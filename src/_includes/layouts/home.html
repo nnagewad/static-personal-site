@@ -4,7 +4,7 @@
 {% block content %}
   
   <h1 class='headline-l title-spacing-small'>{{ title }}</h1>
-  <p class='lead-paragraph'>{{ intro }}</p>
+  <p class='lead-paragraph'>{{ intro | safe }}</p>
 
   {% if latest.headline %}
     <section class='latest'>

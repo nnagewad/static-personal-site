@@ -9,11 +9,3 @@
     text-underline-offset: 0.5rem;
   }
 }
-
-.header-container {
-  display: flex;
-  gap: var(--spacing-4) var(--spacing-7);
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-end;
-}

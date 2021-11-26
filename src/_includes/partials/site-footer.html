@@ -1,5 +1,7 @@
-<footer role='contentinfo' class='wrapper'>
+<footer role='contentinfo' class='wrapper flex-container'>
   {% include 'partials/switch.html' %}
-  <p class='small-font'><small>Designed and built by Nikin Nagewadia</small></p>
-  <p class='small-font'><small>Last built on <time datetime='{{ helpers.builtAtISO }}'>{{ helpers.builtAtString }}</time></small></p>
+  <div class="footer-content">
+    <p class='small-font'><small>Designed and built by Nikin Nagewadia</small></p>
+    <p class='small-font'><small>Last built on <time datetime='{{ helpers.builtAtISO }}'>{{ helpers.builtAtString }}</time></small></p>
+  </div>
 </footer>

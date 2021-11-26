@@ -1,6 +1,6 @@
 .nav-list {
   @extend .list-horizontal;
-  gap: 0 var(--spacing-6);
+  gap: 0 var(--spacing-7);
   font-weight: $nikin-font-weight-bold;
   a:not(:hover) {
     text-decoration: none;
@@ -8,4 +8,12 @@
   a:hover {
     text-underline-offset: 0.5rem;
   }
+}
+
+.header-container {
+  display: flex;
+  gap: var(--spacing-4) var(--spacing-7);
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
 }

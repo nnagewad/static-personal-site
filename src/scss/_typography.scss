@@ -182,6 +182,7 @@ a {
   }
 }
 
+.headline-sm > a:focus,
 blockquote > a:focus {
   box-shadow: 0 var(--focus-background, -0.125rem) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
 }

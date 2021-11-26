@@ -1,7 +1,7 @@
 header {
   @include thick-divider(bottom);
   @include top-6(padding);
-  @include bottom-6(padding);
+  @include bottom-4(padding);
 }
 
 footer {

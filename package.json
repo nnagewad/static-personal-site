@@ -1,0 +1,24 @@
+{
+  "name": "nikin.design",
+  "version": "4.0.0",
+  "description": "Portfolio website for Nikin Nagewadia",
+  "main": ".eleventy.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/scss:dist/css --style=compressed",
+    "build:sass": "sass src/scss:dist/css --style=compressed",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-cache-assets": "^2.3.0",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.43.4",
+    "terser": "^5.10.0"
+  }
+}

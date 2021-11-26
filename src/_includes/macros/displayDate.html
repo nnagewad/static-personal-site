@@ -1,0 +1,6 @@
+{% macro date(label, date) -%}
+  <p>
+    <span>{{ label }}</span>
+    <time datetime='{{ date }}' class='capitalize'>{{ date | date }}</time>
+  </p>
+{%- endmacro %}

@@ -1,0 +1,4 @@
+.nav-list {
+  @extend .list-horizontal;
+  gap: 0 var(--spacing-6);
+}

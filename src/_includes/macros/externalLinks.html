@@ -1,0 +1,8 @@
+{% macro links(title, link) %}
+  <h2 class='headline-m'>{{ title }}</h2>
+  <ul>
+    {% for i in range(0, link | length) | reverse %}
+    <li><a href='{{ link[i].url }}' rel='external'>{{ link[i].name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

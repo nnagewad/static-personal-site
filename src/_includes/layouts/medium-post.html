@@ -1,0 +1,25 @@
+{% from 'macros/tags.html' import tags %}
+{% from 'macros/displayDate.html' import date %}
+
+{% extends 'layouts/base.html' %}
+
+{% block content %}
+  <span class='headline-caption'>Case study</span>
+  <h1 class='headline-l'>{{ title }}</h1>
+  
+  <article>
+    <div class="medium-post">
+      {{ post['content:encoded'] | updateTags | safe }}
+    </div>
+    <div class='meta-information'>
+      <span class='visuallyhidden'>Article information</span>
+      {{ date("Published in", isoDate) }}
+      {{ tags(categories) }}
+    </div>
+  </article>
+
+  <section>
+    <h2 class='headline-m'>Case studies</h2>
+    {% include 'partials/pagination.html' %}
+  </section>
+{% endblock %}

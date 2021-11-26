@@ -1,0 +1,17 @@
+<a class='skip-link wrapper' href='#main-content'>Skip to content</a>
+<header role='banner' class='wrapper'>
+  <div class='site-head__inner'>
+    <a href='/' aria-label='{{ site.name }} - home' class='site-head__brand'>
+      <img src="/images/profile.png" alt="" width="60px" height="auto">
+    </a>
+    <nav class=' aria-label='Primary'>
+      <ul class='nav-list'>
+        {% for item in navigation.items %}
+        <li>
+          <a href='{{ item.url }}'>{{ item.text }}</a>
+        </li>
+        {% endfor %}
+      </ul>        
+    </nav>
+  </div>
+</header>

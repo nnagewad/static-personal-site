@@ -1,0 +1,7 @@
+.skip-link {
+  display: block;
+  padding-left: var(--pixel-5);
+  &:not(:focus) {
+    @extend .visually-hidden;
+  }
+}

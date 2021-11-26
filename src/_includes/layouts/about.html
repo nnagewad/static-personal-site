@@ -1,0 +1,21 @@
+{% extends 'layouts/base.html' %}
+{% from 'macros/experience.html' import experience %}
+
+{% block content %}
+  <h1 class='headline-l title-spacing'>{{ title }}</h1>
+
+  <section>
+    <h2 class='headline-m'>Short bio</h2>
+    <div class='bio'>
+      {{ content | safe }}
+    </div>
+  </section>
+
+  <section>
+    {{ experience("Work", work) }}
+  </section>
+
+  <section>
+    {{ experience("Education", education) }}
+  </section>
+{% endblock %}

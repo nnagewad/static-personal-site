@@ -1,0 +1,19 @@
+{% macro experience(title, list) %}
+  <h2 class='headline-m'>{{ title }}</h2>
+  <ul class='list-extra-spaced'>
+    {% for i in range(0, list | length) | reverse %}
+    <li>
+      <h3 class='headline-sm'>{{ list[i].name }}</h3>
+      <div class="meta-information">
+        <p>
+          <span class='visually-hidden'>Based in</span>
+          <span class='capitalize'>{{ list[i].location }}</span>
+        </p>
+        <p>
+          <span class='visually-hidden'>From</span> <time datetime='{{ list[i].start }}' class='capitalize'>{{ list[i].start | date }}</time> {% if list[i].end %}<span class='visually-hidden'>to</span> <time datetime='{{ list[i].end }}' class='dash capitalize'>{{ list[i].end | date }}</time>{% endif %}
+        </p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+{%- endmacro %}

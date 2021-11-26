@@ -1,0 +1,14 @@
+{% from 'macros/externalLinks.html' import links %}
+
+{% extends 'layouts/base.html' %}
+{% block content %}
+  <h1 class='headline-l title-spacing'>{{ title }}</h1>
+
+  <section>
+    {{ links('Online publications', publication) }}
+  </section>
+
+  <section>
+    {{ links('Social', social) }}
+  </section>
+{% endblock %}

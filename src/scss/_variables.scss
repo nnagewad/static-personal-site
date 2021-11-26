@@ -1,0 +1,78 @@
+:root {
+  // Pixels
+  --pixel-neg5: -0.3125rem;
+  --pixel-2: 0.125rem;
+  --pixel-5: 0.3125rem;
+  --pixel-10: 0.625rem;
+  --pixel-15: 0.9375rem;
+  --pixel-20: 1.25rem;
+  --pixel-25: 1.5625rem;
+  --pixel-30: 1.875rem;
+  --pixel-40: 2.5rem;
+  --pixel-50: 3.125rem;
+  --pixel-60: 3.75rem;
+  // Spacing variables
+  --spacing-neg1: var(--pixel-neg5);
+  --spacing-0: var(--pixel-2);
+  --spacing-1: var(--pixel-5);
+  --spacing-2: var(--pixel-10);
+  --spacing-3: var(--pixel-15);
+  --spacing-4: var(--pixel-20);
+  --spacing-5: var(--pixel-25);
+  --spacing-6: var(--pixel-30);
+  --spacing-7: var(--pixel-40);
+  --spacing-8: var(--pixel-50);
+  --spacing-9: var(--pixel-60);
+  // Border variables
+  --border-thin: var(--pixel-2);
+  --border-thick: var(--pixel-5);
+  // Page Layout
+  --wrapper-width: 64rem;
+  // Typography
+  --link-underline: 20%;
+  // Base font sizes
+  --min-base: 1rem;
+  --target-base: 0.91rem + 0.43vw;
+  --max-base: 1.19rem;
+  // headline-sm font sizes
+  --min-headline-sm: 1.5rem;
+  --target-headline-sm: 1.37rem + 0.64vw;
+  --max-headline-sm: 1.78rem;
+  // headline-m font sizes
+  --min-headline-m: 2.25rem;
+  --target-headline-m: 2.06rem + 0.96vw;
+  --max-headline-m: 2.67rem;
+  // headline-l font sizes
+  --min-headline-l: 3.38rem;
+  --target-headline-l: 3.09rem + 1.44vw;
+  --max-headline-l: 4.01rem;
+  // small font sizes
+  --min-small: 0.67rem;
+  --target-small: 0.61rem + 0.28vw;
+  --max-small: 0.79rem;
+  // Color palette
+  --color-black: #090806;
+  --color-dark-grey: #505A5F;
+  --color-grey: #B1B4B6;
+  --color-white: #F2F1EC;
+  --color-blue: #155389;
+  --color-dark-blue: #002457;
+  --color-pink: #F7BBD3;
+  --color-dark-pink: #EF71A3;
+  --color-yellow: #FFDD00;
+  // Light mode
+  --color-mode: 'light';
+  --color-background: var(--color-white);
+  --color-primary-text: var(--color-black);
+  --color-secondary-text: var(--color-dark-grey);
+  --color-link: var(--color-blue);
+  --color-hover: var(--color-dark-blue);
+  --color-active: var(--color-black);
+  --color-focus: var(--color-yellow);
+  --color-focus-text: var(--color-black);
+  --color-focus-border: var(--color-black);
+  --color-border: var(--color-black);
+  --color-button: var(--color-link);
+  --color-button-hover: var(--color-hover);
+  --color-button-text: var(--color-white);
+}

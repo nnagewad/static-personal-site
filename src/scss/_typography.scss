@@ -176,8 +176,12 @@ a {
     background: var(--color-focus);
     color: var(--color-focus-text);
     text-decoration-skip-ink: none;
-    box-shadow: 0 var(--spacing-neg1) var(--color-focus),0 var(--spacing-1) var(--color-focus-border);
+    box-shadow: 0 var(--focus-background, -0.5rem) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
     text-decoration: none;
     outline: var(--spacing-0) solid transparent;
   }
+}
+
+blockquote > a:focus {
+  box-shadow: 0 var(--focus-background, -0.125rem) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
 }

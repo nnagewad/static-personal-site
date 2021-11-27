@@ -1,7 +1,3 @@
-$nikin-font-family: 'Sora', sans-serif;
-$nikin-font-weight-bold: 700;
-$nikin-font-weight-light: 400;
-
 body,
 .headline-l,
 .headline-m,
@@ -15,8 +11,8 @@ footer small {
 }
 
 body {
-  font-family: $nikin-font-family;
-  font-weight: $nikin-font-weight-light;
+  font-family: 'Sora', sans-serif;
+  font-weight: 400;
   --min-font-size: 1rem;
   --target-font-size: 0.91rem + 0.43vw;
   --max-font-size: 1.19rem;
@@ -28,7 +24,7 @@ body {
 h1,
 h2,
 h3 {
-  font-weight: $nikin-font-weight-bold;
+  font-weight: var(--font-weight-bold);
 }
 
 .headline-l,
@@ -193,4 +189,16 @@ a {
 .headline-sm > a:focus,
 blockquote > a:focus {
   --focus-background: -0.125rem;
+}
+
+.nav-list {
+  @extend .list-horizontal;
+  gap: 0 var(--spacing-7);
+  font-weight: var(--font-weight-bold);
+  a:not(:hover) {
+    text-decoration: none;
+  }
+  a:hover {
+    text-underline-offset: 0.5rem;
+  }
 }

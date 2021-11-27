@@ -2,7 +2,8 @@ body,
 .font-size-3,
 .font-size-2,
 .font-size-1,
-footer small {
+footer small,
+figcaption {
   font-size: clamp(
     var(--min-font-size),
     calc(var(--target-font-size)),
@@ -49,6 +50,13 @@ h3 {
   --min-font-size: 1.41rem;
   --target-font-size: 1.29rem + 0.6vw;
   --max-font-size: 1.68rem;
+}
+
+footer small,
+figcaption {
+  --min-font-size: 0.71rem;
+  --target-font-size: 0.65rem + 0.30vw;
+  --max-font-size: 0.84rem;
 }
 
 p {
@@ -101,11 +109,6 @@ footer {
   p {
     @include bottom-1(margin);
     line-height: 1.125;
-  }
-  small {
-    --min-font-size: 0.71rem;
-    --target-font-size: 0.65rem + 0.30vw;
-    --max-font-size: 0.84rem;
   }
 }
 

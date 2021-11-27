@@ -2,14 +2,24 @@ $nikin-font-family: 'Sora', sans-serif;
 $nikin-font-weight-bold: 700;
 $nikin-font-weight-light: 400;
 
+body,
+.headline-l,
+.headline-m,
+.headline-sm,
+footer small {
+  font-size: clamp(
+    var(--min-font-size),
+    calc(var(--target-font-size)),
+    var(--max-font-size)
+  );
+}
+
 body {
   font-family: $nikin-font-family;
   font-weight: $nikin-font-weight-light;
-  font-size: clamp(
-    var(--min-base),
-    calc(var(--target-base)),
-    var(--max-base)
-  );
+  --min-font-size: 1rem;
+  --target-font-size: 0.91rem + 0.43vw;
+  --max-font-size: 1.19rem;
   line-height: 1.75;
   background: var(--color-background);
   color: var(--color-primary-text);
@@ -28,27 +38,21 @@ h3 {
 }
 
 .headline-l {
-  font-size: clamp(
-    var(--min-headline-l),
-    calc(var(--target-headline-l)),
-    var(--max-headline-l)
-  );
+  --min-font-size: 2.83rem;
+  --target-font-size: 2.59rem + 1.21vw;
+  --max-font-size: 3.36rem;
 }
 
 .headline-m {
-  font-size: clamp(
-    var(--min-headline-m),
-    calc(var(--target-headline-m)),
-    var(--max-headline-m)
-  );
+  --min-font-size: 2.0rem;
+  --target-font-size: 1.83rem + 0.85vw;
+  --max-font-size: 2.37rem;
 }
 
 .headline-sm {
-  font-size: clamp(
-    var(--min-headline-sm),
-    calc(var(--target-headline-sm)),
-    var(--max-headline-sm)
-  );
+  --min-font-size: 1.41rem;
+  --target-font-size: 1.29rem + 0.6vw;
+  --max-font-size: 1.68rem;
 }
 
 p {
@@ -102,11 +106,9 @@ footer {
     line-height: 1.125;
   }
   small {
-    font-size: clamp(
-      var(--min-small),
-      calc(var(--target-small)),
-      var(--max-small)
-    );
+    --min-font-size: 0.71rem;
+    --target-font-size: 0.65rem + 0.30vw;
+    --max-font-size: 0.84rem;
   }
 }
 
@@ -164,6 +166,12 @@ figcaption,
   color: var(--color-secondary-text);
 }
 
+a:focus,
+.headline-sm > a:focus,
+blockquote > a:focus {
+  box-shadow: 0 var(--focus-background) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
+}
+
 a {
   color: var(--color-link);
   &:hover {
@@ -176,7 +184,7 @@ a {
     background: var(--color-focus);
     color: var(--color-focus-text);
     text-decoration-skip-ink: none;
-    box-shadow: 0 var(--focus-background, -0.5rem) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
+    --focus-background: -0.5rem;
     text-decoration: none;
     outline: var(--spacing-0) solid transparent;
   }
@@ -184,5 +192,5 @@ a {
 
 .headline-sm > a:focus,
 blockquote > a:focus {
-  box-shadow: 0 var(--focus-background, -0.125rem) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
+  --focus-background: -0.125rem;
 }

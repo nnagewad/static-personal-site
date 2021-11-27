@@ -32,6 +32,11 @@ main {
   align-items: flex-end;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: minmax(auto, 700px);
+}
+
 section {
   @include top-9(margin);
   @include bottom-9(margin);

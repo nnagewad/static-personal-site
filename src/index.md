@@ -1,7 +1,8 @@
 ---
 layout: 'layouts/home.html'
 title: 'Nikin Nagewadia'
-metaDesc: 'Social introvert originally from Toronto, Canada, currently living in London, England. Interaction designer at Government Digital Service.'
+metaDesc: 'Nikin Nagewadia is an interaction designer currently working at the Government Digial Service in London, England.'
+socialImage: /images/profile.png
 intro: 'Interaction designer at the <a href="https://www.gov.uk/government/organisations/government-digital-service">Government Digital Service</a>'
 latest:
   headline: 'GOV.UK case study is live'

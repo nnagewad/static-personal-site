@@ -42,7 +42,10 @@
   --color-pink: #F7BBD3;
   --color-dark-pink: #EF71A3;
   --color-yellow: #FFDD00;
-  // Light mode
+}
+
+// Light mode
+@mixin light-mode {
   --color-mode: 'light';
   --color-background: var(--color-white);
   --color-primary-text: var(--color-black);
@@ -87,4 +90,17 @@
 
 [data-user-color-scheme='dark'] {
   @include dark-mode;
+}
+
+@media (prefers-color-schem: light) {
+  :root {
+    --color-mode: 'light';
+  }
+  :root:not([data-user-color-scheme]) {
+    @include light-mode;
+  }
+}
+
+[data-user-color-scheme='light'] {
+  @include light-mode;
 }

@@ -3,13 +3,13 @@
 {% extends 'layouts/base.html' %}
 {% block content %}
   
-  <h1 class='headline-l title-spacing-small'>{{ title }}</h1>
+  <h1 class='font-size-3 title-spacing-small'>{{ title }}</h1>
   <p class='lead-paragraph'>{{ intro | safe }}</p>
 
   {% if latest.headline %}
     <section class='latest'>
-      <h2 class='headline-m'>Latest</h2>
-      <h3 class='headline-sm'>{{ latest.headline }}</h3>
+      <h2 class='font-size-2'>Latest</h2>
+      <h3 class='font-size-1'>{{ latest.headline }}</h3>
       {{ content | safe }}
       <div class="meta-information">
         {{ date('Updated in', latest.date) }}
@@ -18,7 +18,7 @@
   {% endif %}
 
   <section>
-    <h2 class='headline-m'>Case studies</h2>
+    <h2 class='font-size-2'>Case studies</h2>
     {% include 'partials/medium-posts.html' %}
   </section>
 

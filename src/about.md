@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/about.html'
 title: 'About'
+metaDesc: 'Learn more about who Nikin Nagewadia is, with a short bio, and list of his past work and education experiences.'
 work:
   0:
     name: 'Freshbooks'

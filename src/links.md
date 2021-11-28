@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/links.html'
 title: 'Links'
+metaDesc: 'Links to contributions Nikin Nagewadia has made to online publications, as well as links to his profile on popular social media sites.'
 social:
   0: 
     name: 'Instagram'

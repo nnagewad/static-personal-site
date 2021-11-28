@@ -7,7 +7,8 @@ pagination:
   addAllPagesToCollections: true
 tags: posts
 permalink: post/{{ post.title | slug }}/index.html
-socialImage: /images/profile.png
+image: case-study
+imageAltText: 'A 3D emoji of Nikin Nagewadia thinking.'
 eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.pubDate }}'

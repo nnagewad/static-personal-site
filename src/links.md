@@ -2,7 +2,8 @@
 layout: 'layouts/links.html'
 title: 'Links'
 metaDesc: 'Links to contributions Nikin Nagewadia has made to online publications, as well as links to his profile on popular social media sites.'
-socialImage: /images/profile.png
+image: links
+imageAltText: 'A 3D emoji of Nikin Nagewadia with his face half-covered by an Apple laptop.'
 social:
   0: 
     name: 'Instagram'

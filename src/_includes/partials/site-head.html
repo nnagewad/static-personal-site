@@ -1,7 +1,16 @@
 <a class='skip-link wrapper' href='#main-content'>Skip to content</a>
 <header role='banner' class='wrapper flex-container'>
-  <a href='/' aria-label='{{ site.name }} - home' class='site-head__brand'>
-    <img src="/images/profile.png" alt="" width="60px" height="auto">
+  <a href='/' aria-label='{{ site.name }} - home' class='site-head-brand'>
+    <img 
+      srcset='
+        /images/{{ image }}@4x.png 4x,
+        /images/{{ image }}@3x.png 3x,
+        /images/{{ image }}@2x.png 2x,
+        /images/{{ image }}.png 1x,
+      '
+      src='/images/{{ image }}.png'
+      alt='{{ imageAltText }}'
+    >
   </a>
   <nav class='site-navigation' aria-label='Primary'>
     <ul class='nav-list'>

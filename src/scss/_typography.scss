@@ -35,27 +35,27 @@ h3 {
 }
 
 .font-size-3 {
-  --min-font-size: 2.83rem;
-  --target-font-size: 2.59rem + 1.21vw;
+  --min-font-size: 2.37rem;
+  --target-font-size: 1.92rem + 2.25vw;
   --max-font-size: 3.36rem;
 }
 
 .font-size-2 {
-  --min-font-size: 2.0rem;
-  --target-font-size: 1.83rem + 0.85vw;
+  --min-font-size: 1.78rem;
+  --target-font-size: 1.51rem + 1.36vw;
   --max-font-size: 2.37rem;
 }
 
 .font-size-1 {
-  --min-font-size: 1.41rem;
-  --target-font-size: 1.29rem + 0.6vw;
+  --min-font-size: 1.33rem;
+  --target-font-size: 1.18rem + 0.79vw;
   --max-font-size: 1.68rem;
 }
 
 footer small,
 figcaption {
-  --min-font-size: 0.71rem;
-  --target-font-size: 0.65rem + 0.30vw;
+  --min-font-size: 0.75rem;
+  --target-font-size: 0.71rem + 0.20vw;
   --max-font-size: 0.84rem;
 }
 

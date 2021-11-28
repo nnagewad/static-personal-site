@@ -7,6 +7,7 @@ pagination:
   addAllPagesToCollections: true
 tags: posts
 permalink: post/{{ post.title | slug }}/index.html
+socialImage: /images/profile.png
 eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.pubDate }}'

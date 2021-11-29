@@ -4,10 +4,9 @@
 {% extends 'layouts/base.html' %}
 
 {% block content %}
-  <span class='headline-caption'>Case study</span>
-  <h1 class='font-size-3'>{{ title }}</h1>
-  
   <article>
+    <span class='headline-caption'>Case study</span>
+    <h1 class='font-size-3'>{{ title }}</h1>
     <div class="medium-post">
       {{ post['content:encoded'] | updateTags | safe }}
     </div>

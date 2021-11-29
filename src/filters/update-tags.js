@@ -7,6 +7,7 @@ module.exports = (post) => {
     .replace(/(<h4>)/g, "<h3 class='font-size-1'>")
     .replace(/(<\/h4>)/g, "</h3>")
     .replace(/(<figcaption>)/g, "<figcaption class='font-size--1'>")
+    .replace(/(<blockquote>)/g, "<blockquote class='font-size-1'>")
     .replace(/(<img src=.https:\/\/medium.*>)/g, "")
     .replace(/(<img)/g, "<img loading='lazy'");
   return updatedCopy;

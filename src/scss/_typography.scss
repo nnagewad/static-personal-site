@@ -5,7 +5,7 @@ body,
 .font-size--1 {
   font-size: clamp(
     var(--min-font-size),
-    calc(var(--target-font-size)),
+    calc(var(--fluid-font-size)),
     var(--max-font-size)
   );
 }
@@ -14,7 +14,7 @@ body {
   font-family: 'Sora', sans-serif;
   font-weight: 400;
   --min-font-size: 1rem;
-  --target-font-size: 0.91rem + 0.43vw;
+  --fluid-font-size: 0.91rem + 0.43vw;
   --max-font-size: 1.19rem;
   line-height: 1.75;
   background: var(--color-background);
@@ -35,25 +35,25 @@ h3 {
 
 .font-size-3 {
   --min-font-size: 2.37rem;
-  --target-font-size: 1.92rem + 2.25vw;
+  --fluid-font-size: 1.92rem + 2.25vw;
   --max-font-size: 3.36rem;
 }
 
 .font-size-2 {
   --min-font-size: 1.78rem;
-  --target-font-size: 1.51rem + 1.36vw;
+  --fluid-font-size: 1.51rem + 1.36vw;
   --max-font-size: 2.37rem;
 }
 
 .font-size-1 {
   --min-font-size: 1.33rem;
-  --target-font-size: 1.18rem + 0.79vw;
+  --fluid-font-size: 1.18rem + 0.79vw;
   --max-font-size: 1.68rem;
 }
 
 .font-size--1 {
   --min-font-size: 0.75rem;
-  --target-font-size: 0.71rem + 0.20vw;
+  --fluid-font-size: 0.71rem + 0.20vw;
   --max-font-size: 0.84rem;
 }
 

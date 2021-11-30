@@ -7,7 +7,6 @@ module.exports = config => {
   config.setUseGitIgnore(false);
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/images/');
-  config.addPassthroughCopy('./src/favicon.ico')
   // Add filters
   config.addFilter('date', dateFormatter);
   config.addFilter('updateTags', updateTags);

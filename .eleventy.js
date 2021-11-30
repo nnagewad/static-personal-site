@@ -1,6 +1,7 @@
 const dateFormatter = require('./src/filters/date-formatter.js');
 const updateTags = require('./src/filters/update-tags.js');
 const { minify } = require('terser');
+const htmlmin = require('html-minifier');
 
 module.exports = config => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -27,6 +28,19 @@ module.exports = config => {
       // Fail gracefully.
       callback(null, code);
     }
+  });
+  config.addTransform("htmlmin", function(content, outputPath) {
+    // Eleventy 1.0+: use this.inputPath and this.outputPath instead
+    if( outputPath && outputPath.endsWith(".html") ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+
+    return content;
   });
 
   return {

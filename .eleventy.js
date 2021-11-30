@@ -10,7 +10,6 @@ module.exports = config => {
   config.addPassthroughCopy('./src/favicon.ico')
   // Add filters
   config.addFilter('date', dateFormatter);
-  // Test filter
   config.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
   config.setBrowserSyncConfig({

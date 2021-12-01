@@ -160,6 +160,11 @@ figcaption,
   color: var(--color-secondary-text);
 }
 
+.headline-caption,
+.article-title {
+  display: block;
+}
+
 a:focus,
 .font-size-1 > a:focus {
   box-shadow: 0 var(--focus-background) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);

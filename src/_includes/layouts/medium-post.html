@@ -5,8 +5,10 @@
 
 {% block content %}
   <article>
-    <span class='headline-caption'>Case study</span>
-    <h1 class='font-size-3'>{{ title }}</h1>
+    <h1>
+      <span class='headline-caption'>Case study:</span>
+      <span class='article-title font-size-3'>{{ title }}</span>
+    </h1>
     <div class="medium-post">
       {{ post['content:encoded'] | updateTags | safe }}
     </div>

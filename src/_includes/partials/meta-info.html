@@ -18,6 +18,11 @@
   {% set metaDesc = summary %}
 {% endif %}
 
+{% if layout === 'layouts/medium-post.html' %}
+  {% set caseStudy = 'Case study: ' %}
+  {% set pageTitle = caseStudy + title + ' - ' + site.name %}
+{% endif %}
+
 
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />

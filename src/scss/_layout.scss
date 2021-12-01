@@ -20,7 +20,7 @@ main {
   max-width: var(--wrapper-width);
   margin: 0 auto;
   &:focus {
-    outline-width: 0px;
+    outline: none;
   }
 }
 

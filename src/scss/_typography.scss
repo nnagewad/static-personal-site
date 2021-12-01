@@ -84,6 +84,10 @@ a {
   @include bottom-9(margin);
 }
 
+.headline-caption {
+  margin-bottom: 0;
+}
+
 .medium-post {  
   img {
     @include bottom-1(margin);

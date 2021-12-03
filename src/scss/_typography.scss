@@ -99,7 +99,7 @@ a {
   }
 
   ol {
-    padding-left: 3%;
+    padding-left: calc(1.1rem + 0.43vw);
     li::marker {
       font-weight: var(--font-weight-bold);
     }
@@ -121,9 +121,11 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  li {
-    @include bottom-2(margin);
-  }
+}
+
+ul li,
+ol li {
+  @include bottom-2(margin);
 }
 
 .list-extra-spaced {

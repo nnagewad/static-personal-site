@@ -97,6 +97,13 @@ a {
   figure {
     @include bottom-6(margin);
   }
+
+  ol {
+    padding-left: 3%;
+    li::marker {
+      font-weight: var(--font-weight-bold);
+    }
+  }
 }
 
 .meta-information > * {

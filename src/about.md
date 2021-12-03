@@ -17,12 +17,12 @@ work:
     end: '2019-11'
   2:
     name: 'A Million Ads'
-    location: 'London, England'
+    location: 'London, United Kingdom'
     start: '2019-06'
     end: '2020-08'
   3:
     name: 'Government Digital Service'
-    location: 'London, England'
+    location: 'London, United Kingdom'
     start: '2020-08'
 education:
   0:
@@ -44,6 +44,6 @@ education:
 
 <p>Although he graduated with a degree in film studies, Nikin’s interest in technology and design led him to a career in UX design. From Freshbooks to Say Yeah!, Nikin helped craft interfaces and front-end code that balanced business and user objectives.</p>
 
-<p>Having spent all his life in Canada, Nikin moved to London, England in spring 2019 where he’s now focused on supporting the Government Digital Service as an interaction designer.</p>
+<p>Having spent all his life in Canada, Nikin moved to London, United Kingdom in spring 2019 where he’s now focused on supporting the Government Digital Service as an interaction designer.</p>
 
 <p>Aside from his day-to-day work, Nikin is an avid photographer, aiming to capture the everyday as cinematic.</p>

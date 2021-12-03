@@ -125,7 +125,7 @@ ul {
 
 ul li,
 ol li {
-  @include bottom-2(margin);
+  @include bottom-3(margin);
 }
 
 .list-extra-spaced {
@@ -133,7 +133,7 @@ ol li {
     @include bottom-1(margin);
   }
   & > li {
-    @include bottom-4(margin);
+    @include bottom-5(margin);
   }
 }
 

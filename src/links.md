@@ -30,4 +30,7 @@ publication:
   1:
     name: 'How we made the GOV.UK accordion component more accessible'
     url: 'https://insidegovuk.blog.gov.uk/2021/10/29/how-we-made-the-gov-uk-accordion-component-more-accessible/'
+  2:
+    name: 'Moving from the private to the public sector as a designer'
+    url: 'https://designnotes.blog.gov.uk/2021/12/17/moving-from-the-private-to-the-public-sector-as-a-designer/'
 ---

@@ -6,8 +6,8 @@ image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Interaction designer at the Government Digital Service'
 latest:
-  headline: 'GOV.UK case study is live'
-  date: '2021-10'
+  headline: 'New GOV.UK blog post is live'
+  date: '2021-12'
 ---
 
-<p>The case study I co-wrote, <a href='https://insidegovuk.blog.gov.uk/2021/10/29/how-we-made-the-gov-uk-accordion-component-more-accessible/' rel='external'>How we made the GOV.UK accordion component more accessible</a>, is now live.</p>
+<p>Latest contribution is now live., <a href='https://designnotes.blog.gov.uk/2021/12/17/moving-from-the-private-to-the-public-sector-as-a-designer/' rel='external'>Moving from the private to the public sector as a designer</a>.</p>

@@ -10,4 +10,4 @@ latest:
   date: '2021-12'
 ---
 
-<p>Latest contribution is now live., <a href='https://designnotes.blog.gov.uk/2021/12/17/moving-from-the-private-to-the-public-sector-as-a-designer/' rel='external'>Moving from the private to the public sector as a designer</a>.</p>
+<p>Latest contribution is now live: <a href='https://designnotes.blog.gov.uk/2021/12/17/moving-from-the-private-to-the-public-sector-as-a-designer/' rel='external'>Moving from the private to the public sector as a designer</a>.</p>

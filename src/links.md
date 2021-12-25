@@ -23,14 +23,17 @@ social:
   5:
     name: 'Medium'
     url: 'https://nkngwd.medium.com/'
-publication:
+articles:
   0:
     name: 'Starting as a designer in government when you’re working from home'
     url: 'https://designnotes.blog.gov.uk/2021/02/15/starting-as-a-designer-in-government-when-youre-working-from-home/'
+    publication: Design in Government
   1:
     name: 'How we made the GOV.UK accordion component more accessible'
     url: 'https://insidegovuk.blog.gov.uk/2021/10/29/how-we-made-the-gov-uk-accordion-component-more-accessible/'
+    publication: Inside GOV.UK
   2:
     name: 'Moving from the private to the public sector as a designer'
     url: 'https://designnotes.blog.gov.uk/2021/12/17/moving-from-the-private-to-the-public-sector-as-a-designer/'
+    publication: Design in Government
 ---

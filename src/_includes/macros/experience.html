@@ -10,7 +10,14 @@
           <span class='capitalize'>{{ list[i].location }}</span>
         </p>
         <p>
-          <span class='visually-hidden'>From</span> <time datetime='{{ list[i].start }}' class='capitalize'>{{ list[i].start | date }}</time> {% if list[i].end %}<span class='visually-hidden'>to</span> <time datetime='{{ list[i].end }}' class='dash capitalize'>{{ list[i].end | date }}</time>{% endif %}
+          <span class='visually-hidden'>From</span>
+          <time datetime='{{ list[i].start }}' class='capitalize'>{{ list[i].start | date }}</time>
+          <span class='visually-hidden'>to</span>
+          {% if list[i].end %}
+            <time datetime='{{ list[i].end }}' class='dash capitalize'>{{ list[i].end | date }}</time>
+          {% else %}
+            <span class='dash capitalize'>present</span>
+          {% endif %}
         </p>
       </div>
     </li>

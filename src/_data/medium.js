@@ -1,4 +1,4 @@
-const Cache = require("@11ty/eleventy-cache-assets");
+const Cache = require("@11ty/eleventy-fetch");
 
 module.exports = async function() {
   let url = "https://v1.nocodeapi.com/nikin/medium/jiEUjZNwxwIIzlUq";

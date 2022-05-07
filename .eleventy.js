@@ -1,3 +1,4 @@
+const utcFormatter = require('./src/filters/utc-formatter.js');
 const dateFormatter = require('./src/filters/date-formatter.js');
 const updateTags = require('./src/filters/update-tags.js');
 const { minify } = require('terser');
@@ -9,6 +10,7 @@ module.exports = config => {
   // Set directories to pass through to the dist folder
   config.addPassthroughCopy('./src/images/');
   // Add filters
+  config.addFilter('utc', utcFormatter);
   config.addFilter('date', dateFormatter);
   config.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes

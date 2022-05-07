@@ -1,5 +1,5 @@
 {% from 'macros/tags.html' import tags %}
-{% from 'macros/displayDate.html' import date %}
+{% from 'macros/displayDate.html' import mediumDate %}
 
 {% extends 'layouts/base.html' %}
 
@@ -14,7 +14,7 @@
     </div>
     <div class='meta-information'>
       <span class='visually-hidden'>Article information</span>
-      {{ date("Published in", isoDate) }}
+      {{ mediumDate("Published in", pubDate) }}
       {{ tags(categories) }}
     </div>
   </article>

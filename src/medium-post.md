@@ -11,9 +11,9 @@ image: case-study
 imageAltText: 'A 3D emoji of Nikin Nagewadia thinking.'
 eleventyComputed:
   title: '{{ post.title }}'
-  pubDate: '{{ post.pubDate }}'
-  isoDate: '{{ post.isoDate }}'
-  categories: '{{ post.categories }}'
+  pubDate: '{{ post.published }}'
+  isoDate: '{{ post.created }}'
+  categories: '{{ post.category }}'
   mediumLink: '{{ post.link }}'
   metaDesc: 'A case study written by Nikin Nagewadia, and published in {{ post.pubDate | date }}.'
 ---

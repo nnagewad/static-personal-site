@@ -10,7 +10,7 @@
       <span class='article-title font-size-3'>{{ title }}</span>
     </h1>
     <div class="medium-post">
-      {{ post['content:encoded'] | updateTags | safe }}
+      {{ post['content'] | updateTags | safe }}
     </div>
     <div class='meta-information'>
       <span class='visually-hidden'>Article information</span>

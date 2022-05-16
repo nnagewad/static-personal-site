@@ -36,4 +36,8 @@ articles:
     name: 'Moving from the private to the public sector as a designer'
     url: 'https://designnotes.blog.gov.uk/2021/12/17/moving-from-the-private-to-the-public-sector-as-a-designer/'
     publication: Design in Government
+  3:
+    name: 'Why and how to embed design training in your organisation'
+    url: 'https://designnotes.blog.gov.uk/2022/05/16/why-and-how-to-embed-design-training-in-your-organisation/'
+    publication: Design in Government
 ---

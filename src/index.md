@@ -6,8 +6,8 @@ image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer working on GOV.UK at Government Digital Service'
 latest:
-  headline: 'New GOV.UK blog post is live'
-  date: '2021-12'
+  headline: 'New blog post: Why and how to embed design training in your organisation'
+  date: '2022-05'
 ---
 
-<p>Latest contribution is now live: <a href='https://designnotes.blog.gov.uk/2021/12/17/moving-from-the-private-to-the-public-sector-as-a-designer/' rel='external'>Moving from the private to the public sector as a designer</a>.</p>
+<p>Brand new blog post contribution: <a href='https://designnotes.blog.gov.uk/2022/05/16/why-and-how-to-embed-design-training-in-your-organisation/' rel='external'>Why and how to embed design training in your organisation</a>.</p>

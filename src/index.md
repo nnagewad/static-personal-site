@@ -6,7 +6,7 @@ image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer working on GOV.UK at Government Digital Service'
 latest:
-  headline: 'New blog post: Why and how to embed design training in your organisation'
+  headline: 'New blog post is now live'
   date: '2022-05'
 ---
 

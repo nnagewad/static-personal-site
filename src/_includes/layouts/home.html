@@ -12,7 +12,7 @@
       <h3 class='font-size-1'>{{ latest.headline }}</h3>
       {{ content | safe }}
       <div class="meta-information">
-        {{ date('Updated in', latest.date) }}
+        {{ date('Updated:', latest.date) }}
       </div>
     </section>
   {% endif %}

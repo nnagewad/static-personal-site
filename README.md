@@ -7,8 +7,8 @@
 
 ## Technology
 
-- 11ty
-- Netflify
+- [11ty](https://www.11ty.dev)
+- [Netflify](https://www.netlify.com)
 
 ## Tutorials
 

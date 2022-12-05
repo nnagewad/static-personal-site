@@ -9,18 +9,15 @@ social:
     name: 'Instagram'
     url: 'https://www.instagram.com/nkngwd/'
   1:
-    name: 'Twitter'
-    url: 'https://twitter.com/nikin_n'
-  2:
     name: 'Dribbble'
     url: 'https://dribbble.com/nnagewad/'
-  3:
+  2:
     name: 'Linkedin'
     url: 'https://www.linkedin.com/in/nikinnagewadia/'
-  4: 
+  3: 
     name: 'Github'
     url: 'https://github.com/nnagewad'
-  5:
+  4:
     name: 'Medium'
     url: 'https://nkngwd.medium.com/'
 articles:

@@ -14,8 +14,8 @@ module.exports = config => {
   config.addFilter('date', dateFormatter);
   config.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
-  config.setBrowserSyncConfig({
-    files: './dist/css/**/*.css'
+  config.setServerOptions({
+    watch: ['./dist/css/**/*.css'],
   });
   // Inline JS
   config.addNunjucksAsyncFilter("jsmin", async function (

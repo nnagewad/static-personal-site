@@ -33,15 +33,15 @@
   --font-weight-bold: 700;
   --nav-underline-offset: 0.5rem;
   // Color palette
-  --color-black: oklch(13.48% 0.006 86.86);
+  --color-black: oklch(13.5% 0.006 86.9);
   --color-dark-grey: oklch(46.07% 0.015 229.22);
-  --color-grey: oklch(76.81% 0.004 236.52);
-  --color-white: oklch(95.75% 0.007 97.35);
-  --color-blue: oklch(43.33% 0.108 249.67);
-  --color-dark-blue: oklch(31.64% 0.073 247.93);
-  --color-pink: oklch(85.32% 0.075 352.99);
-  --color-dark-pink: oklch(71.09% 0.163 357.09);
-  --color-yellow: oklch(89.87% 0.18566745897507492 97.85731698839815);
+  --color-grey: oklch(76.8% 0.004 236.5);
+  --color-white: oklch(95.8% 0.007 97.4);
+  --color-blue: oklch(43.3% 0.1 249.7);
+  --color-dark-blue: oklch(31.6% 0.1 247.9);
+  --color-pink: oklch(85.3% 0.1 353);
+  --color-dark-pink: oklch(71.1% 0.2 357.1);
+  --color-yellow: oklch(90% 0.2 98.1);
   // Light mode color scheme
   --color-mode: 'light';
   --color-background: var(--color-white);

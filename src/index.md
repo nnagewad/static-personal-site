@@ -5,9 +5,9 @@ metaDesc: 'Nikin Nagewadia is a senior interaction designer at Government Digita
 image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer working on GOV.UK at Government Digital Service'
-# latest:
-#   headline: 'New blog post in progress'
-#   date: '2023-06'
+latest:
+  headline: 'Brand new GOV.UK blog post is now live'
+  date: '2023-08'
 ---
 
-<!-- <p>Currently working on a blog post regarding a project I've worked on.</p> -->
+<p>Latest blog post: <a href='https://insidegovuk.blog.gov.uk/2023/08/10/making-it-easier-to-add-images-on-gov-uk/' rel='external'>Making it easier to add images on GOV.UK</a>.</p>

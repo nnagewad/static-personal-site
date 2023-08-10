@@ -37,4 +37,8 @@ articles:
     name: 'Why and how to embed design training in your organisation'
     url: 'https://designnotes.blog.gov.uk/2022/05/16/why-and-how-to-embed-design-training-in-your-organisation/'
     publication: Design in Government
+  4:
+    name: 'Making it easier to add images on GOV.UK'
+    url: 'https://insidegovuk.blog.gov.uk/2023/08/10/making-it-easier-to-add-images-on-gov-uk/'
+    publication: Inside GOV.UK
 ---

@@ -11,13 +11,10 @@ social:
   1:
     name: 'Dribbble'
     url: 'https://dribbble.com/nnagewad/'
-  2:
-    name: 'Linkedin'
-    url: 'https://www.linkedin.com/in/nikinnagewadia/'
-  3: 
+  2: 
     name: 'Github'
     url: 'https://github.com/nnagewad'
-  4:
+  3:
     name: 'Medium'
     url: 'https://nkngwd.medium.com/'
 articles:

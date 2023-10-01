@@ -6,15 +6,12 @@ image: links
 imageAltText: 'A 3D emoji of Nikin Nagewadia with his face half-covered by an Apple laptop.'
 social:
   0: 
-    name: 'Instagram'
-    url: 'https://www.instagram.com/nkngwd/'
-  1:
     name: 'Dribbble'
     url: 'https://dribbble.com/nnagewad/'
-  2: 
+  1: 
     name: 'Github'
     url: 'https://github.com/nnagewad'
-  3:
+  2:
     name: 'Medium'
     url: 'https://nkngwd.medium.com/'
 articles:

@@ -36,7 +36,7 @@ articles:
     url: 'https://insidegovuk.blog.gov.uk/2023/08/10/making-it-easier-to-add-images-on-gov-uk/'
     publication: Inside GOV.UK
   5:
-    name: 'Moving our most-used publishing tool to hte GOV.UK design system'
+    name: 'Moving our most-used publishing tool to the GOV.UK design system'
     url: 'https://insidegovuk.blog.gov.uk/2024/02/08/moving-our-most-used-publishing-tool-to-the-gov-uk-design-system/?utm_medium=referral&utm_source=nikinwebsite&utm_campaign=whitehall'
     publication: Inside GOV.UK
 ---

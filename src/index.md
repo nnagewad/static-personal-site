@@ -10,4 +10,4 @@ latest:
   date: '2024-02'
 ---
 
-<p><a href='https://insidegovuk.blog.gov.uk/2024/02/08/moving-our-most-used-publishing-tool-to-the-gov-uk-design-system/?utm_medium=referral&utm_source=nikinwebsite&utm_campaign=whitehall' rel='external'>Moving our most-used publishing tool to hte GOV.UK design system</a></p>
+<p><a href='https://insidegovuk.blog.gov.uk/2024/02/08/moving-our-most-used-publishing-tool-to-the-gov-uk-design-system/?utm_medium=referral&utm_source=nikinwebsite&utm_campaign=whitehall' rel='external'>Moving our most-used publishing tool to the GOV.UK design system</a></p>

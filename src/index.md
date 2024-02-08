@@ -6,8 +6,8 @@ image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer working on GOV.UK at Government Digital Service'
 latest:
-  headline: 'Brand new GOV.UK blog post is now live'
-  date: '2023-08'
+  headline: 'Brand new GOV.UK blog post about a major project I worked on is now live'
+  date: '2024-02'
 ---
 
-<p>Latest blog post: <a href='https://insidegovuk.blog.gov.uk/2023/08/10/making-it-easier-to-add-images-on-gov-uk/' rel='external'>Making it easier to add images on GOV.UK</a>.</p>
+<p><a href='https://insidegovuk.blog.gov.uk/2024/02/08/moving-our-most-used-publishing-tool-to-the-gov-uk-design-system/?utm_medium=referral&utm_source=nikinwebsite&utm_campaign=whitehall' rel='external'>Moving our most-used publishing tool to hte GOV.UK design system</a></p>

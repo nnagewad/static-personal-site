@@ -6,7 +6,7 @@ image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer working on GOV.UK at Government Digital Service'
 latest:
-  headline: 'Presented at Services Week 2024'
+  headline: '"Upgrading Whitehall Publisher to the GOV.UK Design System" presentation at Services Week 2024'
   date: '2024-03'
 ---
 

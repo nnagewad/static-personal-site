@@ -14,7 +14,7 @@ social:
   2:
     name: 'Medium'
     url: 'https://nkngwd.medium.com/'
-articles:
+publication_presentation:
   0:
     name: 'Starting as a designer in government when you’re working from home'
     url: 'https://designnotes.blog.gov.uk/2021/02/15/starting-as-a-designer-in-government-when-youre-working-from-home/'
@@ -40,7 +40,7 @@ articles:
     url: 'https://insidegovuk.blog.gov.uk/2024/02/08/moving-our-most-used-publishing-tool-to-the-gov-uk-design-system/?utm_medium=referral&utm_source=nikinwebsite&utm_campaign=whitehall'
     publication: Inside GOV.UK
   6:
-    name: 'Services Week 2024: GDS Open Show and Tell'
+    name: 'Upgrading Whitehall Publisher to the GOV.UK Design System'
     url: 'https://youtu.be/cPDBARbzGGg?si=l5opeg32v7c78Hl2&t=2456'
-    publication: UK Gov Design
+    video: 'Services Week 2024: GDS Open Show and Tell'
 ---

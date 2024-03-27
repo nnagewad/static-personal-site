@@ -11,6 +11,13 @@
             <span class='capitalize'>{{ link[i].publication }}</span>
           </p>
         </div>
+      {% elif link[i].video %}
+        <div class="meta-information">
+          <p>
+            <span>Online video:</span>
+            <span class='capitalize'>{{ link[i].video }}</span>
+          </p>
+        </div>
       {% endif %}
     </li>
     {% endfor %}

@@ -39,4 +39,8 @@ articles:
     name: 'Moving our most-used publishing tool to the GOV.UK design system'
     url: 'https://insidegovuk.blog.gov.uk/2024/02/08/moving-our-most-used-publishing-tool-to-the-gov-uk-design-system/?utm_medium=referral&utm_source=nikinwebsite&utm_campaign=whitehall'
     publication: Inside GOV.UK
+  6:
+    name: 'Services Week 2024: GDS Open Show and Tell'
+    url: 'https://youtu.be/cPDBARbzGGg?si=l5opeg32v7c78Hl2&t=2456'
+    publication: UK Gov Design
 ---

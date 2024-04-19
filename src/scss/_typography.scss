@@ -34,6 +34,13 @@ h3 {
   @include bottom-2(margin);
 }
 
+.font-size-3,
+.font-size-2,
+.font-size-1,
+.lead-paragraph {
+  text-wrap: balance;
+}
+
 .font-size-3 {
   --min-font-size: 2.37rem;
   --fluid-font-size: 1.92rem + 2.25vw;

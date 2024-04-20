@@ -16,8 +16,10 @@
     color: var(--color-focus-text);
     border-bottom: var(--border-thick) var(--color-focus-border) solid;
   }
-  &:hover {
-    background: var(--color-button-hover);
-    color: var(--color-button-text);
+  @media (hover: hover) {
+    &:hover {
+      background: var(--color-button-hover);
+      color: var(--color-button-text);
+    }
   }
 }

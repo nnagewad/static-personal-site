@@ -16,6 +16,9 @@
     color: var(--color-focus-text);
     border-bottom: var(--border-thick) var(--color-focus-border) solid;
   }
+  &:active {
+    transform: scale(0.98);
+  }
   @media (hover: hover) {
     &:hover {
       background: var(--color-button-hover);

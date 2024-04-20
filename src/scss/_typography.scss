@@ -72,10 +72,12 @@ p {
 a {
   text-underline-offset: 0.3125em;
   text-decoration-thickness: max(1px, 0.0625rem);
-  &:hover,
-  &[aria-current=page] {
-    text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
-    text-decoration-skip-ink: none;
+  @media (hover: hover) {
+    &:hover,
+    &[aria-current=page] {
+      text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+      text-decoration-skip-ink: none;
+    }
   }
 }
 
@@ -189,8 +191,10 @@ a:focus,
 
 a {
   color: var(--color-link);
-  &:hover {
-    color: var(--color-hover);
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color-hover);
+    }
   }
   &:active {
     color: var(--color-active);
@@ -220,9 +224,11 @@ a {
     color: var(--color-active);
     text-underline-offset: var(--nav-underline-offset);
   }
-  a:hover {
-    color: var(--color-hover);
-    text-underline-offset: var(--nav-underline-offset);
+  @media (hover: hover) {
+    a:hover {
+      color: var(--color-hover);
+      text-underline-offset: var(--nav-underline-offset);
+    }
   }
   a:focus {
     color: var(--color-focus-text);

@@ -2,7 +2,7 @@ const utcFormatter = require('./src/filters/utc-formatter.js');
 const dateFormatter = require('./src/filters/date-formatter.js');
 const updateTags = require('./src/filters/update-tags.js');
 const { minify } = require('terser');
-const htmlmin = require('html-minifier');
+const htmlmin = require('html-minifier-terser');
 
 module.exports = config => {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

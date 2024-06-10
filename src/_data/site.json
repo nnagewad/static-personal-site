@@ -1,5 +1,6 @@
 {
   "name": "Nikin Nagewadia",
   "url": "https://www.nikin.design",
+  "robots": "/robots.txt",
   "siteMap": "/sitemap.xml"
 }

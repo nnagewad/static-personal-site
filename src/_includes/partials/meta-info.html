@@ -43,8 +43,10 @@
 {% endif %}
 
 {% if noFollow %}
-  <meta name="robots" content="noindex,nofollow" />
+  <meta name="robots" content="noindex,nofollow,noai,noimageai" />
   <meta name="googlebot" content="noindex,nofollow" />
+  <meta name="CCBot" content="nofollow" />
+  <meta name="tdm-reservation" content="1" />
 {% endif %}
 
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="oklch(95.8% 0.007 236.5)">

@@ -51,7 +51,8 @@ module.exports = config => {
     htmlTemplateEngine: 'njk',
     dir: {
       input: 'src',
-      output: 'dist'
+      output: 'dist',
+      includes: '_includes'
     }
   };
 };

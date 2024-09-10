@@ -4,6 +4,15 @@
     <picture>
       <source
         srcset='
+          /images/jxl/{{ image }}@4x.jxl 4x,
+          /images/jxl/{{ image }}@3x.jxl 3x,
+          /images/jxl/{{ image }}@2x.jxl 2x,
+          /images/jxl/{{ image }}.jxl 1x
+        '
+        type='image/jxl'
+      >
+      <source
+        srcset='
           /images/avif/{{ image }}@4x.avif 4x,
           /images/avif/{{ image }}@3x.avif 3x,
           /images/avif/{{ image }}@2x.avif 2x,

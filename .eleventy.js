@@ -4,7 +4,7 @@ const updateTags = require('./src/filters/update-tags.js');
 const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
 
-module.exports = config => {
+module.exports = async function (config) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
   // Set directories to pass through to the dist folder
@@ -44,6 +44,9 @@ module.exports = config => {
 
     return content;
   });
+  // Ability to automatically add an ID addtribute to headings
+  const { IdAttributePlugin } = await import("@11ty/eleventy");
+	config.addPlugin(IdAttributePlugin);
 
   return {
     markdownTemplateEngine: 'njk',

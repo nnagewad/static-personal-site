@@ -1,3 +1,6 @@
+@use "sass:math";
+@use "spacing-mixins";
+
 body,
 .font-size-3,
 .font-size-2,
@@ -31,7 +34,7 @@ h3 {
 .font-size-2,
 .font-size-1 {
   line-height: 1.3;
-  @include bottom-2(margin);
+  @include spacing-mixins.bottom-2(margin);
 }
 
 .font-size-3,
@@ -66,16 +69,16 @@ h3 {
 }
 
 p {
-  @include bottom-4(margin);
+  @include spacing-mixins.bottom-4(margin);
 }
 
 a {
   text-underline-offset: 0.3125em;
-  text-decoration-thickness: max(1px, 0.0625rem);
+  text-decoration-thickness: math.max(0.0625rem);
   @media (hover: hover) {
     &:hover,
     &[aria-current=page] {
-      text-decoration-thickness: max(3px, 0.1875rem, 0.12em);
+      text-decoration-thickness: math.max(0.188rem);
       text-decoration-skip-ink: none;
     }
   }
@@ -87,7 +90,7 @@ a {
 
 .title-spacing,
 .lead-paragraph {
-  @include bottom-9(margin);
+  @include spacing-mixins.bottom-9(margin);
 }
 
 .headline-caption {
@@ -96,12 +99,12 @@ a {
 
 .medium-post {  
   img {
-    @include bottom-1(margin);
+    @include spacing-mixins.bottom-1(margin);
   }
 
   blockquote,
   figure {
-    @include bottom-6(margin);
+    @include spacing-mixins.bottom-6(margin);
   }
 
   ol {
@@ -113,12 +116,12 @@ a {
 }
 
 .meta-information > * {
-  @include bottom-1(margin);
+  @include spacing-mixins.bottom-1(margin);
 }
 
 footer {
   p {
-    @include bottom-1(margin);
+    @include spacing-mixins.bottom-1(margin);
     line-height: 1.125;
   }
 }
@@ -131,15 +134,15 @@ ul {
 
 ul li,
 ol li {
-  @include bottom-3(margin);
+  @include spacing-mixins.bottom-3(margin);
 }
 
 .list-extra-spaced {
   .font-size-1 {
-    @include bottom-1(margin);
+    @include spacing-mixins.bottom-1(margin);
   }
   & > li {
-    @include bottom-5(margin);
+    @include spacing-mixins.bottom-5(margin);
   }
 }
 

@@ -1,18 +1,21 @@
+@use "borders-mixins";
+@use "spacing-mixins";
+
 header {
-  @include thick-divider(bottom);
-  @include top-6(padding);
-  @include bottom-4(padding);
+  @include borders-mixins.thick-divider(bottom);
+  @include spacing-mixins.top-6(padding);
+  @include spacing-mixins.bottom-4(padding);
 }
 
 footer {
-  @include thick-divider(top);
-  @include top-6(padding);
-  @include bottom-6(padding);
+  @include borders-mixins.thick-divider(top);
+  @include spacing-mixins.top-6(padding);
+  @include spacing-mixins.bottom-6(padding);
 }
 
 main {
-  @include top-9(padding);
-  @include bottom-9(padding);
+  @include spacing-mixins.top-9(padding);
+  @include spacing-mixins.bottom-9(padding);
 }
 
 .wrapper {
@@ -42,6 +45,6 @@ main {
 }
 
 section {
-  @include top-9(margin);
-  @include bottom-9(margin);
+  @include spacing-mixins.top-9(margin);
+  @include spacing-mixins.bottom-9(margin);
 }

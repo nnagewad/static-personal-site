@@ -1,9 +1,8 @@
-@import 'reset';
-@import 'variables';
-@import 'spacing-mixins';
-@import 'borders-mixins';
-@import 'typography';
-@import 'layout';
-@import 'visually-hidden';
-@import 'skip-link';
-@import 'toggle';
+@use 'reset';
+@use 'variables';
+@use 'spacing-mixins';
+@use 'borders-mixins';
+@use 'typography';
+@use 'layout';
+@use 'skip-link';
+@use 'toggle';

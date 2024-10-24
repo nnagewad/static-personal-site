@@ -13,8 +13,8 @@ work:
   1:
     name: 'Say Yeah!'
     location: 'Toronto, Canada'
-    start: '2019-08'
-    end: '2019-11'
+    start: '2018-08'
+    end: '2018-11'
   2:
     name: 'A Million Ads'
     location: 'London, United Kingdom'

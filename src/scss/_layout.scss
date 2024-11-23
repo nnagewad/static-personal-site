@@ -29,7 +29,7 @@ main {
 
 .flex-container {
   display: flex;
-  gap: var(--spacing-4) var(--spacing-7);
+  gap: var(--spacing-4);
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-end;

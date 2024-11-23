@@ -5,9 +5,6 @@ metaDesc: 'Nikin Nagewadia is a senior interaction designer at Government Digita
 image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer working on GOV.UK at Government Digital Service'
-latest:
-  headline: '"Upgrading Whitehall Publisher to the GOV.UK Design System" presentation at Services Week 2024'
-  date: '2024-03'
 ---
 
 <p><a href='https://youtu.be/cPDBARbzGGg?si=T2SNhHE6AicbzMbZ' rel='external'>Services Week 2024: GDS Open Show and Tell</a></p>

@@ -17,9 +17,9 @@ body {
   font-family: 'Sora', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  --min-font-size: 1rem;
-  --fluid-font-size: 0.91rem + 0.43vw;
-  --max-font-size: 1.19rem;
+  --min-font-size: 1.1875rem;
+  --fluid-font-size: 1.1875rem + 0vw;
+  --max-font-size: 1.1875rem;
   line-height: 1.75;
   background: var(--color-background);
   color: var(--color-primary-text);
@@ -46,27 +46,27 @@ h3 {
 }
 
 .font-size-3 {
-  --min-font-size: 2.37rem;
-  --fluid-font-size: 1.92rem + 2.25vw;
-  --max-font-size: 3.36rem;
+  --min-font-size: 3.3572rem;
+  --fluid-font-size: 3.0615rem + 1.4786vw;
+  --max-font-size: 4.0078rem;
 }
 
 .font-size-2 {
-  --min-font-size: 1.78rem;
-  --fluid-font-size: 1.51rem + 1.36vw;
-  --max-font-size: 2.37rem;
+  --min-font-size: 2.3743rem;
+  --fluid-font-size: 2.239rem + 2.239vw;
+  --max-font-size: 2.6719rem;
 }
 
 .font-size-1 {
-  --min-font-size: 1.33rem;
-  --fluid-font-size: 1.18rem + 0.79vw;
-  --max-font-size: 1.68rem;
+  --min-font-size: 1.6791rem;
+  --fluid-font-size: 1.6327rem + 0.2321vw;
+  --max-font-size: 1.7813rem;
 }
 
 .font-size--1 {
-  --min-font-size: 0.75rem;
-  --fluid-font-size: 0.71rem + 0.20vw;
-  --max-font-size: 0.84rem;
+  --min-font-size: 1rem;
+  --fluid-font-size: 1rem + 0vw;
+  --max-font-size: 1rem;
 }
 
 p {

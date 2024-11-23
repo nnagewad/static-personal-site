@@ -15,6 +15,7 @@ body,
 
 body {
   font-family: 'Sora', sans-serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   --min-font-size: 1rem;
   --fluid-font-size: 0.91rem + 0.43vw;

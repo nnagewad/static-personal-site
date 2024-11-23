@@ -42,49 +42,45 @@
   --color-dark-blue: oklch(27.7% 0.1 249.7);
   --color-pink: oklch(85.3% 0.1 353);
   --color-dark-pink: oklch(71.1% 0.175 353);
-  // Light mode color scheme
-  --color-mode: 'light';
-  --color-background: var(--color-white);
-  --color-primary-text: var(--color-black);
-  --color-secondary-text: var(--color-dark-grey);
-  --color-link: var(--color-blue);
-  --color-hover: var(--color-dark-blue);
-  --color-active: var(--color-black);
-  --color-focus: var(--color-yellow);
-  --color-focus-text: var(--color-black);
-  --color-focus-border: var(--color-black);
-  --color-border: var(--color-black);
-  --color-button: var(--color-link);
-  --color-button-hover: var(--color-hover);
-  --color-button-text: var(--color-white);
-}
-
-// Dark mode color scheme
-@mixin dark-mode {
-  --color-background: var(--color-black);
-  --color-primary-text: var(--color-white);
-  --color-secondary-text: var( --color-grey);
-  --color-link: var(--color-pink);
-  --color-hover: var(--color-dark-pink);
-  --color-active: var(--color-white);
-  --color-focus: var(--color-yellow);
-  --color-focus-text: var(--color-black);
-  --color-focus-border: var(--color-black);
-  --color-border: var(--color-white);
-  --color-button: var(--color-link);
-  --color-button-hover: var(--color-hover);
-  --color-button-text: var(--color-black);
+  // Color scheme
+  color-scheme: light dark;
+  --color-background: light-dark(var(--color-white), var(--color-black));
+  --color-primary-text: light-dark(var(--color-black), var(--color-white));
+  --color-secondary-text: light-dark(var(--color-dark-grey), var( --color-grey));
+  --color-link: light-dark(var(--color-blue), var(--color-pink));
+  --color-hover: light-dark(var(--color-dark-blue), var(--color-dark-pink));
+  --color-active: light-dark(var(--color-black), var(--color-white));
+  --color-focus: light-dark(var(--color-yellow), var(--color-yellow));
+  --color-focus-text: light-dark(var(--color-black), var(--color-black));
+  --color-focus-border: light-dark(var(--color-black), var(--color-black));
+  --color-border: light-dark(var(--color-black), var(--color-white));
+  --color-button: light-dark(var(--color-link), var(--color-link));
+  --color-button-hover: light-dark(var(--color-hover), var(--color-hover));
+  --color-button-text: light-dark(var(--color-white), var(--color-black));
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-mode: 'dark';
+    color-scheme: dark;
   }
   :root:not([data-user-color-scheme]) {
-    @include dark-mode;
+    color-scheme: dark;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color-scheme: light;
+  }
+  :root:not([data-user-color-scheme]) {
+    color-scheme: light;
   }
 }
 
 [data-user-color-scheme='dark'] {
-  @include dark-mode;
+  color-scheme: dark;
+}
+
+[data-user-color-scheme='light'] {
+  color-scheme: light;
 }

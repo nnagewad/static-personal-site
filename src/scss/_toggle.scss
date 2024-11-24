@@ -13,7 +13,7 @@
   height: var(--pixel-40);
   min-width: 11.5em;
   max-width: 100%;
-  color: var(color-primary-text);
+  color: var(--color-primary-text);
   &:focus {
     outline: var(--border-thin) solid var(--color-focus);
   }

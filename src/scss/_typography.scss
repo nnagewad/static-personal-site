@@ -16,7 +16,7 @@ body,
 body {
   font-family: 'Sora', sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: var(--font-weight-standard);
   --min-font-size: 1.1875rem;
   --fluid-font-size: 1.1875rem + 0vw;
   --max-font-size: 1.1875rem;

@@ -1,14 +1,15 @@
 {% from 'macros/tags.html' import tags %}
 {% from 'macros/displayDate.html' import mediumDate %}
 
+<h2 class='font-size-2'>Independent case studies</h2>
 <ul class='list-extra-spaced'>
   {% for post in collections.posts %}
-  <li>
-    <h3 class='font-size-1'><a href='{{ post.url }}'>{{ post.data.title }}</a></h3>
-    <div class='meta-information'>
-      {{ mediumDate("Published:", post.data.pubDate) }}
-      {{ tags(post.data.categories) }}
-    </div>
-  </li>
+    <li>
+      <h3 class='font-size-1'><a href='{{ post.url }}'>{{ post.data.title }}</a></h3>
+      <div class='meta-information'>
+        {{ mediumDate("Published:", post.data.pubDate) }}
+        {{ tags(post.data.categories) }}
+      </div>
+    </li>
   {% endfor %}
 </ul>

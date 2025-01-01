@@ -5,7 +5,7 @@ metaDesc: 'Nikin Nagewadia is a senior interaction designer at Government Digita
 image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer employed by the Government Digital Service, working on GOV.UK'
-publication_presentation:
+articles_videos:
   0:
     name: 'Starting as a designer in government when you’re working from home'
     url: 'https://designnotes.blog.gov.uk/2021/02/15/starting-as-a-designer-in-government-when-youre-working-from-home/'

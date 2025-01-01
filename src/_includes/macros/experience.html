@@ -3,7 +3,7 @@
   <ul class='list-extra-spaced'>
     {% for i in range(0, list | length) | reverse %}
     <li>
-      <h3 class='font-size-1'>{{ list[i].name }}</h3>
+      {{ list[i].name }}
       <div class="meta-information">
         <p>
           <span class='visually-hidden'>Based in</span>

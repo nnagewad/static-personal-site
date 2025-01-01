@@ -43,10 +43,6 @@ main {
   grid-template-columns: minmax(auto, calc(var(--wrapper-width)*3/4));
 }
 
-.site-head-brand {
-  min-height: 4.59rem;
-}
-
 section {
   @include spacing-mixins.top-9(margin);
   @include spacing-mixins.bottom-9(margin);

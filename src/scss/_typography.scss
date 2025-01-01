@@ -1,28 +1,16 @@
 @use "sass:math";
 @use "spacing-mixins";
 
-body,
 .font-size-3,
 .font-size-2,
 .font-size-1,
+.font-size-0,
 .font-size--1 {
   font-size: clamp(
     var(--min-font-size),
     calc(var(--fluid-font-size)),
     var(--max-font-size)
   );
-}
-
-body {
-  font-family: 'Sora', sans-serif;
-  font-optical-sizing: auto;
-  font-weight: var(--font-weight-standard);
-  --min-font-size: 1.1875rem;
-  --fluid-font-size: 1.1875rem + 0vw;
-  --max-font-size: 1.1875rem;
-  line-height: 1.75;
-  background: var(--color-background);
-  color: var(--color-primary-text);
 }
 
 h1,
@@ -63,10 +51,26 @@ h3 {
   --max-font-size: 1.7813rem;
 }
 
+.font-size-0 {
+  font-weight: var(--font-weight-standard);
+  --min-font-size: 1.1875rem;
+  --fluid-font-size: 1.1875rem + 0vw;
+  --max-font-size: 1.1875rem;
+}
+
 .font-size--1 {
   --min-font-size: 0.7917rem;
   --fluid-font-size: 0.8659rem + -0.116vw;
   --max-font-size: 0.8398rem;
+}
+
+body {
+  font-family: 'Sora', sans-serif;
+  font-optical-sizing: auto;
+  @extend .font-size-0;
+  line-height: 1.75;
+  background: var(--color-background);
+  color: var(--color-primary-text);
 }
 
 p {

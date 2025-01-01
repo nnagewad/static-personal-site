@@ -5,8 +5,8 @@
 <p>A compilation of case studies that I have independently published:</p>
 <ul class='list-extra-spaced'>
   {% for post in collections.posts %}
-    <li>
-      <h3 class='font-size-1'><a href='{{ post.url }}'>{{ post.data.title }}</a></h3>
+    <li class='balance-textwrap'>
+      <a href='{{ post.url }}'>{{ post.data.title }}</a>
       <div class='meta-information'>
         {{ mediumDate("Published:", post.data.pubDate) }}
         {{ tags(post.data.categories) }}

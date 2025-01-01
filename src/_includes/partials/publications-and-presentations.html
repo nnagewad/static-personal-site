@@ -4,8 +4,8 @@
 <p>A curated collection of published articles and videos documenting my speaking engagements:</p>
 <ul class='list-extra-spaced'>
   {% for i in range(0, articles_videos | length) | reverse %}
-    <li>
-      <h3 class='font-size-1'><a href='{{ articles_videos[i].url }}' rel='external' target='_blank'>{{ articles_videos[i].name }} <span class='font-size-0'>(opens in a new tab)</span></a></h3>
+    <li class='balance-textwrap'>
+      <a href='{{ articles_videos[i].url }}' rel='external' target='_blank'>{{ articles_videos[i].name }} (opens in a new tab)</a>
       <div class="meta-information">
         {{ date("Uploaded:", articles_videos[i].upload) }}
         {% if articles_videos[i].publication %}

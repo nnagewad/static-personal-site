@@ -1,0 +1,25 @@
+{% from 'macros/displayDate.html' import date %}
+
+<h2 class='font-size-2'>Articles and videos</h2>
+<p>A curated collection of published articles and videos documenting my speaking engagements:</p>
+<ul class='list-extra-spaced'>
+  {% for i in range(0, publication_presentation | length) | reverse %}
+    <li>
+      <h3 class='font-size-1'><a href='{{ publication_presentation[i].url }}' rel='external' target='_blank'>{{ publication_presentation[i].name }}</a></h3><span class='visually-hidden'>(opens in a new tab)</span>
+      <div class="meta-information">
+        {{ date("Uploaded:", publication_presentation[i].upload) }}
+        {% if publication_presentation[i].publication %}
+          <p>
+            <span>Online publication:</span>
+            <span class='capitalize'>{{ publication_presentation[i].publication }}</span>
+          </p>
+        {% elif publication_presentation[i].video %}
+          <p>
+            <span>Online video:</span>
+            <span class='capitalize'>{{ publication_presentation[i].video }}</span>
+          </p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

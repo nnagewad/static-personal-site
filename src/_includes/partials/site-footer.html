@@ -1,7 +1,21 @@
-<footer role='contentinfo' class='wrapper flex-container vertical-align-center'>
+<footer role='contentinfo' class='wrapper flex-container'>
   {% include 'partials/switch.html' %}
-  <div class="footer-content">
-    <p><small class='font-size--1 meta-information'>Designed and built by Nikin Nagewadia</small></p>
-    <p><small class='font-size--1 meta-information'>Last update: <time datetime='{{ helpers.builtAtISO }}'>{{ helpers.builtAtString }}</time></small></p>
+  <ul class='horizontal-list'>
+    <li>
+      <a href='https://github.com/nnagewad' rel='external' target='_blank'>
+        <span class='visually-hidden'>Nikin Nagewadia's GitHub profile</span>
+        {% include 'icons/github.svg' %}
+      </a>
+    </li>
+    <li>
+      <a href='https://www.linkedin.com/in/nikinnagewadia/' rel='external' target='_blank'>
+        <span class='visually-hidden'>Nikin Nagewadia's LinkedIn profile</span>
+        {% include 'icons/linked.svg' %}
+      </a>
+    </li>
+  </ul>
+  <div class='site-info visually-hidden'>
+    <p><small class='font-size--1 meta-information'>Website was designed and built by Nikin Nagewadia</small></p>
+    <p><small class='font-size--1 meta-information'>Last update made on: <time datetime='{{ helpers.builtAtISO }}'>{{ helpers.builtAtString }}</time></small></p>
   </div>
 </footer>

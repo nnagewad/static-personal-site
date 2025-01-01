@@ -29,17 +29,13 @@ main {
 
 .flex-container {
   display: flex;
-  gap: var(--spacing-4) var(--spacing-6);
+  gap: var(--spacing-6);
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .vertical-align-bottom {
   align-items: flex-end;
-}
-
-.vertical-align-center {
-  align-items: center;
 }
 
 .grid-container {

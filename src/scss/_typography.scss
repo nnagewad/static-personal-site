@@ -217,7 +217,7 @@ a {
   --focus-background: -0.125rem;
 }
 
-.nav-list {
+.horizontal-list {
   @extend .list-horizontal;
   gap: 0 var(--spacing-7);
   font-weight: var(--font-weight-bold);

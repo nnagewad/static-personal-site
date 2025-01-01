@@ -38,10 +38,6 @@ main {
   align-items: flex-end;
 }
 
-.vertical-align-center {
-  align-items: center;
-}
-
 .grid-container {
   display: grid;
   grid-template-columns: minmax(auto, calc(var(--wrapper-width)*3/4));

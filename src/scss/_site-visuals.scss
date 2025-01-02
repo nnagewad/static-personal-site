@@ -7,3 +7,9 @@
     height: var(--pixel-60);
     width: auto;
 }
+
+.social-icon {
+  &:focus {
+    --focus-background: -1.5rem;
+  }
+}

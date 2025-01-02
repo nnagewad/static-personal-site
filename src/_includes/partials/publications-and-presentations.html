@@ -5,7 +5,7 @@
 <ul class='list-extra-spaced'>
   {% for i in range(0, articles_videos | length) | reverse %}
     <li class='balance-textwrap'>
-      <a href='{{ articles_videos[i].url }}' rel='external' target='_blank'>{{ articles_videos[i].name }} (opens in a new tab)</a>
+      <a href='{{ articles_videos[i].url }}' rel='noopener noreferrer' target='_blank'>{{ articles_videos[i].name }} (opens in a new tab)</a>
       <div class="meta-information">
         {{ date("Uploaded:", articles_videos[i].upload) }}
         {% if articles_videos[i].publication %}

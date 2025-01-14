@@ -26,8 +26,14 @@ work:
     start: '2020-08'
 ---
 
-<p>Although he graduated with a degree in film studies, Nikin’s interest in technology and design led him to a career in UX design. From Freshbooks to Say Yeah!, Nikin helped craft interfaces and front-end code that balanced business and user objectives.</p>
+<p>Hello, I’m Nikin, a senior interaction designer with over 10+ years of experience designing products and services.</p>
 
-<p>Having spent all his life in Canada, Nikin moved to London, United Kingdom in spring 2019 where he’s now focused on supporting the Government Digital Service as a senior interaction designer.</p>
+<p>Throughout my career I’ve obtained the following skills to help me navigate and wrangle through complex and ambiguous problem spaces:</p>
+<ul class="bullet">
+  <li>By applying strategic-thinking with a growth mindset.</li>
+  <li>Facilitating inclusive workshops attended by members within a multi-disciplinary agile team.</li>
+  <li>Designing user-interfaces that are inclusive and accessible to all users using software like Figma.</li>
+  <li>Using HTML, CSS and Javascript to develop interactive prototypes to be used during user-testing sessions.</li>
+</ul>
 
-<p>Aside from his day-to-day work, Nikin is an avid photographer, aiming to capture the everyday as cinematic.</p>
+<p>I strongly believe by collaborating with other designers, researchers, developers and product leaders will lead to a solution that complies with users and their needs, is technically feasible to implement, and that aligns with the organization’s current and long-term strategy.</p>

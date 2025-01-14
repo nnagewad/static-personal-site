@@ -1,5 +1,6 @@
-{% macro experience(title, list) %}
+{% macro experience(title, lead, list) %}
   <h2 class='font-size-2'>{{ title }}</h2>
+  <p>{{ lead }}</p>
   <ul class='list-extra-spaced'>
     {% for i in range(0, list | length) | reverse %}
     <li>

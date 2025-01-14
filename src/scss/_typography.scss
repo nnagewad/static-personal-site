@@ -130,6 +130,10 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+  &.bullet {
+    list-style-type: disc;
+    padding-left: var(--spacing-4);
+  }
 }
 
 ul li,

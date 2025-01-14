@@ -44,6 +44,6 @@ main {
 }
 
 section {
-  @include spacing-mixins.top-9(margin);
-  @include spacing-mixins.bottom-9(margin);
+  @include spacing-mixins.top-6(margin);
+  @include spacing-mixins.bottom-6(margin);
 }

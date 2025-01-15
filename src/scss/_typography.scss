@@ -127,15 +127,21 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  &.bullet {
-    list-style-type: disc;
-    padding-left: var(--spacing-4);
-  }
+}
+
+.about-me > ul {
+  list-style-type: disc;
+  padding-left: var(--spacing-4);
+  margin-bottom: var(--spacing-4)
 }
 
 ul li,
 ol li {
   @include spacing-mixins.bottom-3(margin);
+}
+
+.list-lead-in {
+  margin-bottom: var(--spacing-1);
 }
 
 .list-extra-spaced {

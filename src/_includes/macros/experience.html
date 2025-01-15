@@ -1,17 +1,21 @@
-{% macro experience(title, lead, list) %}
+{% macro experience(title, list) %}
   <h2 class='font-size-2'>{{ title }}</h2>
-  <p>{{ lead }}</p>
   <ul class='list-extra-spaced'>
     {% for i in range(0, list | length) | reverse %}
     <li>
-      {{ list[i].name }}
+      <span class='visually-hidden'>Job title:</span>
+      {{ list[i].jobTitle }}
       <div class="meta-information">
         <p>
-          <span class='visually-hidden'>Based in</span>
+          <span class='visually-hidden'>at</span>
+          <span class='capitalize'>{{ list[i].organization }}</span>
+        </p>
+        <p>
+          <span class='visually-hidden'>based in</span>
           <span class='capitalize'>{{ list[i].location }}</span>
         </p>
         <p>
-          <span class='visually-hidden'>From</span>
+          <span class='visually-hidden'>from</span>
           <time datetime='{{ list[i].start }}' class='capitalize'>{{ list[i].start | date }}</time>
           <span class='visually-hidden'>to</span>
           {% if list[i].end %}

@@ -4,11 +4,11 @@
 {% block content %}
   <h1 class='font-size-3 title-spacing'>{{ title }}</h1>
 
-  <section>
+  <section class="about-me">
     {{ content | safe }}
   </section>
 
   <section>
-    {{ experience("Employers", "A list of current and past employers:", work) }}
+    {{ experience("My work experience", work) }}
   </section>
 {% endblock %}

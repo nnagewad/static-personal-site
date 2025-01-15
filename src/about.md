@@ -6,24 +6,34 @@ image: about
 imageAltText: 'A 3D emoji of Nikin Nagewadia with a big smile on his face.'
 work:
   0:
-    name: 'Freshbooks'
+    organization: 'Freshbooks'
+    jobTitle: 'Frontend Developer'
     location: 'Toronto, Canada'
     start: '2015-05'
     end: '2018-03'
   1:
-    name: 'Say Yeah!'
+    organization: 'Say Yeah!'
+    jobTitle: 'UX/UI Designer + Developer on a contract'
     location: 'Toronto, Canada'
     start: '2018-08'
     end: '2018-11'
   2:
-    name: 'A Million Ads'
+    organization: 'A Million Ads'
+    jobTitle: 'User Experience Designer'
     location: 'London, United Kingdom'
     start: '2019-06'
     end: '2020-08'
   3:
-    name: 'Government Digital Service'
+    organization: 'Government Digital Service'
+    jobTitle: 'Interaction Designer'
     location: 'London, United Kingdom'
     start: '2020-08'
+    end: '2022-02'
+  4:
+    organization: 'Government Digital Service'
+    jobTitle: 'Senior Interaction Designer'
+    location: 'London, United Kingdom'
+    start: '2022-02'
 ---
 Hello, I’m Nikin, a senior interaction designer with over 10+ years of experience designing products and services.
 

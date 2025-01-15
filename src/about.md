@@ -36,4 +36,4 @@ work:
   <li>Using HTML, CSS and Javascript to develop interactive prototypes to be used during user-testing sessions.</li>
 </ul>
 
-<p>I strongly believe that collaborating with other designers, researchers, developers and product leaders will lead to a solution that complies with users and their needs, is technically feasible to implement, and that aligns with the organization’s current and long-term strategy.</p>
+<p>I strongly believe that collaborating with other designers, researchers, developers and product leaders will lead to a solution that complies with user needs, is technically feasible to implement, and that aligns with the organization’s current and long-term strategy.</p>

@@ -31,7 +31,7 @@ work:
 <p>In order to navigate and wrangle through complex and ambiguous problem spaces:</p>
 <ul class="bullet">
   <li>I apply strategic-thinking with a growth mindset.</li>
-  <li>I Facilitate inclusive workshops attended by members within a multi-disciplinary agile team.</li>
+  <li>I facilitate inclusive workshops attended by members within a multi-disciplinary agile team.</li>
   <li>I design inclusive and accessible user-interfaces via Figma.</li>
   <li>I develop interactive prototypes using HTML, CSS and Javascript when testing our hypothesis with our end-users.</li>
 </ul>

@@ -140,6 +140,10 @@ ol li {
   @include spacing-mixins.bottom-3(margin);
 }
 
+.list-lead-in {
+  margin-bottom: 0;
+}
+
 .list-extra-spaced {
   .font-size-1 {
     @include spacing-mixins.bottom-1(margin);

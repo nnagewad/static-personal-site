@@ -42,7 +42,7 @@ Hello, I’m Nikin, a senior interaction designer with over 10+ years of experie
 - I apply strategic-thinking with a growth mindset.
 - I facilitate inclusive workshops attended by members within a 
 multi-disciplinary agile team.
-- I design inclusive and accessible user-interfaces via Figma.
+- I design inclusive and accessible components and user-interfaces in Figma.
 - I develop interactive prototypes using HTML, CSS and Javascript when testing our hypothesis with our end-users.
 
 I strongly believe that collaborating with other designers, researchers, developers and product leaders will lead to a solution that complies with user needs, is technically feasible to implement, and that aligns with the organization’s current and long-term strategy.

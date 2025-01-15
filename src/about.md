@@ -25,15 +25,14 @@ work:
     location: 'London, United Kingdom'
     start: '2020-08'
 ---
+Hello, I’m Nikin, a senior interaction designer with over 10+ years of experience designing products and services.
 
-<p>Hello, I’m Nikin, a senior interaction designer with over 10+ years of experience designing products and services.</p>
+<p class="list-lead-in">In order to navigate and wrangle through complex and ambiguous problem spaces:</p>
 
-<p>In order to navigate and wrangle through complex and ambiguous problem spaces:</p>
-<ul class="bullet">
-  <li>I apply strategic-thinking with a growth mindset.</li>
-  <li>I facilitate inclusive workshops attended by members within a multi-disciplinary agile team.</li>
-  <li>I design inclusive and accessible user-interfaces via Figma.</li>
-  <li>I develop interactive prototypes using HTML, CSS and Javascript when testing our hypothesis with our end-users.</li>
-</ul>
+- I apply strategic-thinking with a growth mindset.
+- I facilitate inclusive workshops attended by members within a 
+multi-disciplinary agile team.
+- I design inclusive and accessible user-interfaces via Figma.
+- I develop interactive prototypes using HTML, CSS and Javascript when testing our hypothesis with our end-users.
 
-<p>I strongly believe that collaborating with other designers, researchers, developers and product leaders will lead to a solution that complies with user needs, is technically feasible to implement, and that aligns with the organization’s current and long-term strategy.</p>
+I strongly believe that collaborating with other designers, researchers, developers and product leaders will lead to a solution that complies with user needs, is technically feasible to implement, and that aligns with the organization’s current and long-term strategy.

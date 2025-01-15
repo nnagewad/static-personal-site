@@ -28,7 +28,7 @@ work:
 
 <p>Hello, I’m Nikin, a senior interaction designer with over 10+ years of experience designing products and services.</p>
 
-<p>Throughout my career I’ve obtained the following skills to help me navigate and wrangle through complex and ambiguous problem spaces:</p>
+<p>Throughout my career I apply the following skills to help me navigate and wrangle through complex and ambiguous problem spaces:</p>
 <ul class="bullet">
   <li>By applying strategic-thinking with a growth mindset.</li>
   <li>Facilitating inclusive workshops attended by members within a multi-disciplinary agile team.</li>

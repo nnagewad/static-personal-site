@@ -35,14 +35,14 @@ work:
     location: 'London, United Kingdom'
     start: '2022-02'
 ---
-My name is Nikin, I am a senior interaction designer with over 10+ years of experience designing products and services. I am interested in designing efficient and modular systems that are inclusive and accessible to all users.
+My name is Nikin. I am a senior interaction designer with over 10 years of experience designing products and services. I am interested in designing efficient, modular systems that are inclusive and accessible to all users.
 
-<p class="list-lead-in">In order for me to navigate and wrangle through complex and ambiguous problem spaces:</p>
+<p class="list-lead-in">For me to navigate and wrangle through complex and ambiguous problem spaces:</p>
 
-- I apply strategic-thinking with a growth mindset, while thinking about the impact it will have to the system itself.
+- I apply strategic thinking with a growth and future-thinking mindset while considering the impact it will have on the system itself.
 - I utilize storytelling methodology to engage colleagues and senior leaders in the problem space I'm currently exploring.
-- I facilitate inclusive design-centric workshops attended by members within a multi-disciplinary agile team.
-- I craft sustainable and scalable components and user-interfaces in Figma that are designed with inclusivity and accessibility in mind.
-- I develop interactive prototypes using HTML, CSS and Javascript when testing our hypothesis with our end-users.
+- I facilitate inclusive design-centric workshops attended by members of a multi-disciplinary agile team.
+- I design sustainable and scalable components and user interfaces in Figma with inclusivity and accessibility in mind.
+- I develop interactive prototypes using HTML, CSS, and Javascript when testing our hypothesis with our end-users.
 
-I strongly believe through iterating as well as collaborating with other designers, researchers, developers and product leaders will lead to a designed solution that complies with user needs, is technically feasible to implement; and lastly, aligns with the organization’s current and long-term strategy.
+I strongly believe that iterating as well as collaborating with other designers, researchers, data specialists, developers, and product leaders will lead to a solution that complies with user needs, is scalable and sustainable to implement; and lastly, aligns with the organization’s current and long-term strategy.

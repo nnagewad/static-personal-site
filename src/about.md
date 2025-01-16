@@ -40,7 +40,8 @@ My name is Nikin, I am a senior interaction designer with over 10+ years of expe
 <p class="list-lead-in">In order for me to navigate and wrangle through complex and ambiguous problem spaces:</p>
 
 - I apply strategic-thinking with a growth mindset, while thinking about the impact it will have to the system itself.
-- I facilitate inclusive design workshops attended by members within a multi-disciplinary agile team
+- I utilize storytelling methodology to engage colleagues and senior leaders in the problem space I'm currently exploring.
+- I facilitate inclusive design-centric workshops attended by members within a multi-disciplinary agile team.
 - I design inclusive and accessible components and user-interfaces in Figma.
 - I develop interactive prototypes using HTML, CSS and Javascript when testing our hypothesis with our end-users.
 

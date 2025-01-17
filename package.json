@@ -4,8 +4,8 @@
   "description": "Portfolio website for Nikin Nagewadia",
   "main": ".eleventy.js",
   "scripts": {
-    "watch:sass": "sass --watch src/scss:dist/css --style=compressed",
-    "build:sass": "sass src/scss:dist/css --style=compressed",
+    "watch:sass": "sass --watch src/scss:_site/css --style=compressed",
+    "build:sass": "sass src/scss:_site/css --style=compressed",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
     "start": "concurrently \"npm run build:sass\" \"npm run watch:*\"",

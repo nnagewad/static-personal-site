@@ -15,7 +15,7 @@ module.exports = async function (config) {
   config.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
   config.setServerOptions({
-    watch: ['./dist/css/**/*.css'],
+    watch: ['./_site/css/**/*.css'],
   });
   // Inline JS
   config.addNunjucksAsyncFilter("jsmin", async function (

@@ -1,6 +1,6 @@
-const utcFormatter = require('./src/filters/utc-formatter.js');
-const dateFormatter = require('./src/filters/date-formatter.js');
-const updateTags = require('./src/filters/update-tags.js');
+const utcFormatter = require('./src/_filters/utc-formatter.js');
+const dateFormatter = require('./src/_filters/date-formatter.js');
+const updateTags = require('./src/_filters/update-tags.js');
 const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
 
@@ -15,7 +15,7 @@ module.exports = async function (config) {
   config.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
   config.setServerOptions({
-    watch: ['./dist/css/**/*.css'],
+    watch: ['./_site/css/**/*.css'],
   });
   // Inline JS
   config.addNunjucksAsyncFilter("jsmin", async function (
@@ -54,7 +54,6 @@ module.exports = async function (config) {
     htmlTemplateEngine: 'njk',
     dir: {
       input: 'src',
-      output: 'dist',
       includes: '_includes'
     }
   };

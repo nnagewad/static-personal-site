@@ -47,6 +47,18 @@ module.exports = async function (config) {
   // Ability to automatically add an ID addtribute to headings
   const { IdAttributePlugin } = await import("@11ty/eleventy");
 	config.addPlugin(IdAttributePlugin);
+  // Using Eleventy Image Plugin
+  config.addPlugin(eleventyImageTransformPlugin, {
+    formats: ['avif', 'webp', 'auto'],
+    widths: ['auto'],
+    htmlOptions: {
+			imgAttributes: {
+				loading: 'lazy',
+				decoding: 'async',
+			},
+			pictureAttributes: {}
+		},
+  });
 
   return {
     markdownTemplateEngine: 'njk',

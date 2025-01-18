@@ -9,7 +9,7 @@ module.exports = async function (config) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   config.setUseGitIgnore(false);
   // Set directories to pass through to the dist folder
-  config.addPassthroughCopy('./src/images/meta-tags');
+  config.addPassthroughCopy('./src/img/meta-tags');
   // Add filters
   config.addFilter('utc', utcFormatter);
   config.addFilter('date', dateFormatter);

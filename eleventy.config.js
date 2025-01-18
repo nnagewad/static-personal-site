@@ -5,21 +5,21 @@ const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
 const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
 
-module.exports = async function (config) {
+module.exports = async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
-  config.setUseGitIgnore(false);
+  eleventyConfig.setUseGitIgnore(false);
   // Set directories to pass through to the dist folder
-  config.addPassthroughCopy('./src/img/meta-tags');
+  eleventyConfig.addPassthroughCopy('./src/img/meta-tags');
   // Add filters
-  config.addFilter('utc', utcFormatter);
-  config.addFilter('date', dateFormatter);
-  config.addFilter('updateTags', updateTags);
+  eleventyConfig.addFilter('utc', utcFormatter);
+  eleventyConfig.addFilter('date', dateFormatter);
+  eleventyConfig.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
-  config.setServerOptions({
+  eleventyConfig.setServerOptions({
     watch: ['./_site/css/**/*.css'],
   });
   // Inline JS
-  config.addNunjucksAsyncFilter('jsmin', async function (
+  eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
     code,
     callback
   ) {
@@ -32,7 +32,7 @@ module.exports = async function (config) {
       callback(null, code);
     }
   });
-  config.addTransform('htmlmin', function(content, outputPath) {
+  eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
     if( outputPath && outputPath.endsWith('.html') ) {
       let minified = htmlmin.minify(content, {
@@ -47,9 +47,9 @@ module.exports = async function (config) {
   });
   // Ability to automatically add an ID addtribute to headings
   const { IdAttributePlugin } = await import('@11ty/eleventy');
-	config.addPlugin(IdAttributePlugin);
+	eleventyConfig.addPlugin(IdAttributePlugin);
   // Using Eleventy Image Plugin
-  config.addPlugin(eleventyImageTransformPlugin, {
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ['avif', 'webp', 'auto'],
     widths: ['auto'],
     htmlOptions: {

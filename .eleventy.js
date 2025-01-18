@@ -3,6 +3,7 @@ const dateFormatter = require('./src/_filters/date-formatter.js');
 const updateTags = require('./src/_filters/update-tags.js');
 const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
+const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
 
 module.exports = async function (config) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

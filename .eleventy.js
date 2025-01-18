@@ -53,12 +53,12 @@ module.exports = async function (config) {
     formats: ['avif', 'webp', 'auto'],
     widths: ['auto'],
     htmlOptions: {
-			imgAttributes: {
-				loading: 'lazy',
-				decoding: 'async',
-			},
-			pictureAttributes: {}
-		},
+      imgAttributes: {
+        loading: 'lazy',
+        decoding: 'async',
+      },
+      pictureAttributes: {}
+    },
   });
 
   return {

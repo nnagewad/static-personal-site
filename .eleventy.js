@@ -19,7 +19,7 @@ module.exports = async function (config) {
     watch: ['./_site/css/**/*.css'],
   });
   // Inline JS
-  config.addNunjucksAsyncFilter("jsmin", async function (
+  config.addNunjucksAsyncFilter('jsmin', async function (
     code,
     callback
   ) {
@@ -27,14 +27,14 @@ module.exports = async function (config) {
       const minified = await minify(code);
       callback(null, minified.code);
     } catch (err) {
-      console.error("Terser error: ", err);
+      console.error('Terser error: ', err);
       // Fail gracefully.
       callback(null, code);
     }
   });
-  config.addTransform("htmlmin", function(content, outputPath) {
+  config.addTransform('htmlmin', function(content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
-    if( outputPath && outputPath.endsWith(".html") ) {
+    if( outputPath && outputPath.endsWith('.html') ) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
@@ -46,7 +46,7 @@ module.exports = async function (config) {
     return content;
   });
   // Ability to automatically add an ID addtribute to headings
-  const { IdAttributePlugin } = await import("@11ty/eleventy");
+  const { IdAttributePlugin } = await import('@11ty/eleventy');
 	config.addPlugin(IdAttributePlugin);
   // Using Eleventy Image Plugin
   config.addPlugin(eleventyImageTransformPlugin, {

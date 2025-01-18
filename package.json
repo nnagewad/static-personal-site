@@ -2,7 +2,7 @@
   "name": "nikin.design",
   "version": "4.0.0",
   "description": "Portfolio website for Nikin Nagewadia",
-  "main": ".eleventy.js",
+  "main": "eleventy.config.js",
   "scripts": {
     "watch:sass": "sass --watch src/scss:_site/css --style=compressed",
     "build:sass": "sass src/scss:_site/css --style=compressed",

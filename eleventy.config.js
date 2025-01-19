@@ -73,13 +73,13 @@ module.exports = async function(eleventyConfig) {
       limit: 0,
     },
     metadata: {
-    language: 'en',
-    title: 'Nikin\'s case studies',
-    subtitle: 'A collection of self-published case studies',
-    base: 'https://nikin.design',
-    author: {
-      name: 'Nikin Nagewadia'
-    }
+      language: 'en',
+      title: 'Nikin\'s case studies',
+      subtitle: 'A collection of self-published case studies',
+      base: 'https://nikin.design',
+      author: {
+        name: 'Nikin Nagewadia'
+      }
     }
   });
 

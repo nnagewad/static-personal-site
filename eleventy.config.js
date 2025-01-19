@@ -74,7 +74,7 @@ module.exports = async function(eleventyConfig) {
 		},
     metadata: {
 			language: 'en',
-			title: 'Self-published case studies',
+			title: 'Nikin\'s case studies',
 			subtitle: 'A collection of self-published case studies',
 			base: 'https://nikin.design',
 			author: {

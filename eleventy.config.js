@@ -67,20 +67,20 @@ module.exports = async function(eleventyConfig) {
   // Using ELeventy RSS Plugin
   eleventyConfig.addPlugin(feedPlugin, {
     type: 'atom',
-		outputPath: '/feed.xml',
-		collection: {
-			name: 'posts',
-			limit: 0,
-		},
+    outputPath: '/feed.xml',
+    collection: {
+      name: 'posts',
+      limit: 0,
+    },
     metadata: {
-			language: 'en',
-			title: 'Nikin\'s case studies',
-			subtitle: 'A collection of self-published case studies',
-			base: 'https://nikin.design',
-			author: {
-				name: 'Nikin Nagewadia'
-			}
-		}
+    language: 'en',
+    title: 'Nikin\'s case studies',
+    subtitle: 'A collection of self-published case studies',
+    base: 'https://nikin.design',
+    author: {
+      name: 'Nikin Nagewadia'
+    }
+    }
   });
 
   return {

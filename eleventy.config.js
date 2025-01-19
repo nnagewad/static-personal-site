@@ -1,9 +1,11 @@
 const utcFormatter = require('./src/_filters/utc-formatter.js');
 const dateFormatter = require('./src/_filters/date-formatter.js');
+const isoFormatter = require('./src/_filters/iso-formatter.js');
 const updateTags = require('./src/_filters/update-tags.js');
 const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
 const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
+const { feedPlugin } = require('@11ty/eleventy-plugin-rss');
 
 module.exports = async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -14,6 +16,7 @@ module.exports = async function(eleventyConfig) {
   // Add filters
   eleventyConfig.addFilter('utc', utcFormatter);
   eleventyConfig.addFilter('date', dateFormatter);
+  eleventyConfig.addFilter('iso', isoFormatter);
   eleventyConfig.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
   eleventyConfig.setServerOptions({
@@ -60,6 +63,24 @@ module.exports = async function(eleventyConfig) {
       },
       pictureAttributes: {}
     },
+  });
+  // Using ELeventy RSS Plugin
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: 'atom',
+    outputPath: '/feed.xml',
+    collection: {
+      name: 'posts',
+      limit: 0,
+    },
+    metadata: {
+      language: 'en',
+      title: 'Nikin\'s case studies',
+      subtitle: 'A collection of self-published case studies',
+      base: 'https://nikin.design',
+      author: {
+        name: 'Nikin Nagewadia'
+      }
+    }
   });
 
   return {

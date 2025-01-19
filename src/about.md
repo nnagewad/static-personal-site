@@ -4,7 +4,7 @@ title: 'About'
 metaDesc: 'Learn more about who Nikin Nagewadia is, with a short bio, and list of his past work and education experiences.'
 image: about
 imageAltText: 'A 3D emoji of Nikin Nagewadia with a big smile on his face.'
-date: Last Modified
+date: git Last Modified
 work:
   0:
     organization: 'Freshbooks'

@@ -6,7 +6,7 @@ pagination:
   alias: post
   addAllPagesToCollections: true
 tags: posts
-permalink: post/{{ post.title | slugify }}-{{ post.published | utc | iso }}/index.html
+permalink: post/{{ post.published | utc | iso }}/{{ post.title | slugify }}/index.html
 image: case-study
 imageAltText: 'A 3D emoji of Nikin Nagewadia thinking.'
 eleventyComputed:

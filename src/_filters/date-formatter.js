@@ -14,5 +14,5 @@ module.exports = value => {
     "December"
   ];
   let date = new Date(value);
-  return `${month[date.getMonth()]} ${date.getUTCFullYear()}`;
+  return `${month[date.getMonth()]} ${(date.getDate())}, ${date.getUTCFullYear()}`;
 }

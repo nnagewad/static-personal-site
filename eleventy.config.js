@@ -73,7 +73,7 @@ module.exports = async function(eleventyConfig) {
     metadata: {
 			language: 'en',
 			title: 'Nikin Nagewadia',
-			subtitle: 'Nikin Nagewadia is a senior interaction designer at Government Digital Service in London, England.',
+			subtitle: 'A collection of self-published case studies',
 			base: 'https://nikin.design',
 			author: {
 				name: 'Nikin Nagewadia'

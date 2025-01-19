@@ -4,6 +4,7 @@ const updateTags = require('./src/_filters/update-tags.js');
 const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
 const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
+const { feedPlugin } = require('@11ty/eleventy-plugin-rss');
 
 module.exports = async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -60,6 +61,24 @@ module.exports = async function(eleventyConfig) {
       },
       pictureAttributes: {}
     },
+  });
+  // Using ELeventy RSS Plugin
+  eleventyConfig.addPlugin(feedPlugin, {
+    type: 'atom',
+		outputPath: '/feed.xml',
+		collection: {
+			name: 'posts',
+			limit: 0,
+		},
+    metadata: {
+			language: 'en',
+			title: 'Nikin Nagewadia',
+			subtitle: 'Nikin Nagewadia is a senior interaction designer at Government Digital Service in London, England.',
+			base: 'https://nikin.design',
+			author: {
+				name: 'Nikin Nagewadia'
+			}
+		}
   });
 
   return {

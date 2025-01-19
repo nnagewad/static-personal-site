@@ -9,6 +9,7 @@ tags: posts
 permalink: post/{{ post.title | slugify }}/index.html
 image: case-study
 imageAltText: 'A 3D emoji of Nikin Nagewadia thinking.'
+date: git Created
 eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.published }}'

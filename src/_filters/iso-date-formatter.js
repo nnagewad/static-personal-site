@@ -14,5 +14,6 @@ module.exports = value => {
     "12"
   ];
   let date = new Date(value);
-  return `${date.getUTCFullYear()}-${month[date.getMonth()]}-${(date.getDate())}`;
+  let day = `0${(date.getDate())}`.slice(-2);
+  return `${date.getUTCFullYear()}-${month[date.getMonth()]}-${day}`;
 }

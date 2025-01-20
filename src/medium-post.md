@@ -9,12 +9,12 @@ tags: posts
 permalink: post/{{ post.title | slugify }}/index.html
 image: case-study
 imageAltText: 'A 3D emoji of Nikin Nagewadia thinking.'
-date: git Created
 eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.published }}'
   isoDate: '{{ post.created }}'
   categories: '{{ post.category }}'
   mediumLink: '{{ post.link }}'
+  blogPost: '{{ post.content }}'
   metaDesc: 'A case study written by Nikin Nagewadia, published: {{ pubDate | utc | date }}.'
 ---

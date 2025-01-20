@@ -1,7 +1,7 @@
-{% from 'macros/tags.html' import tags %}
-{% from 'macros/displayDate.html' import mediumDate %}
+{% from 'macros/tags.njk' import tags %}
+{% from 'macros/displayDate.njk' import mediumDate %}
 
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/base.njk' %}
 
 {% block content %}
   <article>
@@ -21,6 +21,6 @@
 
   <section>
     <h2 class='font-size-2'>More case studies</h2>
-    {% include 'partials/pagination.html' %}
+    {% include 'partials/pagination.njk' %}
   </section>
 {% endblock %}

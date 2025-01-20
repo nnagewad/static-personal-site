@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/about.html'
+layout: 'layouts/about.njk'
 title: 'About'
 metaDesc: 'Learn more about who Nikin Nagewadia is, with a short bio, and list of his past work and education experiences.'
 image: about

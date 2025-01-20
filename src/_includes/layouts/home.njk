@@ -1,6 +1,6 @@
-{% from 'macros/displayDate.html' import date %}
+{% from 'macros/displayDate.njk' import date %}
 
-{% extends 'layouts/base.html' %}
+{% extends 'layouts/base.njk' %}
 {% block content %}
   
   <h1 class='font-size-3'>{{ title }}</h1>
@@ -18,11 +18,11 @@
   {% endif %}
 
   <section>
-    {% include 'partials/articles-videos.html' %}
+    {% include 'partials/articles-videos.njk' %}
   </section>
 
   <section>
-    {% include 'partials/medium-posts.html' %}
+    {% include 'partials/medium-posts.njk' %}
   </section>
 
 {% endblock %}

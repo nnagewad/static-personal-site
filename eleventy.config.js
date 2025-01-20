@@ -1,5 +1,6 @@
 const utcFormatter = require('./src/_filters/utc-formatter.js');
 const dateFormatter = require('./src/_filters/date-formatter.js');
+const isoDateFormatter = require('./src/_filters/iso-date-formatter.js');
 const updateTags = require('./src/_filters/update-tags.js');
 const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
@@ -13,6 +14,7 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/img/open-graph');
   eleventyConfig.addPassthroughCopy('./src/img/favicon');
   // Add filters
+  eleventyConfig.addFilter('iso', isoDateFormatter);
   eleventyConfig.addFilter('utc', utcFormatter);
   eleventyConfig.addFilter('date', dateFormatter);
   eleventyConfig.addFilter('updateTags', updateTags);

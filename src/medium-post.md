@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/medium-post.html'
+layout: 'layouts/medium-post.njk'
 pagination:
   data: medium
   size: 1

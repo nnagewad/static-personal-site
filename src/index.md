@@ -1,5 +1,5 @@
 ---
-layout: 'layouts/home.html'
+layout: 'layouts/home.njk'
 title: 'Nikin Nagewadia'
 metaDesc: 'Nikin Nagewadia is a senior interaction designer at Government Digital Service in London, England.'
 image: home

@@ -1,13 +1,13 @@
 {% macro date(label, date) -%}
   <p>
     <span>{{ label }}</span>
-    <time datetime='{{ date }}' class='capitalize'>{{ date | date }}</time>
+    <time datetime='{{ date | iso }}' class='capitalize'>{{ date | date }}</time>
   </p>
 {%- endmacro %}
 
 {% macro mediumDate(label, date) -%}
   <p>
     <span>{{ label }}</span>
-    <time datetime='{{ date | utc }}' class='capitalize'>{{ date | utc | date }}</time>
+    <time datetime='{{ date | utc | iso }}' class='capitalize'>{{ date | utc | date }}</time>
   </p>
 {%- endmacro %}

@@ -12,9 +12,9 @@ imageAltText: 'A 3D emoji of Nikin Nagewadia thinking.'
 eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.published }}'
-  isoDate: '{{ post.created }}'
+  xmlPubDate: '{{ pubDate | millisToISO }}'
   categories: '{{ post.category }}'
   mediumLink: '{{ post.link }}'
   blogPost: '{{ post.content | updateTags | safe }}'
-  metaDesc: 'A case study written by Nikin Nagewadia, published: {{ pubDate | utc | date }}.'
+  metaDesc: 'A case study written by Nikin Nagewadia, published on: {{ pubDate | millisToFullDate }}.'
 ---

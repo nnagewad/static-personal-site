@@ -31,7 +31,7 @@
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.data.pubDate | utc | iso(dateToRfc3339) }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.data.blogPost | safe | renderTransforms(post.data.page, metadata.base) }}</content>
+    <content type="html">{{ post.data.blogPost | renderTransforms(post.data.page, metadata.base) }}</content>
   </entry>
   {%- endfor %}
 </feed>

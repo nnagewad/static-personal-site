@@ -15,6 +15,6 @@ eleventyComputed:
   isoDate: '{{ post.created }}'
   categories: '{{ post.category }}'
   mediumLink: '{{ post.link }}'
-  blogPost: '{{ post.content }}'
+  blogPost: '{{ post.content | updateTags | safe }}'
   metaDesc: 'A case study written by Nikin Nagewadia, published: {{ pubDate | utc | date }}.'
 ---

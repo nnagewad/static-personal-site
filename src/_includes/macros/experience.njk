@@ -16,10 +16,10 @@
         </p>
         <p>
           <span class='visually-hidden'>from</span>
-          <time datetime='{{ list[i].start }}' class='capitalize'>{{ list[i].start | date }}</time>
+          <time datetime='{{ list[i].start  | isoToISODate }}' class='capitalize'>{{ list[i].start | isoToFullDate }}</time>
           <span class='visually-hidden'>to</span>
           {% if list[i].end %}
-            <time datetime='{{ list[i].end }}' class='dash capitalize'>{{ list[i].end | date }}</time>
+            <time datetime='{{ list[i].end  | isoToISODate }}' class='dash capitalize'>{{ list[i].end  | isoToFullDate }}</time>
           {% else %}
             <span class='dash capitalize'>present</span>
           {% endif %}

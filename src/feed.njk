@@ -31,7 +31,7 @@
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.data.xmlPubDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.data.blogPost | safe }}</content>
+    {# <content type="html">{{ post.data.blogPost }}</content> #}
   </entry>
   {%- endfor %}
 </feed>

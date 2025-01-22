@@ -3,6 +3,7 @@ const isoToISODate = require('./src/_filters/iso-to-iso-date.js');
 const millisToFullDate = require('./src/_filters/millis-to-full-date.js');
 const millisToISODate = require('./src/_filters/millis-to-iso-date.js');
 const millisToISO = require('./src/_filters/millis-to-iso.js');
+const updateForFeed = require('./src/_filters/update-for-feed.js');
 const updateTags = require('./src/_filters/update-tags.js');
 const { minify } = require('terser');
 const htmlmin = require('html-minifier-terser');
@@ -21,6 +22,7 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.addFilter('millisToFullDate', millisToFullDate);
   eleventyConfig.addFilter('millisToISODate', millisToISODate);
   eleventyConfig.addFilter('millisToISO', millisToISO);
+  eleventyConfig.addFilter('updateForFeed', updateForFeed);
   eleventyConfig.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
   eleventyConfig.setServerOptions({

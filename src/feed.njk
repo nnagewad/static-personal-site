@@ -31,7 +31,7 @@
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.data.xmlPubDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.data.blogPost | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content type="html">{{ post.data.xmlBlogFeed | renderTransforms(post.data.page, metadata.base) }}</content>
   </entry>
   {%- endfor %}
 </feed>

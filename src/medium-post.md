@@ -16,5 +16,6 @@ eleventyComputed:
   categories: '{{ post.category }}'
   mediumLink: '{{ post.link }}'
   blogPostContent: '{{ post.content | updateTags | safe }}'
+  xmlBlogPostContent: '{{ post.content | updateTags }}'
   metaDesc: 'A case study written by Nikin Nagewadia, published on: {{ pubDate | millisToFullDate }}.'
 ---

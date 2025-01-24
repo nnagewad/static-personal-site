@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/about.njk'
 title: 'About'
-metaDesc: 'Learn more about who Nikin Nagewadia is, with a short bio, and list of his past work and education experiences.'
+metaDesc: 'Meet Nikin, a senior interaction designer with a focus on sustainable and scalable solutions. His expertise lies in creating inclusive user experiences through collaboration.'
 image: about
 imageAltText: 'A 3D emoji of Nikin Nagewadia with a big smile on his face.'
 work:

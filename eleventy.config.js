@@ -58,7 +58,7 @@ module.exports = async function(eleventyConfig) {
 	eleventyConfig.addPlugin(IdAttributePlugin);
   // Using Eleventy Image Plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ['avif', 'webp', 'auto'],
+    formats: ['avif', 'webp'],
     widths: ['auto'],
     htmlOptions: {
       imgAttributes: {

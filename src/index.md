@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/home.njk'
 title: 'Nikin Nagewadia'
-metaDesc: 'Discover the work of Nikin Nagewadia, a senior interaction designer at the Government Digital Service, focusing on enhancing GOV.UK's user experience through design.'
+metaDesc: 'Discover the work of Nikin Nagewadia, a senior interaction designer at the Government Digital Service, focusing on enhancing GOV.UK’s user experience through design.'
 image: home
 imageAltText: 'A 3D emoji of Nikin Nagewadia.'
 intro: 'Senior interaction designer employed by the Government Digital Service, working on GOV.UK'

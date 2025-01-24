@@ -1,6 +1,6 @@
 {% macro tags(collection) %}
   <div class="tags">
-    <span>Article topics:</span>
+    <span>Tags:</span>
     <ul class='list-horizontal'>
       {% for tag in collection.split(',') -%}
       <li class='capitalize'>{{ tag.replace('-', ' ') }}</li>

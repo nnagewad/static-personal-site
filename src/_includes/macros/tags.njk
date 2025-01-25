@@ -2,7 +2,7 @@
   <div class="tags">
     <span>Tags:</span>
     <ul class='list-horizontal'>
-      {% for tag in collection.split(',') -%}
+      {% for tag in collection.split(',').sort() -%}
       <li class='capitalize'>{{ tag.replace('-', ' ') }}</li>
       {%- endfor %}
     </ul>

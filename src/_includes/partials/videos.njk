@@ -1,0 +1,25 @@
+{% from 'macros/displayDate.njk' import date %}
+
+<h2 class='font-size-2'>Videos</h2>
+<p class="list-lead-in">Videos from speaking engagements:</p>
+<ul class='list-extra-spaced'>
+  {% for i in range(0, videos | length) | reverse %}
+    <li class='balance-textwrap'>
+      <a href='{{ videos[i].url }}' rel='noopener noreferrer' target='_blank'>{{ videos[i].name }} (opens in a new tab)</a>
+      <div class="meta-information">
+        {{ date("Uploaded:", videos[i].upload) }}
+        {% if videos[i].publication %}
+          <p>
+            <span>Online publication:</span>
+            <span class='capitalize'>{{ videos[i].publication }}</span>
+          </p>
+        {% elif videos[i].video %}
+          <p>
+            <span>Online video:</span>
+            <span class='capitalize'>{{ videos[i].video }}</span>
+          </p>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

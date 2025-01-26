@@ -1,3 +1,4 @@
+const generateMetaDescription = require('./src/_filters/generate-meta-description.js');
 const isoToFullDate = require('./src/_filters/iso-to-full-date.js');
 const isoToISODate = require('./src/_filters/iso-to-iso-date.js');
 const millisToFullDate = require('./src/_filters/millis-to-full-date.js');
@@ -16,6 +17,7 @@ module.exports = async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/img/open-graph');
   eleventyConfig.addPassthroughCopy('./src/img/favicon');
   // Add filters
+  eleventyConfig.addFilter('generateMetaDescription', generateMetaDescription);
   eleventyConfig.addFilter('isoToFullDate', isoToFullDate);
   eleventyConfig.addFilter('isoToISODate', isoToISODate);
   eleventyConfig.addFilter('millisToFullDate', millisToFullDate);

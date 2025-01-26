@@ -1,11 +1,11 @@
-{% set pageTitle = title + ' - ' + site.name %}
+{% set pageTitle = title + ' - ' + site.fullName %}
 
 {# We don't want any duplication. This is likely for the home page. #}
-{% if site.name === title %} 
+{% if site.fullName === title %} 
   {% set pageTitle = title %}
 {% endif %}
 
-{% set siteTitle = site.name %}
+{% set siteTitle = site.fullName %}
 {% set currentUrl = site.url + page.url %}
 
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 

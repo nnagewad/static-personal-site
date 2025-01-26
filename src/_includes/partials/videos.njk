@@ -8,17 +8,10 @@
       <a href='{{ videos[i].url }}' rel='noopener noreferrer' target='_blank'>{{ videos[i].name }} (opens in a new tab)</a>
       <div class="meta-information">
         {{ date("Uploaded:", videos[i].upload) }}
-        {% if videos[i].publication %}
-          <p>
-            <span>Online publication:</span>
-            <span class='capitalize'>{{ videos[i].publication }}</span>
-          </p>
-        {% elif videos[i].video %}
-          <p>
-            <span>Online video:</span>
-            <span class='capitalize'>{{ videos[i].video }}</span>
-          </p>
-        {% endif %}
+        <p>
+          <span>Online video:</span>
+          <span class='capitalize'>{{ videos[i].video }}</span>
+        </p>
       </div>
     </li>
   {% endfor %}

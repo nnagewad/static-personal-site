@@ -1,6 +1,25 @@
 {
-  "name": "Nikin Nagewadia",
+  "fullName": "Nikin Nagewadia",
+  "firstName": "Nikin",
   "url": "https://www.nikin.design",
   "robots": "/robots.txt",
-  "siteMap": "/sitemap.xml"
+  "siteMap": "/sitemap.xml",
+  "language": "en",
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/nnagewad",
+      "icon": "icons/github.svg"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/nikinnagewadia/",
+      "icon": "icons/linkedin.svg"
+    },
+    {
+      "name": "Medium",
+      "url": "https://nkngwd.medium.com/",
+      "icon": "icons/medium.svg"
+    }
+  ]
 }

@@ -1,11 +1,11 @@
-{% set pageTitle = title + ' - ' + site.name %}
+{% set pageTitle = title + ' - ' + site.fullName %}
 
 {# We don't want any duplication. This is likely for the home page. #}
-{% if site.name === title %} 
+{% if site.fullName === title %} 
   {% set pageTitle = title %}
 {% endif %}
 
-{% set siteTitle = site.name %}
+{% set siteTitle = site.fullName %}
 {% set currentUrl = site.url + page.url %}
 
 {# If the page’s Front Matter has specific metaTitle and/or metaDesc items, switch 
@@ -19,7 +19,7 @@
 {% endif %}
 
 {% if layout === 'layouts/medium-post.njk' %}
-  {% set pageTitle = 'Case study: ' + pageTitle %}
+  {% set pageTitle = 'Article: ' + pageTitle %}
 {% endif %}
 
 
@@ -40,7 +40,7 @@
 {% if image %}
   <meta property="og:image" content="/img/open-graph/{{ image }}.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+  <meta property="og:image:alt" content="Page image for {{ site.fullName }}" />
 {% endif %}
 
 {% if noFollow %}

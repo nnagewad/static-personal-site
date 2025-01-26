@@ -3,35 +3,29 @@
   "permalink": "feed.xml",
   "eleventyExcludeFromCollections": true,
   "metadata": {
-    "title": "Nikin's case studies",
-    "description": "A collection of self-published case studies.",
-    "language": "en",
-    "base": "https://nikin.design/",
-    "author": {
-      "name": "Nikin Nagewadia"
-    }
+    "description": "A collection of design centric blog posts and case studies."
   }
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ metadata.language or page.lang }}">
-  <title>{{ metadata.title }}</title>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{{ site.language or page.lang }}">
+  <title>{{ site.fullName }}</title>
   <subtitle>{{ metadata.description }}</subtitle>
-  <link href="{{ permalink | htmlBaseUrl(metadata.base) }}" rel="self" />
-  <link href="{{ metadata.base | addPathPrefixToFullUrl }}" />
+  <link href="{{ permalink | htmlBaseUrl(site.url) }}" rel="self" />
+  <link href="{{ site.url | addPathPrefixToFullUrl }}" />
   <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
-  <id>{{ metadata.base | addPathPrefixToFullUrl }}</id>
+  <id>{{ site.url | addPathPrefixToFullUrl }}</id>
   <author>
-    <name>{{ metadata.author.name }}</name>
+    <name>{{ site.fullName }}</name>
   </author>
   {%- for post in collections.posts | reverse %}
-  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.base) }}{% endset %}
+  {%- set absolutePostUrl %}{{ post.url | htmlBaseUrl(site.url) }}{% endset %}
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.data.xmlPubDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.data.xmlBlogPostContent | renderTransforms(post.data.page, metadata.base) }}</content>
+    <content type="html">{{ post.data.xmlBlogPostContent | renderTransforms(post.data.page, site.url) }}</content>
   </entry>
   {%- endfor %}
 </feed>

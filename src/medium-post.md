@@ -8,7 +8,7 @@ pagination:
 tags: posts
 permalink: post/{{ post.title | slugify }}/index.html
 image: case-study
-imageAltText: 'A 3D emoji of Nikin Nagewadia thinking.'
+imageAltText: '3D animated emoji of a person with a beard and round glasses, wearing a black tuque, in a thoughtful pose.'
 eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.published }}'
@@ -17,5 +17,5 @@ eleventyComputed:
   mediumLink: '{{ post.link }}'
   blogPostContent: '{{ post.content | updateTags | safe }}'
   xmlBlogPostContent: '{{ post.content | updateTags }}'
-  metaDesc: 'A case study written by Nikin Nagewadia, published on: {{ pubDate | millisToFullDate }}.'
+  metaDesc: '{{ post.content | generateMetaDescription }}'
 ---

@@ -1,8 +1,8 @@
+{% from 'macros/heading+leadIn.njk' import headingAndLeadin %}
 {% from 'macros/tags.njk' import tags %}
 {% from 'macros/displayDate.njk' import mediumDate %}
 
-<h2 class='font-size-2'>Articles</h2>
-<p class="list-lead-in">A collection of blog posts and case studies:</p>
+{{ headingAndLeadin('Articles', 'A collection of blog posts and case studies') }}
 <ul class='list-extra-spaced'>
   {% for post in collections.posts %}
     <li class='balance-textwrap'>

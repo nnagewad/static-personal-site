@@ -1,7 +1,7 @@
+{% from 'macros/heading+leadIn.njk' import headingAndLeadin %}
 {% from 'macros/displayDate.njk' import date %}
 
-<h2 class='font-size-2'>Videos</h2>
-<p class="list-lead-in">Videos from speaking engagements:</p>
+{{ headingAndLeadin('Videos', 'Videos from speaking engagements') }}
 <ul class='list-extra-spaced'>
   {% for i in range(0, videos | length) | reverse %}
     <li class='balance-textwrap'>

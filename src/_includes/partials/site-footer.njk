@@ -1,27 +1,19 @@
+{% from 'macros/socialIcons.njk' import socialIcon %}
+
 <footer role='contentinfo' class='wrapper flex-container'>
   {% include 'partials/switch.njk' %}
   <ul class='horizontal-list'>
-    <li>
-      <a class='social-icon' href='https://github.com/nnagewad' rel='noopener noreferrer' target='_blank'>
-        <span class='visually-hidden'>Nikin Nagewadia's GitHub profile (opens in a new tab)</span>
-        {% include 'icons/github.svg' %}
-      </a>
-    </li>
-    <li>
-      <a class='social-icon' href='https://www.linkedin.com/in/nikinnagewadia/' rel='noopener noreferrer' target='_blank'>
-        <span class='visually-hidden'>Nikin Nagewadia's LinkedIn profile (opens in a new tab)</span>
-        {% include 'icons/linkedin.svg' %}
-      </a>
-    </li>
-    <li>
-      <a class='social-icon' href='https://nkngwd.medium.com/' rel='noopener noreferrer' target='_blank'>
-        <span class='visually-hidden'>Nikin Nagewadia's Medium profile (opens in a new tab)</span>
-        {% include 'icons/medium.svg' %}
-      </a>
-    </li>
+    {% for social in site.socials %}
+      <li>
+        <a class='social-icon' href='{{ social.url }}' rel='noopener noreferrer' target='_blank'>
+          <span class='visually-hidden'>{{ site.firstName }}'s {{ social.name }} profile (opens in a new tab)</span>
+          {{ socialIcon(social.icon) }}
+        </a>
+      </li>
+    {% endfor %}
   </ul>
   <div class='visually-hidden'>
-    <p><small>Website was designed and built by Nikin Nagewadia</small></p>
+    <p><small>Website was designed and built by {{ site.fullName }}</small></p>
     <p><small>Last update made on: <time datetime='{{ helpers.builtAtISO }}'>{{ helpers.builtAtString }}</time></small></p>
   </div>
 </footer>

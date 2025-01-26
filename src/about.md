@@ -3,7 +3,7 @@ layout: 'layouts/about.njk'
 title: 'About'
 metaDesc: 'Meet Nikin, a senior interaction designer with a focus on sustainable and scalable solutions. His expertise lies in creating inclusive user experiences through collaboration.'
 image: about
-imageAltText: 'A 3D emoji of Nikin Nagewadia with a big smile on his face.'
+imageAltText: '3D animated emoji of a smiling person with a beard, glasses, a tuque, and a sweat drop.'
 work:
   0:
     organization: 'Freshbooks'
@@ -35,7 +35,7 @@ work:
     location: 'London, United Kingdom'
     start: 2022-02-02
 ---
-My name is Nikin. I am a senior interaction designer with over 10 years of experience designing products and services. I am interested in designing efficient, modular systems that are inclusive and accessible to all users.
+My name is {{ site.firstName }}. I am a senior interaction designer with over 10 years of experience designing products and services. I am interested in designing efficient, modular systems that are inclusive and accessible to all users.
 
 <p class="list-lead-in">For me to navigate and wrangle through complex and ambiguous problem spaces:</p>
 

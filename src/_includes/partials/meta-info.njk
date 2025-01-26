@@ -19,7 +19,7 @@
 {% endif %}
 
 {% if layout === 'layouts/medium-post.njk' %}
-  {% set pageTitle = 'Case study: ' + pageTitle %}
+  {% set pageTitle = 'Article: ' + pageTitle %}
 {% endif %}
 
 
@@ -40,7 +40,7 @@
 {% if image %}
   <meta property="og:image" content="/img/open-graph/{{ image }}.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="Page image for {{ site.name }}" />
+  <meta property="og:image:alt" content="Page image for {{ site.fullName }}" />
 {% endif %}
 
 {% if noFollow %}

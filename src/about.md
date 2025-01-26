@@ -3,7 +3,7 @@ layout: 'layouts/about.njk'
 title: 'About'
 metaDesc: 'Meet Nikin, a senior interaction designer with a focus on sustainable and scalable solutions. His expertise lies in creating inclusive user experiences through collaboration.'
 image: about
-imageAltText: 'A 3D emoji of Nikin Nagewadia with a big smile on his face.'
+imageAltText: '3D animated emoji of a smiling person with a beard, glasses, a tuque, and a sweat drop.'
 work:
   0:
     organization: 'Freshbooks'

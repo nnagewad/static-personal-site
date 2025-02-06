@@ -21,7 +21,7 @@
     "@11ty/eleventy-plugin-rss": "^2.0.3",
     "html-minifier-terser": "^7.2.0",
     "luxon": "^3.5.0",
-    "sass": "^1.83.4",
+    "sass": "^1.84.0",
     "terser": "^5.37.0"
   },
   "devDependencies": {

@@ -1,4 +1,4 @@
-export const getLinkActiveState = (itemUrl, pageUrl) => {
+export function getLinkActiveState(itemUrl, pageUrl) {
   let response = '';
 
   if (itemUrl === pageUrl) {
@@ -10,8 +10,6 @@ export const getLinkActiveState = (itemUrl, pageUrl) => {
   }
 
   return response;
-};
-
+}
 export const builtAtString = new Date().toUTCString();
-
 export const builtAtISO = new Date().toISOString();

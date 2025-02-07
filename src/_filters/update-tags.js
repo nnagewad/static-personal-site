@@ -1,4 +1,4 @@
-module.exports = (post) => {
+export default (post) => {
   const updatedCopy = post
     .replace(/(<h4>)+?/, "<p class='lead-paragraph'>")
     .replace(/(<\/h4>)+?/, "</p>")

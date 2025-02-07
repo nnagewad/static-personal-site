@@ -1,6 +1,6 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
-module.exports = value => {
+export default value => {
   let date = Number(value);
   return DateTime.fromMillis(date).toISODate();
 }

@@ -1,11 +1,9 @@
-const Cache = require("@11ty/eleventy-fetch");
+import Cache from '@11ty/eleventy-fetch';
 
-module.exports = async function() {
+export default async function() {
   let url = "https://v1.nocodeapi.com/nikin/medium/jiEUjZNwxwIIzlUq";
-
-  /* This returns a promise */
   return Cache(url, {
-    duration: "1d", // save for 1 day
-    type: "json"    // we’ll parse JSON for you
+    duration: "1d", 
+    type: "json"
   });
 }

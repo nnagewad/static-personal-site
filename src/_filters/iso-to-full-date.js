@@ -1,6 +1,6 @@
-const { DateTime } = require("luxon");
+import { DateTime } from "luxon";
 
-module.exports = value => {
+export default value => {
   let date = DateTime.fromJSDate(value);
   return DateTime.fromISO(date).toLocaleString(DateTime.DATE_FULL);
 }

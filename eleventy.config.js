@@ -1,16 +1,16 @@
-const generateMetaDescription = require('./src/_filters/generate-meta-description.js');
-const isoToFullDate = require('./src/_filters/iso-to-full-date.js');
-const isoToISODate = require('./src/_filters/iso-to-iso-date.js');
-const millisToFullDate = require('./src/_filters/millis-to-full-date.js');
-const millisToISODate = require('./src/_filters/millis-to-iso-date.js');
-const millisToISO = require('./src/_filters/millis-to-iso.js');
-const updateTags = require('./src/_filters/update-tags.js');
-const { minify } = require('terser');
-const htmlmin = require('html-minifier-terser');
-const { eleventyImageTransformPlugin } = require('@11ty/eleventy-img');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
+import generateMetaDescription from './src/_filters/generate-meta-description.js';
+import isoToFullDate from './src/_filters/iso-to-full-date.js';
+import isoToISODate from './src/_filters/iso-to-iso-date.js';
+import millisToFullDate from './src/_filters/millis-to-full-date.js';
+import millisToISODate from './src/_filters/millis-to-iso-date.js';
+import millisToISO from './src/_filters/millis-to-iso.js';
+import updateTags from './src/_filters/update-tags.js';
+import { minify } from 'terser';
+import htmlmin from 'html-minifier-terser';
+import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import pluginRss from '@11ty/eleventy-plugin-rss';
 
-module.exports = async function(eleventyConfig) {
+export default async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   eleventyConfig.setUseGitIgnore(false);
   // Set directories to pass through to the _site folder

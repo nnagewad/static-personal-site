@@ -9,6 +9,7 @@ Thumbs.db
 .sass-cache
 .env
 .cache
+api.js
 
 # Node modules and output
 node_modules

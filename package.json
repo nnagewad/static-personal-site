@@ -23,7 +23,7 @@
     "html-minifier-terser": "^7.2.0",
     "luxon": "^3.5.0",
     "sass": "^1.84.0",
-    "terser": "^5.38.1"
+    "terser": "^5.38.2"
   },
   "devDependencies": {
     "concurrently": "^9.1.2"

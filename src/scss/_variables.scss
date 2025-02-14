@@ -45,7 +45,7 @@
   --color-dark-pink: oklch(71.1% 0.175 353);
   // Color scheme
   color-scheme: light dark;
-  --color-background: light-dark(var(--color-white), green);
+  --color-background: light-dark(var(--color-white), var(--color-black));
   --color-primary-text: light-dark(var(--color-black), var(--color-white));
   --color-secondary-text: light-dark(var(--color-dark-grey), var( --color-grey));
   --color-link: light-dark(var(--color-blue), var(--color-pink));

@@ -6,11 +6,9 @@
   "type": "module",
   "scripts": {
     "watch:sass": "sass --watch src/scss:_site/css --style=compressed",
-    "build:sass": "sass src/scss:_site/css --style=compressed",
     "watch:eleventy": "eleventy --serve",
-    "build:eleventy": "eleventy",
-    "start": "concurrently \"npm run build:sass\" \"npm run watch:*\"",
-    "production": "concurrently \"npm run build:*\""
+    "start": "concurrently \"npm run watch:sass\" \"npm run watch:eleventy\"",
+    "build": "concurrently \"sass src/scss:_site/css --style=compressed\" \"eleventy\""
   },
   "keywords": [],
   "author": "",

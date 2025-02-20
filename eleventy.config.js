@@ -52,12 +52,11 @@ export default async function(eleventyConfig) {
       });
       return minified;
     }
-
     return content;
   });
   // Ability to automatically add an ID addtribute to headings
   const { IdAttributePlugin } = await import('@11ty/eleventy');
-	eleventyConfig.addPlugin(IdAttributePlugin);
+  eleventyConfig.addPlugin(IdAttributePlugin);
   // Using Eleventy Image Plugin
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ['avif', 'webp'],

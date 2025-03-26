@@ -11,9 +11,9 @@ image: case-study
 imageAltText: '3D animated emoji of a person with a beard and round glasses, wearing a black tuque, in a thoughtful pose.'
 eleventyComputed:
   title: '{{ post.title }}'
-  pubDate: '{{ post.published }}'
-  xmlPubDate: '{{ pubDate | millisToISO }}'
-  categories: '{{ post.category }}'
+  pubDate: '{{ post.pubDate }}'
+  xmlPubDate: '{{ pubDate | apiToISO }}'
+  categories: '{{ post.categories }}'
   mediumLink: '{{ post.link }}'
   blogPostContent: '{{ post.content | updateTags | safe }}'
   xmlBlogPostContent: '{{ post.content | updateTags }}'

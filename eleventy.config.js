@@ -1,9 +1,8 @@
 import generateMetaDescription from './src/_filters/generate-meta-description.js';
+import apiToFullDate from './src/_filters/api-to-full-date.js';
+import apiToISO from './src/_filters/api-to-iso.js';
 import isoToFullDate from './src/_filters/iso-to-full-date.js';
 import isoToISODate from './src/_filters/iso-to-iso-date.js';
-import millisToFullDate from './src/_filters/millis-to-full-date.js';
-import millisToISODate from './src/_filters/millis-to-iso-date.js';
-import millisToISO from './src/_filters/millis-to-iso.js';
 import updateTags from './src/_filters/update-tags.js';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
@@ -20,9 +19,8 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter('generateMetaDescription', generateMetaDescription);
   eleventyConfig.addFilter('isoToFullDate', isoToFullDate);
   eleventyConfig.addFilter('isoToISODate', isoToISODate);
-  eleventyConfig.addFilter('millisToFullDate', millisToFullDate);
-  eleventyConfig.addFilter('millisToISODate', millisToISODate);
-  eleventyConfig.addFilter('millisToISO', millisToISO);
+  eleventyConfig.addFilter('apiToFullDate', apiToFullDate);
+  eleventyConfig.addFilter('apiToISO', apiToISO);
   eleventyConfig.addFilter('updateTags', updateTags);
   // Watch SCSS files for changes
   eleventyConfig.setServerOptions({

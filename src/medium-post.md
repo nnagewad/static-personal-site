@@ -13,7 +13,7 @@ eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.published }}'
   xmlPubDate: '{{ pubDate | millisToISO }}'
-  categories: '{{ post.category }}'
+  categories: '{{ post.categories }}'
   mediumLink: '{{ post.link }}'
   blogPostContent: '{{ post.content | updateTags | safe }}'
   xmlBlogPostContent: '{{ post.content | updateTags }}'

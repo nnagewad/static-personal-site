@@ -1,11 +1,11 @@
-{% macro date(label, date) -%}
+{% macro date(label, date) %}
   <p>
     <span>{{ label }}</span>
     <time datetime='{{ date | isoToISODate }}' class='capitalize'>{{ date | isoToFullDate }}</time>
   </p>
 {% endmacro %}
 
-{% macro mediumDate(label, date) -%}
+{% macro mediumDate(label, date) %}
   <p>
     <span>{{ label }}</span>
     <time datetime='{{ date | apiToISO }}' class='capitalize'>{{ date | apiToFullDate }}</time>

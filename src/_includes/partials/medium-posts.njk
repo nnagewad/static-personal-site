@@ -2,15 +2,37 @@
 {% from 'macros/tags.njk' import tags %}
 {% from 'macros/displayDate.njk' import mediumDate %}
 
-{{ headingAndLeadin('Articles', 'A collection of blog posts and case studies') }}
-<ul class='list-extra-spaced'>
-  {% for post in collections.posts %}
-    <li class='balance-textwrap'>
-      <a href='{{ post.url }}'>{{ post.data.title }}</a>
-      <div class='meta-information'>
-        {{ mediumDate("Published:", post.data.pubDate) }}
-        {{ tags(post.data.categories) }}
-      </div>
-    </li>
-  {% endfor %}
-</ul>
+<section>
+  {{ headingAndLeadin('Case studies', 'A collection case studies') }}
+  <ul class='list-extra-spaced'>
+    {% for post in collections.posts %}
+      {% if 'case-study' in post.data.categories %}
+        <li class='balance-textwrap'>
+          <a href='{{ post.url }}'>{{ post.data.title }}</a>
+          <div class='meta-information'>
+            {{ mediumDate("Published:", post.data.pubDate) }}
+            {{ tags(post.data.categories) }}
+          </div>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+
+<section>
+  {{ headingAndLeadin('Articles', 'A collection of blog articles') }}
+  <ul class='list-extra-spaced'>
+    {% for post in collections.posts %}
+      {% if 'case-study' not in post.data.categories %}
+        <li class='balance-textwrap'>
+          <a href='{{ post.url }}'>{{ post.data.title }}</a>
+          <div class='meta-information'>
+            {{ mediumDate("Published:", post.data.pubDate) }}
+            {{ tags(post.data.categories) }}
+          </div>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</section>
+

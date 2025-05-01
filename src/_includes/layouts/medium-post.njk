@@ -6,7 +6,13 @@
 {% block content %}
   <article>
     <h1>
-      <span class='headline-caption'>Article</span>
+      <span class='headline-caption'>
+        {% if 'case-study' in post.categories %}
+          Case study
+        {% else %}
+          Article
+        {% endif %}
+      </span>
       <span class='article-title font-size-3'>{{ title }}</span>
     </h1>
     <div class="medium-post">

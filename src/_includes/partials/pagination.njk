@@ -1,9 +1,9 @@
 <ul>
-  {%- for pageEntry in pagination.pages %}
-    {%- if page.url != pagination.hrefs[ loop.index0 ] %}
-      <li>
+  {% for pageEntry in pagination.pages %}
+    {% if page.url != pagination.hrefs[ loop.index0 ] %}
+      <li class="balance-textwrap">
         <a href='{{ pagination.hrefs[ loop.index0 ] }}'>{{ pageEntry.title }}</a>
       </li>
-    {%- endif %}
-  {%- endfor %}
+    {% endif %}
+  {% endfor %}
 </ul>

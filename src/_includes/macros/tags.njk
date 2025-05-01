@@ -3,7 +3,9 @@
     <span>Tags:</span>
     <ul class='list-horizontal'>
       {% for tag in collection.split(',').sort() %}
-        <li class='capitalize'>{{ tag.replace('-', ' ') }}</li>
+        {% if tag != 'case-study' %}
+          <li class='capitalize'>{{ tag.replace('-', ' ') }}</li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

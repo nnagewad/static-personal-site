@@ -40,7 +40,7 @@ main {
 
 .grid-container {
   display: grid;
-  grid-template-columns: minmax(auto, calc(var(--wrapper-width)*3/4));
+  grid-template-columns: minmax(auto, calc(var(--wrapper-width)*2/3));
 }
 
 section {

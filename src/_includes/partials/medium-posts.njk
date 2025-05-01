@@ -1,9 +1,8 @@
-{% from 'macros/heading+leadIn.njk' import headingAndLeadin %}
 {% from 'macros/tags.njk' import tags %}
 {% from 'macros/displayDate.njk' import mediumDate %}
 
 <section>
-  {{ headingAndLeadin('Case studies', 'A collection case studies') }}
+  <h2 class='font-size-2'>Case studies</h2>
   <ul class='list-extra-spaced'>
     {% for post in collections.posts %}
       {% if 'case-study' in post.data.categories %}
@@ -20,7 +19,7 @@
 </section>
 
 <section>
-  {{ headingAndLeadin('Articles', 'A collection of blog articles') }}
+  <h2 class='font-size-2'>Articles</h2>
   <ul class='list-extra-spaced'>
     {% for post in collections.posts %}
       {% if 'case-study' not in post.data.categories %}

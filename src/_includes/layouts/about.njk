@@ -2,14 +2,14 @@
 {% from 'macros/experience.njk' import experience %}
 
 {% block content %}
-  <h1 class='font-size-3 title-spacing'>{{ title }}</h1>
+  <h1 class='font-size-3 title-spacing grid-container'>{{ title }}</h1>
 
   <section class="about-me">
-    <h2 class='font-size-2'>Allow me to introduce myself</h2>
+    <h2 class='font-size-2 grid-container'>Allow me to introduce myself</h2>
     {{ content | safe }}
   </section>
 
-  <section>
+  <section class='grid-container'>
     {{ experience("My work experience", work) }}
   </section>
 {% endblock %}

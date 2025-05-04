@@ -30,7 +30,6 @@ main {
 .flex-container {
   display: flex;
   gap: var(--spacing-6);
-  flex-wrap: wrap;
   justify-content: space-between;
   &--wrap {
     @extend .flex-container;

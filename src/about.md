@@ -4,6 +4,8 @@ title: 'About'
 metaDesc: 'Meet Nikin, a senior interaction designer with a focus on sustainable and scalable solutions. His expertise lies in creating inclusive user experiences through collaboration.'
 image: about
 imageAltText: '3D animated emoji of a smiling person with a beard, glasses, a tuque, and a sweat drop.'
+headshotImage: '/img/headshot/nikin.jpg'
+headshotAltText: 'Black and white headshot of Nikin Nagewadia.'
 work:
   0:
     organization: 'Freshbooks'

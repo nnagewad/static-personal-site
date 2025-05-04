@@ -4,7 +4,7 @@ title: 'About'
 metaDesc: 'Meet Nikin, a senior interaction designer with a focus on sustainable and scalable solutions. His expertise lies in creating inclusive user experiences through collaboration.'
 image: about
 imageAltText: '3D animated emoji of a smiling person with a beard, glasses, a tuque, and a sweat drop.'
-headshotImage: '/img/head-shot/nikin-headshot.jpg'
+headshotImage: '/img/headshot/nikin-headshot.jpg'
 headshotAltText: 'The image is a black and white close-up of an adult male facing slightly to the left. He has short, wavy hair and is wearing thin-rimmed glasses. His facial expression is relaxed and appears to be smiling gently. The background is out of focus, featuring what seems to be an exterior urban scene with a building and indistinct foliage.'
 work:
   0:

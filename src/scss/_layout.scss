@@ -55,7 +55,7 @@ section {
   @include spacing-mixins.bottom-6(margin);
 }
 
-.head-shot {
+.headshot {
   order: 2;
   flex: 1 0 calc((var(--wrapper-width)*1/3) - var(--spacing-6));
   img {

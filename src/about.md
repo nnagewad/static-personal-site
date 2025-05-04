@@ -12,14 +12,14 @@ work:
     start: 2015-05-18
     end: 2018-03-15
   1:
-    organization: 'Say Yeah!'
-    jobTitle: 'UX/UI Designer + Developer on a contract'
+    organization: 'Say Yeah! (Contract)'
+    jobTitle: 'UX/UI Designer + Developer'
     location: 'Toronto, Canada'
     start: 2018-08-06
     end: 2018-11-30
   2:
     organization: 'A Million Ads'
-    jobTitle: 'User Experience Designer'
+    jobTitle: 'Product Designer'
     location: 'London, United Kingdom'
     start: 2019-06-03
     end: 2020-08-20

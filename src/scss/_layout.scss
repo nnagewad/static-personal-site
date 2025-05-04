@@ -32,6 +32,14 @@ main {
   gap: var(--spacing-6);
   flex-wrap: wrap;
   justify-content: space-between;
+  &--wrap {
+    @extend .flex-container;
+    flex-wrap: wrap;
+  }
+  &--reverse-wrap {
+    @extend .flex-container;
+    flex-wrap: wrap-reverse;
+  }
 }
 
 .vertical-align-bottom {

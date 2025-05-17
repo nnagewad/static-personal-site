@@ -24,6 +24,6 @@
     "concurrently": "^9.1.2",
     "html-minifier-terser": "^7.2.0",
     "sass": "^1.88.0",
-    "terser": "^5.39.1"
+    "terser": "^5.39.2"
   }
 }

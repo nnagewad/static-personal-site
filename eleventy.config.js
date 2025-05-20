@@ -8,6 +8,7 @@ import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginRss from '@11ty/eleventy-plugin-rss';
+import 'dotenv/config';
 
 export default async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file

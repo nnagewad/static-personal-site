@@ -1,5 +1,5 @@
 import Cache from '@11ty/eleventy-fetch';
-import API_KEY from './api.js';
+const API_KEY = process.env.API_KEY;
 
 export default async function() {
   let mediumUsername = "nkngwd"; // Replace with your username

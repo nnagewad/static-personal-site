@@ -29,20 +29,14 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter("sanitizeHTML", (content) => {
     return sanitizeHtml(content, {
       allowedTags: [
-        "a", "b", "i", "em", "strong", "p", "ul", "ol", "li",
-        "br", "img", "figure", "figcaption", "h1", "h2", "h3", "h4", "h5", "h6",
-        "blockquote", "code", "pre", "source", "video", "audio"
+        "a", "b", "i", "em", "strong", "p", "ul", "ol", "li", "br", "img", "blockquote", "code", "pre", "h1", "h2", "h3", "h4", "h5", "h6"
       ],
       allowedAttributes: {
         a: ["href", "title", "rel", "target"],
         img: ["src", "alt", "title", "width", "height"],
-        figure: ["class"],
-        figcaption: ["class"],
-        source: ["src", "type"],
-        video: ["controls", "src", "type", "width", "height"],
-        audio: ["controls", "src", "type"],
       },
-      selfClosing: ["img", "br", "source"],
+      allowedSchemes: ['http', 'https', 'mailto'],
+      selfClosing: ["img", "br"],
     });
   });
   // Watch SCSS files for changes

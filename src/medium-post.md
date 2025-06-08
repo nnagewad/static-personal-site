@@ -16,6 +16,5 @@ eleventyComputed:
   categories: '{{ post.categories }}'
   mediumLink: '{{ post.link }}'
   blogPostContent: '{{ post.content | updateTags | safe }}'
-  xmlBlogPostContent: '{{ post.content | updateTags }}'
   metaDesc: '{{ post.content | generateMetaDescription }}'
 ---

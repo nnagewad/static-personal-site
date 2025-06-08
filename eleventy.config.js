@@ -5,12 +5,12 @@ import isoToFullDate from './src/_filters/iso-to-full-date.js';
 import isoToISODate from './src/_filters/iso-to-iso-date.js';
 import updateTags from './src/_filters/update-tags.js';
 import updateMediumImageUrl from './src/_filters/update-medium-image-url.js';
-import updateForXML from './src/_filters/update-for-xml.js';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import 'dotenv/config';
+import sanitizeHtml from "sanitize-html";
 
 export default async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
@@ -26,7 +26,25 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter('apiToISO', apiToISO);
   eleventyConfig.addFilter('updateTags', updateTags);
   eleventyConfig.addFilter('updateMediumImageUrl', updateMediumImageUrl);
-  eleventyConfig.addFilter('updateForXML', updateForXML);
+  eleventyConfig.addFilter("sanitizeHTML", (content) => {
+    return sanitizeHtml(content, {
+      allowedTags: [
+        "a", "b", "i", "em", "strong", "p", "ul", "ol", "li",
+        "br", "img", "figure", "figcaption", "h1", "h2", "h3", "h4", "h5", "h6",
+        "blockquote", "code", "pre", "source", "video", "audio"
+      ],
+      allowedAttributes: {
+        a: ["href", "title", "rel", "target"],
+        img: ["src", "alt", "title", "width", "height"],
+        figure: ["class"],
+        figcaption: ["class"],
+        source: ["src", "type"],
+        video: ["controls", "src", "type", "width", "height"],
+        audio: ["controls", "src", "type"],
+      },
+      selfClosing: ["img", "br", "source"],
+    });
+  });
   // Watch SCSS files for changes
   eleventyConfig.setServerOptions({
     watch: ['./_site/css/**/*.css'],

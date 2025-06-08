@@ -25,7 +25,7 @@
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.data.xmlPubDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.data.blogPostContent | renderTransforms(post.data.page, site.url) | updateMediumImageUrl | updateForXML | safe }}</content>
+    <content type="html">{{ post.data.blogPostContent | renderTransforms(post.data.page, site.url) | updateMediumImageUrl | sanitizeHTML | safe }}</content>
   </entry>
   {%- endfor %}
 </feed>

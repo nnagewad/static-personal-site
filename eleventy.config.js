@@ -4,7 +4,6 @@ import apiToISO from './src/_filters/api-to-iso.js';
 import isoToFullDate from './src/_filters/iso-to-full-date.js';
 import isoToISODate from './src/_filters/iso-to-iso-date.js';
 import updateTags from './src/_filters/update-tags.js';
-import updateMediumImageUrl from './src/_filters/update-medium-image-url.js';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
@@ -25,7 +24,6 @@ export default async function(eleventyConfig) {
   eleventyConfig.addFilter('apiToFullDate', apiToFullDate);
   eleventyConfig.addFilter('apiToISO', apiToISO);
   eleventyConfig.addFilter('updateTags', updateTags);
-  eleventyConfig.addFilter('updateMediumImageUrl', updateMediumImageUrl);
   eleventyConfig.addFilter("sanitizeHTML", (content) => {
     return sanitizeHtml(content, {
       allowedTags: [

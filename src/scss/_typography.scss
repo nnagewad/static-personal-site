@@ -155,7 +155,6 @@ ol li {
   }
 }
 
-.tags,
 .list-horizontal {
   display: flex;
   flex-wrap: wrap;
@@ -166,11 +165,11 @@ ol li {
   }
 }
 
-.list-horizontal {
+.horizontal-gap--3 {
   gap: 0 var(--spacing-3);
 }
 
-.tags {
+.horizontal-gap--2 {
   gap: 0 var(--spacing-2);
 }
 

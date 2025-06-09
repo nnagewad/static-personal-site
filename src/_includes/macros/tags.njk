@@ -1,7 +1,7 @@
 {% macro tags(collection) %}
   <div class="list-horizontal horizontal-gap--2">
     <span>Tags:</span>
-    <ul class='list-horizontal horizontal-gap--3'>
+    <ul class="list-horizontal horizontal-gap--3 tags-list">
       {% for tag in collection.split(',').sort() %}
         {% if tag != 'case-study' %}
           <li class='capitalize'>{{ tag.replace('-', ' ') }}</li>

@@ -12,7 +12,6 @@ imageAltText: '3D animated emoji of a person with a beard and round glasses, wea
 eleventyComputed:
   title: '{{ post.title }}'
   pubDate: '{{ post.pubDate }}'
-  xmlPubDate: '{{ pubDate | apiToISO }}'
   categories: '{{ post.categories }}'
   mediumLink: '{{ post.link }}'
   blogPostContent: '{{ post.content | updateTags | safe }}'

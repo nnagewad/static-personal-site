@@ -1,13 +1,17 @@
 {% macro date(label, date) %}
-  <p>
-    <span>{{ label }}</span>
-    <time datetime='{{ date | isoToISODate }}' class='capitalize'>{{ date | isoToFullDate }}</time>
-  </p>
+  <dl class="list-horizontal horizontal-gap--2">
+    <dt>{{ label }}</dt>
+    <dd>
+      <time datetime='{{ date | isoToISODate }}' class='capitalize'>{{ date | isoToFullDate }}</time>
+    </dd>
+  </dl>
 {% endmacro %}
 
 {% macro mediumDate(label, date) %}
-  <p>
-    <span>{{ label }}</span>
-    <time datetime='{{ date | apiToISO }}' class='capitalize'>{{ date | apiToFullDate }}</time>
-  </p>
+  <dl class="list-horizontal horizontal-gap--2">
+    <dt>{{ label }}</dt>
+    <dd>
+      <time datetime='{{ date | apiToISO }}' class='capitalize'>{{ date | apiToFullDate }}</time>
+    </dd>
+  </dl>
 {% endmacro %}

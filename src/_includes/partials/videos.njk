@@ -7,10 +7,10 @@
       <a href='{{ videos[i].url }}' rel='noopener noreferrer' target='_blank'>{{ videos[i].name }} (opens in a new tab)</a>
       <div class="meta-information">
         {{ date("Uploaded:", videos[i].upload) }}
-        <p>
-          <span>Online video:</span>
-          <span class='capitalize'>{{ videos[i].video }}</span>
-        </p>
+        <dl class="list-horizontal horizontal-gap--2">
+          <dt>Online video:</dt>
+          <dd class='capitalize'>{{ videos[i].video }}</dd>
+        </dl>
       </div>
     </li>
   {% endfor %}

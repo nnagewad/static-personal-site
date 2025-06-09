@@ -23,7 +23,7 @@
   <entry>
     <title>{{ post.data.title }}</title>
     <link href="{{ absolutePostUrl }}" />
-    <updated>{{ post.data.xmlPubDate }}</updated>
+    <updated>{{ post.data.pubDate | apiToISO }}</updated>
     <id>{{ absolutePostUrl }}</id>
     <content type="html"><![CDATA[{{ post.data.blogPostContent | renderTransforms(post.data.page, site.url) | sanitizeHTML | safe }}]]></content>
   </entry>

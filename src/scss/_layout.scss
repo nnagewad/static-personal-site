@@ -1,6 +1,10 @@
 @use "borders-mixins";
 @use "spacing-mixins";
 
+body {
+  background: var(--color-background);
+}
+
 header {
   @include borders-mixins.thick-divider(bottom);
   @include spacing-mixins.top-6(padding);

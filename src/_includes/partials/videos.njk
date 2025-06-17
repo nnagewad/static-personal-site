@@ -5,13 +5,13 @@
   {% for i in range(0, videos | length) | reverse %}
     <li class='balance-textwrap'>
       <a href='{{ videos[i].url }}' rel='noopener noreferrer' target='_blank'>{{ videos[i].name }} (opens in a new tab)</a>
-      <div class="meta-information">
+      <dl class="meta-information">
         {{ date("Uploaded:", videos[i].upload) }}
-        <dl class="list-horizontal horizontal-gap--2">
+        <div lass="list-horizontal horizontal-gap--2">
           <dt>Online video:</dt>
           <dd class='capitalize'>{{ videos[i].video }}</dd>
-        </dl>
-      </div>
+        </div>
+      </dl>
     </li>
   {% endfor %}
 </ul>

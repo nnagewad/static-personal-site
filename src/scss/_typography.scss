@@ -194,8 +194,8 @@ figcaption,
   display: block;
 }
 
-a:focus,
-.font-size-1 > a:focus {
+a:focus-visible,
+.font-size-1 > a:focus-visible {
   box-shadow: 0 var(--focus-background) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
 }
 
@@ -209,7 +209,7 @@ a {
   &:active {
     color: var(--color-active);
   }
-  &:focus {
+  &:focus-visible {
     background: var(--color-focus);
     color: var(--color-focus-text);
     text-decoration-skip-ink: none;
@@ -219,7 +219,7 @@ a {
   }
 }
 
-.font-size-1 > a:focus {
+.font-size-1 > a:focus-visible {
   --focus-background: -0.125rem;
 }
 
@@ -227,20 +227,22 @@ a {
   @extend .list-horizontal;
   gap: 0 var(--spacing-7);
   font-weight: var(--font-weight-bold);
-  a:not(:hover, [aria-current=page]) {
-    text-decoration: none;
-  }
-  a[aria-current=page] {
-    color: var(--color-active);
-    text-underline-offset: var(--nav-underline-offset);
+  a {
+    &:not(:hover, [aria-current=page]) {
+      text-decoration: none;
+    }
+    &[aria-current=page] {
+      color: var(--color-active);
+      text-underline-offset: var(--nav-underline-offset);
+    }
+    &:focus-visible {
+      color: var(--color-focus-text);
+    }
   }
   @media (hover: hover) {
     a:hover {
       color: var(--color-hover);
       text-underline-offset: var(--nav-underline-offset);
     }
-  }
-  a:focus {
-    color: var(--color-focus-text);
   }
 }

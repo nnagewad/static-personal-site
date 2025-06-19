@@ -1,12 +1,14 @@
 {% macro tags(collection) %}
   <div class="list-horizontal horizontal-gap--2">
     <dt>Tags:</dt>
-    <dd class="list-horizontal horizontal-gap--3">
-      {% for tag in collection.split(',').sort() %}
-        {% if tag != 'case-study' %}
-          <span class='capitalize tags-list'>{{ tag.replace('-', ' ') }}</span>
-        {% endif %}
-      {% endfor %}
+    <dd>
+      <ul class="list-horizontal horizontal-gap--3">
+        {% for tag in collection.split(',').sort() %}
+          {% if tag != 'case-study' %}
+            <li class='capitalize tags-list'>{{ tag.replace('-', ' ') }}</li>
+          {% endif %}
+        {% endfor %}
+      </ul>
     </dd>
       
   </div>

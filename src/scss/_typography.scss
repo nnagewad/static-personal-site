@@ -136,6 +136,10 @@ article ul,
   margin-bottom: var(--spacing-4)
 }
 
+article dd ul {
+  padding-left: 0;
+}
+
 ul li,
 ol li {
   @include spacing-mixins.bottom-3(margin);

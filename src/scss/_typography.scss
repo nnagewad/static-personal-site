@@ -136,8 +136,9 @@ article ul,
   margin-bottom: var(--spacing-4)
 }
 
-article dd ul {
+.meta-information ul {
   padding-left: 0;
+  margin-bottom: 0;
 }
 
 ul li,

@@ -136,6 +136,11 @@ article ul,
   margin-bottom: var(--spacing-4)
 }
 
+.meta-information ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
 ul li,
 ol li {
   @include spacing-mixins.bottom-3(margin);

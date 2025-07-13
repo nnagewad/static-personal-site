@@ -40,7 +40,7 @@
 {% if image %}
   <meta property="og:image" content="/img/open-graph/{{ image }}.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="Page image for {{ site.fullName }}" />
+  <meta property="og:image:alt" content="{{ imageAltText }}" />
 {% endif %}
 
 {% if noFollow %}

@@ -76,6 +76,10 @@ a {
   font-size: 1rem;
 }
 
+:where(h1) {
+  @extend .font-size-3;
+}
+
 .lead-paragraph {
   @extend .balance-textwrap;
 }

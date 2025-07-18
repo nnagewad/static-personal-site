@@ -1,4 +1,4 @@
-# Nikin.design
+# nikin.design
 
 ## Summary
 

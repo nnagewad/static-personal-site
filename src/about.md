@@ -43,7 +43,7 @@ My name is {{ site.firstName }}. I am a senior interaction designer with over 10
 
 - I apply strategic thinking with a growth and future-thinking mindset while considering the impact it will have on the system itself.
 - I utilize storytelling methodology to engage colleagues and senior leaders in the problem space I'm currently exploring.
-- I facilitate inclusive design-centric workshops attended by members of a multi-disciplinary agile team.
+- I facilitate inclusive design-centric workshops, attended by members within a multi-disciplinary agile team, to unlock their creativity to solve design challenges.
 - I design sustainable and scalable components and user interfaces in Figma with inclusivity and accessibility in mind.
 - I develop interactive prototypes using HTML, CSS, and Javascript when testing our hypothesis with our end-users.
 

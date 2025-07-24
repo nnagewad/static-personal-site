@@ -5,7 +5,7 @@ metaDesc: 'Meet Nikin, a senior interaction designer with a focus on sustainable
 image: about
 imageAltText: '3D animated emoji of a smiling person with a beard, glasses, a tuque, and a sweat drop.'
 headshotImage: '/img/headshot/nikin.jpg'
-headshotAltText: 'Black and white headshot of Nikin Nagewadia.'
+headshotAltText: 'Black and white portrait of a smiling man with glasses and a beard.'
 work:
   0:
     organization: 'Freshbooks'

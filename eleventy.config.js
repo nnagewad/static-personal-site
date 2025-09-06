@@ -55,7 +55,45 @@ export default async function(eleventyConfig) {
       callback(null, code);
     }
   });
-  // Minify HTML output
+
+  // IMPORTANT: Replace Medium images BEFORE any other transforms
+  eleventyConfig.addTransform("replaceMediumImages", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      // Replace Medium CDN images with inline SVG placeholders
+      const updatedContent = content.replace(
+        /<img([^>]*)\s+src="https:\/\/cdn-images-1\.medium\.com\/[^"]*"([^>]*)>/gi,
+        '<img$1 src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f3f4f6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\' font-family=\'Arial, sans-serif\' font-size=\'16\' fill=\'%23666\'%3EMedium Image%3C/text%3E%3C/svg%3E"$2>'
+      );
+      
+      // Also handle markdown-style images that might become HTML
+      return updatedContent.replace(
+        /https:\/\/cdn-images-1\.medium\.com\/[^\s\)"]*/g,
+        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='100%25' height='100%25' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial, sans-serif' font-size='16' fill='%23666'%3EMedium Image%3C/text%3E%3C/svg%3E"
+      );
+    }
+    return content;
+  });
+
+  // Ability to automatically add an ID addtribute to headings
+  const { IdAttributePlugin } = await import('@11ty/eleventy');
+  eleventyConfig.addPlugin(IdAttributePlugin);
+
+  // Using Eleventy Image Plugin - with external image exclusion
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ['avif', 'webp'],
+    widths: ['auto'],
+    // Skip external images by only processing local images
+    extensions: "html",
+    htmlOptions: {
+      imgAttributes: {
+        loading: 'lazy',
+        decoding: 'async',
+      },
+      pictureAttributes: {}
+    },
+  });
+
+  // Minify HTML output - AFTER image processing
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     if( outputPath && outputPath.endsWith('.html') ) {
       let minified = htmlmin.minify(content, {
@@ -67,21 +105,7 @@ export default async function(eleventyConfig) {
     }
     return content;
   });
-  // Ability to automatically add an ID addtribute to headings
-  const { IdAttributePlugin } = await import('@11ty/eleventy');
-  eleventyConfig.addPlugin(IdAttributePlugin);
-  // Using Eleventy Image Plugin
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ['avif', 'webp'],
-    widths: ['auto'],
-    htmlOptions: {
-      imgAttributes: {
-        loading: 'lazy',
-        decoding: 'async',
-      },
-      pictureAttributes: {}
-    },
-  });
+
   // Using ELeventy RSS Plugin
   eleventyConfig.addPlugin(pluginRss);
 

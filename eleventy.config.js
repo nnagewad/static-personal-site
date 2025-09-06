@@ -14,8 +14,10 @@ import sanitizeHtml from "sanitize-html";
 export default async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   eleventyConfig.setUseGitIgnore(false);
+  
   // Set directories to pass through to the _site folder
   eleventyConfig.addPassthroughCopy('./src/img/');
+  
   // Add filters
   eleventyConfig.addFilter('generateMetaDescription', generateMetaDescription);
   eleventyConfig.addFilter('isoToFullDate', isoToFullDate);
@@ -36,10 +38,12 @@ export default async function(eleventyConfig) {
       selfClosing: ["img", "br"],
     });
   });
+  
   // Watch SCSS files for changes
   eleventyConfig.setServerOptions({
     watch: ['./_site/css/**/*.css'],
   });
+  
   // Inline JS
   eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
     code,
@@ -59,23 +63,36 @@ export default async function(eleventyConfig) {
   const { IdAttributePlugin } = await import('@11ty/eleventy');
   eleventyConfig.addPlugin(IdAttributePlugin);
 
-  // DISABLED - Image plugin causing GIF processing errors on Netlify
-  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-  //   formats: ['avif', 'webp'],
-  //   widths: ['auto'],
-  //   dryRun: true,
-  //   htmlOptions: {
-  //     imgAttributes: {
-  //       loading: 'lazy',
-  //       decoding: 'async',
-  //     },
-  //     pictureAttributes: {}
-  //   },
-  // });
+  // Using Eleventy Image Plugin - ONLY for local images
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ['avif', 'webp'],
+    widths: ['auto'],
+    
+    // Only process local images - skip all external URLs
+    urlFilter: (src) => {
+      // Only process images that start with /img/ (local images)
+      return src.startsWith('/img/') || src.startsWith('./img/') || src.startsWith('../img/');
+    },
+    
+    // Configure output
+    urlPath: "/img/optimized/",
+    outputDir: "./dist/img/optimized/",
+    
+    htmlOptions: {
+      imgAttributes: {
+        loading: 'lazy',
+        decoding: 'async',
+      },
+      pictureAttributes: {
+        class: 'responsive-image'
+      }
+    },
+  });
 
-  // Simple transform to add loading attributes without image processing
-  eleventyConfig.addTransform("addImageAttributes", function(content, outputPath) {
+  // Fallback transform for images not processed by the plugin (like Medium images)
+  eleventyConfig.addTransform("addImageAttributesFallback", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
+      // Add loading attributes to images that don't already have them
       return content.replace(
         /<img(?![^>]*\bloading\s*=)([^>]*)>/gi,
         '<img loading="lazy" decoding="async"$1>'

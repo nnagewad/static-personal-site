@@ -6,7 +6,6 @@ import isoToISODate from './src/_filters/iso-to-iso-date.js';
 import updateTags from './src/_filters/update-tags.js';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
-import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import 'dotenv/config';
 import sanitizeHtml from "sanitize-html";
@@ -63,32 +62,15 @@ export default async function(eleventyConfig) {
   const { IdAttributePlugin } = await import('@11ty/eleventy');
   eleventyConfig.addPlugin(IdAttributePlugin);
 
-  // Add transform to skip Medium images BEFORE image plugin processes them
-  eleventyConfig.addTransform("skipExternalImages", function(content, outputPath) {
+  // Simple transform to add loading attributes to all images
+  eleventyConfig.addTransform("addImageAttributes", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
-      // Replace Medium CDN images with data URLs so image plugin ignores them
       return content.replace(
-        /<img([^>]*)\s+src="https:\/\/cdn-images-1\.medium\.com\/[^"]*"([^>]*)>/gi,
-        '<img$1 src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f3f4f6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\' font-family=\'Arial, sans-serif\' font-size=\'16\' fill=\'%23666\'%3EMedium Image%3C/text%3E%3C/svg%3E"$2>'
+        /<img(?![^>]*\bloading\s*=)([^>]*)>/gi,
+        '<img loading="lazy" decoding="async"$1>'
       );
     }
     return content;
-  });
-
-  // Using Eleventy Image Plugin - should now only see local images
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ['avif', 'webp'],
-    widths: ['auto'],
-    
-    htmlOptions: {
-      imgAttributes: {
-        loading: 'lazy',
-        decoding: 'async',
-      },
-      pictureAttributes: {
-        class: 'responsive-image'
-      }
-    },
   });
 
   // Minify HTML output

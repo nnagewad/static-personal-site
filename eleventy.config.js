@@ -25,35 +25,18 @@ export default async function(eleventyConfig) {
       formats: ["avif", "webp"],
       widths: ["auto"],
       
-      // Filter to skip tracking pixels and other unwanted images
+      // Only process local images - skip ALL external URLs
       urlFilter: function(src) {
-        // Decode HTML entities first
-        const decodedSrc = src.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+        // Skip all external URLs completely
+        const isExternal = src.startsWith('http://') || src.startsWith('https://') || src.startsWith('//');
         
-        const skipPatterns = [
-          'medium.com/_/stat',           // Medium tracking pixels
-          'event=post.clientViewed',     // Specific tracking events
-          'googletagmanager.com',        // Google Analytics
-          'facebook.com/tr',             // Facebook pixel
-          'twitter.com/i/adsct',         // Twitter pixel
-          'doubleclick.net',             // Google ads
-          'google-analytics.com',        // GA tracking
-          '/stat?',                      // Any stat tracking URLs
-          'referrerSource=',             // Medium referrer tracking
-          'postId=',                     // Medium post tracking
-        ];
-        
-        // Check both original and decoded URL
-        const shouldSkip = skipPatterns.some(pattern => 
-          src.includes(pattern) || decodedSrc.includes(pattern)
-        );
-        
-        if (shouldSkip) {
-          console.log(`Skipping image: ${src}`);
+        if (isExternal) {
+          console.log(`Skipping external image: ${src}`);
+          return false;
         }
         
-        // Return false (skip) if any pattern matches
-        return !shouldSkip;
+        console.log(`Processing local image: ${src}`);
+        return true;
       },
       
       htmlOptions: {
@@ -107,6 +90,18 @@ export default async function(eleventyConfig) {
   });
 
   // Transforms
+  // Add a simple transform to add lazy loading to external images
+  eleventyConfig.addTransform("addLazyLoadingToExternalImages", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      // Add lazy loading to external images that weren't processed by the Image plugin
+      return content.replace(
+        /<img([^>]*?)src=["'](https?:\/\/[^"']+)["']([^>]*?)(?![^>]*loading=)/gi,
+        '<img$1src="$2"$3 loading="lazy" decoding="async"'
+      );
+    }
+    return content;
+  });
+
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     if( outputPath && outputPath.endsWith('.html') ) {
       let minified = htmlmin.minify(content, {

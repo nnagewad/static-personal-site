@@ -81,9 +81,21 @@ export default async function(eleventyConfig) {
           continue;
         }
         
-        // Process local images only
-        const altMatch = fullMatch.match(/alt=["']([^"']*)["']/);
-        const alt = altMatch ? altMatch[1] : "";
+        // Extract all attributes from the original img tag
+        const extractAttributes = (imgTag) => {
+          const attributes = {};
+          const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
+          let attrMatch;
+          while ((attrMatch = attrRegex.exec(imgTag)) !== null) {
+            const [, name, value] = attrMatch;
+            if (name !== 'src') { // Exclude src as it will be handled by the Image plugin
+              attributes[name] = value;
+            }
+          }
+          return attributes;
+        };
+        
+        const originalAttributes = extractAttributes(fullMatch);
         
         try {
           // Convert relative paths to absolute paths
@@ -96,12 +108,17 @@ export default async function(eleventyConfig) {
             urlPath: "/img/optimized/",
           });
 
+          // Merge original attributes with required ones
           let imageAttributes = {
-            alt,
-            sizes: "100vw",
+            ...originalAttributes, // Preserve all original attributes (class, id, data-*, etc.)
             loading: "lazy",
             decoding: "async",
           };
+
+          // Remove sizes from original attributes if it exists, as we want to control it
+          if (!originalAttributes.sizes) {
+            imageAttributes.sizes = "100vw";
+          }
 
           const optimizedImg = Image.generateHTML(metadata, imageAttributes);
           processedContent = processedContent.replace(fullMatch, optimizedImg);

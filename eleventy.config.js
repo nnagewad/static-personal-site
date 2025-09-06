@@ -1,10 +1,9 @@
 import 'dotenv/config';
 import { minify } from 'terser';
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
 import pluginRss from '@11ty/eleventy-plugin-rss';
-import Image from "@11ty/eleventy-img";
-import path from "path";
 import generateMetaDescription from './src/_filters/generate-meta-description.js';
 import apiToFullDate from './src/_filters/api-to-full-date.js';
 import apiToISO from './src/_filters/api-to-iso.js';
@@ -22,10 +21,40 @@ export default async function(eleventyConfig) {
   
   // Plugins
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+      formats: ["avif", "webp"],
+      widths: ["auto"],
+      
+      // Filter to skip tracking pixels and other unwanted images
+      urlFilter: function(src) {
+        const skipPatterns = [
+          'medium.com/_/stat',           // Medium tracking pixels
+          'event=post.clientViewed',     // Specific tracking events
+          'googletagmanager.com',        // Google Analytics
+          'facebook.com/tr',             // Facebook pixel
+          'twitter.com/i/adsct',         // Twitter pixel
+          'doubleclick.net',             // Google ads
+          'google-analytics.com',        // GA tracking
+        ];
+        
+        // Return false (skip) if any pattern matches
+        return !skipPatterns.some(pattern => src.includes(pattern));
+      },
+      
+      htmlOptions: {
+        imgAttributes: {
+          loading: "lazy",
+          decoding: "async",
+        },
+        pictureAttributes: {}
+      },
+    });
   
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/img/favicon");
   eleventyConfig.addPassthroughCopy("src/img/open-graph");
+  eleventyConfig.addPassthroughCopy("src/img/headshot");
+  eleventyConfig.addPassthroughCopy("src/img/header");
   
   // Filters
   eleventyConfig.addFilter('generateMetaDescription', generateMetaDescription);
@@ -63,110 +92,6 @@ export default async function(eleventyConfig) {
   });
 
   // Transforms
-  eleventyConfig.addTransform("optimizeLocalImages", async function(content, outputPath) {
-    if (outputPath && outputPath.endsWith(".html")) {
-      const imgRegex = /<img\s+([^>]*?)src=["']([^"']+)["']([^>]*?)>/g;
-      let processedContent = content;
-      const matches = [...content.matchAll(imgRegex)];
-      
-      for (const match of matches) {
-        const [fullMatch, beforeSrc, src, afterSrc] = match;
-        
-        // Function to check if we should skip this image
-        const shouldSkipImage = (src) => {
-          const skipPatterns = [
-            'medium.com/_/stat',           // Medium tracking pixels
-            'event=post.clientViewed',     // Specific tracking events
-            'googletagmanager.com',        // Google Analytics
-            'facebook.com/tr',             // Facebook pixel
-            'twitter.com/i/adsct',         // Twitter pixel
-            'doubleclick.net',             // Google ads
-          ];
-          
-          return skipPatterns.some(pattern => src.includes(pattern));
-        };
-        
-        // Skip tracking images - just add lazy loading
-        if (shouldSkipImage(src)) {
-          if (!fullMatch.includes('loading=')) {
-            const lazyImg = fullMatch.replace(/<img/, '<img loading="lazy" decoding="async"');
-            processedContent = processedContent.replace(fullMatch, lazyImg);
-          }
-          continue;
-        }
-        
-        // Extract all attributes from the original img tag
-        const extractAttributes = (imgTag) => {
-          const attributes = {};
-          const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
-          let attrMatch;
-          while ((attrMatch = attrRegex.exec(imgTag)) !== null) {
-            const [, name, value] = attrMatch;
-            if (name !== 'src') {
-              attributes[name] = value;
-            }
-          }
-          return attributes;
-        };
-        
-        const originalAttributes = extractAttributes(fullMatch);
-        
-        try {
-          let srcPath;
-          let isExternal = false;
-          
-          // Handle both local and external images
-          if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("//")) {
-            // External image - use the URL directly
-            srcPath = src;
-            isExternal = true;
-          } else {
-            // Local image - resolve the path
-            srcPath = src.startsWith("/") ? path.join("./src", src) : path.resolve("./src", src);
-          }
-          
-          let metadata = await Image(srcPath, {
-            widths: ['auto'],
-            formats: ["avif", "webp"],
-            outputDir: "./_site/img/optimized/",
-            urlPath: "/img/optimized/",
-            // Add caching for external images
-            ...(isExternal && {
-              cacheOptions: {
-                duration: "1d", // Cache external images for 1 day
-                directory: ".cache",
-              },
-            }),
-          });
-
-          // Merge original attributes with required ones
-          let imageAttributes = {
-            ...originalAttributes,
-            loading: "lazy",
-            decoding: "async",
-          };
-
-          if (!originalAttributes.sizes) {
-            imageAttributes.sizes = "100vw";
-          }
-
-          const optimizedImg = Image.generateHTML(metadata, imageAttributes);
-          processedContent = processedContent.replace(fullMatch, optimizedImg);
-        } catch (error) {
-          console.warn(`Failed to process image: ${src}`, error.message);
-          // Keep original image with lazy loading
-          if (!fullMatch.includes('loading=')) {
-            const lazyImg = fullMatch.replace(/<img/, '<img loading="lazy" decoding="async"');
-            processedContent = processedContent.replace(fullMatch, lazyImg);
-          }
-        }
-      }
-      
-      return processedContent;
-    }
-    return content;
-  });
-
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     if( outputPath && outputPath.endsWith('.html') ) {
       let minified = htmlmin.minify(content, {

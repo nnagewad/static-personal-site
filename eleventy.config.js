@@ -16,6 +16,10 @@ import updateTags from './src/_filters/update-tags.js';
 export default async function(eleventyConfig) {
   // 2. CORE CONFIGURATION
   eleventyConfig.setUseGitIgnore(false);
+
+  eleventyConfig.setServerOptions({
+    watch: ['./_site/css/**/*.css'],
+  });
   
   // 3. PLUGINS
   const { IdAttributePlugin } = await import('@11ty/eleventy');

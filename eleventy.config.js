@@ -63,20 +63,22 @@ export default async function(eleventyConfig) {
   const { IdAttributePlugin } = await import('@11ty/eleventy');
   eleventyConfig.addPlugin(IdAttributePlugin);
 
-  // Using Eleventy Image Plugin - ONLY for local images
+  // Add transform to skip Medium images BEFORE image plugin processes them
+  eleventyConfig.addTransform("skipExternalImages", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      // Replace Medium CDN images with data URLs so image plugin ignores them
+      return content.replace(
+        /<img([^>]*)\s+src="https:\/\/cdn-images-1\.medium\.com\/[^"]*"([^>]*)>/gi,
+        '<img$1 src="data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\' viewBox=\'0 0 600 400\'%3E%3Crect width=\'100%25\' height=\'100%25\' fill=\'%23f3f4f6\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dominant-baseline=\'middle\' font-family=\'Arial, sans-serif\' font-size=\'16\' fill=\'%23666\'%3EMedium Image%3C/text%3E%3C/svg%3E"$2>'
+      );
+    }
+    return content;
+  });
+
+  // Using Eleventy Image Plugin - should now only see local images
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ['avif', 'webp'],
     widths: ['auto'],
-    
-    // Only process local images - skip all external URLs
-    urlFilter: (src) => {
-      // Only process images that start with /img/ (local images)
-      return src.startsWith('/img/') || src.startsWith('./img/') || src.startsWith('../img/');
-    },
-    
-    // Configure output
-    urlPath: "/img/optimized/",
-    outputDir: "./dist/img/optimized/",
     
     htmlOptions: {
       imgAttributes: {
@@ -87,18 +89,6 @@ export default async function(eleventyConfig) {
         class: 'responsive-image'
       }
     },
-  });
-
-  // Fallback transform for images not processed by the plugin (like Medium images)
-  eleventyConfig.addTransform("addImageAttributesFallback", function(content, outputPath) {
-    if (outputPath && outputPath.endsWith(".html")) {
-      // Add loading attributes to images that don't already have them
-      return content.replace(
-        /<img(?![^>]*\bloading\s*=)([^>]*)>/gi,
-        '<img loading="lazy" decoding="async"$1>'
-      );
-    }
-    return content;
   });
 
   // Minify HTML output

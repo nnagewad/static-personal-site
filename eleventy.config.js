@@ -24,6 +24,13 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["avif", "webp"],
     widths: ["auto"],
+    
+    // Add this to skip external images
+    urlFilter: function(src) {
+      // Only process local images (not external URLs)
+      return !src.startsWith("http://") && !src.startsWith("https://") && !src.startsWith("//");
+    },
+    
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",

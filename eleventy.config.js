@@ -31,6 +31,20 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["avif", "webp"],
     widths: ["auto"],
+    
+    // Only process local images - skip all external URLs
+    urlFilter: function(src) {
+      const isExternal = src.startsWith('http://') || src.startsWith('https://') || src.startsWith('//');
+      
+      if (isExternal) {
+        console.log(`Skipping external image: ${src}`);
+        return false; // Skip processing
+      }
+      
+      console.log(`Processing local image: ${src}`);
+      return true; // Process this image
+    },
+    
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",
@@ -43,6 +57,8 @@ export default async function(eleventyConfig) {
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/img/favicon");
   eleventyConfig.addPassthroughCopy("src/img/open-graph");
+  eleventyConfig.addPassthroughCopy("src/img/headshot");
+  eleventyConfig.addPassthroughCopy("src/img/header");
   
   // Filters
   const filters = {
@@ -76,6 +92,17 @@ export default async function(eleventyConfig) {
       console.error('Terser error: ', err);
       callback(null, code);
     }
+  });
+
+  // Add lazy loading to external images that aren't processed
+  eleventyConfig.addTransform("addLazyLoadingToExternalImages", function(content, outputPath) {
+    if (!outputPath?.endsWith(".html")) return content;
+    
+    // Add lazy loading to external images that weren't processed by the Image plugin
+    return content.replace(
+      /<img([^>]*?)src=["'](https?:\/\/[^"']+)["']([^>]*?)(?![^>]*loading=)/gi,
+      '<img$1src="$2"$3 loading="lazy" decoding="async"'
+    );
   });
 
   // HTML minification

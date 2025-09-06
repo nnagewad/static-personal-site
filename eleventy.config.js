@@ -3,8 +3,7 @@ import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
 import pluginRss from '@11ty/eleventy-plugin-rss';
-import Image from "@11ty/eleventy-img";
-import path from "path";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 // Import filters
 import generateMetaDescription from './src/_filters/generate-meta-description.js';
@@ -15,65 +14,10 @@ import isoToISODate from './src/_filters/iso-to-iso-date.js';
 import updateTags from './src/_filters/update-tags.js';
 
 // Configuration constants
-const SKIP_PATTERNS = [
-  'medium.com/_/stat',
-  'event=post.clientViewed',
-  'googletagmanager.com',
-  'facebook.com/tr',
-  'twitter.com/i/adsct',
-  'doubleclick.net',
-];
-
 const ALLOWED_TAGS = [
   "a", "b", "i", "em", "strong", "p", "ul", "ol", "li", "br", "img", 
   "blockquote", "code", "pre", "h1", "h2", "h3", "h4", "h5", "h6"
 ];
-
-// Helper functions
-const shouldSkipImage = (src) => SKIP_PATTERNS.some(pattern => src.includes(pattern));
-
-const isExternalImage = (src) => src.startsWith("http://") || src.startsWith("https://") || src.startsWith("//");
-
-const extractAttributes = (imgTag) => {
-  const attributes = {};
-  const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
-  let match;
-  while ((match = attrRegex.exec(imgTag)) !== null) {
-    const [, name, value] = match;
-    if (name !== 'src') attributes[name] = value;
-  }
-  return attributes;
-};
-
-const addLazyLoading = (imgTag) => 
-  imgTag.includes('loading=') ? imgTag : imgTag.replace(/<img/, '<img loading="lazy" decoding="async"');
-
-const processImage = async (src, originalAttributes) => {
-  const isExternal = isExternalImage(src);
-  const srcPath = isExternal ? src : (src.startsWith("/") ? path.join("./src", src) : path.resolve("./src", src));
-  
-  const metadata = await Image(srcPath, {
-    widths: ['auto'],
-    formats: ["avif", "webp"],
-    outputDir: "./_site/img/optimized/",
-    urlPath: "/img/optimized/",
-    ...(isExternal && {
-      cacheOptions: {
-        duration: "1d",
-        directory: ".cache",
-      },
-    }),
-  });
-
-  const imageAttributes = {
-    ...originalAttributes,
-    loading: "lazy",
-    decoding: "async",
-    ...(!originalAttributes.sizes && { sizes: "100vw" }),
-  };
-
-  return Image.generateHTML(metadata, imageAttributes);
-};
 
 export default async function(eleventyConfig) {
   // Configuration
@@ -84,6 +28,17 @@ export default async function(eleventyConfig) {
   
   // Plugins
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["avif", "webp"],
+    widths: ["auto"],
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+      },
+      pictureAttributes: {}
+    },
+  });
   
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/img/favicon");
@@ -121,33 +76,6 @@ export default async function(eleventyConfig) {
       console.error('Terser error: ', err);
       callback(null, code);
     }
-  });
-
-  // Image optimization transform
-  eleventyConfig.addTransform("optimizeImages", async function(content, outputPath) {
-    if (!outputPath?.endsWith(".html")) return content;
-
-    const imgRegex = /<img\s+([^>]*?)src=["']([^"']+)["']([^>]*?)>/g;
-    let processedContent = content;
-    const matches = [...content.matchAll(imgRegex)];
-    
-    for (const [fullMatch, , src] of matches) {
-      try {
-        if (shouldSkipImage(src)) {
-          processedContent = processedContent.replace(fullMatch, addLazyLoading(fullMatch));
-          continue;
-        }
-
-        const originalAttributes = extractAttributes(fullMatch);
-        const optimizedImg = await processImage(src, originalAttributes);
-        processedContent = processedContent.replace(fullMatch, optimizedImg);
-      } catch (error) {
-        console.warn(`Failed to process image: ${src}`, error.message);
-        processedContent = processedContent.replace(fullMatch, addLazyLoading(fullMatch));
-      }
-    }
-    
-    return processedContent;
   });
 
   // HTML minification

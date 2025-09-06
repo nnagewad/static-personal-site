@@ -27,6 +27,9 @@ export default async function(eleventyConfig) {
       
       // Filter to skip tracking pixels and other unwanted images
       urlFilter: function(src) {
+        // Decode HTML entities first
+        const decodedSrc = src.replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>');
+        
         const skipPatterns = [
           'medium.com/_/stat',           // Medium tracking pixels
           'event=post.clientViewed',     // Specific tracking events
@@ -35,10 +38,22 @@ export default async function(eleventyConfig) {
           'twitter.com/i/adsct',         // Twitter pixel
           'doubleclick.net',             // Google ads
           'google-analytics.com',        // GA tracking
+          '/stat?',                      // Any stat tracking URLs
+          'referrerSource=',             // Medium referrer tracking
+          'postId=',                     // Medium post tracking
         ];
         
+        // Check both original and decoded URL
+        const shouldSkip = skipPatterns.some(pattern => 
+          src.includes(pattern) || decodedSrc.includes(pattern)
+        );
+        
+        if (shouldSkip) {
+          console.log(`Skipping image: ${src}`);
+        }
+        
         // Return false (skip) if any pattern matches
-        return !skipPatterns.some(pattern => src.includes(pattern));
+        return !shouldSkip;
       },
       
       htmlOptions: {

@@ -2,8 +2,9 @@ import 'dotenv/config';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
-import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginRss from '@11ty/eleventy-plugin-rss';
+import Image from "@11ty/eleventy-img";
+import path from "path";
 import generateMetaDescription from './src/_filters/generate-meta-description.js';
 import apiToFullDate from './src/_filters/api-to-full-date.js';
 import apiToISO from './src/_filters/api-to-iso.js';
@@ -19,39 +20,8 @@ export default async function(eleventyConfig) {
     watch: ['./_site/css/**/*.css'],
   });
   
-  // Plugins (add early so they can be configured)
+  // Plugins
   eleventyConfig.addPlugin(pluginRss);
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ["avif", "webp"],
-    widths: ["auto"],
-    
-    urlFilter: function(src) {
-      // Skip external images and Medium tracking pixels
-      const skipDomains = [
-        "medium.com",
-        "cdn-images-1.medium.com", 
-        "miro.medium.com"
-      ];
-      
-      // Check if it's an external URL from excluded domains
-      for (const domain of skipDomains) {
-        if (src.includes(domain)) {
-          return false;
-        }
-      }
-      
-      // Skip any external URLs
-      return !src.startsWith("http://") && !src.startsWith("https://") && !src.startsWith("//");
-    },
-    
-    htmlOptions: {
-      imgAttributes: {
-        loading: "lazy",
-        decoding: "async",
-      },
-      pictureAttributes: {}
-    },
-  });
   
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/img/favicon");
@@ -92,13 +62,60 @@ export default async function(eleventyConfig) {
     }
   });
 
-  // Transforms (apply last)
-  eleventyConfig.addTransform("addImageAttributes", function(content, outputPath) {
+  // Transforms
+  eleventyConfig.addTransform("optimizeLocalImages", async function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
-      return content.replace(
-        /<img(?![^>]*\bloading\s*=)([^>]*)>/gi,
-        '<img loading="lazy" decoding="async"$1>'
-      );
+      const imgRegex = /<img\s+([^>]*?)src=["']([^"']+)["']([^>]*?)>/g;
+      let processedContent = content;
+      const matches = [...content.matchAll(imgRegex)];
+      
+      for (const match of matches) {
+        const [fullMatch, beforeSrc, src, afterSrc] = match;
+        
+        // Skip external images - just add lazy loading
+        if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("//")) {
+          if (!fullMatch.includes('loading=')) {
+            const lazyImg = fullMatch.replace(/<img/, '<img loading="lazy" decoding="async"');
+            processedContent = processedContent.replace(fullMatch, lazyImg);
+          }
+          continue;
+        }
+        
+        // Process local images only
+        const altMatch = fullMatch.match(/alt=["']([^"']*)["']/);
+        const alt = altMatch ? altMatch[1] : "";
+        
+        try {
+          // Convert relative paths to absolute paths
+          const srcPath = src.startsWith("/") ? path.join("./src", src) : path.resolve("./src", src);
+          
+          let metadata = await Image(srcPath, {
+            widths: ['auto'],
+            formats: ["avif", "webp", "jpeg"],
+            outputDir: "./_site/img/optimized/",
+            urlPath: "/img/optimized/",
+          });
+
+          let imageAttributes = {
+            alt,
+            sizes: "100vw",
+            loading: "lazy",
+            decoding: "async",
+          };
+
+          const optimizedImg = Image.generateHTML(metadata, imageAttributes);
+          processedContent = processedContent.replace(fullMatch, optimizedImg);
+        } catch (error) {
+          console.warn(`Failed to process local image: ${src}`, error.message);
+          // Keep original image with lazy loading
+          if (!fullMatch.includes('loading=')) {
+            const lazyImg = fullMatch.replace(/<img/, '<img loading="lazy" decoding="async"');
+            processedContent = processedContent.replace(fullMatch, lazyImg);
+          }
+        }
+      }
+      
+      return processedContent;
     }
     return content;
   });

@@ -25,9 +25,22 @@ export default async function(eleventyConfig) {
     formats: ["avif", "webp"],
     widths: ["auto"],
     
-    // Add this to skip external images
     urlFilter: function(src) {
-      // Only process local images (not external URLs)
+      // Skip external images and Medium tracking pixels
+      const skipDomains = [
+        "medium.com",
+        "cdn-images-1.medium.com", 
+        "miro.medium.com"
+      ];
+      
+      // Check if it's an external URL from excluded domains
+      for (const domain of skipDomains) {
+        if (src.includes(domain)) {
+          return false;
+        }
+      }
+      
+      // Skip any external URLs
       return !src.startsWith("http://") && !src.startsWith("https://") && !src.startsWith("//");
     },
     

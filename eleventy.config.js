@@ -4,8 +4,6 @@ import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginRss from '@11ty/eleventy-plugin-rss';
-
-// Custom filters
 import generateMetaDescription from './src/_filters/generate-meta-description.js';
 import apiToFullDate from './src/_filters/api-to-full-date.js';
 import apiToISO from './src/_filters/api-to-iso.js';
@@ -14,16 +12,14 @@ import isoToISODate from './src/_filters/iso-to-iso-date.js';
 import updateTags from './src/_filters/update-tags.js';
 
 export default async function(eleventyConfig) {
-  // 2. CORE CONFIGURATION
+  // Configuration
   eleventyConfig.setUseGitIgnore(false);
 
   eleventyConfig.setServerOptions({
     watch: ['./_site/css/**/*.css'],
   });
   
-  // 3. PLUGINS
-  const { IdAttributePlugin } = await import('@11ty/eleventy');
-  eleventyConfig.addPlugin(IdAttributePlugin);
+  // Plugins (add early so they can be configured)
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["avif", "webp"],
@@ -41,7 +37,7 @@ export default async function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/img/favicon");
   eleventyConfig.addPassthroughCopy("src/img/open-graph");
   
-  // 5. FILTERS
+  // Filters
   eleventyConfig.addFilter('generateMetaDescription', generateMetaDescription);
   eleventyConfig.addFilter('isoToFullDate', isoToFullDate);
   eleventyConfig.addFilter('isoToISODate', isoToISODate);
@@ -62,7 +58,7 @@ export default async function(eleventyConfig) {
     });
   });
 
-  // 6. ASYNC FILTERS
+  // Async filters
   eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
     code,
     callback
@@ -76,7 +72,7 @@ export default async function(eleventyConfig) {
     }
   });
 
-  // 7. TRANSFORMS
+  // Transforms (apply last)
   eleventyConfig.addTransform("addImageAttributes", function(content, outputPath) {
     if (outputPath && outputPath.endsWith(".html")) {
       return content.replace(
@@ -99,12 +95,6 @@ export default async function(eleventyConfig) {
     return content;
   });
 
-  // 8. SERVER OPTIONS
-  eleventyConfig.setServerOptions({
-    watch: ['./_site/css/**/*.css'],
-  });
-
-  // 9. RETURN CONFIGURATION
   return {
     markdownTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',

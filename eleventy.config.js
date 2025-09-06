@@ -6,7 +6,6 @@ import isoToISODate from './src/_filters/iso-to-iso-date.js';
 import updateTags from './src/_filters/update-tags.js';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
-import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import 'dotenv/config';
 import sanitizeHtml from "sanitize-html";
@@ -14,9 +13,10 @@ import sanitizeHtml from "sanitize-html";
 export default async function(eleventyConfig) {
   // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
   eleventyConfig.setUseGitIgnore(false);
+  
   // Set directories to pass through to the _site folder
-  eleventyConfig.addPassthroughCopy('./src/img/open-graph');
-  eleventyConfig.addPassthroughCopy('./src/img/favicon');
+  eleventyConfig.addPassthroughCopy('./src/img/');
+  
   // Add filters
   eleventyConfig.addFilter('generateMetaDescription', generateMetaDescription);
   eleventyConfig.addFilter('isoToFullDate', isoToFullDate);
@@ -37,10 +37,12 @@ export default async function(eleventyConfig) {
       selfClosing: ["img", "br"],
     });
   });
+  
   // Watch SCSS files for changes
   eleventyConfig.setServerOptions({
     watch: ['./_site/css/**/*.css'],
   });
+  
   // Inline JS
   eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
     code,
@@ -55,6 +57,22 @@ export default async function(eleventyConfig) {
       callback(null, code);
     }
   });
+
+  // Ability to automatically add an ID addtribute to headings
+  const { IdAttributePlugin } = await import('@11ty/eleventy');
+  eleventyConfig.addPlugin(IdAttributePlugin);
+
+  // Simple transform to add loading attributes to all images
+  eleventyConfig.addTransform("addImageAttributes", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return content.replace(
+        /<img(?![^>]*\bloading\s*=)([^>]*)>/gi,
+        '<img loading="lazy" decoding="async"$1>'
+      );
+    }
+    return content;
+  });
+
   // Minify HTML output
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     if( outputPath && outputPath.endsWith('.html') ) {
@@ -67,21 +85,7 @@ export default async function(eleventyConfig) {
     }
     return content;
   });
-  // Ability to automatically add an ID addtribute to headings
-  const { IdAttributePlugin } = await import('@11ty/eleventy');
-  eleventyConfig.addPlugin(IdAttributePlugin);
-  // Using Eleventy Image Plugin
-  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-    formats: ['avif', 'webp'],
-    widths: ['auto'],
-    htmlOptions: {
-      imgAttributes: {
-        loading: 'lazy',
-        decoding: 'async',
-      },
-      pictureAttributes: {}
-    },
-  });
+
   // Using ELeventy RSS Plugin
   eleventyConfig.addPlugin(pluginRss);
 

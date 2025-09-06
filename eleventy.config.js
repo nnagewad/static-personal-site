@@ -2,6 +2,7 @@ import 'dotenv/config';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import pluginRss from '@11ty/eleventy-plugin-rss';
 
 // Custom filters
@@ -20,9 +21,21 @@ export default async function(eleventyConfig) {
   const { IdAttributePlugin } = await import('@11ty/eleventy');
   eleventyConfig.addPlugin(IdAttributePlugin);
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    formats: ["avif", "webp"],
+    widths: ["auto"],
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+      },
+      pictureAttributes: {}
+    },
+  });
   
-  // 4. PASSTHROUGH COPIES
-  eleventyConfig.addPassthroughCopy('./src/img/');
+  // Passthrough copies
+  eleventyConfig.addPassthroughCopy("src/img/favicon");
+  eleventyConfig.addPassthroughCopy("src/img/open-graph");
   
   // 5. FILTERS
   eleventyConfig.addFilter('generateMetaDescription', generateMetaDescription);

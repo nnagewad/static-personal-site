@@ -72,8 +72,22 @@ export default async function(eleventyConfig) {
       for (const match of matches) {
         const [fullMatch, beforeSrc, src, afterSrc] = match;
         
-        // Skip external images - just add lazy loading
-        if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("//")) {
+        // Function to check if we should skip this image
+        const shouldSkipImage = (src) => {
+          const skipPatterns = [
+            'medium.com/_/stat',           // Medium tracking pixels
+            'event=post.clientViewed',     // Specific tracking events
+            'googletagmanager.com',        // Google Analytics
+            'facebook.com/tr',             // Facebook pixel
+            'twitter.com/i/adsct',         // Twitter pixel
+            'doubleclick.net',             // Google ads
+          ];
+          
+          return skipPatterns.some(pattern => src.includes(pattern));
+        };
+        
+        // Skip tracking images - just add lazy loading
+        if (shouldSkipImage(src)) {
           if (!fullMatch.includes('loading=')) {
             const lazyImg = fullMatch.replace(/<img/, '<img loading="lazy" decoding="async"');
             processedContent = processedContent.replace(fullMatch, lazyImg);
@@ -88,7 +102,7 @@ export default async function(eleventyConfig) {
           let attrMatch;
           while ((attrMatch = attrRegex.exec(imgTag)) !== null) {
             const [, name, value] = attrMatch;
-            if (name !== 'src') { // Exclude src as it will be handled by the Image plugin
+            if (name !== 'src') {
               attributes[name] = value;
             }
           }
@@ -98,24 +112,40 @@ export default async function(eleventyConfig) {
         const originalAttributes = extractAttributes(fullMatch);
         
         try {
-          // Convert relative paths to absolute paths
-          const srcPath = src.startsWith("/") ? path.join("./src", src) : path.resolve("./src", src);
+          let srcPath;
+          let isExternal = false;
+          
+          // Handle both local and external images
+          if (src.startsWith("http://") || src.startsWith("https://") || src.startsWith("//")) {
+            // External image - use the URL directly
+            srcPath = src;
+            isExternal = true;
+          } else {
+            // Local image - resolve the path
+            srcPath = src.startsWith("/") ? path.join("./src", src) : path.resolve("./src", src);
+          }
           
           let metadata = await Image(srcPath, {
             widths: ['auto'],
-            formats: ["avif", "webp", "jpeg"],
+            formats: ["avif", "webp"],
             outputDir: "./_site/img/optimized/",
             urlPath: "/img/optimized/",
+            // Add caching for external images
+            ...(isExternal && {
+              cacheOptions: {
+                duration: "1d", // Cache external images for 1 day
+                directory: ".cache",
+              },
+            }),
           });
 
           // Merge original attributes with required ones
           let imageAttributes = {
-            ...originalAttributes, // Preserve all original attributes (class, id, data-*, etc.)
+            ...originalAttributes,
             loading: "lazy",
             decoding: "async",
           };
 
-          // Remove sizes from original attributes if it exists, as we want to control it
           if (!originalAttributes.sizes) {
             imageAttributes.sizes = "100vw";
           }
@@ -123,7 +153,7 @@ export default async function(eleventyConfig) {
           const optimizedImg = Image.generateHTML(metadata, imageAttributes);
           processedContent = processedContent.replace(fullMatch, optimizedImg);
         } catch (error) {
-          console.warn(`Failed to process local image: ${src}`, error.message);
+          console.warn(`Failed to process image: ${src}`, error.message);
           // Keep original image with lazy loading
           if (!fullMatch.includes('loading=')) {
             const lazyImg = fullMatch.replace(/<img/, '<img loading="lazy" decoding="async"');

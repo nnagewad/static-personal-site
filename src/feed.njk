@@ -25,7 +25,7 @@
     <link href="{{ absolutePostUrl }}" />
     <updated>{{ post.data.pubDate | apiToISO }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html"><![CDATA[{{ post.data.blogPostContent | renderTransforms(post.data.page, site.url) | sanitizeHTML | safe }}]]></content>
+    <content type="html"><![CDATA[{{ post.data.blogPostContent | renderTransforms(post.data.page, site.url) | safe }}]]></content>
   </entry>
   {%- endfor %}
 </feed>

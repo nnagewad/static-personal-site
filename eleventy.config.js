@@ -5,6 +5,7 @@ import sanitizeHtml from "sanitize-html";
 import pluginRss from '@11ty/eleventy-plugin-rss';
 import Image from "@11ty/eleventy-img";
 import path from "path";
+import fs from "fs";
 
 // Import filters
 import generateMetaDescription from './src/_filters/generate-meta-description.js';
@@ -55,7 +56,7 @@ const processImage = async (src, originalAttributes) => {
   const metadata = await Image(srcPath, {
     widths: ['auto'],
     formats: ["avif", "webp"],
-    outputDir: "./_site/img/optimized/",
+    outputDir: ".cache/@11ty/img/",
     urlPath: "/img/optimized/",
     ...(isExternal && {
       cacheOptions: {
@@ -159,6 +160,24 @@ export default async function(eleventyConfig) {
       removeComments: true,
       collapseWhitespace: true
     });
+  });
+
+  // Copy optimized images from cache to output directory after build
+  eleventyConfig.on("eleventy.after", () => {
+    const cacheDir = ".cache/@11ty/img/";
+    const outputDir = path.join(eleventyConfig.directories.output, "img/optimized/");
+    
+    if (fs.existsSync(cacheDir)) {
+      try {
+        fs.mkdirSync(outputDir, { recursive: true });
+        fs.cpSync(cacheDir, outputDir, {
+          recursive: true
+        });
+        console.log(`📸 Copied optimized images from cache to ${outputDir}`);
+      } catch (err) {
+        console.error(`❌ Failed to copy optimized images from cache to ${outputDir}:`, err);
+      }
+    }
   });
 
   return {

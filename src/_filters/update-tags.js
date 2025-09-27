@@ -8,6 +8,27 @@ export default (post) => {
     .replace(/(<\/h4>)/g, "</h3>")
     .replace(/(<figcaption>)/g, "<figcaption class='font-size--1'>")
     .replace(/(<blockquote>)/g, "<blockquote class='font-size-1'>")
-    .replace(/(<img src=.https:\/\/medium.*>)/g, "");
+    // Remove Medium tracking pixels
+    .replace(/<img[^>]*src="https:\/\/medium\.com\/_\/stat[^"]*"[^>]*>/g, "")
+    // Add lazy loading and async decoding to all external images (Medium, etc.)
+    .replace(/(<img\s+)([^>]*src="https?:\/\/[^"]*")([^>]*)>/g, (match, openTag, srcAttr, restAttrs) => {
+      // Check if loading or decoding attributes already exist
+      const hasLoading = /loading\s*=/.test(restAttrs) || /loading\s*=/.test(srcAttr);
+      const hasDecoding = /decoding\s*=/.test(restAttrs) || /decoding\s*=/.test(srcAttr);
+      
+      let result = openTag + srcAttr + restAttrs;
+      
+      // Add loading="lazy" if not present
+      if (!hasLoading) {
+        result += ' loading="lazy"';
+      }
+      
+      // Add decoding="async" if not present
+      if (!hasDecoding) {
+        result += ' decoding="async"';
+      }
+      
+      return result + '>';
+    });
   return updatedCopy;
 }

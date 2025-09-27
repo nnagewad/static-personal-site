@@ -3,7 +3,7 @@ import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
 import pluginRss from '@11ty/eleventy-plugin-rss';
-import Image from "@11ty/eleventy-img";
+import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "path";
 import fs from "fs";
 
@@ -15,66 +15,12 @@ import isoToFullDate from './src/_filters/iso-to-full-date.js';
 import isoToISODate from './src/_filters/iso-to-iso-date.js';
 import updateTags from './src/_filters/update-tags.js';
 
-// Configuration constants
-const SKIP_PATTERNS = [
-  'medium.com/_/stat',
-  'event=post.clientViewed',
-  'googletagmanager.com',
-  'facebook.com/tr',
-  'twitter.com/i/adsct',
-  'doubleclick.net',
-];
-
+// Define allowed HTML tags for sanitization
 const ALLOWED_TAGS = [
-  "a", "b", "i", "em", "strong", "p", "ul", "ol", "li", "br", "img", 
-  "blockquote", "code", "pre", "h1", "h2", "h3", "h4", "h5", "h6"
+  'p', 'br', 'strong', 'em', 'u', 'i', 'b', 'a', 'img', 'ul', 'ol', 'li', 
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span', 
+  'div', 'figure', 'figcaption'
 ];
-
-// Helper functions
-const shouldSkipImage = (src) => SKIP_PATTERNS.some(pattern => src.includes(pattern));
-
-const isExternalImage = (src) => src.startsWith("http://") || src.startsWith("https://") || src.startsWith("//");
-
-const extractAttributes = (imgTag) => {
-  const attributes = {};
-  const attrRegex = /(\w+(?:-\w+)*)=["']([^"']*)["']/g;
-  let match;
-  while ((match = attrRegex.exec(imgTag)) !== null) {
-    const [, name, value] = match;
-    if (name !== 'src') attributes[name] = value;
-  }
-  return attributes;
-};
-
-const addLazyLoading = (imgTag) => 
-  imgTag.includes('loading=') ? imgTag : imgTag.replace(/<img/, '<img loading="lazy" decoding="async"');
-
-const processImage = async (src, originalAttributes) => {
-  const isExternal = isExternalImage(src);
-  const srcPath = isExternal ? src : (src.startsWith("/") ? path.join("./src", src) : path.resolve("./src", src));
-  
-  const metadata = await Image(srcPath, {
-    widths: ['auto'],
-    formats: ["avif", "webp"],
-    outputDir: ".cache/@11ty/img/",
-    urlPath: "/img/optimized/",
-    ...(isExternal && {
-      cacheOptions: {
-        duration: "1d",
-        directory: ".cache",
-      },
-    }),
-  });
-
-  const imageAttributes = {
-    ...originalAttributes,
-    loading: "lazy",
-    decoding: "async",
-    ...(!originalAttributes.sizes && { sizes: "100vw" }),
-  };
-
-  return Image.generateHTML(metadata, imageAttributes);
-};
 
 export default async function(eleventyConfig) {
   // Configuration
@@ -85,6 +31,21 @@ export default async function(eleventyConfig) {
   
   // Plugins
   eleventyConfig.addPlugin(pluginRss);
+  eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
+    urlPath: "/img/",
+    outputDir: ".cache/@11ty/img/",
+    formats: ["avif", "webp"],
+    widths: ["auto"],
+    // Don't fail on external image errors (like 429 from Medium)
+    failOnError: false,
+    htmlOptions: {
+      imgAttributes: {
+        loading: "lazy",
+        decoding: "async",
+      },
+      pictureAttributes: {}
+    },
+  });
   
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/img/favicon");
@@ -114,7 +75,10 @@ export default async function(eleventyConfig) {
   });
 
   // Async filters
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
+  eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
+    code,
+    callback
+  ) {
     try {
       const minified = await minify(code);
       callback(null, minified.code);
@@ -124,58 +88,40 @@ export default async function(eleventyConfig) {
     }
   });
 
-  // Image optimization transform
-  eleventyConfig.addTransform("optimizeImages", async function(content, outputPath) {
-    if (!outputPath?.endsWith(".html")) return content;
-
-    const imgRegex = /<img\s+([^>]*?)src=["']([^"']+)["']([^>]*?)>/g;
-    let processedContent = content;
-    const matches = [...content.matchAll(imgRegex)];
-    
-    for (const [fullMatch, , src] of matches) {
-      try {
-        if (shouldSkipImage(src)) {
-          processedContent = processedContent.replace(fullMatch, addLazyLoading(fullMatch));
-          continue;
-        }
-
-        const originalAttributes = extractAttributes(fullMatch);
-        const optimizedImg = await processImage(src, originalAttributes);
-        processedContent = processedContent.replace(fullMatch, optimizedImg);
-      } catch (error) {
-        console.warn(`Failed to process image: ${src}`, error.message);
-        processedContent = processedContent.replace(fullMatch, addLazyLoading(fullMatch));
-      }
-    }
-    
-    return processedContent;
-  });
-
   // HTML minification
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
-    if (!outputPath?.endsWith('.html')) return content;
-    
-    return htmlmin.minify(content, {
-      useShortDoctype: true,
-      removeComments: true,
-      collapseWhitespace: true
-    });
+    if( outputPath && outputPath.endsWith('.html') ) {
+      let minified = htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+      return minified;
+    }
+    return content;
   });
 
-  // Copy optimized images from cache to output directory after build
-  eleventyConfig.on("eleventy.after", () => {
-    const cacheDir = ".cache/@11ty/img/";
-    const outputDir = path.join(eleventyConfig.directories.output, "img/optimized/");
-    
-    if (fs.existsSync(cacheDir)) {
+  // Store output directory for use in event handlers
+  const outputDirectory = "_site";
+
+  // Copy processed images from cache to final output after build
+  eleventyConfig.on("eleventy.after", async () => {
+    if (process.env.ELEVENTY_RUN_MODE === "build") {
+      const cacheDir = ".cache/@11ty/img/";
+      const outputDir = path.join(outputDirectory, "img");
+      
       try {
-        fs.mkdirSync(outputDir, { recursive: true });
-        fs.cpSync(cacheDir, outputDir, {
+        await fs.promises.access(cacheDir);
+        await fs.promises.cp(cacheDir, outputDir, {
           recursive: true
         });
-        console.log(`📸 Copied optimized images from cache to ${outputDir}`);
+        console.log("📸 Copied processed images from cache to output directory");
       } catch (err) {
-        console.error(`❌ Failed to copy optimized images from cache to ${outputDir}:`, err);
+        if (err.code === 'ENOENT') {
+          console.log("ℹ️ No cached images found to copy");
+        } else {
+          console.error(`❌ Failed to copy processed images from "${cacheDir}" to "${outputDir}":`, err);
+        }
       }
     }
   });

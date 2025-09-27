@@ -11,10 +11,11 @@ export default (post) => {
     // Remove Medium tracking pixels
     .replace(/<img[^>]*src="https:\/\/medium\.com\/_\/stat[^"]*"[^>]*>/g, "")
     // Add lazy loading and async decoding to all external images (Medium, etc.)
-    .replace(/(<img\s+)([^>]*src="https?:\/\/[^"]*")([^>]*)>/g, (match, openTag, srcAttr, restAttrs) => {
-      // Check if loading or decoding attributes already exist
-      const hasLoading = /loading\s*=/.test(restAttrs) || /loading\s*=/.test(srcAttr);
-      const hasDecoding = /decoding\s*=/.test(restAttrs) || /decoding\s*=/.test(srcAttr);
+    .replace(/(<img\s+)([^>]*src=["']https?:\/\/[^"']*["'])([^>]*)>/g, (match, openTag, srcAttr, restAttrs) => {
+      // Check if loading or decoding attributes already exist with flexible patterns
+      // Handles variations like: loading="lazy", loading='lazy', loading = "lazy", etc.
+      const hasLoading = /loading\s*=\s*["'][^"']*["']/i.test(restAttrs) || /loading\s*=\s*["'][^"']*["']/i.test(srcAttr);
+      const hasDecoding = /decoding\s*=\s*["'][^"']*["']/i.test(restAttrs) || /decoding\s*=\s*["'][^"']*["']/i.test(srcAttr);
       
       let result = openTag + srcAttr + restAttrs;
       

@@ -12,10 +12,15 @@ export default (post) => {
     .replace(/<img[^>]*src="https:\/\/medium\.com\/_\/stat[^"]*"[^>]*>/g, "")
     // Add lazy loading and async decoding to all external images (Medium, etc.)
     .replace(/(<img\s+)([^>]*src=["']https?:\/\/[^"']*["'])([^>]*)>/g, (match, openTag, srcAttr, restAttrs) => {
+      // Helper to check if an attribute exists in a string
+      function hasAttribute(attrName, str) {
+        const regex = new RegExp(attrName + '\\s*=\\s*["\'][^"\']*["\']', 'i');
+        return regex.test(str);
+      }
       // Check if loading or decoding attributes already exist with flexible patterns
       // Handles variations like: loading="lazy", loading='lazy', loading = "lazy", etc.
-      const hasLoading = /loading\s*=\s*["'][^"']*["']/i.test(restAttrs) || /loading\s*=\s*["'][^"']*["']/i.test(srcAttr);
-      const hasDecoding = /decoding\s*=\s*["'][^"']*["']/i.test(restAttrs) || /decoding\s*=\s*["'][^"']*["']/i.test(srcAttr);
+      const hasLoading = hasAttribute('loading', restAttrs) || hasAttribute('loading', srcAttr);
+      const hasDecoding = hasAttribute('decoding', restAttrs) || hasAttribute('decoding', srcAttr);
       
       let result = openTag + srcAttr + restAttrs;
       

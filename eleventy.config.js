@@ -105,15 +105,19 @@ export default async function(eleventyConfig) {
   const outputDirectory = "_site";
 
   // Copy processed images from cache to final output after build
-  eleventyConfig.on("eleventy.after", async () => {
+  eleventyConfig.on("eleventy.after", () => {
     if (process.env.ELEVENTY_RUN_MODE === "build") {
       const cacheDir = ".cache/@11ty/img/";
       const outputDir = path.join(outputDirectory, "img");
       
       try {
-        await fs.promises.access(cacheDir);
-        await fs.promises.cp(cacheDir, outputDir, {
-          recursive: true
+        // Check if cache directory exists
+        fs.accessSync(cacheDir);
+        
+        // Use synchronous copy for better Node.js compatibility
+        fs.cpSync(cacheDir, outputDir, {
+          recursive: true,
+          force: true // Overwrite existing files
         });
         console.log("📸 Copied processed images from cache to output directory");
       } catch (err) {

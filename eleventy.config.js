@@ -168,10 +168,15 @@ export default async function(eleventyConfig) {
     const outputDir = path.join(eleventyConfig.directories.output, "img/optimized/");
     
     if (fs.existsSync(cacheDir)) {
-      fs.cpSync(cacheDir, outputDir, {
-        recursive: true
-      });
-      console.log(`📸 Copied optimized images from cache to ${outputDir}`);
+      try {
+        fs.mkdirSync(outputDir, { recursive: true });
+        fs.cpSync(cacheDir, outputDir, {
+          recursive: true
+        });
+        console.log(`📸 Copied optimized images from cache to ${outputDir}`);
+      } catch (err) {
+        console.error(`❌ Failed to copy optimized images from cache to ${outputDir}:`, err);
+      }
     }
   });
 

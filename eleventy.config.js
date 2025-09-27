@@ -75,10 +75,7 @@ export default async function(eleventyConfig) {
   });
 
   // Async filters
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', async function (
-    code,
-    callback
-  ) {
+  eleventyConfig.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
     try {
       const minified = await minify(code);
       callback(null, minified.code);

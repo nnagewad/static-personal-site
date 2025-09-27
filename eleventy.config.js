@@ -165,7 +165,7 @@ export default async function(eleventyConfig) {
   // Copy optimized images from cache to output directory after build
   eleventyConfig.on("eleventy.after", () => {
     const cacheDir = ".cache/@11ty/img/";
-    const outputDir = path.join(eleventyConfig.directories.output, "/img/optimized/");
+    const outputDir = path.join(eleventyConfig.directories.output, "img/optimized/");
     
     if (fs.existsSync(cacheDir)) {
       fs.cpSync(cacheDir, outputDir, {

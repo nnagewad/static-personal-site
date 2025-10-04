@@ -19,8 +19,10 @@
 
   {% include 'partials/medium-posts.njk' %}
 
-  <section>
-    {% include 'partials/videos.njk' %}
-  </section>
+  {% if (videos | length) > 0 %}
+    <section>
+      {% include 'partials/videos.njk' %}
+    </section>
+  {% endif %}
 
 {% endblock %}

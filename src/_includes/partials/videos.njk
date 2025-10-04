@@ -1,6 +1,10 @@
 {% from 'macros/displayDate.njk' import date %}
 
-<h2 class='font-size-2'>Videos</h2>
+{% if (videos | length ) > 1 %}
+  <h2 class='font-size-2'>Videos</h2>
+{% else %}
+  <h2 class='font-size-2'>Video</h2>
+{% endif %}
 <ul class='list-extra-spaced'>
   {% for i in range(0, videos | length) | reverse %}
     <li class='balance-textwrap'>

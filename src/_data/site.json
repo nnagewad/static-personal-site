@@ -7,19 +7,24 @@
   "language": "en",
   "socials": [
     {
-      "name": "GitHub",
+      "name": "Nikin's GitHub profile",
       "url": "https://github.com/nnagewad",
       "icon": "icons/github.svg"
     },
     {
-      "name": "LinkedIn",
+      "name": "Nikin's LinkedIn profile",
       "url": "https://www.linkedin.com/in/nikinnagewadia/",
       "icon": "icons/linkedin.svg"
     },
     {
-      "name": "Medium",
+      "name": "Nikin's Medium profile",
       "url": "https://nkngwd.medium.com/",
       "icon": "icons/medium.svg"
+    },
+    {
+      "name": "RSS Feed for this site",
+      "url": "/feed.xml",
+      "icon": "icons/rss-feed.svg"
     }
   ]
 }

@@ -11,7 +11,7 @@
         <img src="{{ headshotImage }}" alt="{{ headshotAltText }}">
       </div>
       <div class="details">
-        {{ content | safe }}
+        {{ content | urlize | safe }}
       </div>
     </div>
   </section>

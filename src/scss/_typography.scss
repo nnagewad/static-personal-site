@@ -161,6 +161,9 @@ ol li {
   & > li {
     @include spacing-mixins.bottom-5(margin);
   }
+  & > li:last-child {
+    @include spacing-mixins.bottom-4(margin);
+  }
 }
 
 .list-horizontal {

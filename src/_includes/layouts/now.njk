@@ -1,12 +1,22 @@
 {% extends 'layouts/base.njk' %}
+{% from 'macros/displayDate.njk' import date %}
 
 {% block content %}
   <h1 class='font-size-3 title-spacing grid-container'>{{ title }}</h1>
 
-  <section>
+  <section class="now">
     <h2 class='font-size-2 grid-container'>What am I doing right now</h2>
-    <div class="details">
-      {{ content | safe }}
-    </div>
+    {{ updates[i].note }}
+    <dl class="meta-information">
+      {{ date("Date:", updates[i].date) }}
+    </dl>
+  </section>
+
+  <section class="previous-posts">
+    <h2 class='font-size-2 grid-container'>Previous posts</h2>
+    {{ updates[i].note }}
+    <dl class="meta-information">
+      {{ date("Date:", updates[i].date) }}
+    </dl>
   </section>
 {% endblock %}

@@ -1,37 +1,56 @@
 {% from 'macros/tags.njk' import tags %}
 {% from 'macros/displayDate.njk' import mediumDate %}
 
-<section>
-  <h2 class='font-size-2'>Case studies</h2>
-  <ul class='list-extra-spaced'>
-    {% for post in collections.posts %}
-      {% if 'case-study' in post.data.categories %}
-        <li class='balance-textwrap'>
-          <a href='{{ post.url }}'>{{ post.data.title }}</a>
-          <dl class='meta-information'>
-            {{ mediumDate("Published:", post.data.pubDate) }}
-            {{ tags(post.data.categories) }}
-          </dl>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</section>
+{% set hasCaseStudies = false %}
+{% set hasArticles = false %}
+{% set caseStudyCount = 0 %}
+{% set articleCount = 0 %}
+{% for post in collections.posts %}
+  {% if post.data.categories and 'case-study' in post.data.categories %}
+    {% set hasCaseStudies = true %}
+    {% set caseStudyCount = caseStudyCount + 1 %}
+  {% endif %}
+  {% if not post.data.categories or 'case-study' not in post.data.categories %}
+    {% set hasArticles = true %}
+    {% set articleCount = articleCount + 1 %}
+  {% endif %}
+{% endfor %}
 
-<section>
-  <h2 class='font-size-2'>Articles</h2>
-  <ul class='list-extra-spaced'>
-    {% for post in collections.posts %}
-      {% if 'case-study' not in post.data.categories %}
-        <li class='balance-textwrap'>
-          <a href='{{ post.url }}'>{{ post.data.title }}</a>
-          <dl class='meta-information'>
-            {{ mediumDate("Published:", post.data.pubDate) }}
-            {{ tags(post.data.categories) }}
-          </dl>
-        </li>
-      {% endif %}
-    {% endfor %}
-  </ul>
-</section>
+{% if hasCaseStudies %}
+  <section>
+    <h2 class='font-size-2'>{% if caseStudyCount == 1 %}Case study{% else %}Case studies{% endif %}</h2>
+    <ul class='list-extra-spaced'>
+      {% for post in collections.posts %}
+        {% if 'case-study' in post.data.categories %}
+          <li class='balance-textwrap'>
+            <a href='{{ post.url }}'>{{ post.data.title }}</a>
+            <dl class='meta-information'>
+              {{ mediumDate("Published:", post.data.pubDate) }}
+              {{ tags(post.data.categories) }}
+            </dl>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
+
+{% if hasArticles %}
+  <section>
+    <h2 class='font-size-2'>{% if articleCount == 1 %}Article{% else %}Articles{% endif %}</h2>
+    <ul class='list-extra-spaced'>
+      {% for post in collections.posts %}
+        {% if 'case-study' not in post.data.categories %}
+          <li class='balance-textwrap'>
+            <a href='{{ post.url }}'>{{ post.data.title }}</a>
+            <dl class='meta-information'>
+              {{ mediumDate("Published:", post.data.pubDate) }}
+              {{ tags(post.data.categories) }}
+            </dl>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+{% endif %}
 

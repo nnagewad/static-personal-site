@@ -2,8 +2,8 @@
 layout: 'layouts/now.njk'
 title: 'Now'
 metaDesc: 'Get an idea what Nikin is currently doing right now.'
-image: about
-imageAltText: '3D animated emoji of a smiling person with a beard, glasses, a tuque, and a sweat drop.'
+image: now
+imageAltText: '3D animated emoji of a person wearing glasses and a hoodie is focused on a laptop screen..'
 update: 2025-10-04
 ---
 - Been learning Swift via CodeAcademy, about 85% complete

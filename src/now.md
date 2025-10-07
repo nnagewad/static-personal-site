@@ -4,9 +4,8 @@ title: 'Now'
 metaDesc: 'Get an idea what Nikin is currently doing right now.'
 image: now
 imageAltText: '3D animated emoji of a person wearing glasses and a hoodie is focused on a laptop screen..'
-update: 2025-10-04
+update: 2025-10-07
 ---
-- Been learning Swift via CodeAcademy, about 85% complete
-- Now that I know what an MCP is I'm wondering where I could use it
-- Prepping my trip to Berlin in a couple of weeks, expect to see something posted on [Everyday Lens](https://everydaylens.photos)
-- Listening to the new Nala Sinephro
+- Just completed the Intro. to Swift course on CodeAcademy
+- Posted [this photo](https://everydaylens.photos/photo/the-corridor-of-wandering-souls/) I took on Sunday at Tate Britain
+- Having a hard time sleeping as lot is going on in my mind, especially with regards how my day-to-day job is a bit of lull at the moment

@@ -7,4 +7,4 @@ imageAltText: '3D animated emoji of a person wearing glasses and a hoodie is foc
 update: 2025-10-09
 ---
 - Getting ready to start the intermediate course on Swift module on CodeAcademy
-- All week have been listening to a [podcast](https://podcasts.apple.com/gb/podcast/dissect/id1143845868) around Radiohead's “In Rainbows”
+- All week have been listening to a podcast around Radiohead's “In Rainbows”

@@ -18,6 +18,8 @@
   max-width: 100%;
   color: var(--color-primary-text);
   &:focus {
-    outline: var(--border-thin) solid var(--color-focus);
+    border: var(--border-thin) var(--color-focus-border) solid;
+    outline: var(--border-thick) solid var(--color-focus);
+    outline-offset: 0px;
   }
 }

@@ -17,7 +17,7 @@
   height: var(--pixel-40);
   max-width: 100%;
   color: var(--color-primary-text);
-  &:focus {
+  &:focus-visible {
     border: var(--border-thin) var(--color-focus-border) solid;
     outline: var(--border-thick) solid var(--color-focus);
     outline-offset: 0px;

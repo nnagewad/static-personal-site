@@ -4,12 +4,12 @@ title: 'Now'
 metaDesc: 'Get an idea what Nikin is currently doing right now.'
 image: now
 imageAltText: '3D animated emoji of a person wearing glasses and a hoodie is focused on a laptop screen..'
-update: 2025-11-22
+update: 2025-11-28
 ---
-A handful of photos taken in Paris are now live on [Everyday Lens](https://everydaylens.photos).
+What a gig heavy week. Saw Tortoise on Saturday, then saw Radiohead on Tuesday.
 
-Saw [SML](https://www.sml.band/) on Thursday evening at the Church of Sound (wish I brought my camera for that show).
+Uploaded more photos to [Everyday Lens](https://everydaylens.photos).
 
-Tonight, I'll be seeing the legendary [Tortoise](https://www.trts.com/) at the Barbican Centre.
+Building prototypes in Figma to test a proposed flow/process that could change how content gets on GOV.UK...
 
-Non-music related, work is getting interesting, in a good way. We'll see what comes of it...
+Lastly, Getting ready for X-mas, first time buying gifts in a long time. Also, my birthday is coming up next week... Not sure what to do...

@@ -4,12 +4,12 @@ title: 'Now'
 metaDesc: 'Get an idea what Nikin is currently doing right now.'
 image: now
 imageAltText: '3D animated emoji of a person wearing glasses and a hoodie is focused on a laptop screen..'
-update: 2025-11-28
+update: 2025-12-22
 ---
-What a gig heavy week. Saw Tortoise on Saturday, then saw Radiohead on Tuesday.
+Last day at work before I head to Toronto, Canada for the holidays.
 
-Uploaded more photos to [Everyday Lens](https://everydaylens.photos).
+Saw a early preview of [Sentimental Value](https://en.wikipedia.org/wiki/Sentimental_Value) at the Barbican last night.
 
-Building prototypes in Figma to test a proposed flow/process that could change how content gets on GOV.UK...
+Uploaded a few more photos on [Everyday Lens](https://everydaylens.photos)
 
-Lastly, Getting ready for X-mas, first time buying gifts in a long time. Also, my birthday is coming up next week... Not sure what to do...
+Lastly, been using [Claude Code](https://claude.com/product/claude-code) to help build an iOS app that I've been thinkning about for a couple years now...

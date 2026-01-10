@@ -20,11 +20,6 @@
       "name": "Nikin's Medium profile",
       "url": "https://nkngwd.medium.com/",
       "icon": "icons/medium.svg"
-    },
-    {
-      "name": "RSS Feed for this site",
-      "url": "/feed.xml",
-      "icon": "icons/rss-feed.svg"
     }
   ]
 }

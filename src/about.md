@@ -38,3 +38,5 @@ work:
     start: 2022-02-02
 ---
 I’m {{ site.firstName }}, a product designer with 10+ years of experience. I specialize in building efficient, modular, and accessible systems, navigating complex problem spaces through strategic thinking, storytelling, and collaboration. I design scalable, inclusive interfaces and I validate those ideas through prototyping, working closely with cross-functional teams to deliver solutions aligned with user needs and long-term business goals.
+
+Outside of work, I take photos and share them on my personal photography site, [Everyday Lens](https://everydaylens.photos).

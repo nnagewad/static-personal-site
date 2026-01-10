@@ -6,4 +6,10 @@ metaDesc: 'How you can get a hold of
 image: contact
 imageAltText: '3D animated emoji of a person wearing glasses and a hoodie is focused on a laptop screen..'
 ---
-If you’d like to connect or have a question, you can [book a time to chat](https://calendar.app.google/qskJMLK8NsfX78bu8).
+Have a question or just want to say hi? Reach out:
+
+- [LinkedIn](https://www.linkedin.com/in/nikinnagewadia/)
+
+- [Email](mailto:nikin.n@gmail.com)
+
+- [Schedule a chat](https://calendar.app.google/qskJMLK8NsfX78bu8)

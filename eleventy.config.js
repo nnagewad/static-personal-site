@@ -2,7 +2,6 @@ import 'dotenv/config';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
-import pluginRss from '@11ty/eleventy-plugin-rss';
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "path";
 import fs from "fs";
@@ -30,7 +29,6 @@ export default async function(eleventyConfig) {
   });
   
   // Plugins
-  eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     urlPath: "/img/",
     outputDir: ".cache/@11ty/img/",

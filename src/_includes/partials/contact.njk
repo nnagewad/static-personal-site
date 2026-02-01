@@ -1,9 +1,0 @@
-<h2 id="{{ contactSectionTitle | slugify }}">{{ contactSectionTitle }}</h2>
-<p>{{ contactIntro | safe }}</p>
-<ul>
-  {% for contact in contacts %}
-    <li>
-      <a href='{{ contact.url }}'>{{ contact.title }}</a>
-    </li>
-  {% endfor %}
-</ul>

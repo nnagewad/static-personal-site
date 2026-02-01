@@ -1,9 +1,0 @@
-<h2 id="{{ caseStudiesSectionTitle | slugify }}">{{ caseStudiesSectionTitle }}</h2>
-<p>{{ caseStudiesIntro | safe }}</p>
-<ul>
-  {% for caseStudy in caseStudies %}
-    <li>
-      <a href='{{ caseStudy.url }}'>{{ caseStudy.title }}</a>
-    </li>
-  {% endfor %}
-</ul>

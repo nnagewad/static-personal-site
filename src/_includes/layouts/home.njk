@@ -1,14 +1,15 @@
 {% from 'macros/displayDate.njk' import date %}
+{% from 'macros/linkList.njk' import linkList %}
 
 {% extends 'layouts/base.njk' %}
 {% block content %}
-  
+
   <h1 class='font-size-2'>{{ title }}</h1>
   <p class='lead-paragraph'>{{ subTitle }}</p>
 
   {% include 'partials/about.njk' %}
-  {% include 'partials/case-studies.njk' %}
-  {% include 'partials/supplementary-materials.njk' %}
-  {% include 'partials/contact.njk' %}
+  {{ linkList(caseStudiesSectionTitle, caseStudiesIntro, caseStudies) }}
+  {{ linkList(supplementaryMaterialsSectionTitle, supplementaryMaterialsIntro, supplementaryMaterials) }}
+  {{ linkList(contactSectionTitle, contactIntro, contacts) }}
 
 {% endblock %}

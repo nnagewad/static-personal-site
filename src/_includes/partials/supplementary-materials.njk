@@ -1,9 +1,0 @@
-<h2 id="{{ supplementaryMaterialsSectionTitle | slugify }}">{{ supplementaryMaterialsSectionTitle }}</h2>
-<p>{{ supplementaryMaterialsIntro | safe }}</p>
-<ul>
-  {% for supplementaryMaterial in supplementaryMaterials %}
-    <li>
-      <a href='{{ supplementaryMaterial.url }}'>{{ supplementaryMaterial.title }}</a>
-    </li>
-  {% endfor %}
-</ul>

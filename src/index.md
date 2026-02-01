@@ -5,10 +5,4 @@ metaDesc: 'Discover the work of Nikin Nagewadia, a senior interaction designer a
 image: home
 imageAltText: '3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard.'
 intro: 'Senior interaction designer employed by the Government Digital Service, working on GOV.UK'
-videos:
-  0:
-    name: 'Upgrading Whitehall Publisher to the GOV.UK Design System'
-    url: 'https://youtu.be/cPDBARbzGGg?si=l5opeg32v7c78Hl2&t=2456'
-    video: 'Services Week 2024: GDS Open Show and Tell'
-    upload: 2024-03-26
 ---

@@ -1,8 +1,48 @@
 ---
 layout: 'layouts/home.njk'
-title: 'Nikin Nagewadia'
-metaDesc: 'Discover the work of Nikin Nagewadia, a senior interaction designer at the Government Digital Service, focusing on enhancing GOV.UK’s user experience through design.'
+title:
+  Nikin Nagewadia
+metaDesc: 'update'
 image: home
-imageAltText: '3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard.'
-intro: 'Senior interaction designer employed by the Government Digital Service, working on GOV.UK'
+imageAltText:
+  3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard
+subTitle:
+  Senior Product / Interaction Designer with a background in Frontend Development
+aboutSectionTitle:
+  About
+about:
+  I'm Nikin, a product and interaction designer with a background in frontend development. That combination has shaped how I work — I design systems that are not only scalable and inclusive, but buildable. Over 10+ years I've led complex product work at scale, from replatforming government publishing tools to building design systems from the ground up. Outside of work, I take photographs and share them on <a href="https://everydaylens.photos">Everyday Lens</a>.
+caseStudiesSectionTitle:
+  Case studies
+caseStudiesIntro:
+  Two projects, both <strong>designed with integrity</strong>. Everyday Lens is where I apply that thinking independently. GDS is where it was built.
+caseStudies:
+  - url: https://nikin.design
+    title: Everyday Lens
+  - url: https://google.com
+    title: GDS
+supplementaryMaterialsSectionTitle:
+  Supplementary materials
+supplementaryMaterialsIntro:
+  "A little more to explore:"
+supplementaryMaterials:
+  - url: https://github.com/nnagewad
+    title: GitHub
+  - url: https://medium.com/@nkngwd
+    title: Medium
+  - url: /now
+    title: Now page
+  - url: /resume
+    title: Resume
+contactSectionTitle:
+  Contact
+contactIntro:
+  "I'd love to hear from you. Get in touch via any of the below:"
+contacts:
+  - url: mailto:nikin.n@gmail.com
+    title: Email
+  - url: https://www.linkedin.com/in/nikinnagewadia/
+    title: LinkedIn
+  - url: https://calendar.app.google/qskJMLK8NsfX78bu8
+    title: Set up a video call
 ---

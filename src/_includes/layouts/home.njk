@@ -3,18 +3,7 @@
 {% extends 'layouts/base.njk' %}
 {% block content %}
   
-  <h1 class='font-size-3'>{{ title }}</h1>
+  <h1 class='font-size-2'>{{ title }}</h1>
   <p class='lead-paragraph'>{{ intro }}</p>
-
-  {% if latest.headline %}
-    <section class='latest'>
-      <h2 class='font-size-2'>Latest</h2>
-      <h3 class='font-size-1'>{{ latest.headline }}</h3>
-      {{ content | safe }}
-      <div class="meta-information">
-        {{ date('Updated:', latest.date) }}
-      </div>
-    </section>
-  {% endif %}
 
 {% endblock %}

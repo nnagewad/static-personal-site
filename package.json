@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "nikin.design",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Portfolio website for Nikin Nagewadia",
   "main": "eleventy.config.js",
   "type": "module",

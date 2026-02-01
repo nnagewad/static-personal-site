@@ -6,12 +6,3 @@
     </dd>
   </div>
 {% endmacro %}
-
-{% macro mediumDate(label, date) %}
-  <div class="list-horizontal horizontal-gap--2">
-    <dt>{{ label }}</dt>
-    <dd>
-      <time datetime='{{ date | apiToISO }}' class='capitalize'>{{ date | apiToFullDate }}</time>
-    </dd>
-  </div>
-{% endmacro %}

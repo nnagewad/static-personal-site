@@ -3,7 +3,6 @@
 ## Summary
 
 - Portfolio website.
-- Pulling content from Medium.
 
 ## Technology
 

@@ -18,11 +18,6 @@
   {% set metaDesc = summary %}
 {% endif %}
 
-{% if layout === 'layouts/medium-post.njk' %}
-  {% set pageTitle = 'Article: ' + pageTitle %}
-{% endif %}
-
-
 <title>{{ pageTitle }}</title>
 <link rel="canonical" href="{{ currentUrl }}" />
 

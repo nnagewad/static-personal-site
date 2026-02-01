@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import { minify } from 'terser';
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
@@ -7,17 +6,13 @@ import path from "path";
 import fs from "fs";
 
 // Import filters
-import generateMetaDescription from './src/_filters/generate-meta-description.js';
-import apiToFullDate from './src/_filters/api-to-full-date.js';
-import apiToISO from './src/_filters/api-to-iso.js';
 import isoToFullDate from './src/_filters/iso-to-full-date.js';
 import isoToISODate from './src/_filters/iso-to-iso-date.js';
-import updateTags from './src/_filters/update-tags.js';
 
 // Define allowed HTML tags for sanitization
 const ALLOWED_TAGS = [
-  'p', 'br', 'strong', 'em', 'u', 'i', 'b', 'a', 'img', 'ul', 'ol', 'li', 
-  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span', 
+  'p', 'br', 'strong', 'em', 'u', 'i', 'b', 'a', 'img', 'ul', 'ol', 'li',
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span',
   'div', 'figure', 'figcaption'
 ];
 
@@ -34,7 +29,6 @@ export default async function(eleventyConfig) {
     outputDir: ".cache/@11ty/img/",
     formats: ["avif", "webp"],
     widths: ["auto"],
-    // Don't fail on external image errors (like 429 from Medium)
     failOnError: false,
     htmlOptions: {
       imgAttributes: {
@@ -51,12 +45,8 @@ export default async function(eleventyConfig) {
   
   // Filters
   const filters = {
-    generateMetaDescription,
     isoToFullDate,
     isoToISODate,
-    apiToFullDate,
-    apiToISO,
-    updateTags,
     sanitizeHTML: (content) => sanitizeHtml(content, {
       allowedTags: ALLOWED_TAGS,
       allowedAttributes: {

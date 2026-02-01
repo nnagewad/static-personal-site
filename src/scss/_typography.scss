@@ -184,6 +184,10 @@ ol li {
   content: "- ";
 }
 
+.lead-paragraph {
+  font-weight: var(--font-weight-standard);
+}
+
 .headline-caption,
 .lead-paragraph {
   @extend .font-size-1;

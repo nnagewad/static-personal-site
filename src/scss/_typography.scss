@@ -48,6 +48,7 @@ a {
   --min-font-size: 1.9214rem;
   --fluid-font-size: 1.5565rem + 1.8244vw;
   --max-font-size: 2.7241rem;
+  @include spacing-mixins.bottom-2(margin);
 }
 
 .font-size-0,
@@ -84,8 +85,6 @@ footer {
 }
 
 ul {
-  list-style-position: inside;
-  padding: 0;
   li + li {
     @include spacing-mixins.top-1(margin)
   }

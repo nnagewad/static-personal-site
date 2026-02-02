@@ -5,7 +5,17 @@ body {
   background: var(--color-background);
 }
 
-header {
+.page-header {
+  @include spacing-mixins.bottom-9(margin);
+  p {
+    margin-bottom: 0;
+  }
+  .font-size-2:has(+ .lead-paragraph) {
+    @include spacing-mixins.bottom-2(margin);
+  }
+}
+
+.header-nav {
   @include borders-mixins.thick-divider(bottom);
   @include spacing-mixins.top-6(padding);
   @include spacing-mixins.bottom-4(padding);
@@ -58,13 +68,6 @@ section {
   @include spacing-mixins.bottom-8(margin);
 }
 
-.headshot {
-  order: 2;
-  flex: 1 1 calc((var(--wrapper-width)*1/5) - var(--spacing-6));
-  img {
-    margin: 0;
-  }
-}
 
 .details {
   order: 1;

@@ -13,9 +13,12 @@
   </head>
   <body>
     {% include 'partials/site-header.njk' %}
-    <main tabindex='-1' id='main-content' class='wrapper grid-container'>
-      {% block content %}
-      {% endblock %}
+    <main tabindex='-1' id='main-content' class='wrapper'>
+      {% include 'partials/page-header.njk'%}
+      <div class="grid-container">
+        {% block content %}
+        {% endblock %}
+      </div>
     </main>
     {% include 'partials/site-footer.njk' %}
     {% set js %}

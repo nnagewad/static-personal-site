@@ -1,11 +1,15 @@
 {% macro linkList(sectionTitle, intro, items) %}
-<h2 id="{{ sectionTitle | slugify }}">{{ sectionTitle }}</h2>
-<p>{{ intro | safe }}</p>
-<ul>
-  {% for item in items %}
-    <li>
-      <a href='{{ item.url }}'>{{ item.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+
+<section>
+  <h2 class="font-size-1" id="{{ sectionTitle | slugify }}">{{ sectionTitle }}</h2>
+  <p>{{ intro | safe }}</p>
+  <ul>
+    {% for item in items %}
+      <li>
+        <a href='{{ item.url }}'>{{ item.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
 {% endmacro %}

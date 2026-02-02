@@ -4,6 +4,7 @@ import sanitizeHtml from "sanitize-html";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "path";
 import fs from "fs";
+import { IdAttributePlugin } from "@11ty/eleventy";
 
 // Import filters
 import isoToFullDate from './src/_filters/iso-to-full-date.js';
@@ -38,6 +39,8 @@ export default async function(eleventyConfig) {
       pictureAttributes: {}
     },
   });
+
+  eleventyConfig.addPlugin(IdAttributePlugin);
   
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/img/favicon");

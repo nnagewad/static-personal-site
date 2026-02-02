@@ -9,12 +9,6 @@ body {
   color: var(--color-primary-text);
 }
 
-h1,
-h2,
-h3 {
-  line-height: 1.3;
-}
-
 p {
   @include spacing-mixins.bottom-4(margin);
 }
@@ -35,7 +29,7 @@ a {
 .font-size-2,
 .font-size-1 {
   font-weight: var(--font-weight-bold);
-  line-height: 1.3;
+  line-height: 1.125;
   text-wrap: balance;
   font-size: clamp(
     var(--min-font-size),
@@ -82,28 +76,6 @@ a {
   margin-bottom: 0;
 }
 
-.medium-post {  
-  img {
-    @include spacing-mixins.bottom-1(margin);
-  }
-
-  blockquote,
-  figure {
-    @include spacing-mixins.bottom-6(margin);
-  }
-
-  ol {
-    padding-left: calc(var(--spacing-4) + 0.43vw);
-  }
-}
-
-.meta-information {
-  @extend .font-size--1;
-  & > * {
-    @include spacing-mixins.bottom-1(margin);
-  }
-}
-
 footer {
   p {
     @include spacing-mixins.bottom-1(margin);
@@ -139,20 +111,20 @@ ul {
   }
 }
 
+.home-link {
+  @include spacing-mixins.bottom-6(margin);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
 .lead-paragraph {
-  font-weight: var(--font-weight-standard);
+    font-weight: var(--font-weight-standard);
 }
 
 .headline-caption,
 .lead-paragraph {
   @extend .font-size-1;
-}
-
-blockquote,
-figcaption,
-.headline-caption,
-.lead-paragraph,
-.meta-information {
   color: var(--color-secondary-text);
 }
 
@@ -188,26 +160,4 @@ a {
 
 .font-size-1 > a:focus-visible {
   --focus-background: -0.125rem;
-}
-
-.header-menu-items {
-  font-weight: var(--font-weight-bold);
-  a {
-    &:not(:hover, [aria-current=page]) {
-      text-decoration: none;
-    }
-    &[aria-current=page] {
-      color: var(--color-active);
-      text-underline-offset: var(--nav-underline-offset);
-    }
-    &:focus-visible {
-      color: var(--color-focus-text);
-    }
-  }
-  @media (hover: hover) {
-    a:hover {
-      color: var(--color-hover);
-      text-underline-offset: var(--nav-underline-offset);
-    }
-  }
 }

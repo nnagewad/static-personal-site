@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  @include spacing-mixins.bottom-4(margin);
+  @include spacing-mixins.bottom-6(margin);
 }
 
 a {
@@ -89,7 +89,7 @@ ul {
 }
 
 .list-lead-in {
-  margin-bottom: var(--spacing-1);
+  margin-bottom: var(--spacing-3);
 }
 
 .list-extra-spaced {

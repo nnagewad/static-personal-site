@@ -22,6 +22,7 @@ p {
 a {
   text-underline-offset: 0.3125em;
   text-decoration-thickness: math.max(0.0625rem);
+  font-weight: var(--font-weight-semibold);
   @media (hover: hover) {
     &:hover,
     &[aria-current=page] {

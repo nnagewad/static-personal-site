@@ -15,7 +15,7 @@ about:
 caseStudiesSectionTitle:
   Case studies
 caseStudiesIntro:
-  Two projects, both <strong>designed with integrity</strong>. Everyday Lens is where I apply that thinking independently. GDS is where it was built.
+  "Everyday Lens embodies three principles: <strong>honest</strong>, <strong>purposeful</strong>, and <strong>built to last</strong>. These principles were shaped during my time at GDS and now guide how I approach product and interaction design."
 caseStudies:
   - url: https://nikin.design
     title: Everyday Lens

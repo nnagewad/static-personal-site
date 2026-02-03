@@ -9,12 +9,11 @@ imageAltText:
 subTitle:
   Building a personal publishing system with AI collaboration
 ---
-<section>
-  <h2 class="font-size-3">Context</h2>
+<div class="intro">
   <p>I've always enjoyed taking photos, but I rarely shared them. When I did post on Instagram, my work disappeared into the algorithm—likes mattered more than the photos themselves. I wanted somewhere to share my work on my own terms.</p>
   <p>But beyond finding a home for my photos, I was curious. Large language models were changing how people work with content, and I wanted to see firsthand what AI could actually do in a creative workflow. Could it handle the boring parts—titles, tags, descriptions—without losing my voice? That question drove the project as much as the publishing problem.</p>
   <p>So I built <a href="https://everydaylens.photos">Everyday Lens</a>.</p>
-</section>
+</div>
 
 <section>
   <h2 class="font-size-3">Design judgment</h2>

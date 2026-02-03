@@ -28,7 +28,7 @@ supplementaryMaterialsIntro:
 supplementaryMaterials:
   - url: https://github.com/nnagewad
     title: GitHub
-  - url: https://medium.com/@nkngwd
+  - url: https://nkngwd.medium.com
     title: Medium
   - url: /now
     title: Now page

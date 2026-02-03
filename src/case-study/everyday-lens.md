@@ -7,18 +7,18 @@ image: home
 imageAltText:
   3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard
 subTitle:
-  An automated photography workflow with AI collaboration
+  Building a personal publishing system with AI collaboration
 ---
 <section>
   <h2 class="font-size-3">Context</h2>
   <p>I've always enjoyed taking photos, but I rarely shared them. When I did post on Instagram, my work disappeared into the algorithm—likes mattered more than the photos themselves. I wanted somewhere to share my work on my own terms.</p>
   <p>But beyond finding a home for my photos, I was curious. Large language models were changing how people work with content, and I wanted to see firsthand what AI could actually do in a creative workflow. Could it handle the boring parts—titles, tags, descriptions—without losing my voice? That question drove the project as much as the publishing problem.</p>
-  <p>So I built Everyday Lens: a publishing system that gets out of my way.</p>
+  <p>So I built <a href="https://everydaylens.photos">Everyday Lens</a>.</p>
 </section>
 
 <section>
   <h2 class="font-size-3">Design judgment</h2>
-  <p>I wanted the system to feel effortless—but I also wanted it to feel like mine. The terminal-inspired aesthetic wasn't just a style choice. It reflected what the tool actually is: something quiet, utilitarian, running in the background doing its job. No flashy interface needed. Just clean typography, high contrast, and the photos take front and center.</p>
+  <p>I wanted the system to feel effortless—but I also wanted it to feel like mine. The terminal-inspired aesthetic wasn't just a style choice. It reflected what the tool actually is: something quiet, utilitarian, running in the background doing its job. No flashy interface needed. Just clean typography, high colour contrast, and the photos take front and center.</p>
   <p>That instinct—form follows function—comes directly from my years working on GOV.UK. It's become how I design everything.</p>
   <p>Built solo, in my own time, with no budget or team. I prioritized automation and ownership over polish and flexibility. The goal was to build something that would last—not just something that worked today. A system that removed friction entirely, while using AI as a collaborator rather than a replacement for creative decisions.</p>
 </section>

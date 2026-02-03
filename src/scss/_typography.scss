@@ -26,12 +26,20 @@ a {
   }
 }
 
+span.font-size-4 {
+  display: block;
+}
+
+h1:has(+ .lead-paragraph) {
+  @include spacing-mixins.bottom-1(margin);
+}
+
 .font-size-4,
 .font-size-3,
 .font-size-2,
 .font-size-1 {
   line-height: 1.125;
-  text-wrap: balance;
+  text-wrap: pretty;
   font-size: clamp(
     var(--min-font-size),
     calc(var(--fluid-font-size)),
@@ -101,7 +109,10 @@ footer {
 
 ul {
   li + li {
-    @include spacing-mixins.top-1(margin)
+    @include spacing-mixins.top-1(margin);
+  }
+  li {
+    text-wrap: pretty;
   }
 }
 

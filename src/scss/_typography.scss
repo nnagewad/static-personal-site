@@ -88,6 +88,11 @@ a {
   font-size: 0.75rem;
 }
 
+strong {
+  font-weight: var(--font-weight-bold);
+  color: var(--color-secondary-text);  
+}
+
 footer {
   p {
     @include spacing-mixins.bottom-1(margin);

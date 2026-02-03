@@ -26,7 +26,7 @@ subTitle:
 <section>
   <h2 class="font-size-3">Design decisions</h2>
   <h3 class="font-size-2">Automation first</h3>
-  <p>A script detects new photos, extracts camera metadata, and triggers AI-generated titles, alt text, and tags—reducing publishing time from 15 minutes to under 60 seconds.</p>
+  <p>A script detects new photos, extracts camera metadata, and triggers AI-generated titles, alt text, and tags—reducing publishing time from 10 minutes (manually entering all the metadata) to under 60 seconds.</p>
   
   <h3 class="font-size-2">AI with guardrails</h3>
   <p>Claude generates the first draft of metadata. It's accurate about 80% of the time, but the 20% it gets wrong is often the most important content—personal stories, artistic intent, location significance. I made a deliberate choice to never let AI publish without review—accuracy without oversight isn't something I'm comfortable with. The review step keeps my voice in the work.</p>
@@ -43,7 +43,7 @@ subTitle:
 
 <section>
   <h2 class="font-size-3">Impact</h2>
-  <ul>
+  <ul class="list-extra-spaced ">
     <li><strong>80% AI accuracy baseline</strong> established for creative metadata generation</li>
     <li><strong>90+ Lighthouse scores</strong> across performance, accessibility, and SEO</li>
     <li><strong>Influenced how I think about AI collaboration</strong> — understanding where it adds value and where human judgment is irreplaceable</li>

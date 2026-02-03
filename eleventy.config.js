@@ -24,6 +24,15 @@ export default async function(eleventyConfig) {
     watch: ['./_site/css/**/*.css'],
   });
   
+  // Collections
+  eleventyConfig.addCollection("caseStudies", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/case-study/*.md").map(item => ({
+      url: item.url,
+      title: item.data.title,
+      subTitle: item.data.subTitle
+    }));
+  });
+
   // Plugins
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     urlPath: "/img/",

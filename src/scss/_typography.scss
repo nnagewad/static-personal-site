@@ -120,21 +120,30 @@ ul {
   margin-bottom: var(--spacing-3);
 }
 
-.list-extra-spaced {
-  @include spacing-mixins.bottom-3(margin);
+.link-subtitle {
+  font-weight: var(--font-weight-standard);
 }
 
 .list-extra-spaced {
-  .font-size-1 {
-    @include spacing-mixins.bottom-1(margin);
-  }
   & > li {
-    @include spacing-mixins.bottom-5(margin);
+    @include spacing-mixins.bottom-3(margin);
   }
   & > li:last-child {
-    @include spacing-mixins.bottom-4(margin);
+    margin-bottom: 0;
   }
 }
+
+// .list-extra-spaced {
+//   .font-size-1 {
+//     @include spacing-mixins.bottom-1(margin);
+//   }
+//   & > li {
+//     @include spacing-mixins.bottom-5(margin);
+//   }
+//   & > li:last-child {
+//     @include spacing-mixins.bottom-4(margin);
+//   }
+// }
 
 .home-link {
   @include spacing-mixins.bottom-6(margin);

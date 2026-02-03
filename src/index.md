@@ -16,11 +16,6 @@ caseStudiesSectionTitle:
   Case studies
 caseStudiesIntro:
   "Everyday Lens embodies three principles: <strong>honest</strong>, <strong>purposeful</strong>, and <strong>built to last</strong>. These principles were shaped during my time at the Government Digital Service and now guide how I approach product and interaction design."
-caseStudies:
-  - url: /case-study/everyday-lens
-    title: Everyday Lens
-  - url: https://google.com
-    title: Government Digital Service
 supplementaryMaterialsSectionTitle:
   Supplementary materials
 supplementaryMaterialsIntro:

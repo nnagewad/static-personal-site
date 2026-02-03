@@ -65,9 +65,3 @@ main {
 section {
   @include spacing-mixins.bottom-8(margin);
 }
-
-
-.details {
-  order: 1;
-  flex: 0 1 calc(var(--wrapper-width)*2/3);
-}

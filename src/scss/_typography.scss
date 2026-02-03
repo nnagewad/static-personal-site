@@ -11,9 +11,6 @@ body {
 
 p {
   @include spacing-mixins.bottom-6(margin);
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 a {

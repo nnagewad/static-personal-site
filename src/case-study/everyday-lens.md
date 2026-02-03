@@ -43,7 +43,7 @@ subTitle:
 
 <section>
   <h2 class="font-size-3">Impact</h2>
-  <ul class="list-extra-spaced ">
+  <ul class="list-extra-space ">
     <li><strong>80% AI accuracy baseline</strong> established for creative metadata generation</li>
     <li><strong>90+ Lighthouse scores</strong> across performance, accessibility, and SEO</li>
     <li><strong>Influenced how I think about AI collaboration</strong> — understanding where it adds value and where human judgment is irreplaceable</li>

@@ -124,7 +124,7 @@ ul {
   font-weight: var(--font-weight-standard);
 }
 
-.list-extra-spaced {
+.list-extra-space {
   & > li {
     @include spacing-mixins.bottom-3(margin);
   }

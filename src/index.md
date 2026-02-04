@@ -26,7 +26,7 @@ supplementaryMaterials:
   - url: https://nkngwd.medium.com
     title: Medium
   - url: /now
-    title: Now page
+    title: Now
   - url: /resume
     title: Resume
 contactSectionTitle:

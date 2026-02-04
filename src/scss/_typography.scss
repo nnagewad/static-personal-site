@@ -140,6 +140,11 @@ ul {
   gap: var(--spacing-2);
 }
 
+.last-updated {
+  @extend .font-size--1;
+  color: var(--color-secondary-text);
+}
+
 .headline-caption {
   display: block;
   margin-bottom: 0;
@@ -192,4 +197,18 @@ section {
   .font-size-1 {
     @include spacing-mixins.bottom-1(margin);
   }
+}
+
+.list-horizontal {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  li {
+    flex-basis: max-content;
+    margin-bottom: 0;
+  }
+}
+
+.horizontal-gap--2 {
+  gap: 0 var(--spacing-2);
 }

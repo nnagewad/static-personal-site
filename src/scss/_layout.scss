@@ -63,6 +63,7 @@ main {
 }
 
 section,
-.intro {
+.intro,
+.now-list {
   @include spacing-mixins.bottom-8(margin);
 }

@@ -47,9 +47,12 @@
   --color-dark-blue: oklch(27.7% 0.1 249.7);
   --color-pink: oklch(85.3% 0.1 353);
   --color-dark-pink: oklch(71.1% 0.175 353);
+  --color-white--7: oklch(85.8% 0.007 236.5);
+  --color-black--7: oklch(23.5% 0.007 236.5);
   // Color scheme
   color-scheme: light dark;
-  --color-background: light-dark(var(--color-white), var(--color-black));
+  --color-background-top: light-dark(var(--color-white--7), var(--color-black--7));
+  --color-background-bottom: light-dark(var(--color-white), var(--color-black));
   --color-primary-text: light-dark(var(--color-black), var(--color-white));
   --color-secondary-text: light-dark(var(--color-dark-grey), var( --color-grey));
   --color-link: light-dark(var(--color-blue), var(--color-pink));

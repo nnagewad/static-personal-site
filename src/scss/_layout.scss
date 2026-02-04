@@ -2,7 +2,8 @@
 @use "spacing-mixins";
 
 body {
-  background: var(--color-background);
+  background: var(--color-background-bottom);
+  background: linear-gradient(to bottom, var(--color-background-top), var(--color-background-bottom));
 }
 
 .page-header {

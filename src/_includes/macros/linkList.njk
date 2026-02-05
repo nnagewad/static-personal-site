@@ -2,7 +2,9 @@
 
 <section>
   <h2 class="font-size-3">{{ sectionTitle }}</h2>
-  <p class="list-lead-in">{{ intro | markdown | safe }}</p>
+  {% if intro %}
+    <p class="list-lead-in">{{ intro | markdown | safe }}</p>
+  {% endif %}
   <ul {% if listClass %} class="{{ listClass }}"{% endif %}>
     {% for item in items %}
       <li>

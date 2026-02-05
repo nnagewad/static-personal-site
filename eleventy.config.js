@@ -5,6 +5,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "path";
 import fs from "fs";
 import { IdAttributePlugin } from "@11ty/eleventy";
+import MarkdownIt from "markdown-it";
 
 // Import filters
 import isoToFullDate from './src/_filters/iso-to-full-date.js';
@@ -16,6 +17,8 @@ const ALLOWED_TAGS = [
   'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span',
   'div', 'figure', 'figcaption'
 ];
+
+const md = new MarkdownIt();
 
 export default async function(eleventyConfig) {
   // Configuration
@@ -59,6 +62,7 @@ export default async function(eleventyConfig) {
   const filters = {
     isoToFullDate,
     isoToISODate,
+    markdown: (content) => md.render(content || ''),
     sanitizeHTML: (content) => sanitizeHtml(content, {
       allowedTags: ALLOWED_TAGS,
       allowedAttributes: {

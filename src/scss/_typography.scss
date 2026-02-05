@@ -212,3 +212,16 @@ section {
 .horizontal-gap--2 {
   gap: 0 var(--spacing-2);
 }
+
+ul,
+ol {
+  @include spacing-mixins.bottom-6(padding)
+}
+
+section {
+  section {
+    ul {
+      padding-bottom: 0;
+    }
+  }
+}

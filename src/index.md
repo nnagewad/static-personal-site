@@ -27,8 +27,6 @@ supplementaryMaterials:
     title: Medium
   - url: /now
     title: Now
-  - url: /resume
-    title: Resume
 contactSectionTitle:
   Contact
 contactIntro:

@@ -37,7 +37,7 @@ subTitle:
   <p>Clean URLs, Open Graph previews, and RSS feeds. Anyone can access and subscribe without signing up to a social media platform.</p>
   
   <h3 class="font-size-2">Scalable and accessible design system</h3>
-  <p>Terminal-inspired UI, high-contrast typography, and reusable components. WCAG 2.1 AA compliant from day one, influenced by GOV.UK design principles</p>
+  <p>Terminal-inspired UI, typography, colour-scheme, and reusable components. WCAG 2.1 AA compliant from day one, influenced by GOV.UK design principles.</p>
 </section>
 
 <section>

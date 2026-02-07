@@ -57,11 +57,6 @@ main {
   align-items: flex-end;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: minmax(auto, calc(var(--wrapper-width)*2/3));
-}
-
 .side-by-side-images {
   display: flex;
   flex-wrap: wrap;

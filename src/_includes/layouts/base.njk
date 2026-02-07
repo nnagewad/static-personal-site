@@ -15,7 +15,7 @@
     {% include 'partials/site-header.njk' %}
     <main tabindex='-1' id='main-content' class='wrapper {% if layout != "layouts/home.njk" %} children-pages {% endif %}'>
       {% include 'partials/page-header.njk'%}
-      <div class="grid-container">
+      <div>
         {% block content %}
         {% endblock %}
       </div>

@@ -25,7 +25,7 @@ subTitle:
   <p>A script detects new photos, extracts camera metadata, and triggers AI-generated titles, alt text, and tags—reducing publishing time from 10 minutes (manually entering all the metadata) to under 60 seconds. I chose to automate metadata entry specifically because it's the part of publishing that adds no creative value — it's just friction. The actual creative decisions (curation, sequencing, editing) stay with me.</p>
   
   <h3 class="font-size-2">AI with guardrails</h3>
-  <p>Although Claude does a great job in coming up with a unique title, alt text and tags I made the deliberate choice to review its output. In practice, Claude gets titles and alt text right about 80% of the time. The other 20% is where it defaults to generic or overly literal descriptions — exactly the kind of output that would flatten the work if left unchecked. The review step catches that.</p>
+  <p>Although Claude does a great job in coming up with a unique title, alt text and tags I made the deliberate choice to review its output. In practice, Claude gets titles, tags and alt text right about 90% of the time. The other 10% is where it defaults to generic or overly literal descriptions — exactly the kind of output that would flatten the work if left unchecked. The review step catches that.</p>
   
   <h3 class="font-size-2">Multi-channel distribution</h3>
   <p>Clean URLs, Open Graph previews, and RSS feeds. Anyone can access and subscribe without signing up to a social media platform.</p>

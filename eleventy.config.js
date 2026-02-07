@@ -85,6 +85,17 @@ export default async function(eleventyConfig) {
     }
   });
 
+  // Add external link icons
+  const externalLinkSvg = '<svg class="navigation-icons" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" width="12.59" height="12.57" viewBox="0 0 12.59 12.57"><polygon points="12.59 0 12.59 0 12.59 0 3.11 0 3.11 1.98 9.19 1.98 0 11.17 .71 11.88 .71 11.88 1.41 12.59 10.61 3.39 10.61 9.48 12.59 9.48 12.59 0 12.59 0 12.59 0"/></svg>';
+  eleventyConfig.addTransform('externalLinks', function(content, outputPath) {
+    if (outputPath && outputPath.endsWith('.html')) {
+      return content.replace(/<a\s([^>]*href\s*=\s*"(?:https?:\/\/|mailto:)[^"]*"[^>]*)>(.*?)<\/a>/gi, (match, attrs, inner) => {
+        return `<a ${attrs}>${inner}</a> ${externalLinkSvg}`;
+      });
+    }
+    return content;
+  });
+
   // HTML minification
   eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
     if (outputPath && outputPath.endsWith('.html')) {

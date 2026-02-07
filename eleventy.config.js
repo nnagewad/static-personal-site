@@ -54,10 +54,6 @@ export default async function(eleventyConfig) {
 
   eleventyConfig.addPlugin(IdAttributePlugin);
   
-  // Passthrough copies
-  eleventyConfig.addPassthroughCopy("src/img/favicon");
-  eleventyConfig.addPassthroughCopy("src/img/open-graph");
-  
   // Filters
   const filters = {
     isoToFullDate,

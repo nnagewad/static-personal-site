@@ -24,7 +24,8 @@
   --spacing-8: var(--pixel-50);
   --spacing-9: var(--pixel-60);
   // Border variables
-  --border-thin: var(--pixel-2);
+  --border-thin: 0.0625rem;
+  --border-medium: var(--pixel-2);
   --border-thick: var(--pixel-5);
   // Page Layout
   --wrapper-width: 64rem;

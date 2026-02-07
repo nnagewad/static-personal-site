@@ -235,4 +235,7 @@ section {
 .header-links {
   padding: 0;
   list-style: none;
+  a:not(:hover) {
+    text-decoration: none;
+  }
 }

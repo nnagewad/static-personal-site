@@ -11,7 +11,7 @@ subTitle:
 aboutSectionTitle:
   About
 about:
-  I'm Nikin, a product designer with a background in frontend development. That combination has shaped how I work — I design systems that are not only scalable and inclusive, but buildable. Over 10+ years I've led complex product work at scale, from replatforming government publishing tools to building design systems from the ground up. Outside of work, I take photographs and share them on [Everyday Lens](https://everydaylens.photos).
+  I'm Nikin, a product designer with a background in frontend development. That combination has shaped how I work — I design systems that are not only scalable and inclusive, but buildable. Over 10+ years I've led complex product work at scale, from replatforming government publishing tools to building design systems from the ground up. Outside of work, I created [Everyday Lens](https://everydaylens.photos) a website where I share my photography.
 caseStudiesSectionTitle:
   Case studies
 supplementaryMaterialsSectionTitle:

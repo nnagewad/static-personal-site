@@ -14,8 +14,6 @@ about:
   I'm Nikin, a product designer with a background in frontend development. That combination has shaped how I work — I design systems that are not only scalable and inclusive, but buildable. Over 10+ years I've led complex product work at scale, from replatforming government publishing tools to building design systems from the ground up. Outside of work, I take photographs and share them on [Everyday Lens](https://everydaylens.photos).
 caseStudiesSectionTitle:
   Case studies
-caseStudiesIntro:
-  "Everyday Lens embodies three principles: **honest**, **purposeful**, and **built to last**. These principles were shaped during my time at the Government Digital Service and now guide how I approach product design."
 supplementaryMaterialsSectionTitle:
   Supplementary materials
 supplementaryMaterials:
@@ -30,8 +28,6 @@ supplementaryMaterials:
     subTitle: What I'm up to right now
 contactSectionTitle:
   Contact
-contactIntro:
-  "I'd love to hear from you. Get in touch via any of the below:"
 contacts:
   - url: mailto:nikin.n@gmail.com
     title: Email

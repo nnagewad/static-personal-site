@@ -4,8 +4,8 @@
 {% block content %}
 
   {% include 'partials/about.njk' %}
-  {{ linkList(caseStudiesSectionTitle, caseStudiesIntro, collections.caseStudies, "list-extra-space") }}
-  {{ linkList(contactSectionTitle, contactIntro, contacts) }}
-  {{ linkList(supplementaryMaterialsSectionTitle, supplementaryMaterialsIntro, supplementaryMaterials) }}
+  {{ linkList(caseStudiesSectionTitle, collections.caseStudies, "list-extra-space") }}
+  {{ linkList(contactSectionTitle, contacts) }}
+  {{ linkList(supplementaryMaterialsSectionTitle, supplementaryMaterials) }}
 
 {% endblock %}

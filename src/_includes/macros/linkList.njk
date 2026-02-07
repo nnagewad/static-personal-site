@@ -1,17 +1,14 @@
-{% macro linkList(sectionTitle, intro, items, listClass) %}
+{% macro linkList(sectionTitle, items, listClass) %}
 
-<section>
-  <h2 class="font-size-3">{{ sectionTitle }}</h2>
-  {% if intro %}
-    <p class="list-lead-in">{{ intro | markdown | safe }}</p>
-  {% endif %}
-  <ul {% if listClass %} class="{{ listClass }}"{% endif %}>
-    {% for item in items %}
-      <li>
-        <a href='{{ item.url }}'>{{ item.title }}{% if item.subTitle %}<span class="link-subtitle">: {{ item.subTitle }}</span>{% endif %}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+  <section>
+    <h2 class="font-size-3">{{ sectionTitle }}</h2>
+    <ul {% if listClass %} class="{{ listClass }}"{% endif %}>
+      {% for item in items %}
+        <li>
+          <a href='{{ item.url }}'>{{ item.title }}{% if item.subTitle %}<span class="link-subtitle">: {{ item.subTitle }}</span>{% endif %}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
 {% endmacro %}

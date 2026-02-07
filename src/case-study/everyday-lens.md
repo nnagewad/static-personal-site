@@ -64,7 +64,7 @@ subTitle:
 <section>
   <h2 class="font-size-3">Impact</h2>
   <ul class="list-extra-space ">
-    <li><strong>80% AI accuracy baseline</strong> established for creative metadata generation — fast enough to be worthwhile, but a clear reminder that AI output needs human oversight for subjective, creative work</li>
+    <li><strong>90% AI accuracy baseline</strong> established for creative metadata generation — fast enough to be worthwhile, but a clear reminder that AI output needs human oversight for subjective, creative work</li>
     <li><strong>90+ Lighthouse scores</strong> across performance, accessibility, and SEO</li>
     <li><strong>Influenced how I think about AI as a collaborator</strong>, clearly showing where it can add value and where human judgment is irreplaceable</li>
   </ul>

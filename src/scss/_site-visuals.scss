@@ -22,3 +22,8 @@
 .figure-between-content {
   @include spacing-mixins.bottom-6(margin);
 }
+
+.image-outline {
+  margin: 0;
+  outline: var(--border-thin) solid var(--color-border);
+}

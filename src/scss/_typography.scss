@@ -136,9 +136,6 @@ ul {
 
 .home-link {
   @include spacing-mixins.bottom-6(margin);
-  display: flex;
-  align-items: center;
-  @extend .horizontal-gap-small
 }
 
 .last-updated {

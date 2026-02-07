@@ -206,12 +206,17 @@ section {
   justify-content: flex-start;
   li {
     flex-basis: max-content;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
 
 .horizontal-gap-small {
   gap: 0 var(--spacing-2);
+}
+
+.horizontal-gap-large {
+  gap: 0 var(--spacing-7);
 }
 
 ul,
@@ -225,4 +230,9 @@ section {
       padding-bottom: 0;
     }
   }
+}
+
+.header-links {
+  padding: 0;
+  list-style: none;
 }

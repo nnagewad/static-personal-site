@@ -3,4 +3,13 @@
   <a href='/' aria-label='{{ site.fullName }}'>
     <img src='/img/header/{{ image }}.png' alt='{{ imageAltText }}' class='site-header-image'>
   </a>
+  {% if headerLinks.items %}
+    <ul class='header-links list-horizontal horizontal-gap-large'>
+      {% for item in headerLinks.items %}
+        <li>
+          <a href='{{ item.url }}'>{{ item.text }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </header>

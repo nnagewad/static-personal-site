@@ -31,7 +31,7 @@ subTitle:
   
   <section>
     <h3 class="font-size-2">Design judgment</h3>
-    <p>Just myself and a service designer, a tight fiscal quarter, and a fragmented mess of docs and wikis to consolidate. I prioritized adoption over completeness — not about building something impressive, but solving a real frustration: designers spending hours hunting for guidance that should have been easy to find, and as a result slower output.</p>
+    <p>With just myself, a service designer, a tight fiscal quarter, and a fragmented mess of docs to consolidate, I prioritized adoption over completeness — solving a real frustration: designers spending hours hunting for guidance that should have been easy to find.</p>
   </section>
   
   <section>
@@ -60,7 +60,7 @@ subTitle:
   <h2 class="font-size-3">Upgrading Whitehall Publisher</h2>
   <div class="intro">
     <p>Whitehall Publisher is the UK government's internal CMS, used across departments to publish guidance, news, and policy content to GOV.UK. The legacy system relied on outdated components and inconsistent workflows, increasing cognitive load, slowing delivery, and introducing avoidable errors.</p>
-    <p>I led the user-experince and interface design effort to upgrade Whitehall Publisher to the GOV.UK Design System while content designers continue to publish on GOV.UK.</p>
+    <p>I led the user-experience and interface design effort to upgrade Whitehall Publisher to the GOV.UK Design System while content designers continue to publish on GOV.UK.</p>
   </div>
   
   <section>
@@ -113,8 +113,8 @@ subTitle:
     <h3 class="font-size-2">Impact</h3>
     <ul class="list-extra-space">
       <li><strong>100% task success in testing:</strong> Participants consistently understood their local restrictions and the restrictions of where they would be travelling to</li>
-      <li><strong>Highlighted design for emotional context</strong> in high-stakes scenarios as a critical consideration</li>
-      <li>The service didn't launch due to technical limitations given that the publishing tool lacks the capabilities of modern CMS, treating specific content as datapoints. However, the prototype influenced senior leadership's decision to invest in upgrading our internal tools that can better serve GOV.UK's end-users</li>
+      <li><strong>Demonstrated how design can help end-users especially during a high stress watershed moment</strong></li>
+      <li>The prototype influenced senior leadership's decision to invest in upgrading internal tools. The service itself didn't ship due to CMS limitations, but <strong>the work shifted how the organization thought about content as structured data</strong>.</li>
     </ul>
   </section>
 </section>

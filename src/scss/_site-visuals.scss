@@ -1,3 +1,5 @@
+@use "spacing-mixins";
+
 .icon-size,
 .social-icon {
   height: var(--pixel-40);
@@ -6,6 +8,7 @@
 
 .navigation-icons {
   fill: var(--color-secondary-text);
+  overflow: visible;
 }
 
 .site-header-image {
@@ -13,6 +16,15 @@
   width: auto;
 }
 
-.navigation-icons {
-  overflow: visible;
+.side-by-side-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--pixel-20);
+  img {
+    flex: auto;
+  }
+}
+
+.figure-between-content {
+  @include spacing-mixins.bottom-6(margin);
 }

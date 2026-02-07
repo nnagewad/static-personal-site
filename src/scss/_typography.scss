@@ -26,6 +26,17 @@ a {
   }
 }
 
+figcaption {
+  @include spacing-mixins.top-2(margin);
+  color: var(--color-secondary-text);
+  font-weight: var(--font-weight-standard);
+  @extend .font-size--1;
+}
+
+small {
+  @extend .font-size--2;
+}
+
 span.font-size-4 {
   display: block;
 }

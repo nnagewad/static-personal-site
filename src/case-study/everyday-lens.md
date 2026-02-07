@@ -12,6 +12,11 @@ subTitle:
 ---
 <div class="intro">
   <p>As AI tools become part of every designer's workflow, I wanted to understand firsthand where they genuinely add value and where they fall short — not in theory, but through building something real. In the summer of 2025 I built <a href="https://everydaylens.photos">Everyday Lens</a>: a personal publishing system for my photography, designed with AI as a collaborator rather than just a build tool.</p>
+
+  <figure>
+    <img src="photos/everydayLens.png" alt='A responsive web gallery on a smartphone and laptop, titled "everyday lens," showing a variety of photographs.'>
+    <figcaption></figcaption>
+  </figure>
 </div>
 
 <section>
@@ -26,6 +31,20 @@ subTitle:
   
   <h3 class="font-size-2">AI with guardrails</h3>
   <p>Although Claude does a great job in coming up with a unique title, alt text and tags I made the deliberate choice to review its output. In practice, Claude gets titles, tags and alt text right about 90% of the time. The other 10% is where it defaults to generic or overly literal descriptions — exactly the kind of output that would flatten the work if left unchecked. The review step catches that.</p>
+
+  <figure class="figure-between-content">
+    <div class="side-by-side-images">
+      <div>
+        <small>figure 1:</small>
+        <img src="photos/json.png" alt="Screenshot of a code editor showing a JSON file with metadata for photographs, including tags, filenames, camera details, and descriptions.">
+      </div>
+      <div>
+        <small>figure 2:</small>
+        <img src="photos/the-percussion-of-shadows-and-light.png" alt="Web page with a black and white photo of musicians performing with motion blur.">
+      </div>
+    </div>
+    <figcaption>Figure 1 contains the extracted metadata and the generative content as data points. Figure 2 is the page output from those data points</figcaption>
+  </figure>
   
   <h3 class="font-size-2">Multi-channel distribution</h3>
   <p>Clean URLs, Open Graph previews, and RSS feeds. Anyone can access and subscribe without signing up to a social media platform.</p>
@@ -33,6 +52,10 @@ subTitle:
   <h3 class="font-size-2">Utilitarian design aesthetic</h3>
   <p>The command-line interface aesthetic wasn't just a style choice. It reflected what the tool actually is: something quiet, utilitarian, running in the background doing its job. No flashy interface: clean typography, high contrast colours. I considered more expressive visual directions early on, but they competed with the photography. The CLI aesthetic solved that — it signals 'tool, not gallery app' and keeps the interface out of the way.</p>
 
+  <figure>
+    <img src="photos/cli.png" alt="Terminal window showing installation info for claude-code version 2.1.34.">
+    <figcaption></figcaption>
+  </figure>
 
   <h3 class="font-size-2">Built with accessibility in mind</h3>
   <p>Inspired by my work at GDS, from day-one, this site was built with all end-users in mind. Therefore, the colours abide by colour contrast accessibility standards, the font size is legible even for the hard of sight, and it's possible to navigate using only a keyboard.</p>

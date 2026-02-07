@@ -153,6 +153,7 @@ ul {
 .lead-paragraph {
   font-weight: var(--font-weight-standard);
   @extend .font-size-2;
+  text-wrap: balance;
 }
 
 .headline-caption,

@@ -26,13 +26,4 @@ supplementaryMaterials:
   - url: /now
     title: Now
     subTitle: What I'm up to right now
-contactSectionTitle:
-  Contact
-contacts:
-  - url: mailto:nikin.n@gmail.com
-    title: Email
-  - url: https://www.linkedin.com/in/nikinnagewadia/
-    title: LinkedIn
-  - url: https://calendar.app.google/qskJMLK8NsfX78bu8
-    title: Set up a video call
 ---

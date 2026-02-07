@@ -1,11 +1,5 @@
 @use "spacing-mixins";
 
-.icon-size,
-.social-icon {
-  height: var(--pixel-40);
-  width: auto;
-}
-
 .navigation-icons {
   fill: var(--color-secondary-text);
   overflow: visible;

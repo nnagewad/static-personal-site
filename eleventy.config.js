@@ -1,7 +1,6 @@
 import { minify } from 'terser';
 import CleanCSS from 'clean-css';
 import htmlmin from 'html-minifier-terser';
-import sanitizeHtml from "sanitize-html";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "path";
 import fs from "fs";
@@ -11,13 +10,6 @@ import MarkdownIt from "markdown-it";
 // Import filters
 import isoToFullDate from './src/_filters/iso-to-full-date.js';
 import isoToISODate from './src/_filters/iso-to-iso-date.js';
-
-// Define allowed HTML tags for sanitization
-const ALLOWED_TAGS = [
-  'p', 'br', 'strong', 'em', 'u', 'i', 'b', 'a', 'img', 'ul', 'ol', 'li',
-  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span',
-  'div', 'figure', 'figcaption'
-];
 
 const md = new MarkdownIt();
 
@@ -61,16 +53,7 @@ export default async function(eleventyConfig) {
   const filters = {
     isoToFullDate,
     isoToISODate,
-    markdown: (content) => md.render(content || ''),
-    sanitizeHTML: (content) => sanitizeHtml(content, {
-      allowedTags: ALLOWED_TAGS,
-      allowedAttributes: {
-        a: ["href", "title", "rel", "target"],
-        img: ["src", "alt", "title", "width", "height"],
-      },
-      allowedSchemes: ['http', 'https', 'mailto'],
-      selfClosing: ["img", "br"],
-    })
+    markdown: (content) => md.render(content || '')
   };
 
   Object.entries(filters).forEach(([name, filter]) => {

@@ -3,7 +3,8 @@ order: 2
 layout: 'layouts/case-study.njk'
 title:
   Government Digital Service
-metaDesc: 'update'
+metaDesc:
+  "Three projects from my time at the Government Digital Service: a publishing design guide, a CMS upgrade, and COVID-19 emergency services."
 image: home
 imageAltText:
   3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard

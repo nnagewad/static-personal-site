@@ -1,7 +1,8 @@
 ---
 layout: 'layouts/now.njk'
 title: Now
-metaDesc: 'update'
+metaDesc:
+  What Nikin is up to right now
 image: home
 imageAltText:
   3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard
@@ -10,5 +11,5 @@ location: London, UK
 ---
 - Obsessing over the new Broken Social Scene
 - Redoing my entire website
-- Still need to find a job
-- Still need to plan for Italy
+- Exploring new opportunities in Toronto
+- Planning a trip to Italy before I leave Europe

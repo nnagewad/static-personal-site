@@ -3,7 +3,8 @@ order: 1
 layout: 'layouts/case-study.njk'
 title:
   Everyday Lens
-metaDesc: 'update'
+metaDesc:
+  How I built a personal photography publishing system using AI as a collaborator, not a replacement.
 image: home
 imageAltText:
   3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard

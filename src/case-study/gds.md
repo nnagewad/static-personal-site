@@ -17,7 +17,7 @@ subTitle:
   <ol class="list-extra-space">
     <li><a href="#gov-uk-publishing-design-guide">GOV.UK Publishing Design Guide</a>: I created a design guide for internal publishing tools, adopted across teams within GDS and led to the creation of an org-wide Figma UI Kit</li>
     <li><a href="#upgrading-whitehall-publisher">Upgrading Whitehall Publisher</a>: I modernized a legacy CMS used by content teams across government departments, reducing complexity and establishing reusable patterns</li>
-    <li><a href="#covid-19-local-checker-and-travel-checker">COVID-19 Local Checker and Travel Checker</a>: I designed an emergency service for location-specific restrictions under extreme time pressure that influenced future infrastructure investment for GOV.UK</li>
+    <li><a href="#covid-19-local-checker-and-travel-checker">COVID-19 Local Checker and Travel Checker</a>: I designed two emergency services for location-specific restrictions under extreme time pressure that influenced future infrastructure investment for GOV.UK</li>
   </ol>
 </div>
 
@@ -99,7 +99,7 @@ subTitle:
     <ul class="list-extra-space">
       <li><strong>Adopted across government</strong> publishing teams in multiple departments</li>
       <li><strong>Reduced publishing errors:</strong> Users reported faster, more confident publishing in post-launch interviews</li>
-      <li><strong>Established baseline patterns</strong> that other GDS publishing tools later adopted and further evolving</li>
+      <li><strong>Established baseline patterns</strong> that other GDS publishing tools later adopted, and continue to evolve</li>
     </ul>
   </section>
 </section>
@@ -109,7 +109,7 @@ subTitle:
   <h2 class="font-size-3">COVID-19 Local Checker and Travel Checker</h2>
   <div class="intro">
     <p>In late 2020, COVID-19 restrictions changed frequently and varied by location. Guidance was often difficult to interpret, creating confusion at a time when clarity directly affected public trust and compliance.</p>
-    <p>I joined the GDS emergency response team as the sole product designer, responsible for designing two services: <strong>Local Checker</strong> and <strong>Travel Checker</strong>. Both services deliver clear, location-specific guidance under extreme time constraints and evolving policy requirements.</p>
+    <p>I joined the GDS emergency response team as the sole product designer, responsible for designing two services: <strong>Local Checker</strong> and <strong>Travel Checker</strong>. Both services were designed to deliver location-specific guidance under extreme time constraints and evolving policy requirements.</p>
   </div>
 
   <section>
@@ -124,6 +124,10 @@ subTitle:
       <li><strong>Clear output</strong> highlighting to users relevant information, then allowing them to learn more via available guidance</li>
       <li><strong>High-fidelity prototyping</strong> in code using the <a href="https://prototype-kit.service.gov.uk/docs/">GOV.UK Prototype Kit</a> to validate user-flow, accessibility, content design, and edge cases during user testing sessions</li>
     </ul>
+  </section>
+
+  <section>
+    <h3 class="font-size-2">Prototypes</h3>
     <figure class="figure-between-content figure-prototype">
       <h4 class="font-size-1">Local Checker</h4>
       <div class="side-by-side-images">
@@ -140,7 +144,7 @@ subTitle:
     </figure>
     <figure>
       <h4 class="font-size-1">Travel Checker</h4>
-       <div class="side-by-side-images">
+      <div class="side-by-side-images">
         <div>
           <small>figure 5</small>
           <img src="photos/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">

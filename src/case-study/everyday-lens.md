@@ -14,7 +14,7 @@ subTitle:
   <p>As AI tools become part of every designer's workflow, I wanted to understand firsthand where they genuinely add value and where they fall short — not in theory, but through building something real. In the summer of 2025 I built <a href="https://everydaylens.photos">Everyday Lens</a>: a personal publishing system for my photography, designed with AI as a collaborator rather than just a build tool.</p>
 
   <figure>
-    <img src="photos/everydayLens.png" alt='A responsive web gallery on a smartphone and laptop, titled "everyday lens," showing a variety of photographs.'>
+    <img src="visuals/everydayLens.png" alt='A responsive web gallery on a smartphone and laptop, titled "everyday lens," showing a variety of photographs.'>
     <figcaption>Left: Light mode version of Everyday Lens on a mobile device. Right: Dark mode version of Everyday Lens on a laptop.</figcaption>
   </figure>
 </div>
@@ -36,11 +36,11 @@ subTitle:
     <div class="side-by-side-images">
       <div>
         <small>figure 1:</small>
-        <img class="image-outline" src="photos/json.png" alt="Screenshot of a JSON file containing both AI-generated metadata and camera extracted metadata.">
+        <img class="image-outline" src="visuals/json.png" alt="Screenshot of a JSON file containing both AI-generated metadata and camera extracted metadata.">
       </div>
       <div>
         <small>figure 2:</small>
-        <img class="image-outline" src="photos/the-percussion-of-shadows-and-light.png" alt="Web page with a black and white photo of musicians performing with motion blur.">
+        <img class="image-outline" src="visuals/the-percussion-of-shadows-and-light.png" alt="Web page with a black and white photo of musicians performing with motion blur.">
       </div>
     </div>
     <figcaption>Figure 1: AI-generated metadata — title, alt text, and tags — along with the camera extracted metadata stored as JSON. Figure 2: The published result, built from those data points.</figcaption>
@@ -53,7 +53,7 @@ subTitle:
   <p>The command-line interface aesthetic wasn't just a style choice. It reflected what the tool actually is: something quiet, utilitarian, running in the background doing its job. No flashy interface: clean typography, high contrast colours. I considered more expressive visual directions early on, but they competed with the photography. The CLI aesthetic solved that — it signals 'tool, not gallery app' and keeps the interface out of the way.</p>
 
   <figure class="figure-between-content">
-    <img src="photos/cli.png" alt="Terminal window showing installation info for claude-code version 2.1.34.">
+    <img src="visuals/cli.png" alt="Terminal window showing installation info for claude-code version 2.1.34.">
     <figcaption>The minimal aesthetic of the CLI influenced the design aesthetic of Everyday Lens.</figcaption>
   </figure>
 

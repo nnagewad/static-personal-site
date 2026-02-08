@@ -28,7 +28,7 @@ subTitle:
     <p>While GOV.UK has a mature <a href="https://design-system.service.gov.uk">Design System</a>, guidance for editorial design and publishing tools was fragmented across documents, wikis, and team-owned resources. This fragmentation slowed teams down, caused inconsistency, and made onboarding new designers unnecessarily difficult.</p>
     <p>I identified the opportunity to consolidate this knowledge into a single source of truth: the <a href="https://design-guide.publishing.service.gov.uk">GOV.UK Publishing Design Guide</a>.</p>
     <figure>
-      <img src="photos/publishingDesignGuide.png" alt="Two devices showing the GOV.UK Publishing Design Guide website, with details on frontend templates and Lego-like illustrations.">
+      <img src="visuals/publishingDesignGuide.png" alt="Two devices showing the GOV.UK Publishing Design Guide website, with details on frontend templates and Lego-like illustrations.">
       <figcaption>Left: GOV.UK Publishing Design Guide's homepage on a mobile device. Right: Overview page of Frontend Templates on a laptop.</figcaption>
     </figure>
   </div>
@@ -74,11 +74,11 @@ subTitle:
       <div class="side-by-side-images">
         <div>
           <small>figure 1:</small>
-          <img src="photos/whitehall-before.png" alt="GOV.UK Whitehall document management interface on a laptop screen.">
+          <img src="visuals/whitehall-before.png" alt="GOV.UK Whitehall document management interface on a laptop screen.">
         </div>
         <div>
           <small>figure 2:</small>
-          <img src="photos/whitehall-after.png" alt="Laptop displaying a GOV.UK document management webpage with filters and document list.">
+          <img src="visuals/whitehall-after.png" alt="Laptop displaying a GOV.UK document management webpage with filters and document list.">
         </div>
       </div>
       <figcaption>Figure 1: Document search interface before upgrade. Figure 2: Document search interface after upgrade.</figcaption>
@@ -133,11 +133,11 @@ subTitle:
       <div class="side-by-side-images">
         <div>
           <small>figure 3</small>
-          <img src="photos/localChecker - start.png" alt="GOV.UK page on local coronavirus restrictions with a text field for postcode entry.">
+          <img src="visuals/localChecker - start.png" alt="GOV.UK page on local coronavirus restrictions with a text field for postcode entry.">
         </div>
         <div>
           <small>figure 4</small>
-          <img src="photos/localChecker - results.png" alt="Screenshot of a GOV.UK webpage about Tier 1 COVID-19 restrictions for Cornwall.">
+          <img src="visuals/localChecker - results.png" alt="Screenshot of a GOV.UK webpage about Tier 1 COVID-19 restrictions for Cornwall.">
         </div>
       </div>
       <figcaption>Figure 3: Start page for Local Checker. Figure 4: Results page for Local Checker.</figcaption>
@@ -147,11 +147,11 @@ subTitle:
       <div class="side-by-side-images">
         <div>
           <small>figure 5</small>
-          <img src="photos/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">
+          <img src="visuals/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">
         </div>
         <div>
           <small>figure 6</small>
-          <img src="photos/travelChecker - results.png" alt="GOV.UK webpage on travel restrictions between Reading and Bristol.">
+          <img src="visuals/travelChecker - results.png" alt="GOV.UK webpage on travel restrictions between Reading and Bristol.">
         </div>
       </div>
       <figcaption>Figure 5: Start page for Travel Checker. Figure 6: Results page for Travel Checker.</figcaption>

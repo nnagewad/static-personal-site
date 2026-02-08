@@ -17,7 +17,7 @@ subTitle:
   <ol class="list-extra-space">
     <li><a href="#gov-uk-publishing-design-guide">GOV.UK Publishing Design Guide</a>: I created a design guide for internal publishing tools, adopted across teams within GDS and led to the creation of an org-wide Figma UI Kit</li>
     <li><a href="#upgrading-whitehall-publisher">Upgrading Whitehall Publisher</a>: I modernized a legacy CMS used by content teams across government departments, reducing complexity and establishing reusable patterns</li>
-    <li><a href="#covid-19-postcode-and-travel-checker">COVID-19 Postcode and Travel Checker</a>: I designed an emergency service for location-specific restrictions under extreme time pressure that influenced future infrastructure investment for GOV.UK</li>
+    <li><a href="#covid-19-local-checker-and-travel-checker">COVID-19 Local Checker and Travel Checker</a>: I designed an emergency service for location-specific restrictions under extreme time pressure that influenced future infrastructure investment for GOV.UK</li>
   </ol>
 </div>
 
@@ -27,6 +27,10 @@ subTitle:
   <div class="intro">
     <p>While GOV.UK has a mature <a href="https://design-system.service.gov.uk">Design System</a>, guidance for editorial design and publishing tools was fragmented across documents, wikis, and team-owned resources. This fragmentation slowed teams down, caused inconsistency, and made onboarding new designers unnecessarily difficult.</p>
     <p>I identified the opportunity to consolidate this knowledge into a single source of truth: the <a href="https://design-guide.publishing.service.gov.uk">GOV.UK Publishing Design Guide</a>.</p>
+    <figure>
+      <img src="photos/publishingDesignGuide.png" alt="Two devices showing the GOV.UK Publishing Design Guide website, with details on frontend templates and Lego-like illustrations.">
+      <figcaption>Left: GOV.UK Publishing Design Guide's homepage on a mobile device. Right: Overview page of Frontend Templates on a laptop.</figcaption>
+    </figure>
   </div>
   
   <section>
@@ -66,6 +70,19 @@ subTitle:
   <section>
     <h3 class="font-size-2">Design judgment</h3>
     <p>I balanced modernization with operational stability. Internal tools like this are easy to deprioritize—but 2000+ content designers rely on Whitehall every day to keep GOV.UK running.</p>
+    <figure>
+      <div class="side-by-side-images">
+        <div>
+          <small>figure 1:</small>
+          <img src="photos/whitehall-before.png" alt="GOV.UK Whitehall document management interface on a laptop screen.">
+        </div>
+        <div>
+          <small>figure 2:</small>
+          <img src="photos/whitehall-after.png" alt="Laptop displaying a GOV.UK document management webpage with filters and document list.">
+        </div>
+      </div>
+      <figcaption>Figure 1: Document search interface before upgrade. Figure 2: Document search interface after upgrade.</figcaption>
+    </figure>
   </section>
   
   <section>
@@ -82,17 +99,17 @@ subTitle:
     <ul class="list-extra-space">
       <li><strong>Adopted across government</strong> publishing teams in multiple departments</li>
       <li><strong>Reduced publishing errors:</strong> Users reported faster, more confident publishing in post-launch interviews</li>
-      <li><strong>Established baseline patterns</strong> that other GDS publishing tools later adopted, reducing future design and engineering decisions across teams</li>
+      <li><strong>Established baseline patterns</strong> that other GDS publishing tools later adopted and further evolving</li>
     </ul>
   </section>
 </section>
 
 
 <section>
-  <h2 class="font-size-3">COVID-19 Postcode and Travel Checker</h2>
+  <h2 class="font-size-3">COVID-19 Local Checker and Travel Checker</h2>
   <div class="intro">
     <p>In late 2020, COVID-19 restrictions changed frequently and varied by location. Guidance was often difficult to interpret, creating confusion at a time when clarity directly affected public trust and compliance.</p>
-    <p>I joined the GDS emergency response team as the sole product designer, responsible for designing a service that could deliver clear, location-specific guidance under extreme time constraints and evolving policy requirements.</p>
+    <p>I joined the GDS emergency response team as the sole product designer, responsible for designing two services: <strong>Local Checker</strong> and <strong>Travel Checker</strong>. Both services deliver clear, location-specific guidance under extreme time constraints and evolving policy requirements.</p>
   </div>
 
   <section>
@@ -105,8 +122,36 @@ subTitle:
     <ul class="list-extra-space">
       <li><strong>Consistency between the two checkers</strong> via similar flows of entering postcode(s) to eliminate ambiguity and avoid complex regional mapping</li>
       <li><strong>Clear output</strong> highlighting to users relevant information, then allowing them to learn more via available guidance</li>
-      <li><strong>High-fidelity prototyping</strong> in code using the <a href="https://prototype-kit.service.gov.uk/docs/">GOV.UK Prototype Kit</a> to validate user-flow, accessibility, content behavior, and edge cases during user testing sessions</li>
+      <li><strong>High-fidelity prototyping</strong> in code using the <a href="https://prototype-kit.service.gov.uk/docs/">GOV.UK Prototype Kit</a> to validate user-flow, accessibility, content design, and edge cases during user testing sessions</li>
     </ul>
+    <figure class="figure-between-content figure-prototype">
+      <h4 class="font-size-1">Local Checker</h4>
+      <div class="side-by-side-images">
+        <div>
+          <small>figure 3</small>
+          <img src="photos/localChecker - start.png" alt="GOV.UK page on local coronavirus restrictions with a text field for postcode entry.">
+        </div>
+        <div>
+          <small>figure 4</small>
+          <img src="photos/localChecker - results.png" alt="Screenshot of a GOV.UK webpage about Tier 1 COVID-19 restrictions for Cornwall.">
+        </div>
+      </div>
+      <figcaption>Figure 3: Start page for Local Checker. Figure 4: Results page for Local Checker.</figcaption>
+    </figure>
+    <figure>
+      <h4 class="font-size-1">Travel Checker</h4>
+       <div class="side-by-side-images">
+        <div>
+          <small>figure 5</small>
+          <img src="photos/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">
+        </div>
+        <div>
+          <small>figure 6</small>
+          <img src="photos/travelChecker - results.png" alt="GOV.UK webpage on travel restrictions between Reading and Bristol.">
+        </div>
+      </div>
+      <figcaption>Figure 5: Start page for Travel Checker. Figure 6: Results page for Travel Checker.</figcaption>
+    </figure>
   </section>
 
   <section>

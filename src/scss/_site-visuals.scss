@@ -23,6 +23,10 @@
   @include spacing-mixins.bottom-6(margin);
 }
 
+.figure-prototype {
+  @include spacing-mixins.top-4(margin);
+}
+
 .image-outline {
   margin: 0;
   outline: var(--border-thin) solid var(--color-border);

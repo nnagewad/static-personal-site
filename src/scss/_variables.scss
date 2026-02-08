@@ -5,7 +5,6 @@
   --pixel-10: 0.625rem;
   --pixel-15: 0.9375rem;
   --pixel-20: 1.25rem;
-  --pixel-25: 1.5625rem;
   --pixel-30: 1.875rem;
   --pixel-40: 2.5rem;
   --pixel-50: 3.125rem;
@@ -16,7 +15,6 @@
   --spacing-2: var(--pixel-10);
   --spacing-3: var(--pixel-15);
   --spacing-4: var(--pixel-20);
-  --spacing-5: var(--pixel-25);
   --spacing-6: var(--pixel-30);
   --spacing-7: var(--pixel-40);
   --spacing-8: var(--pixel-50);
@@ -63,16 +61,10 @@
   :root {
     color-scheme: dark;
   }
-  :root:not([data-user-color-scheme]) {
-    color-scheme: dark;
-  }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    color-scheme: light;
-  }
-  :root:not([data-user-color-scheme]) {
     color-scheme: light;
   }
 }

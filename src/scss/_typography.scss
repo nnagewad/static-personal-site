@@ -17,12 +17,27 @@ a {
   text-underline-offset: 0.3125em;
   text-decoration-thickness: math.max(0.0625rem);
   font-weight: var(--font-weight-semibold);
+  color: var(--color-link);
   @media (hover: hover) {
     &:hover,
     &[aria-current=page] {
       text-decoration-thickness: math.max(0.188rem);
       text-decoration-skip-ink: none;
     }
+    &:hover {
+      color: var(--color-hover);
+    }
+  }
+  &:active {
+    color: var(--color-active);
+  }
+  &:focus-visible {
+    background: var(--color-focus);
+    color: var(--color-focus-text);
+    text-decoration-skip-ink: none;
+    --focus-background: -0.55rem;
+    text-decoration: none;
+    outline: var(--spacing-0) solid transparent;
   }
 }
 
@@ -179,26 +194,6 @@ a:focus-visible,
   box-shadow: 0 var(--focus-background) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
 }
 
-a {
-  color: var(--color-link);
-  @media (hover: hover) {
-    &:hover {
-      color: var(--color-hover);
-    }
-  }
-  &:active {
-    color: var(--color-active);
-  }
-  &:focus-visible {
-    background: var(--color-focus);
-    color: var(--color-focus-text);
-    text-decoration-skip-ink: none;
-    --focus-background: -0.55rem;
-    text-decoration: none;
-    outline: var(--spacing-0) solid transparent;
-  }
-}
-
 section {
   .font-size-3 {
     @include spacing-mixins.spacing(bottom, 3, margin);
@@ -208,6 +203,11 @@ section {
   }
   .font-size-1 {
     @include spacing-mixins.spacing(bottom, 1, margin);
+  }
+  section {
+    ul {
+      padding-bottom: 0;
+    }
   }
 }
 
@@ -233,14 +233,6 @@ section {
 ul,
 ol {
   @include spacing-mixins.spacing(bottom, 6, padding)
-}
-
-section {
-  section {
-    ul {
-      padding-bottom: 0;
-    }
-  }
 }
 
 .header-links {

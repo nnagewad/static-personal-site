@@ -10,6 +10,7 @@ body {
 }
 
 .header-nav {
+  align-items: flex-end;
   @include borders-mixins.thick-divider(bottom);
   @include spacing-mixins.spacing(top, 6, padding);
   @include spacing-mixins.spacing(bottom, 4, padding);
@@ -51,10 +52,6 @@ main {
     @extend .flex-container;
     flex-wrap: wrap-reverse;
   }
-}
-
-.vertical-align-bottom {
-  align-items: flex-end;
 }
 
 .side-by-side-images {

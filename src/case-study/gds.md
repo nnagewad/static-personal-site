@@ -5,9 +5,6 @@ title:
   Government Digital Service
 metaDesc:
   "Three projects from my time at the Government Digital Service: a publishing design guide, a CMS upgrade, and COVID-19 emergency services."
-image: home
-imageAltText:
-  3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard
 subTitle:
   Building simple, trustworthy systems at scale
 ---

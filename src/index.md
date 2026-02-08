@@ -4,9 +4,6 @@ title:
   Nikin Nagewadia
 metaDesc:
   Senior product designer with 10+ years experience building scalable design systems. Frontend development background. Based in Toronto.
-image: home
-imageAltText:
-  3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard
 subTitle:
   Senior product designer with a background in frontend development
 aboutSectionTitle:

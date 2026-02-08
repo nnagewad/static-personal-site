@@ -1,7 +1,7 @@
 <a class='skip-link wrapper' href='#main-content'>Skip to content</a>
 <header class='wrapper flex-container--wrap header-nav'>
-  <a href='/' aria-label='{{ site.fullName }}'>
-    <img src='/img/header/{{ image }}.png' alt='{{ imageAltText }}' class='site-header-image'>
+  <a class='site-header-image--placeholder' href='/' aria-label='{{ site.fullName }}'>
+    {% include 'icons/site-logo.svg' %}
   </a>
   {% if headerLinks.items %}
     <ul class='header-links list-horizontal'>

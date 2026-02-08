@@ -5,9 +5,23 @@
   overflow: visible;
 }
 
+.site-header-image--placeholder:focus-visible {
+  .site-header-image {
+    fill: var(--color-focus-text);
+  }
+}
+
 .site-header-image {
-  height: var(--pixel-60);
-  width: auto;
+  display: block;
+  width: var(--pixel-50);
+  height: auto;
+  fill: var(--color-link);
+  &:hover {
+    fill: var(--color-hover);
+  }
+  &:active {
+    fill: var(--color-active);
+  }
 }
 
 .figure-between-content {

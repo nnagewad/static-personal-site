@@ -54,7 +54,7 @@ subTitle:
   <p>The command-line interface aesthetic wasn't just a style choice. It reflected what the tool actually is: something quiet, utilitarian, running in the background doing its job. No flashy interface: clean typography, high contrast colours. I considered more expressive visual directions early on, but they competed with the photography. The CLI aesthetic solved that — it signals 'tool, not gallery app' and keeps the interface out of the way.</p>
 
   <figure class="figure-between-content">
-    <img src="visuals/cli.png" alt="Terminal window showing installation info for claude-code version 2.1.34.">
+    <img src="visuals/cli.png" class="image-cli" alt="Terminal window showing installation info for claude-code version 2.1.34.">
     <figcaption>The minimal aesthetic of the CLI influenced the design aesthetic of Everyday Lens.</figcaption>
   </figure>
 

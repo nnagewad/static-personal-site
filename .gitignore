@@ -15,3 +15,4 @@ node_modules
 _site
 # Build artifacts
 src/_includes/style.css
+src/_includes/style.css.map

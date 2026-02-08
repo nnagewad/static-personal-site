@@ -222,14 +222,6 @@ section {
   }
 }
 
-.horizontal-gap-small {
-  gap: 0 var(--spacing-2);
-}
-
-.horizontal-gap-large {
-  gap: 0 var(--spacing-7);
-}
-
 ul,
 ol {
   @include spacing-mixins.spacing(bottom, 6, padding)
@@ -238,6 +230,7 @@ ol {
 .header-links {
   padding: 0;
   list-style: none;
+  gap: 0 var(--spacing-7);
   a:not(:hover) {
     text-decoration: none;
   }

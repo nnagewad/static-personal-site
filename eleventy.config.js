@@ -1,4 +1,5 @@
 import { minify } from 'terser';
+import CleanCSS from 'clean-css';
 import htmlmin from 'html-minifier-terser';
 import sanitizeHtml from "sanitize-html";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
@@ -24,7 +25,7 @@ export default async function(eleventyConfig) {
   // Configuration
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setServerOptions({
-    watch: ['./_site/css/**/*.css'],
+    watch: ['./src/_includes/style.css'],
   });
   
   // Collections
@@ -74,6 +75,10 @@ export default async function(eleventyConfig) {
 
   Object.entries(filters).forEach(([name, filter]) => {
     eleventyConfig.addFilter(name, filter);
+  });
+
+  eleventyConfig.addFilter('cssmin', function (code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   // Async filters

@@ -6,28 +6,28 @@ body {
 }
 
 .page-header {
-  @include spacing-mixins.bottom-9(margin);
+  @include spacing-mixins.spacing(bottom, 9, margin);
 }
 
 .header-nav {
   @include borders-mixins.thick-divider(bottom);
-  @include spacing-mixins.top-6(padding);
-  @include spacing-mixins.bottom-4(padding);
+  @include spacing-mixins.spacing(top, 6, padding);
+  @include spacing-mixins.spacing(bottom, 4, padding);
 }
 
 footer {
   @include borders-mixins.thick-divider(top);
-  @include spacing-mixins.top-6(padding);
-  @include spacing-mixins.bottom-6(padding);
+  @include spacing-mixins.spacing(top, 6, padding);
+  @include spacing-mixins.spacing(bottom, 6, padding);
 }
 
 main {
-  @include spacing-mixins.top-9(padding);
-  @include spacing-mixins.bottom-9(padding);
+  @include spacing-mixins.spacing(top, 9, padding);
+  @include spacing-mixins.spacing(bottom, 9, padding);
 }
 
 .children-pages {
-  @include spacing-mixins.top-6(padding);
+  @include spacing-mixins.spacing(top, 6, padding);
 }
 
 .wrapper {
@@ -60,7 +60,7 @@ main {
 .side-by-side-images {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-6);
+  gap: var(--pixel-20);
 
   > * {
     flex: 1 1 300px;
@@ -69,11 +69,12 @@ main {
   img {
     width: 100%;
     height: auto;
+    flex: auto;
   }
 }
 
 section,
 .intro,
 .now-list {
-  @include spacing-mixins.bottom-8(margin);
+  @include spacing-mixins.spacing(bottom, 8, margin);
 }

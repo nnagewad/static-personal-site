@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  @include spacing-mixins.bottom-6(margin);
+  @include spacing-mixins.spacing(bottom, 6, margin);
 }
 
 a {
@@ -27,7 +27,7 @@ a {
 }
 
 figcaption {
-  @include spacing-mixins.top-2(margin);
+  @include spacing-mixins.spacing(top, 2, margin);
   color: var(--color-secondary-text);
   font-weight: var(--font-weight-standard);
   @extend .font-size--1;
@@ -44,7 +44,7 @@ span.font-size-4 {
 }
 
 h1:has(+ .lead-paragraph) {
-  @include spacing-mixins.bottom-1(margin);
+  @include spacing-mixins.spacing(bottom, 1, margin);
 }
 
 .font-size-4,
@@ -116,14 +116,14 @@ strong {
 
 footer {
   p {
-    @include spacing-mixins.bottom-1(margin);
+    @include spacing-mixins.spacing(bottom, 1, margin);
     line-height: 1.125;
   }
 }
 
 ul {
   li + li {
-    @include spacing-mixins.top-1(margin);
+    @include spacing-mixins.spacing(top, 1, margin);
   }
   li {
     text-wrap: pretty;
@@ -140,7 +140,7 @@ ul {
 
 .list-extra-space {
   & > li {
-    @include spacing-mixins.bottom-3(margin);
+    @include spacing-mixins.spacing(bottom, 3, margin);
   }
   & > li:last-child {
     margin-bottom: 0;
@@ -148,7 +148,7 @@ ul {
 }
 
 .home-link {
-  @include spacing-mixins.bottom-6(margin);
+  @include spacing-mixins.spacing(bottom, 6, margin);
 }
 
 .last-updated {
@@ -201,13 +201,13 @@ a {
 
 section {
   .font-size-3 {
-    @include spacing-mixins.bottom-3(margin);
+    @include spacing-mixins.spacing(bottom, 3, margin);
   }
   .font-size-2 {
-    @include spacing-mixins.bottom-2(margin);
+    @include spacing-mixins.spacing(bottom, 2, margin);
   }
   .font-size-1 {
-    @include spacing-mixins.bottom-1(margin);
+    @include spacing-mixins.spacing(bottom, 1, margin);
   }
 }
 
@@ -232,7 +232,7 @@ section {
 
 ul,
 ol {
-  @include spacing-mixins.bottom-6(padding)
+  @include spacing-mixins.spacing(bottom, 6, padding)
 }
 
 section {

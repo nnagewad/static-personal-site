@@ -7,5 +7,5 @@
     {{ content | safe }}
   </div>
   
-  <p class="last-updated">Last updated from {{ location }} on <time datetime='{{ date | isoToISODate }}' class='capitalize'>{{ date | isoToFullDate }}</time></p>
+  <p class="last-updated">Last updated from {{ location }} on <time datetime='{{ date | isoToISODate }}'>{{ date | isoToFullDate }}</time></p>
 {% endblock %}

@@ -10,21 +10,12 @@
   width: auto;
 }
 
-.side-by-side-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--pixel-20);
-  img {
-    flex: auto;
-  }
-}
-
 .figure-between-content {
-  @include spacing-mixins.bottom-6(margin);
+  @include spacing-mixins.spacing(bottom, 6, margin);
 }
 
 .figure-prototype {
-  @include spacing-mixins.top-4(margin);
+  @include spacing-mixins.spacing(top, 4, margin);
 }
 
 .image-outline {

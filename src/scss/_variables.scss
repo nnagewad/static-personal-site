@@ -1,6 +1,5 @@
 :root {
   // Pixels
-  --pixel-neg5: -0.3125rem;
   --pixel-2: 0.125rem;
   --pixel-5: 0.3125rem;
   --pixel-10: 0.625rem;
@@ -12,7 +11,6 @@
   --pixel-50: 3.125rem;
   --pixel-60: 3.75rem;
   // Spacing variables
-  --spacing-neg1: var(--pixel-neg5);
   --spacing-0: var(--pixel-2);
   --spacing-1: var(--pixel-5);
   --spacing-2: var(--pixel-10);
@@ -37,7 +35,6 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   --font-weight-extrabold: 800;
-  --nav-underline-offset: 0.375rem;
   // Color palette
   --color-yellow: oklch(90% 0.2 98.1);
   --color-black: oklch(18.5% 0.007 236.5);

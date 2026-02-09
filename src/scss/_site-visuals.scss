@@ -6,7 +6,10 @@
 }
 
 .site-header-image--placeholder:focus-visible {
-  .site-header-image {
+  .header-image-background {
+    fill: transparent;
+  }
+  .header-image-foreground {
     fill: var(--color-focus-text);
   }
 }
@@ -15,13 +18,30 @@
   display: block;
   width: var(--pixel-50);
   height: auto;
-  fill: var(--color-link);
+  overflow: visible;
+  .header-image-background {
+    fill: light-dark(transparent, var( --color-link));
+  }
+
+  .header-image-foreground {
+    fill: light-dark(var( --color-link), var(--color-background));
+  }
   &:hover {
-    fill: var(--color-hover);
+    .header-image-background {
+      fill: light-dark(transparent, var( --color-hover));
+    }
+    .header-image-foreground {
+      fill: light-dark(var( --color-hover), var(--color-background));
+    }
   }
   &:active {
-    fill: var(--color-active);
-  }
+    .header-image-background {
+      fill: light-dark(transparent, var( --color-active));
+    }
+    .header-image-foreground {
+      fill: light-dark(var( --color-active), var(--color-background));
+    }
+  } 
 }
 
 .figure-between-content {

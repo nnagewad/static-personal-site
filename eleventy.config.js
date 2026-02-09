@@ -20,6 +20,10 @@ export default async function(eleventyConfig) {
     watch: ['./src/_includes/style.css'],
   });
   
+  // Passthrough copy
+  eleventyConfig.addPassthroughCopy("src/img/favicon");
+  eleventyConfig.addPassthroughCopy("src/img/open-graph");
+
   // Collections
   eleventyConfig.addCollection("caseStudies", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/case-study/*.md")

@@ -44,6 +44,21 @@
   } 
 }
 
+.pupil-left,
+.pupil-right {
+  animation: blink 4s infinite;
+  transform-origin: center;
+}
+
+@keyframes blink {
+  0%, 95%, 100% { 
+    transform: scaleY(1);
+  }
+  97.5% { 
+    transform: scaleY(0.1);
+  }
+}
+
 .figure-between-content {
   @include spacing-mixins.spacing(bottom, 6, margin);
 }

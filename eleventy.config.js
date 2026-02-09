@@ -1,40 +1,42 @@
-import 'dotenv/config';
 import { minify } from 'terser';
+import CleanCSS from 'clean-css';
 import htmlmin from 'html-minifier-terser';
-import sanitizeHtml from "sanitize-html";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 import path from "path";
 import fs from "fs";
+import { IdAttributePlugin } from "@11ty/eleventy";
+import MarkdownIt from "markdown-it";
 
 // Import filters
-import generateMetaDescription from './src/_filters/generate-meta-description.js';
-import apiToFullDate from './src/_filters/api-to-full-date.js';
-import apiToISO from './src/_filters/api-to-iso.js';
 import isoToFullDate from './src/_filters/iso-to-full-date.js';
 import isoToISODate from './src/_filters/iso-to-iso-date.js';
-import updateTags from './src/_filters/update-tags.js';
 
-// Define allowed HTML tags for sanitization
-const ALLOWED_TAGS = [
-  'p', 'br', 'strong', 'em', 'u', 'i', 'b', 'a', 'img', 'ul', 'ol', 'li', 
-  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'code', 'pre', 'span', 
-  'div', 'figure', 'figcaption'
-];
+const md = new MarkdownIt();
 
 export default async function(eleventyConfig) {
   // Configuration
   eleventyConfig.setUseGitIgnore(false);
   eleventyConfig.setServerOptions({
-    watch: ['./_site/css/**/*.css'],
+    watch: ['./src/_includes/style.css'],
   });
   
+  // Collections
+  eleventyConfig.addCollection("caseStudies", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/case-study/*.md")
+      .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
+      .map(item => ({
+        url: item.url,
+        title: item.data.title,
+        subTitle: item.data.subTitle
+      }));
+  });
+
   // Plugins
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     urlPath: "/img/",
     outputDir: ".cache/@11ty/img/",
     formats: ["avif", "webp"],
     widths: ["auto"],
-    // Don't fail on external image errors (like 429 from Medium)
     failOnError: false,
     htmlOptions: {
       imgAttributes: {
@@ -44,32 +46,22 @@ export default async function(eleventyConfig) {
       pictureAttributes: {}
     },
   });
-  
-  // Passthrough copies
-  eleventyConfig.addPassthroughCopy("src/img/favicon");
-  eleventyConfig.addPassthroughCopy("src/img/open-graph");
+
+  eleventyConfig.addPlugin(IdAttributePlugin);
   
   // Filters
   const filters = {
-    generateMetaDescription,
     isoToFullDate,
     isoToISODate,
-    apiToFullDate,
-    apiToISO,
-    updateTags,
-    sanitizeHTML: (content) => sanitizeHtml(content, {
-      allowedTags: ALLOWED_TAGS,
-      allowedAttributes: {
-        a: ["href", "title", "rel", "target"],
-        img: ["src", "alt", "title", "width", "height"],
-      },
-      allowedSchemes: ['http', 'https', 'mailto'],
-      selfClosing: ["img", "br"],
-    })
+    markdown: (content) => md.render(content || '')
   };
 
   Object.entries(filters).forEach(([name, filter]) => {
     eleventyConfig.addFilter(name, filter);
+  });
+
+  eleventyConfig.addFilter('cssmin', function (code) {
+    return new CleanCSS({}).minify(code).styles;
   });
 
   // Async filters

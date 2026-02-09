@@ -1,14 +1,30 @@
 ---
 layout: 'layouts/home.njk'
-title: 'Nikin Nagewadia'
-metaDesc: 'Discover the work of Nikin Nagewadia, a senior interaction designer at the Government Digital Service, focusing on enhancing GOV.UK’s user experience through design.'
-image: home
-imageAltText: '3D animated emoji of a friendly and approachable person with a black tuque, glasses, and a beard.'
-intro: 'Senior interaction designer employed by the Government Digital Service, working on GOV.UK'
-videos:
-  0:
-    name: 'Upgrading Whitehall Publisher to the GOV.UK Design System'
-    url: 'https://youtu.be/cPDBARbzGGg?si=l5opeg32v7c78Hl2&t=2456'
-    video: 'Services Week 2024: GDS Open Show and Tell'
-    upload: 2024-03-26
+title:
+  Nikin Nagewadia
+subTitle:
+  Senior product designer with a background in frontend development
+metaDesc:
+  Senior product designer with 10+ years experience building scalable design systems. Frontend development background. Based in Toronto.
+aboutSectionTitle:
+  About
+about:
+  I'm Nikin, a product designer with a background in frontend development. That combination has shaped how I work — I design systems that are not only scalable and inclusive, but buildable. Over 10+ years I've led complex product work at scale, from replatforming government publishing tools to building design systems from the ground up.
+  
+  
+  Outside of work, I created [Everyday Lens](https://everydaylens.photos) a website where I share my photography. I'm currently building an iOS app using Claude Code and Figma.
+caseStudiesSectionTitle:
+  Case studies
+supplementaryMaterialsSectionTitle:
+  Supplementary materials
+supplementaryMaterials:
+  - url: https://github.com/nnagewad
+    title: GitHub
+    subTitle: Projects and code samples
+  - url: https://nkngwd.medium.com
+    title: Medium
+    subTitle: Deep dives into projects and think pieces
+  - url: /now
+    title: Now
+    subTitle: What I'm up to right now
 ---

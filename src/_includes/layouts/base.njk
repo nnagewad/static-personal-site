@@ -1,5 +1,3 @@
-{% set assetHash = global.random() %}
-
 <!DOCTYPE html>
 <html lang='{{ site.language }}' class='no-js'>
   <head>
@@ -9,13 +7,19 @@
     <meta name="generator" content="{{ eleventy.generator }}">
     {% include "partials/meta-info.njk" %}
     {% include 'partials/google-fonts.njk' %}
-    <link rel='stylesheet' href='/css/style.css?{{ assetHash }}' />
+    {% set css %}
+      {% include "style.css" %}
+    {% endset %}
+    <style>{{ css | cssmin | safe }}</style>
   </head>
   <body>
     {% include 'partials/site-header.njk' %}
-    <main tabindex='-1' id='main-content' class='wrapper {% if title != 'About' %} grid-container {% endif %}'>
-      {% block content %}
-      {% endblock %}
+    <main tabindex='-1' id='main-content' class='wrapper {% if layout != "layouts/home.njk" %} children-pages {% endif %}'>
+      {% include 'partials/page-header.njk'%}
+      <div>
+        {% block content %}
+        {% endblock %}
+      </div>
     </main>
     {% include 'partials/site-footer.njk' %}
     {% set js %}

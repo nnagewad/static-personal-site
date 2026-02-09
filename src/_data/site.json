@@ -4,17 +4,5 @@
   "url": "https://www.nikin.design",
   "robots": "/robots.txt",
   "siteMap": "/sitemap.xml",
-  "language": "en",
-  "socials": [
-    {
-      "name": "Nikin's GitHub profile",
-      "url": "https://github.com/nnagewad",
-      "icon": "icons/github.svg"
-    },
-    {
-      "name": "Nikin's Medium profile",
-      "url": "https://nkngwd.medium.com/",
-      "icon": "icons/medium.svg"
-    }
-  ]
+  "language": "en"
 }

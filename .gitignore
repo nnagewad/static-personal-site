@@ -13,4 +13,6 @@ Thumbs.db
 # Node modules and output
 node_modules
 _site
-src/_includes/css
+# Build artifacts
+src/_includes/style.css
+src/_includes/style.css.map

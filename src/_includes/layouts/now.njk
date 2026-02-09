@@ -1,0 +1,11 @@
+{% extends 'layouts/base.njk' %}
+{% block content %}
+
+  <p class="list-lead-in">Here is a list of what's going with me at this moment:</p>
+  
+  <div class="now-list">
+    {{ content | safe }}
+  </div>
+  
+  <p class="last-updated">Last updated from {{ location }} on <time datetime='{{ date | isoToISODate }}'>{{ date | isoToFullDate }}</time></p>
+{% endblock %}

@@ -1,15 +1,15 @@
 <a class='skip-link wrapper' href='#main-content'>Skip to content</a>
-<header class='wrapper flex-container--wrap vertical-align-bottom'>
-  <a href='/' aria-label='{{ site.fullName }}'>
-    <img src='/img/header/{{ image }}.png' alt='{{ imageAltText }}' class='site-header-image'>
+<header class='wrapper flex-container--wrap header-nav'>
+  <a class='site-header-image--placeholder' href='/' aria-label='{{ site.fullName }}'>
+    {% include 'icons/site-logo.svg' %}
   </a>
-  <nav class='site-navigation' aria-label='Primary'>
-    <ul class='header-menu-items list-horizontal horizontal-gap--7'>
-      {% for item in navigation.items %}
-      <li>
-        <a href='{{ item.url }}' {{ helpers.getLinkActiveState(item.url, page.url) | safe }}>{{ item.text }}</a>
-      </li>
+  {% if headerLinks.items %}
+    <ul class='header-links list-horizontal'>
+      {% for item in headerLinks.items %}
+        <li>
+          <a href='{{ item.url }}'>{{ item.text }}</a>
+        </li>
       {% endfor %}
-    </ul>        
-  </nav>
+    </ul>
+  {% endif %}
 </header>

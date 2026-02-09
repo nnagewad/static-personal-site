@@ -1,28 +1,28 @@
 {
   "$schema": "https://json.schemastore.org/package.json",
   "name": "nikin.design",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Portfolio website for Nikin Nagewadia",
   "main": "eleventy.config.js",
   "type": "module",
   "scripts": {
-    "watch:sass": "sass --watch src/scss:_site/css --style=compressed",
+    "watch:sass": "sass --watch src/scss/style.scss:src/_includes/style.css --style=compressed",
     "watch:eleventy": "eleventy --serve",
-    "start": "concurrently \"npm run watch:sass\" \"npm run watch:eleventy\"",
-    "build": "concurrently \"sass src/scss:_site/css --style=compressed\" \"eleventy\""
+    "start": "npm run build:sass && concurrently \"npm run watch:sass\" \"npm run watch:eleventy\"",
+    "build:sass": "sass src/scss/style.scss:src/_includes/style.css --style=compressed --no-source-map",
+    "build": "npm run build:sass && eleventy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Nikin Nagewadia",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
-    "@11ty/eleventy-fetch": "^5.1.1",
     "@11ty/eleventy-img": "^6.0.4",
-    "dotenv": "^17.2.3",
-    "luxon": "^3.7.2",
-    "sanitize-html": "^2.17.0"
+    "luxon": "^3.7.2"
   },
   "devDependencies": {
+    "@types/node": "^25.2.1",
+    "clean-css": "^5.3.3",
     "concurrently": "^9.2.1",
     "html-minifier-terser": "^7.2.0",
     "netlify-plugin-cache": "^1.0.3",

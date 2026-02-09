@@ -1,28 +1,10 @@
-{% from 'macros/displayDate.njk' import date %}
+{% from 'macros/linkList.njk' import linkList %}
 
 {% extends 'layouts/base.njk' %}
 {% block content %}
-  
-  <h1 class='font-size-3'>{{ title }}</h1>
-  <p class='lead-paragraph'>{{ intro }}</p>
 
-  {% if latest.headline %}
-    <section class='latest'>
-      <h2 class='font-size-2'>Latest</h2>
-      <h3 class='font-size-1'>{{ latest.headline }}</h3>
-      {{ content | safe }}
-      <div class="meta-information">
-        {{ date('Updated:', latest.date) }}
-      </div>
-    </section>
-  {% endif %}
-
-  {% include 'partials/medium-posts.njk' %}
-
-  {% if (videos | length) > 0 %}
-    <section>
-      {% include 'partials/videos.njk' %}
-    </section>
-  {% endif %}
+  {% include 'partials/about.njk' %}
+  {{ linkList(caseStudiesSectionTitle, collections.caseStudies, "list-extra-space") }}
+  {{ linkList(supplementaryMaterialsSectionTitle, supplementaryMaterials) }}
 
 {% endblock %}

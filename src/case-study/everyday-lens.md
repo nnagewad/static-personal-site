@@ -8,7 +8,7 @@ subTitle:
 metaDesc:
   How I built a personal photography publishing system using AI as a collaborator, not a replacement.
 opengraphImage:
-  caseStudy_everyLens
+  caseStudy_everydayLens
 opengraphImageAltText:
   Stylized illustration of a face with glasses next to the "Everyday Lens" logo.
 ---

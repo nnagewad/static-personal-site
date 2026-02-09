@@ -3,10 +3,14 @@ order: 1
 layout: 'layouts/case-study.njk'
 title:
   Everyday Lens
-metaDesc:
-  How I built a personal photography publishing system using AI as a collaborator, not a replacement.
 subTitle:
   Building a personal publishing system with AI collaboration
+metaDesc:
+  How I built a personal photography publishing system using AI as a collaborator, not a replacement.
+opengraphImage:
+  caseStudy_everyLens
+opengraphImageAltText:
+  Stylized illustration of a face with glasses next to the "Everyday Lens" logo.
 ---
 <div class="intro">
   <p>As AI tools become part of every designer's workflow, I wanted to understand firsthand where they genuinely add value and where they fall short — not in theory, but through building something real. In the summer of 2025 I built <a href="https://everydaylens.photos">Everyday Lens</a>: a personal publishing system for my photography, designed with AI as a collaborator rather than just a build tool.</p>

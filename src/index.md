@@ -2,10 +2,10 @@
 layout: 'layouts/home.njk'
 title:
   Nikin Nagewadia
-metaDesc:
-  Senior product designer with 10+ years experience building scalable design systems. Frontend development background. Based in Toronto.
 subTitle:
   Senior product designer with a background in frontend development
+metaDesc:
+  Senior product designer with 10+ years experience building scalable design systems. Frontend development background. Based in Toronto.
 aboutSectionTitle:
   About
 about:

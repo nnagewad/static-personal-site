@@ -32,9 +32,13 @@
 {% endif %}
 
 {% if image %}
-  <meta property="og:image" content="/img/open-graph/{{ image }}.png" />
+  <meta property="og:image" content="/img/open-graph/{{ opengraphImage }}.png" />
   <meta property="og:image:type" content="image/png" />
-  <meta property="og:image:alt" content="{{ imageAltText }}" />
+  <meta property="og:image:alt" content="{{ opengraphImageAltText }}" />
+{% else %}
+  <meta property="og:image" content="/img/open-graph/default.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Stylized illustration of a man's face with glasses and a beard on a light gray background." />
 {% endif %}
 
 {% if noFollow %}

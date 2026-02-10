@@ -74,7 +74,7 @@ opengraphImageAltText:
   <section class="decision-group">
     <h3 class="font-size-2">Design judgment</h3>
     <p>I balanced modernization with operational stability. Internal tools like this are easy to deprioritize—but 2000+ content designers rely on Whitehall every day to keep GOV.UK running.</p>
-    <figure>
+    <figure class="figure-bottom-padding--6">
       <div class="side-by-side-images">
         <div>
           <img src="visuals/whitehall-before.png" alt="GOV.UK Whitehall document management interface on a laptop screen.">

@@ -199,11 +199,9 @@ section {
   .font-size-3 {
     @include spacing-mixins.spacing(bottom, 3, margin);
   }
-  .font-size-2 {
-    @include spacing-mixins.spacing(bottom, 2, margin);
-  }
+  .font-size-2,
   .font-size-1 {
-    @include spacing-mixins.spacing(bottom, 1, margin);
+    @include spacing-mixins.spacing(bottom, 2, margin);
   }
 }
 

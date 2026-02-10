@@ -205,11 +205,6 @@ section {
   .font-size-1 {
     @include spacing-mixins.spacing(bottom, 1, margin);
   }
-  section {
-    ul {
-      padding-bottom: 0;
-    }
-  }
 }
 
 .list-horizontal {

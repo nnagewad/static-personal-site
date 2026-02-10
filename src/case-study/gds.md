@@ -25,7 +25,7 @@ opengraphImageAltText:
 
 <hr>
 
-<section>
+<section class="project">
   <h2 class="font-size-3">GOV.UK Publishing Design Guide</h2>
   <div class="intro">
     <p>While GOV.UK has a mature <a href="https://design-system.service.gov.uk">Design System</a>, guidance for editorial design and publishing tools was fragmented across documents, wikis, and team-owned resources. This fragmentation slowed teams down, caused inconsistency, and made onboarding new designers unnecessarily difficult.</p>
@@ -36,12 +36,12 @@ opengraphImageAltText:
     </figure>
   </div>
   
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Design judgment</h3>
     <p>With just myself, a service designer, a tight fiscal quarter, and a fragmented mess of docs to consolidate, I prioritized adoption over completeness — solving a real frustration: designers spending hours hunting for guidance that should have been easy to find.</p>
   </section>
   
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Design decisions</h3>
     <ul class="list-extra-space">
       <li><strong>Lean validation first:</strong> Started with a shared Google Doc to consolidate existing knowledge, align contributors, and validate structure before committing to a technical solution</li>
@@ -51,7 +51,7 @@ opengraphImageAltText:
     </ul>
   </section>
 
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Impact</h3>
     <ul class="list-extra-space">
       <li>Adopted across GDS by designers, developers, researchers, product managers, and content designers</li>
@@ -64,14 +64,14 @@ opengraphImageAltText:
 
 <hr>
 
-<section>
+<section class="project">
   <h2 class="font-size-3">Upgrading Whitehall Publisher</h2>
-  <div class="intro">
+  <div class="intro no-figure">
     <p>Whitehall Publisher is the UK government's internal CMS, used across departments to publish guidance, news, and policy content to GOV.UK. The legacy system relied on outdated components and inconsistent workflows, increasing cognitive load, slowing delivery, and introducing avoidable errors.</p>
     <p>I led the user-experience and interface design effort to upgrade Whitehall Publisher to the GOV.UK Design System while content designers continue to publish on GOV.UK.</p>
   </div>
   
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Design judgment</h3>
     <p>I balanced modernization with operational stability. Internal tools like this are easy to deprioritize—but 2000+ content designers rely on Whitehall every day to keep GOV.UK running.</p>
     <figure>
@@ -89,7 +89,7 @@ opengraphImageAltText:
     </figure>
   </section>
   
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Design decisions</h3>
     <ul class="list-extra-space">
       <li><strong>Replaced legacy components</strong> with GOV.UK Design System equivalents to improve consistency and accessibility</li>
@@ -98,7 +98,7 @@ opengraphImageAltText:
     </ul>
   </section>
   
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Impact</h3>
     <ul class="list-extra-space">
       <li><strong>Adopted across government</strong> publishing teams in multiple departments</li>
@@ -110,19 +110,19 @@ opengraphImageAltText:
 
 <hr>
 
-<section>
+<section class="project">
   <h2 class="font-size-3">COVID-19 Local Checker and Travel Checker</h2>
-  <div class="intro">
+  <div class="intro no-figure">
     <p>In late 2020, COVID-19 restrictions changed frequently and varied by location. Guidance was often difficult to interpret, creating confusion at a time when clarity directly affected public trust and compliance.</p>
     <p>I joined the GDS emergency response team as the sole product designer, responsible for designing two services: <strong>Local Checker</strong> and <strong>Travel Checker</strong>. Both services were designed to deliver location-specific guidance under extreme time constraints and evolving policy requirements.</p>
   </div>
 
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Design judgment</h3>
     <p>I optimized for speed and clarity in order to support confident decision-making for users during this stressful moment.</p>
   </section>
 
-  <section>
+  <section class="decision-group">
     <h3 class="font-size-2">Design decisions</h3>
     <ul class="list-extra-space">
       <li><strong>Consistency between the two checkers</strong> via similar flows of entering postcode(s) to eliminate ambiguity and avoid complex regional mapping</li>

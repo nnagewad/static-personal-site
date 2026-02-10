@@ -15,7 +15,7 @@ opengraphImageAltText:
 <div class="intro">
   <p>As AI tools become part of every designer's workflow, I wanted to understand firsthand where they genuinely add value and where they fall short — not in theory, but through building something real. In the summer of 2025 I built <a href="https://everydaylens.photos">Everyday Lens</a>: a personal publishing system for my photography, designed with AI as a collaborator rather than just a build tool.</p>
 
-  <figure>
+  <figure class="figure-bottom-padding--6">
     <img src="visuals/everydayLens.png" alt='A responsive web gallery on a smartphone and laptop, titled "everyday lens," showing a variety of photographs.'>
     <figcaption>Left: Light mode version of Everyday Lens on a mobile device. Right: Dark mode version of Everyday Lens on a laptop.</figcaption>
   </figure>

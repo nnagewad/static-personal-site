@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  @include spacing-mixins.spacing(bottom, 6, margin);
+  @include spacing-mixins.spacing(bottom, 6, padding);
 }
 
 a {
@@ -199,16 +199,9 @@ section {
   .font-size-3 {
     @include spacing-mixins.spacing(bottom, 3, margin);
   }
-  .font-size-2 {
-    @include spacing-mixins.spacing(bottom, 2, margin);
-  }
+  .font-size-2,
   .font-size-1 {
-    @include spacing-mixins.spacing(bottom, 1, margin);
-  }
-  section {
-    ul {
-      padding-bottom: 0;
-    }
+    @include spacing-mixins.spacing(bottom, 2, margin);
   }
 }
 
@@ -236,3 +229,7 @@ ol {
     text-decoration: none;
   }
 }
+
+  section.decision-group {
+    @include spacing-mixins.spacing(bottom, 4, margin);
+  }

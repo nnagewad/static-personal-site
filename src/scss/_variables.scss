@@ -9,6 +9,7 @@
   --pixel-40: 2.5rem;
   --pixel-50: 3.125rem;
   --pixel-60: 3.75rem;
+  --pixel-80: 5rem;
   // Spacing variables
   --spacing-0: var(--pixel-2);
   --spacing-1: var(--pixel-5);
@@ -19,6 +20,7 @@
   --spacing-7: var(--pixel-40);
   --spacing-8: var(--pixel-50);
   --spacing-9: var(--pixel-60);
+  --spacing-10: var(--pixel-80);
   // Border variables
   --border-thin: 0.0625rem;
   --border-medium: var(--pixel-2);
@@ -38,7 +40,7 @@
   --color-black: oklch(18.5% 0.007 236.5);
   --color-white: oklch(92.8% 0.007 236.5);
   --color-grey: oklch(76.8% 0.007 236.5);
-  --color-dark-grey: oklch(46.5% 0.007 236.5);
+  --color-dark-grey: oklch(38.8% 0.007 236.5);
   --color-blue: oklch(43.3% 0.1 249.7);
   --color-dark-blue: oklch(27.7% 0.1 249.7);
   --color-pink: oklch(85.3% 0.1 353);

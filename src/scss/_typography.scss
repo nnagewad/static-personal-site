@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  @include spacing-mixins.spacing(bottom, 6, margin);
+  @include spacing-mixins.spacing(bottom, 6, padding);
 }
 
 a {

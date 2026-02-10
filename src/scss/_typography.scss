@@ -230,6 +230,6 @@ ol {
   }
 }
 
-  section.decision-group {
+  .decision-group {
     @include spacing-mixins.spacing(bottom, 4, margin);
   }

@@ -23,6 +23,7 @@ opengraphImageAltText:
   </ol>
 </div>
 
+<hr>
 
 <section>
   <h2 class="font-size-3">GOV.UK Publishing Design Guide</h2>
@@ -61,6 +62,7 @@ opengraphImageAltText:
   </section>
 </section>
 
+<hr>
 
 <section>
   <h2 class="font-size-3">Upgrading Whitehall Publisher</h2>
@@ -106,6 +108,7 @@ opengraphImageAltText:
   </section>
 </section>
 
+<hr>
 
 <section>
   <h2 class="font-size-3">COVID-19 Local Checker and Travel Checker</h2>

@@ -231,3 +231,7 @@ ol {
     text-decoration: none;
   }
 }
+
+  section.decision-group {
+    @include spacing-mixins.spacing(bottom, 4, margin);
+  }

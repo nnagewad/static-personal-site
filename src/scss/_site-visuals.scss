@@ -60,7 +60,7 @@
 }
 
 .figure-between-content {
-  @include spacing-mixins.spacing(bottom, 6, margin);
+  @include spacing-mixins.spacing(bottom, 6, padding);
 }
 
 .figure-prototype {
@@ -80,5 +80,5 @@
 hr {
   border-bottom: var(--border-medium) var(--color-border) solid;
   margin-top: 0;
-  margin-bottom: var(--spacing-10);
+  @include spacing-mixins.spacing(bottom, 10, margin)
 }

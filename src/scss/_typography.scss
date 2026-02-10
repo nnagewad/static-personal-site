@@ -238,5 +238,5 @@ ol {
   .figure-label {
     text-align: center;
     display: block;
-    @include spacing-mixins.spacing(top, 1, margin);
+    @include spacing-mixins.spacing(bottom, 1, margin);
   }

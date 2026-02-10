@@ -77,12 +77,12 @@ opengraphImageAltText:
     <figure>
       <div class="side-by-side-images">
         <div>
-          <small>figure 1:</small>
           <img src="visuals/whitehall-before.png" alt="GOV.UK Whitehall document management interface on a laptop screen.">
+          <small>Figure 1</small>
         </div>
         <div>
-          <small>figure 2:</small>
           <img src="visuals/whitehall-after.png" alt="Laptop displaying a GOV.UK document management webpage with filters and document list.">
+          <small>Figure 2</small>
         </div>
       </div>
       <figcaption>Figure 1: Document search interface before upgrade. Figure 2: Document search interface after upgrade.</figcaption>
@@ -137,12 +137,12 @@ opengraphImageAltText:
       <h4 class="font-size-1">Local Checker</h4>
       <div class="side-by-side-images">
         <div>
-          <small>figure 3</small>
           <img src="visuals/localChecker - start.png" alt="GOV.UK page on local coronavirus restrictions with a text field for postcode entry.">
+          <small>Figure 3</small>
         </div>
         <div>
-          <small>figure 4</small>
           <img src="visuals/localChecker - results.png" alt="Screenshot of a GOV.UK webpage about Tier 1 COVID-19 restrictions for Cornwall.">
+          <small>Figure 4</small>
         </div>
       </div>
       <figcaption>Figure 3: Start page for Local Checker. Figure 4: Results page for Local Checker.</figcaption>
@@ -151,12 +151,12 @@ opengraphImageAltText:
       <h4 class="font-size-1">Travel Checker</h4>
       <div class="side-by-side-images">
         <div>
-          <small>figure 5</small>
           <img src="visuals/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">
+          <small>Figure 5</small>
         </div>
         <div>
-          <small>figure 6</small>
           <img src="visuals/travelChecker - results.png" alt="GOV.UK webpage on travel restrictions between Reading and Bristol.">
+          <small>Figure 6</small>
         </div>
       </div>
       <figcaption>Figure 5: Start page for Travel Checker. Figure 6: Results page for Travel Checker.</figcaption>

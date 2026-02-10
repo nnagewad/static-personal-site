@@ -39,12 +39,12 @@ opengraphImageAltText:
     <figure class="figure-between-content">
       <div class="side-by-side-images">
         <div>
-          <small>figure 1:</small>
           <img class="image-outline" src="visuals/json.png" alt="Screenshot of a JSON file containing both AI-generated metadata and camera extracted metadata.">
+          <small>Figure 1</small>
         </div>
         <div>
-          <small>figure 2:</small>
           <img class="image-outline" src="visuals/the-percussion-of-shadows-and-light.png" alt="Web page with a black and white photo of musicians performing with motion blur.">
+          <small>Figure 2</small>
         </div>
       </div>
       <figcaption>Figure 1: AI-generated metadata — title, alt text, and tags — along with the camera extracted metadata stored as JSON. Figure 2: The published result, built from those data points.</figcaption>

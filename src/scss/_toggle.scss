@@ -21,6 +21,6 @@
   &:focus-visible {
     border: var(--border-medium) var(--color-focus-border) solid;
     outline: var(--border-thick) solid var(--color-focus);
-    outline-offset: 0px;
+    outline-offset: 0;
   }
 }

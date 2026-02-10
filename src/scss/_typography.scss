@@ -190,8 +190,7 @@ ul {
   color: var(--color-secondary-text);
 }
 
-a:focus-visible,
-.font-size-1 > a:focus-visible {
+a:focus-visible {
   box-shadow: 0 var(--focus-background) var(--color-focus),0 var(--focus-underline) var(--color-focus-border);
 }
 
@@ -218,18 +217,20 @@ section {
 
 ul,
 ol {
-  @include spacing-mixins.spacing(bottom, 6, padding)
+  @include spacing-mixins.spacing(bottom, 6, padding);
 }
 
 .header-links {
   padding: 0;
   list-style: none;
   gap: 0 var(--spacing-7);
-  a:not(:hover) {
-    text-decoration: none;
+  @media (hover: hover) {
+    a:not(:hover) {
+      text-decoration: none;
+    }
   }
 }
 
-  .decision-group {
+.decision-group {
     @include spacing-mixins.spacing(bottom, 4, margin);
   }

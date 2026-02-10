@@ -20,28 +20,28 @@
   height: auto;
   overflow: visible;
   .header-image-background {
-    fill: light-dark(transparent, var( --color-link));
+    fill: light-dark(transparent, var(--color-link));
   }
 
   .header-image-foreground {
-    fill: light-dark(var( --color-link), var(--color-background));
+    fill: light-dark(var(--color-link), var(--color-background));
   }
   &:hover {
     .header-image-background {
-      fill: light-dark(transparent, var( --color-hover));
+      fill: light-dark(transparent, var(--color-hover));
     }
     .header-image-foreground {
-      fill: light-dark(var( --color-hover), var(--color-background));
+      fill: light-dark(var(--color-hover), var(--color-background));
     }
   }
   &:active {
     .header-image-background {
-      fill: light-dark(transparent, var( --color-active));
+      fill: light-dark(transparent, var(--color-active));
     }
     .header-image-foreground {
-      fill: light-dark(var( --color-active), var(--color-background));
+      fill: light-dark(var(--color-active), var(--color-background));
     }
-  } 
+  }
 }
 
 .pupil-left,

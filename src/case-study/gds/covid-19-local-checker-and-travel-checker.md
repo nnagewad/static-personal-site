@@ -2,7 +2,7 @@
 order: 3
 layout: 'layouts/case-study.njk'
 title:
-  COVID-19 Local Checker and Travel Checker
+  COVID-19 Postcode Checkers
 subTitle:
   Designing location-specific COVID-19 guidance under extreme time pressure
 metaDesc:

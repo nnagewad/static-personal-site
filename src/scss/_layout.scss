@@ -76,11 +76,6 @@ section,
   @include spacing-mixins.spacing(bottom, 10, margin);
 }
 
-.related-links {
-  @include borders-mixins.thin-divider(top);
-  @include spacing-mixins.spacing(top, 6, padding);
-}
-
 .last-updated,
 .related-links {
   margin-bottom: 0;

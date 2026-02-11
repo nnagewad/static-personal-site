@@ -3,8 +3,10 @@ order: 1
 layout: 'layouts/case-study.njk'
 title:
   GOV.UK Publishing Design Guide
+subTitle:
+  Consolidating fragmented design guidance into a single source of truth for GOV.UK web and publishing teams
 metaDesc:
-  Update
+  How I created the GOV.UK Publishing Design Guide — consolidating scattered documentation into a single, extensible resource adopted across the Government Digital Service.
 opengraphImage:
   caseStudy_gds
 opengraphImageAltText:

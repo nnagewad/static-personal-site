@@ -3,8 +3,10 @@ order: 2
 layout: 'layouts/case-study.njk'
 title:
   Upgrading Whitehall Publisher
+subTitle:
+  Upgrading the UK government's internal CMS while 2,000+ content designers continued publishing
 metaDesc:
-  Update
+  How I led the UX and interface design effort to upgrade Whitehall Publisher to the GOV.UK Design System, reducing publishing errors and establishing baseline patterns across government.
 opengraphImage:
   caseStudy_gds
 opengraphImageAltText:

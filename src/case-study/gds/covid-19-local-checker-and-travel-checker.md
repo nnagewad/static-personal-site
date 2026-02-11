@@ -3,8 +3,10 @@ order: 3
 layout: 'layouts/case-study.njk'
 title:
   COVID-19 Local Checker and Travel Checker
+subTitle:
+  Designing location-specific COVID-19 guidance under extreme time pressure
 metaDesc:
-  Update
+  How I designed two services to help the public understand local and travel restrictions during COVID-19, achieving 100% task success in testing and shifting how the organizsation approached structured content.
 opengraphImage:
   caseStudy_gds
 opengraphImageAltText:

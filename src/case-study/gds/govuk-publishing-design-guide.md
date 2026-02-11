@@ -32,7 +32,7 @@ opengraphImageAltText:
     <h3 class="font-size-2">Lean validation</h3>
     <p>Started with a shared Google Doc to consolidate existing knowledge, align contributors, and validate structure before committing to a technical solution.</p>
     <figure>
-      <img class="image-googleDoc" src="../visuals/googleDoc_prototype.png" alt='Screenshot of a Google Docs document titled "Gov.uk design library," detailing the purpose and contribution guidelines.'>
+      <img class="image-googleDoc image-outline" src="../visuals/googleDoc_prototype.png" alt='Screenshot of a Google Docs document titled "Gov.uk design library," detailing the purpose and contribution guidelines.'>
       <figcaption>Early prototype of Publishing Design Guide was created in Google Docs.</figcaption>
     </figure>
   </section>

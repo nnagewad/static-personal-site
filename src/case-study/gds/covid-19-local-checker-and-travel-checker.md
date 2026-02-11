@@ -14,12 +14,12 @@ opengraphImageAltText:
 ---
 <div class="intro">
   <p>In late 2020, COVID-19 restrictions changed frequently and varied by location. Guidance was often difficult to interpret, creating confusion at a time when clarity directly affected public trust and compliance.</p>
-  <p>I joined the GDS emergency response team as the sole product designer, responsible for designing two services: <strong>Local Checker</strong> and <strong>Travel Checker</strong>. Both services were designed to deliver location-specific guidance under extreme time constraints and evolving policy requirements.</p>
+  <p>I joined the GDS emergency response team as the sole product designer, responsible for designing two services: <strong>Local Checker</strong> and <strong>Travel Checker</strong>. Both services were designed to deliver location-specific guidance (via postcode) under extreme time constraints and evolving policy requirements.</p>
 </div>
 
 <section>
   <h2 class="font-size-3">Design judgment</h2>
-  <p>I optimized for speed and clarity in order to support confident decision-making for users during this stressful moment.</p>
+  <p>I optimized for speed and clarity in order to support end-users be informed of the latest COVID restrictions in order for them to make necessary decisions during this watershed moment.</p>
 </section>
 
 <section>

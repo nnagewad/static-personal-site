@@ -1,0 +1,70 @@
+---
+layout: 'layouts/case-study.njk'
+title:
+  COVID-19 Local Checker and Travel Checker
+metaDesc:
+  Update
+opengraphImage:
+  caseStudy_gds
+opengraphImageAltText:
+  Illustration of a bearded man with glasses beside the "Government Digital Service" logo.
+---
+<div class="intro no-figure">
+  <p>In late 2020, COVID-19 restrictions changed frequently and varied by location. Guidance was often difficult to interpret, creating confusion at a time when clarity directly affected public trust and compliance.</p>
+  <p>I joined the GDS emergency response team as the sole product designer, responsible for designing two services: <strong>Local Checker</strong> and <strong>Travel Checker</strong>. Both services were designed to deliver location-specific guidance under extreme time constraints and evolving policy requirements.</p>
+</div>
+
+<section class="decision-group">
+  <h3 class="font-size-2">Design judgment</h3>
+  <p>I optimized for speed and clarity in order to support confident decision-making for users during this stressful moment.</p>
+</section>
+
+<section class="decision-group">
+  <h3 class="font-size-2">Design decisions</h3>
+  <ul class="list-extra-space">
+    <li><strong>Consistency between the two checkers</strong> via similar flows of entering postcode(s) to eliminate ambiguity and avoid complex regional mapping</li>
+    <li><strong>Clear output</strong> highlighting to users relevant information, then allowing them to learn more via available guidance</li>
+    <li><strong>High-fidelity prototyping</strong> in code using the <a href="https://prototype-kit.service.gov.uk/docs/">GOV.UK Prototype Kit</a> to validate user-flow, accessibility, content design, and edge cases during user testing sessions</li>
+  </ul>
+</section>
+
+<section>
+  <h3 class="font-size-2">Prototypes</h3>
+  <figure class="figure-between-content figure-prototype">
+    <h4 class="font-size-1">Local Checker</h4>
+    <div class="side-by-side-images">
+      <div>
+        <small class="figure-label">Figure 3</small>
+        <img src="../visuals/localChecker - start.png" alt="GOV.UK page on local coronavirus restrictions with a text field for postcode entry.">
+      </div>
+      <div>
+        <small class="figure-label">Figure 4</small>
+        <img src="../visuals/localChecker - results.png" alt="Screenshot of a GOV.UK webpage about Tier 1 COVID-19 restrictions for Cornwall.">
+      </div>
+    </div>
+    <figcaption>Figure 3: Start page for Local Checker. Figure 4: Results page for Local Checker.</figcaption>
+  </figure>
+  <figure>
+    <h4 class="font-size-1">Travel Checker</h4>
+    <div class="side-by-side-images">
+      <div>
+        <small class="figure-label">Figure 5</small>
+        <img src="../visuals/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">
+      </div>
+      <div>
+        <small class="figure-label">Figure 6</small>
+        <img src="../visuals/travelChecker - results.png" alt="GOV.UK webpage on travel restrictions between Reading and Bristol.">
+      </div>
+    </div>
+    <figcaption>Figure 5: Start page for Travel Checker. Figure 6: Results page for Travel Checker.</figcaption>
+  </figure>
+</section>
+
+<section>
+  <h3 class="font-size-2">Impact</h3>
+  <ul class="list-extra-space">
+    <li><strong>100% task success in testing:</strong> Participants consistently understood their local restrictions and the restrictions of where they would be travelling to</li>
+    <li><strong>Demonstrated how design can help end-users especially during a high stress watershed moment</strong></li>
+    <li>The prototype influenced senior leadership's decision to invest in upgrading internal tools. The service itself didn't ship due to CMS limitations, but <strong>the work shifted how the organization thought about content as structured data</strong>.</li>
+  </ul>
+</section>

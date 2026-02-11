@@ -69,8 +69,16 @@
   height: auto;
 }
 
-hr {
-  border-bottom: var(--border-medium) var(--color-border) solid;
-  margin-top: 0;
-  @include spacing-mixins.spacing(bottom, 10, margin);
+.image-googleDoc {
+  width: 375px;
+  height: auto;
+}
+
+.image-figma {
+  width: 500px;
+  height: auto;
+}
+
+.image-withinList {
+  @include spacing-mixins.spacing(top, 3, margin);
 }

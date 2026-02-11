@@ -28,12 +28,26 @@ opengraphImageAltText:
 
 <section>
   <h2 class="font-size-3">Design decisions</h2>
-  <ul class="list-extra-space">
-    <li><strong>Lean validation first:</strong> Started with a shared Google Doc to consolidate existing knowledge, align contributors, and validate structure before committing to a technical solution</li>
-    <li><strong>Design through delivery:</strong> With a single fiscal quarter to ship, I skipped high-fidelity Figma mocks and built directly in 11ty. Every day spent designing in Figma was a day we couldn't spend validating with real users—so I built first and iterated fast.</li>
-    <li><strong>Planned for extensibility:</strong> Scoped the initial release tightly while laying foundations for future component references, Figma embeds, and code snippets</li>
-    <li><strong>Intentional visual clarity:</strong> Introduced a small set of Lego-inspired illustrations to support conceptual clarity and differentiate the guide without compromising GOV.UK's utilitarian design principles. The illustrations demonstrate the difference between components, patterns, and frontend templates through visual storytelling.</li>
-  </ul>
+  <section>
+    <h3 class="font-size-2">Lean validation</h3>
+    <p>Started with a shared Google Doc to consolidate existing knowledge, align contributors, and validate structure before committing to a technical solution.</p>
+    <figure>
+      <img class="image-googleDoc" src="../visuals/googleDoc_prototype.png" alt='Screenshot of a Google Docs document titled "Gov.uk design library," detailing the purpose and contribution guidelines.'>
+      <figcaption>Early prototype of Publishing Design Guide was created in Google Docs.</figcaption>
+    </figure>
+  </section>
+  <section>
+    <h3 class="font-size-2">Design through delivery</h3>
+    <p>With a single fiscal quarter to ship, I skipped high-fidelity Figma mocks and built directly in 11ty. Every day spent designing in Figma was a day we couldn't spend validating with real users—so I built first and iterated fast.</p>
+  </section>
+  <section>
+    <h3 class="font-size-2">Planned for extensibility</h3>
+    <p>Scoped the initial release tightly while laying foundations for future component references, Figma embeds, and code snippets.</p>
+  </section>
+  <section>
+    <h3 class="font-size-2">Intentional visual clarity</h3>
+    <p>Introduced a small set of Lego-inspired illustrations to support conceptual clarity and differentiate the guide without compromising GOV.UK's utilitarian design principles. The illustrations demonstrate the difference between components, patterns, and frontend templates through visual storytelling.</p>
+  </section>
 </section>
 
 <section>
@@ -42,6 +56,12 @@ opengraphImageAltText:
     <li>Adopted across GDS by designers, developers, researchers, product managers, and content designers</li>
     <li>Reduced onboarding time and eliminated duplicated documentation work across teams</li>
     <li>Inspired similar platforms created by other government teams</li>
-    <li>Directly influenced the creation of an organization-wide Figma UI Kit used across government</li>
+    <li>
+      Directly influenced the creation of an updated Figma UI Kit of the GOV.UK Design System, which can be used as a basis to create editorial and publishing tool specific components
+      <figure>
+        <img class="image-withinList image-figma" src="../visuals/figma_DesignSystemV2.png" alt="Screenshot of the GOV.UK Design System V2 in Figma, showing various user interface components.">
+        <figcaption>Version 2 of the GOV.UK Design System Figma UI Kit.</figcaption>
+      </figure>
+    </li>
   </ul>
 </section>

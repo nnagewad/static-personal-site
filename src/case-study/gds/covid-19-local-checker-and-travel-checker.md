@@ -1,4 +1,5 @@
 ---
+order: 3
 layout: 'layouts/case-study.njk'
 title:
   COVID-19 Local Checker and Travel Checker

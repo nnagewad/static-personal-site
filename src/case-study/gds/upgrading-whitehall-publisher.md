@@ -1,4 +1,5 @@
 ---
+order: 2
 layout: 'layouts/case-study.njk'
 title:
   Upgrading Whitehall Publisher

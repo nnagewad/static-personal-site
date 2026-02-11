@@ -1,4 +1,5 @@
 ---
+order: 1
 layout: 'layouts/case-study.njk'
 title:
   GOV.UK Publishing Design Guide

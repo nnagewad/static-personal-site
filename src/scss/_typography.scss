@@ -5,7 +5,7 @@ body {
   font-family: var(--font-family);
   font-optical-sizing: auto;
   @extend .font-size-0;
-  line-height: 1.735;
+  
   color: var(--color-primary-text);
 }
 
@@ -63,11 +63,21 @@ h1:has(+ .lead-paragraph) {
   @include spacing-mixins.spacing(bottom, 1, margin);
 }
 
+.font-size-1,
+p {
+  line-height: 1.735;
+}
+
+.font-size-4,
+.font-size-3,
+.font-size-2 {
+  line-height: 1.125;
+}
+
 .font-size-4,
 .font-size-3,
 .font-size-2,
 .font-size-1 {
-  line-height: 1.125;
   font-size: clamp(
     var(--min-font-size),
     calc(var(--fluid-font-size)),

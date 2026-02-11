@@ -52,7 +52,7 @@ opengraphImageAltText:
             <img class="image-outline" src="../visuals/updatedFlow_deleteGroup.png" alt="Updated user flow showing the process to delete a group on a GOV.UK website with three stages.">
           </div>
         </div>
-        <figcaption>Figure 3: The original user flow for deleting a group. Figure 4: The updated user flow for deleting a group.</figcaption>
+        <figcaption>Figure 3: Original five-step flow for deleting a group. Figure 4: Simplified three-step flow.</figcaption>
       </figure>
     </li>
     <li><strong>Shipped incrementally</strong> on a weekly cadence, validating usability with content designers before rollout</li>

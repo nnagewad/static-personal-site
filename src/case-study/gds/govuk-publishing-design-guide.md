@@ -1,7 +1,6 @@
 ---
 order: 1
 layout: 'layouts/case-study.njk'
-icon: icons/placeholder-logo.svg
 title:
   GOV.UK Publishing Design Guide
 subTitle:

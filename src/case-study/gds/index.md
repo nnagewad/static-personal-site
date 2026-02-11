@@ -1,7 +1,6 @@
 ---
 order: 2
 layout: 'layouts/case-study.njk'
-icon: icons/placeholder-logo.svg
 headlineCaption: Case studies
 title:
   Government Digital Service
@@ -20,9 +19,9 @@ opengraphImageAltText:
   <p><strong>Three projects that demonstrate my range:</strong></p>
 </div>
 
-{% from 'partials/card.njk' import card %}
+{% from 'macros/card.njk' import card %}
 <div class="card-list">
   {% for item in collections.gdsCaseStudies %}
-    {{ card(item.url, item.title, item.subTitle, item.icon, "h2") }}
+    {{ card(item.url, item.title, item.subTitle, null, "h2") }}
   {% endfor %}
 </div>

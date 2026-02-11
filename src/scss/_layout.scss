@@ -73,7 +73,7 @@ main {
 section,
 .intro,
 .now-list {
-  @include spacing-mixins.spacing(bottom, 9, margin);
+  @include spacing-mixins.spacing(bottom, 10, margin);
 }
 
 .related-links {

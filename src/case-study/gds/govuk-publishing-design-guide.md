@@ -58,8 +58,8 @@ opengraphImageAltText:
     <li>Inspired similar platforms created by other government teams</li>
     <li>
       Directly influenced the creation of an updated Figma UI Kit of the GOV.UK Design System, which can be used as a basis to create editorial and publishing tool specific components
-      <figure>
-        <img class="image-withinList image-figma" src="../visuals/figma_DesignSystemV2.png" alt="Screenshot of the GOV.UK Design System V2 in Figma, showing various user interface components.">
+      <figure class="image-withinList">
+        <img class="image-figma" src="../visuals/figma_DesignSystemV2.png" alt="Screenshot of the GOV.UK Design System V2 in Figma, showing various user interface components.">
         <figcaption>Version 2 of the GOV.UK Design System Figma UI Kit.</figcaption>
       </figure>
     </li>

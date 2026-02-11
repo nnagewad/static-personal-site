@@ -6,7 +6,7 @@ body {
 }
 
 .page-header {
-  @include spacing-mixins.spacing(bottom, 9, margin);
+  @include spacing-mixins.spacing(bottom, 10, margin);
 }
 
 .header-nav {
@@ -73,5 +73,15 @@ main {
 section,
 .intro,
 .now-list {
-  @include spacing-mixins.spacing(bottom, 8, margin);
+  @include spacing-mixins.spacing(bottom, 10, margin);
+}
+
+.related-links {
+  @include borders-mixins.thin-divider(top);
+  @include spacing-mixins.spacing(top, 6, padding);
+}
+
+.last-updated,
+.related-links {
+  margin-bottom: 0;
 }

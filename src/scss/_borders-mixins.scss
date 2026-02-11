@@ -5,3 +5,11 @@
     border-bottom: var(--border-thick) solid var(--color-border);
   }
 }
+
+@mixin thin-divider($direction) {
+  @if $direction == top {
+    border-top: var(--border-medium) solid var(--color-border);
+  } @else if $direction == bottom {
+    border-bottom: var(--border-medium) solid var(--color-border);
+  }
+}

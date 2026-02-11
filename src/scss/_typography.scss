@@ -10,7 +10,7 @@ body {
 }
 
 p {
-  @include spacing-mixins.spacing(bottom, 6, padding);
+  @include spacing-mixins.spacing(bottom, 6, margin);
 }
 
 a {
@@ -146,10 +146,6 @@ ul {
   }
 }
 
-.list-lead-in {
-  margin-bottom: var(--spacing-3);
-}
-
 .link-subtitle {
   font-weight: var(--font-weight-standard);
 }
@@ -215,11 +211,6 @@ section {
   }
 }
 
-ul,
-ol {
-  @include spacing-mixins.spacing(bottom, 6, padding);
-}
-
 .header-links {
   padding: 0;
   list-style: none;
@@ -231,12 +222,13 @@ ol {
   }
 }
 
-.decision-group {
-    @include spacing-mixins.spacing(bottom, 4, margin);
-  }
-
   .figure-label {
     text-align: center;
     display: block;
     @include spacing-mixins.spacing(bottom, 1, margin);
+  }
+
+  .related-links-heading {
+    @extend .font-size-1;
+    color: var(--color-secondary-text)
   }

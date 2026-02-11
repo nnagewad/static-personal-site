@@ -1,0 +1,67 @@
+---
+order: 1
+layout: 'layouts/case-study.njk'
+title:
+  GOV.UK Publishing Design Guide
+subTitle:
+  Consolidating fragmented design guidance into a single source of truth for GOV.UK web and publishing teams
+metaDesc:
+  How I created the GOV.UK Publishing Design Guide — consolidating scattered documentation into a single, extensible resource adopted across the Government Digital Service.
+opengraphImage:
+  caseStudy_gds
+opengraphImageAltText:
+  Illustration of a bearded man with glasses beside the "Government Digital Service" logo.
+---
+<div class="intro">
+  <p>While GOV.UK has a mature <a href="https://design-system.service.gov.uk">Design System</a>, guidance for editorial design and publishing tools was fragmented across documents, wikis, and team-owned resources. This fragmentation slowed teams down, caused inconsistency, and made onboarding new designers unnecessarily difficult.</p>
+  <p>I identified the opportunity to consolidate this knowledge into a single source of truth: the <a href="https://design-guide.publishing.service.gov.uk">GOV.UK Publishing Design Guide</a>.</p>
+  <figure>
+    <img src="../visuals/publishingDesignGuide.png" alt="Two devices showing the GOV.UK Publishing Design Guide website, with details on frontend templates and Lego-like illustrations.">
+    <figcaption>Left: GOV.UK Publishing Design Guide's homepage on a mobile device. Right: Overview page of Frontend Templates on a laptop.</figcaption>
+  </figure>
+</div>
+
+<section>
+  <h2 class="font-size-3">Design judgment</h2>
+  <p>With just myself, a service designer, a tight fiscal quarter, and a fragmented mess of docs to consolidate, I prioritized adoption over completeness — solving a real frustration: designers spending hours hunting for guidance that should have been easy to find.</p>
+</section>
+
+<section>
+  <h2 class="font-size-3">Design decisions</h2>
+  <section>
+    <h3 class="font-size-2">Lean validation</h3>
+    <p>Started with a shared Google Doc to consolidate existing knowledge, align contributors, and validate structure before committing to a technical solution.</p>
+    <figure>
+      <img class="image-googleDoc image-outline" src="../visuals/googleDoc_prototype.png" alt='Screenshot of a Google Docs document titled "Gov.uk design library," detailing the purpose and contribution guidelines.'>
+      <figcaption>Early prototype of Publishing Design Guide was created in Google Docs.</figcaption>
+    </figure>
+  </section>
+  <section>
+    <h3 class="font-size-2">Design through delivery</h3>
+    <p>With a single fiscal quarter to ship, I skipped high-fidelity Figma mocks and built directly in 11ty. Every day spent designing in Figma was a day we couldn't spend validating with real users—so I built first and iterated fast.</p>
+  </section>
+  <section>
+    <h3 class="font-size-2">Planned for extensibility</h3>
+    <p>Scoped the initial release tightly while laying foundations for future component references, Figma embeds, and code snippets.</p>
+  </section>
+  <section>
+    <h3 class="font-size-2">Intentional visual clarity</h3>
+    <p>Introduced a small set of Lego-inspired illustrations to support conceptual clarity and differentiate the guide without compromising GOV.UK's utilitarian design principles. The illustrations demonstrate the difference between components, patterns, and frontend templates through visual storytelling.</p>
+  </section>
+</section>
+
+<section>
+  <h2 class="font-size-3">Impact</h2>
+  <ul class="list-extra-space">
+    <li>Adopted across GDS by designers, developers, researchers, product managers, and content designers</li>
+    <li>Reduced onboarding time and eliminated duplicated documentation work across teams</li>
+    <li>Inspired similar platforms created by other government teams</li>
+    <li>
+      Directly influenced the creation of an updated Figma UI Kit of the GOV.UK Design System, which can be used as a basis to create editorial and publishing tool specific components
+      <figure class="image-withinList">
+        <img class="image-figma" src="../visuals/figma_DesignSystemV2.png" alt="Screenshot of the GOV.UK Design System V2 in Figma, showing various user interface components.">
+        <figcaption>Version 2 of the GOV.UK Design System Figma UI Kit.</figcaption>
+      </figure>
+    </li>
+  </ul>
+</section>

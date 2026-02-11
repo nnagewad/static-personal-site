@@ -59,34 +59,30 @@
   }
 }
 
-.figure-between-content {
-  @include spacing-mixins.spacing(bottom, 6, padding);
-}
-
-.figure-prototype {
-  @include spacing-mixins.spacing(top, 4, margin);
-}
-
-.no-figure {
-  @include spacing-mixins.spacing(bottom, 4, margin);
-}
-
-.figure-bottom-padding--6 {
-  @include spacing-mixins.spacing(bottom, 6, padding);
-}
-
 .image-outline {
-  margin: 0;
   outline: var(--border-thin) solid var(--color-border);
 }
 
 .image-cli {
-  width: 500px;
+  max-width: 500px;
   height: auto;
 }
 
-hr {
-  border-bottom: var(--border-medium) var(--color-border) solid;
-  margin-top: 0;
-  @include spacing-mixins.spacing(bottom, 10, margin)
+.image-googleDoc {
+  max-width: 375px;
+  height: auto;
+}
+
+.image-figma {
+  max-width: 500px;
+  height: auto;
+}
+
+.image-user-flow-sketch {
+  max-width: 512px;
+  height: auto;
+}
+
+.image-withinList {
+  @include spacing-mixins.spacing(top, 3, margin);
 }

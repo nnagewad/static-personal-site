@@ -59,20 +59,8 @@
   }
 }
 
-.figure-between-content {
-  @include spacing-mixins.spacing(bottom, 6, padding);
-}
-
 .figure-prototype {
   @include spacing-mixins.spacing(top, 4, margin);
-}
-
-.no-figure {
-  @include spacing-mixins.spacing(bottom, 4, margin);
-}
-
-.figure-bottom-padding--6 {
-  @include spacing-mixins.spacing(bottom, 6, padding);
 }
 
 .image-outline {
@@ -88,5 +76,5 @@
 hr {
   border-bottom: var(--border-medium) var(--color-border) solid;
   margin-top: 0;
-  @include spacing-mixins.spacing(bottom, 10, margin)
+  @include spacing-mixins.spacing(bottom, 10, margin);
 }

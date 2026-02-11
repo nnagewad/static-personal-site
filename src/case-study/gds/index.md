@@ -13,10 +13,10 @@ opengraphImage:
 opengraphImageAltText:
   Illustration of a bearded man with glasses beside the "Government Digital Service" logo.
 ---
-<div class="intro">
+<div>
   <p>At the Government Digital Service (GDS), I designed products and systems used by millions of people across <a href="https://gov.uk">GOV.UK</a>. That's where I learned what design actually means: building products and services people can trust.</p>
 
-  <p>Three projects that demonstrate my range:</p>
+  <p><strong>Three projects that demonstrate my range:</strong></p>
   <ol class="list-extra-space">
   {% for item in collections.gdsCaseStudies %}
   <li><a href="{{ item.url }}">{{ item.title }}</a>: {{ item.subTitle }}</li>

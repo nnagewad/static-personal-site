@@ -21,12 +21,12 @@ opengraphImageAltText:
   </figure>
 </div>
 
-<section class="decision-group">
+<section>
   <h2 class="font-size-3">Design judgment</h2>
   <p>With just myself, a service designer, a tight fiscal quarter, and a fragmented mess of docs to consolidate, I prioritized adoption over completeness — solving a real frustration: designers spending hours hunting for guidance that should have been easy to find.</p>
 </section>
 
-<section class="decision-group">
+<section>
   <h2 class="font-size-3">Design decisions</h2>
   <ul class="list-extra-space">
     <li><strong>Lean validation first:</strong> Started with a shared Google Doc to consolidate existing knowledge, align contributors, and validate structure before committing to a technical solution</li>
@@ -36,7 +36,7 @@ opengraphImageAltText:
   </ul>
 </section>
 
-<section class="decision-group">
+<section>
   <h2 class="font-size-3">Impact</h2>
   <ul class="list-extra-space">
     <li>Adopted across GDS by designers, developers, researchers, product managers, and content designers</li>

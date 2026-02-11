@@ -26,7 +26,7 @@ export default async function(eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("caseStudies", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/case-study/*.md")
+    return collectionApi.getFilteredByGlob(["src/case-study/*.md", "src/case-study/*/index.md"])
       .sort((a, b) => (a.data.order || 0) - (b.data.order || 0))
       .map(item => ({
         url: item.url,

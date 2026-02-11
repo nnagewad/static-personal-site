@@ -2,9 +2,7 @@
 
 {% extends 'layouts/base.njk' %}
 {% block content %}
-
-  {% include 'partials/about.njk' %}
+  {{ content | safe }}
   {{ linkList(caseStudiesSectionTitle, collections.caseStudies, "list-extra-space") }}
   {{ linkList(supplementaryMaterialsSectionTitle, supplementaryMaterials) }}
-
 {% endblock %}

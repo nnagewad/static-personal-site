@@ -33,34 +33,38 @@ opengraphImageAltText:
 
 <section>
   <h2 class="font-size-3">Prototypes</h2>
-  <figure class="figure-between-content figure-prototype">
-    <h4 class="font-size-1">Local Checker</h4>
-    <div class="side-by-side-images">
-      <div>
-        <small class="figure-label">Figure 3</small>
-        <img src="../visuals/localChecker - start.png" alt="GOV.UK page on local coronavirus restrictions with a text field for postcode entry.">
+  <section>
+    <h3 class="font-size-1">Local Checker</h3>
+    <figure>
+      <div class="side-by-side-images">
+        <div>
+          <small class="figure-label">Figure 3</small>
+          <img src="../visuals/localChecker - start.png" alt="GOV.UK page on local coronavirus restrictions with a text field for postcode entry.">
+        </div>
+        <div>
+          <small class="figure-label">Figure 4</small>
+          <img src="../visuals/localChecker - results.png" alt="Screenshot of a GOV.UK webpage about Tier 1 COVID-19 restrictions for Cornwall.">
+        </div>
       </div>
-      <div>
-        <small class="figure-label">Figure 4</small>
-        <img src="../visuals/localChecker - results.png" alt="Screenshot of a GOV.UK webpage about Tier 1 COVID-19 restrictions for Cornwall.">
+      <figcaption>Figure 3: Start page for Local Checker. Figure 4: Results page for Local Checker.</figcaption>
+    </figure>
+  </section>
+  <section>
+    <figure>
+      <h3 class="font-size-1">Travel Checker</h3>
+      <div class="side-by-side-images">
+        <div>
+          <small class="figure-label">Figure 5</small>
+          <img src="../visuals/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">
+        </div>
+        <div>
+          <small class="figure-label">Figure 6</small>
+          <img src="../visuals/travelChecker - results.png" alt="GOV.UK webpage on travel restrictions between Reading and Bristol.">
+        </div>
       </div>
-    </div>
-    <figcaption>Figure 3: Start page for Local Checker. Figure 4: Results page for Local Checker.</figcaption>
-  </figure>
-  <figure>
-    <h4 class="font-size-1">Travel Checker</h4>
-    <div class="side-by-side-images">
-      <div>
-        <small class="figure-label">Figure 5</small>
-        <img src="../visuals/travelChecker - start.png" alt="Screenshot of a GOV.UK webpage about travel restrictions between areas.">
-      </div>
-      <div>
-        <small class="figure-label">Figure 6</small>
-        <img src="../visuals/travelChecker - results.png" alt="GOV.UK webpage on travel restrictions between Reading and Bristol.">
-      </div>
-    </div>
-    <figcaption>Figure 5: Start page for Travel Checker. Figure 6: Results page for Travel Checker.</figcaption>
-  </figure>
+      <figcaption>Figure 5: Start page for Travel Checker. Figure 6: Results page for Travel Checker.</figcaption>
+    </figure>
+  </section>
 </section>
 
 <section>

@@ -75,3 +75,8 @@ section,
 .now-list {
   @include spacing-mixins.spacing(bottom, 8, margin);
 }
+
+.related-links {
+  @include borders-mixins.thin-divider(top);
+  @include spacing-mixins.spacing(top, 6, padding);
+}

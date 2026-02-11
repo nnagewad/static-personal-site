@@ -2,4 +2,22 @@
 
 {% block content %}
   {{ content | safe }}
+  {% set isGdsCaseStudy = false %}
+  {% for item in collections.gdsCaseStudies %}
+    {% if item.url == page.url %}
+      {% set isGdsCaseStudy = true %}
+    {% endif %}
+  {% endfor %}
+  {% if isGdsCaseStudy %}
+  <section class="related-links">
+    <h2 class="related-links-heading">GDS case studies:</h2>
+    <ul>
+      {% for item in collections.gdsCaseStudies %}
+        {% if item.url != page.url %}
+        <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
 {% endblock %}

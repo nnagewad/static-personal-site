@@ -12,7 +12,7 @@ opengraphImage:
 opengraphImageAltText:
   Illustration of a bearded man with glasses beside the "Government Digital Service" logo.
 ---
-<div>
+<div class="intro">
   <p>Whitehall Publisher is the UK government's internal CMS, used across departments to publish guidance, news, and policy content to GOV.UK. The legacy system relied on outdated components and inconsistent workflows, increasing cognitive load, slowing delivery, and introducing avoidable errors.</p>
   <p>I led the user-experience and interface design effort to upgrade Whitehall Publisher to the GOV.UK Design System while content designers continue to publish on GOV.UK.</p>
 </div>

@@ -15,7 +15,7 @@ opengraphImageAltText:
 <div class="intro">
   <p>As AI tools become part of every designer's workflow, I wanted to understand firsthand where they genuinely add value and where they fall short — not in theory, but through building something real. In the summer of 2025 I built <a href="https://everydaylens.photos">Everyday Lens</a>: a personal publishing system for my photography, designed with AI as a collaborator rather than just a build tool.</p>
 
-  <figure class="figure-bottom-padding--6">
+  <figure>
     <img src="visuals/everydayLens.png" alt='A responsive web gallery on a smartphone and laptop, titled "everyday lens," showing a variety of photographs.'>
     <figcaption>Left: Light mode version of Everyday Lens on a mobile device. Right: Dark mode version of Everyday Lens on a laptop.</figcaption>
   </figure>
@@ -28,12 +28,12 @@ opengraphImageAltText:
 
 <section>
   <h2 class="font-size-3">Design decisions</h2>
-  <section class="decision-group">
+  <section>
     <h3 class="font-size-2">Automation first</h3>
     <p>A script detects new photos, extracts camera metadata, and triggers AI-generated titles, alt text, and tags—reducing publishing time from 10 minutes (manually entering all the metadata) to under 60 seconds. I chose to automate metadata entry specifically because it's the part of publishing that adds no creative value — it's just friction. The actual creative decisions (curation, sequencing, editing) stay with me.</p>
   </section>
   
-  <section class="decision-group">
+  <section>
     <h3 class="font-size-2">AI with guardrails</h3>
     <p>Although Claude does a great job in coming up with a unique title, alt text and tags I made the deliberate choice to review its output. In practice, Claude gets titles, tags and alt text right about 90% of the time. The other 10% is where it defaults to generic or overly literal descriptions — exactly the kind of output that would flatten the work if left unchecked. The review step catches that.</p>
     <figure class="figure-between-content">
@@ -51,12 +51,12 @@ opengraphImageAltText:
     </figure>
   </section>
   
-  <section class="decision-group">
+  <section>
     <h3 class="font-size-2">Multi-channel distribution</h3>
     <p>Clean URLs, Open Graph previews, and RSS feeds. Anyone can access and subscribe without signing up to a social media platform.</p>
   </section>
   
-  <section class="decision-group">
+  <section>
     <h3 class="font-size-2">Utilitarian design aesthetic</h3>
     <p>The command-line interface aesthetic wasn't just a style choice. It reflected what the tool actually is: something quiet, utilitarian, running in the background doing its job. No flashy interface: clean typography, high contrast colours. I considered more expressive visual directions early on, but they competed with the photography. The CLI aesthetic solved that — it signals 'tool, not gallery app' and keeps the interface out of the way.</p>
     <figure class="figure-between-content">
@@ -65,7 +65,7 @@ opengraphImageAltText:
     </figure>
   </section>
 
-  <section class="decision-group">
+  <section>
     <h3 class="font-size-2">Built with accessibility in mind</h3>
     <p>Inspired by my work at GDS, from day-one, this site was built with all end-users in mind. Therefore, the colours abide by colour contrast accessibility standards, the font size is legible even for the hard of sight, and it's possible to navigate using only a keyboard.</p>
   </section>

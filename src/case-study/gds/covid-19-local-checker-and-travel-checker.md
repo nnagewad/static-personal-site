@@ -19,7 +19,7 @@ opengraphImageAltText:
 
 <section>
   <h2 class="font-size-3">Design judgment</h2>
-  <p>I optimized for speed and clarity in order to support end-users be informed of the latest COVID restrictions in order for them to make necessary decisions during this watershed moment.</p>
+  <p>I optimized for speed and clarity in order to help end-users understand the latest COVID restrictions so they could make informed decisions during this watershed moment.</p>
 </section>
 
 <section>

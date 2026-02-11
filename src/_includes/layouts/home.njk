@@ -1,8 +1,16 @@
 {% from 'macros/linkList.njk' import linkList %}
+{% from 'partials/card.njk' import card %}
 
 {% extends 'layouts/base.njk' %}
 {% block content %}
   {{ content | safe }}
-  {{ linkList(caseStudiesSectionTitle, collections.caseStudies, "list-extra-space") }}
+  <section>
+    <h2 class="font-size-3">{{ caseStudiesSectionTitle }}</h2>
+    <div class="card-list">
+      {% for item in collections.caseStudies %}
+        {{ card(item.url, item.title, item.subTitle, item.icon) }}
+      {% endfor %}
+    </div>
+  </section>
   {{ linkList(supplementaryMaterialsSectionTitle, supplementaryMaterials) }}
 {% endblock %}

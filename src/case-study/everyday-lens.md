@@ -1,6 +1,7 @@
 ---
 order: 1
 layout: 'layouts/case-study.njk'
+icon: icons/everydayLens-logo.svg
 title:
   Everyday Lens
 subTitle:

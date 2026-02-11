@@ -1,6 +1,7 @@
 ---
 order: 3
 layout: 'layouts/case-study.njk'
+icon: icons/placeholder-logo.svg
 title:
   COVID-19 Postcode Checkers
 subTitle:

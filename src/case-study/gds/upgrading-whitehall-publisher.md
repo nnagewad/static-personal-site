@@ -1,6 +1,7 @@
 ---
 order: 2
 layout: 'layouts/case-study.njk'
+icon: icons/placeholder-logo.svg
 title:
   Upgrading Whitehall Publisher
 subTitle:

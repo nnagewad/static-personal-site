@@ -1,6 +1,7 @@
 ---
 order: 2
 layout: 'layouts/case-study.njk'
+headlineCaption: Case studies
 title:
   Government Digital Service
 subTitle:
@@ -17,8 +18,8 @@ opengraphImageAltText:
 
   <p>Three projects that demonstrate my range:</p>
   <ol class="list-extra-space">
-    <li><a href="./govuk-publishing-design-guide">GOV.UK Publishing Design Guide</a>: I created a design guide for internal publishing tools, adopted across teams within GDS and led to the creation of an org-wide Figma UI Kit</li>
-    <li><a href="./upgrading-whitehall-publisher">Upgrading Whitehall Publisher</a>: I modernized a legacy CMS used by content teams across government departments, reducing complexity and establishing reusable patterns</li>
-    <li><a href="./covid-19-local-checker-and-travel-checker">COVID-19 Local Checker and Travel Checker</a>: I designed two emergency services for location-specific restrictions under extreme time pressure that influenced future infrastructure investment for GOV.UK</li>
+  {% for item in collections.gdsCaseStudies %}
+  <li><a href="{{ item.url }}">{{ item.title }}</a>: {{ item.subTitle }}</li>
+  {% endfor %}
   </ol>
 </div>

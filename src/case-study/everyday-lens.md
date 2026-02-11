@@ -36,7 +36,7 @@ opengraphImageAltText:
   <section>
     <h3 class="font-size-2">AI with guardrails</h3>
     <p>Although Claude does a great job in coming up with a unique title, alt text and tags I made the deliberate choice to review its output. In practice, Claude gets titles, tags and alt text right about 90% of the time. The other 10% is where it defaults to generic or overly literal descriptions — exactly the kind of output that would flatten the work if left unchecked. The review step catches that.</p>
-    <figure class="figure-between-content">
+    <figure>
       <div class="side-by-side-images">
         <div>
           <small class="figure-label">Figure 1</small>
@@ -59,7 +59,7 @@ opengraphImageAltText:
   <section>
     <h3 class="font-size-2">Utilitarian design aesthetic</h3>
     <p>The command-line interface aesthetic wasn't just a style choice. It reflected what the tool actually is: something quiet, utilitarian, running in the background doing its job. No flashy interface: clean typography, high contrast colours. I considered more expressive visual directions early on, but they competed with the photography. The CLI aesthetic solved that — it signals 'tool, not gallery app' and keeps the interface out of the way.</p>
-    <figure class="figure-between-content">
+    <figure>
       <img src="visuals/cli.png" class="image-cli" alt="Terminal window showing installation info for claude-code version 2.1.34.">
       <figcaption>The minimal aesthetic of the CLI influenced the design aesthetic of Everyday Lens.</figcaption>
     </figure>

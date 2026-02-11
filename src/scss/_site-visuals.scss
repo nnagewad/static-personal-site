@@ -59,10 +59,6 @@
   }
 }
 
-.figure-prototype {
-  @include spacing-mixins.spacing(top, 4, margin);
-}
-
 .image-outline {
   margin: 0;
   outline: var(--border-thin) solid var(--color-border);

@@ -11,7 +11,7 @@
   {% if isGdsCaseStudy %}
   <section class="related-links">
     <h2 class="related-links-heading">GDS case studies:</h2>
-    <ul>
+    <ul class="list-extra-space">
       {% for item in collections.gdsCaseStudies %}
         {% if item.url != page.url %}
         <li><a href="{{ item.url }}">{{ item.title }}</a></li>

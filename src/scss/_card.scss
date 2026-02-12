@@ -19,6 +19,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
+  gap: var(--spacing-3);
   &:hover {
     border-color: var(--color-hover);
     .card-img svg {
@@ -60,12 +61,12 @@
 
 .card-img {
   order: 1;
-  width: var(--pixel-60);
+  width: auto;
   height: var(--pixel-60);
   svg {
-    width: 100%;
     height: 100%;
     fill: var(--color-link);
+    display: block;
   }
 }
 

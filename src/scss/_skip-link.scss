@@ -1,6 +1,7 @@
 @use 'visually-hidden';
 
 .skip-link {
+  font-weight: var(--font-weight-standard);
   display: block;
   padding-left: var(--pixel-5);
   &:not(:focus-visible) {

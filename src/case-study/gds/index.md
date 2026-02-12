@@ -1,5 +1,6 @@
 ---
 order: 2
+icon: icons/gds-crown.svg
 layout: 'layouts/case-study.njk'
 headlineCaption: Case studies
 title:

@@ -224,6 +224,7 @@ section {
 
 .header-links {
   padding: 0;
+  margin-bottom: 0;
   list-style: none;
   gap: 0 var(--spacing-7);
   @media (hover: hover) {

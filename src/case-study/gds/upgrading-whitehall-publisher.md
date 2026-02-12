@@ -39,24 +39,22 @@ opengraphImageAltText:
   <h2 class="font-size-3">Design decisions</h2>
   <ul class="list-extra-space">
     <li><strong>Replaced legacy components</strong> with GOV.UK Design System equivalents to improve consistency and accessibility</li>
-    <li>
-      Took the opportunity to <strong>simplify some publishing flows</strong> based on prior research, usability findings, as well as adopting common publishing patterns found on modern-day CMS
-      <figure class="image-withinList">
-        <div class="side-by-side-images">
-          <div>
-            <small class="figure-label">Figure 3</small>
-            <img class="image-outline" src="../visuals/originalFlow_deleteGroup.png" alt="Original user flow showing the process to delete a group on a GOV.UK website with five stages.">
-          </div>
-          <div>
-            <small class="figure-label">Figure 4</small>
-            <img class="image-outline" src="../visuals/updatedFlow_deleteGroup.png" alt="Updated user flow showing the process to delete a group on a GOV.UK website with three stages.">
-          </div>
-        </div>
-        <figcaption>Figure 3: Original five-step flow for deleting a group. Figure 4: Simplified three-step flow.</figcaption>
-      </figure>
-    </li>
+    <li>Took the opportunity to <strong>simplify some publishing flows</strong> based on prior research, usability findings, as well as adopting common publishing patterns found on modern-day CMS</li>
     <li><strong>Shipped incrementally</strong> on a weekly cadence, validating usability with content designers before rollout</li>
   </ul>
+  <figure>
+    <div class="side-by-side-images">
+      <div>
+        <small class="figure-label">Figure 3</small>
+        <img class="image-outline" src="../visuals/originalFlow_deleteGroup.png" alt="Original user flow showing the process to delete a group on a GOV.UK website with five stages.">
+      </div>
+      <div>
+        <small class="figure-label">Figure 4</small>
+        <img class="image-outline" src="../visuals/updatedFlow_deleteGroup.png" alt="Updated user flow showing the process to delete a group on a GOV.UK website with three stages.">
+      </div>
+    </div>
+    <figcaption>Figure 3: Original five-step flow for deleting a group. Figure 4: Simplified three-step flow.</figcaption>
+  </figure>
 </section>
 
 <section>

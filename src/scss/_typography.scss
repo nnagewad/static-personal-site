@@ -234,13 +234,13 @@ section {
   }
 }
 
-  .figure-label {
-    text-align: center;
-    display: block;
-    @include spacing-mixins.spacing(bottom, 1, margin);
-  }
+.figure-label {
+  text-align: center;
+  display: block;
+  @include spacing-mixins.spacing(bottom, 1, margin);
+}
 
-  .related-links-heading {
-    @extend .font-size-1;
-    color: var(--color-secondary-text)
-  }
+.related-links-heading {
+  @extend .font-size-1;
+  color: var(--color-secondary-text)
+}

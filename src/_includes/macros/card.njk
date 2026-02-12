@@ -1,0 +1,13 @@
+{% macro card(url, title, description, icon, headingLevel="h3") %}
+<div class="card">
+  <div class="card-details">
+    <{{ headingLevel }} class="font-size-1"><a href="{{ url }}">{{ title }}</a></{{ headingLevel }}>
+    {% if description %}<p>{{ description }}</p>{% endif %}
+  </div>
+  {% if icon %}
+  <div class="card-img">
+    {% include icon %}
+  </div>
+  {% endif %}
+</div>
+{% endmacro %}

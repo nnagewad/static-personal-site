@@ -31,7 +31,8 @@ export default async function(eleventyConfig) {
       .map(item => ({
         url: item.url,
         title: item.data.title,
-        subTitle: item.data.subTitle
+        subTitle: item.data.subTitle,
+        icon: item.data.icon
       }));
   });
 
@@ -42,7 +43,8 @@ export default async function(eleventyConfig) {
       .map(item => ({
         url: item.url,
         title: item.data.title,
-        subTitle: item.data.subTitle
+        subTitle: item.data.subTitle,
+        icon: item.data.icon
       }));
   });
 

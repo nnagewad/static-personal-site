@@ -148,6 +148,7 @@ footer {
 }
 
 ul {
+  @include spacing-mixins.spacing(bottom, 6, margin);
   li + li {
     @include spacing-mixins.spacing(top, 1, margin);
   }

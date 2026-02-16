@@ -40,15 +40,23 @@ opengraphImageAltText:
     <figure>
       <div class="side-by-side-images">
         <div>
-          <small class="figure-label">Figure 1</small>
-          <img class="image-outline" src="visuals/json.png" alt="Screenshot of a JSON file containing both AI-generated metadata and camera extracted metadata.">
+          <small class="figure-label">Figure 1a</small>
+          <img class="image-outline" src="visuals/json_1.png" alt='Screenshot of the metadata for the photograph entitled, "The Percussion of Shadows and Light".'>
         </div>
         <div>
-          <small class="figure-label">Figure 2</small>
-          <img class="image-outline" src="visuals/the-percussion-of-shadows-and-light.png" alt="Web page with a black and white photo of musicians performing with motion blur.">
+          <small class="figure-label">Figure 2a</small>
+          <img class="image-outline" src="visuals/the-percussion-of-shadows-and-light.png" alt='Web page containing the photograph entitled, "The Percussion of Shadows and Light".'>
+        </div>
+        <div>
+          <small class="figure-label">Figure 1b</small>
+          <img class="image-outline" src="visuals/json_2.png" alt='Screenshot of the metadata for the photograph entitled, "The Narrow Hour".'>
+        </div>
+        <div>
+          <small class="figure-label">Figure 2b</small>
+          <img class="image-outline" src="visuals/the-narrow-hour.png" alt='Web page containing the photograph entitled, "The Narrow Hour".'>
         </div>
       </div>
-      <figcaption>Figure 1: AI-generated metadata — title, alt text, and tags — along with the camera extracted metadata stored as JSON. Figure 2: The published result, built from those data points.</figcaption>
+      <figcaption>Figure 1a and 1b: AI-generated metadata — title, alt text, and tags — along with the camera extracted metadata stored as JSON. Figure 2a and 2b: The published result, built from those data points.</figcaption>
     </figure>
   </section>
   
@@ -79,6 +87,20 @@ opengraphImageAltText:
     <li><strong>90+ Lighthouse scores</strong> across performance, accessibility, and SEO</li>
     <li><strong>Influenced how I think about AI as a collaborator</strong>, clearly showing where it can add value and where human judgment is irreplaceable</li>
   </ul>
+  <figure>
+    <div class="three-images">
+      <div>
+        <img class="image-outline" src="visuals/the-mirrors-morning-prayer.png" alt='Web page containing the photograph entitled, "The Mirror‘s Morning Prayer".'>
+      </div>
+      <div>
+        <img class="image-outline" src="visuals/the-ascent-through-concrete-dreams.png" alt='Web page containing the photograph entitled, "The Ascent Through Concrete Dreams".'>
+      </div>
+      <div>
+        <img class="image-outline" src="visuals/the-alchemists-vigil.png" alt='Web page containing the photograph entitled, "The Alchemist‘s Vigil".'>
+      </div>
+    </div>
+    <figcaption>A selection of photographs from Everyday Lens.</figcaption>
+  </figure>
 </section>
 
 <section>

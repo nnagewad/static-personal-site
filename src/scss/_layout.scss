@@ -58,15 +58,26 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: var(--pixel-20);
-
   > * {
-    flex: 1 1 300px;
+    flex: 1 1 330px;
   }
-
   img {
     width: 100%;
     height: auto;
     flex: auto;
+  }
+}
+
+.three-images {
+  display: flex;
+  flex-direction: column;
+  gap: var(--pixel-20);
+  @media (min-width: 48rem) {
+    flex-direction: row;
+  }
+  img {
+    width: 100%;
+    height: auto;
   }
 }
 

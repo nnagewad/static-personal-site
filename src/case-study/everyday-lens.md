@@ -87,6 +87,20 @@ opengraphImageAltText:
     <li><strong>90+ Lighthouse scores</strong> across performance, accessibility, and SEO</li>
     <li><strong>Influenced how I think about AI as a collaborator</strong>, clearly showing where it can add value and where human judgment is irreplaceable</li>
   </ul>
+  <figure>
+    <div class="three-images">
+      <div>
+        <img class="image-outline" src="visuals/the-mirrors-morning-prayer.png" alt='Web page containing the photograph entitled, "The Mirror‘s Morning Prayer".'>
+      </div>
+      <div>
+        <img class="image-outline" src="visuals/the-ascent-through-concrete-dreams.png" alt='Web page containing the photograph entitled, "The Ascent Through Concrete Dreams".'>
+      </div>
+      <div>
+        <img class="image-outline" src="visuals/the-conductor-of-electric-atmosphere.png" alt='Web page containing the photograph entitled, "The Conductor of Electric Atmosphere".'>
+      </div>
+    </div>
+    <figcaption>A selection of photographs from Everyday Lens.</figcaption>
+  </figure>
 </section>
 
 <section>

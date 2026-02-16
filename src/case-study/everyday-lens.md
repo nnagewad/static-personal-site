@@ -40,15 +40,23 @@ opengraphImageAltText:
     <figure>
       <div class="side-by-side-images">
         <div>
-          <small class="figure-label">Figure 1</small>
-          <img class="image-outline" src="visuals/json.png" alt="Screenshot of a JSON file containing both AI-generated metadata and camera extracted metadata.">
+          <small class="figure-label">Figure 1a</small>
+          <img class="image-outline" src="visuals/json_1.png" alt='Screenshot of the metadata for the photograph entitled, "The Percussion of Shadows and Light".'>
         </div>
         <div>
-          <small class="figure-label">Figure 2</small>
-          <img class="image-outline" src="visuals/the-percussion-of-shadows-and-light.png" alt="Web page with a black and white photo of musicians performing with motion blur.">
+          <small class="figure-label">Figure 2a</small>
+          <img class="image-outline" src="visuals/the-percussion-of-shadows-and-light.png" alt='Web page containing the photograph entitled, "The Percussion of Shadows and Light".'>
+        </div>
+        <div>
+          <small class="figure-label">Figure 1b</small>
+          <img class="image-outline" src="visuals/json_2.png" alt='Screenshot of the metadata for the photograph entitled, "The Narrow Hour".'>
+        </div>
+        <div>
+          <small class="figure-label">Figure 2b</small>
+          <img class="image-outline" src="visuals/the-narrow-hour.png" alt='Web page containing the photograph entitled, "The Narrow Hour".'>
         </div>
       </div>
-      <figcaption>Figure 1: AI-generated metadata — title, alt text, and tags — along with the camera extracted metadata stored as JSON. Figure 2: The published result, built from those data points.</figcaption>
+      <figcaption>Figure 1a and 1b: AI-generated metadata — title, alt text, and tags — along with the camera extracted metadata stored as JSON. Figure 2a and 2b: The published result, built from those data points.</figcaption>
     </figure>
   </section>
   

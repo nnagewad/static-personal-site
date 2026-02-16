@@ -96,7 +96,7 @@ opengraphImageAltText:
         <img class="image-outline" src="visuals/the-ascent-through-concrete-dreams.png" alt='Web page containing the photograph entitled, "The Ascent Through Concrete Dreams".'>
       </div>
       <div>
-        <img class="image-outline" src="visuals/the-conductor-of-electric-atmosphere.png" alt='Web page containing the photograph entitled, "The Conductor of Electric Atmosphere".'>
+        <img class="image-outline" src="visuals/the-alchemists-vigil.png" alt='Web page containing the photograph entitled, "The Alchemist‘s Vigil".'>
       </div>
     </div>
     <figcaption>A selection of photographs from Everyday Lens.</figcaption>

@@ -58,11 +58,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: var(--pixel-20);
-
   > * {
     flex: 1 1 330px;
   }
-
   img {
     width: 100%;
     height: auto;

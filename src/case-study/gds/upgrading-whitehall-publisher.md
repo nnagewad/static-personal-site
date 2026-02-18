@@ -19,7 +19,7 @@ opengraphImageAltText:
 
 <section>
   <h2 class="font-size-3">Design judgment</h2>
-  <p>I balanced modernization with operational stability. Internal tools like this are easy to deprioritize—but 2000+ content designers rely on Whitehall every day to keep GOV.UK running.</p>
+  <p>I balanced modernization with operational stability. Internal tools like this are easy to deprioritize, but 2000+ content designers rely on Whitehall every day to keep GOV.UK running.</p>
   <figure class="figure-bottom-padding--6">
     <div class="side-by-side-images">
       <div>

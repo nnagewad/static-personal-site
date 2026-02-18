@@ -6,7 +6,7 @@ title:
 subTitle:
   Consolidating fragmented design guidance into a single source of truth for GOV.UK web and publishing teams
 metaDesc:
-  How I created the GOV.UK Publishing Design Guide — consolidating scattered documentation into a single, extensible resource adopted across the Government Digital Service.
+  How I created the GOV.UK Publishing Design Guide, consolidating scattered documentation into a single, extensible resource adopted across the Government Digital Service.
 opengraphImage:
   caseStudy_gds
 opengraphImageAltText:
@@ -23,7 +23,7 @@ opengraphImageAltText:
 
 <section>
   <h2 class="font-size-3">Design judgment</h2>
-  <p>With just myself, a service designer, a tight fiscal quarter, and a fragmented mess of docs to consolidate, I prioritized adoption over completeness — solving a real frustration: designers spending hours hunting for guidance that should have been easy to find.</p>
+  <p>With just myself, a service designer, a tight fiscal quarter, and a fragmented mess of docs to consolidate, I prioritized adoption over completeness, solving a real frustration: designers spending hours hunting for guidance that should have been easy to find.</p>
 </section>
 
 <section>
@@ -38,7 +38,7 @@ opengraphImageAltText:
   </section>
   <section>
     <h3 class="font-size-2">Design through delivery</h3>
-    <p>With a single fiscal quarter to ship, I skipped high-fidelity Figma mocks and built directly in 11ty. Every day spent designing in Figma was a day we couldn't spend validating with real users—so I built first and iterated fast.</p>
+    <p>With a single fiscal quarter to ship, I skipped high-fidelity Figma mocks and built directly in 11ty. Every day spent designing in Figma was a day we couldn't spend validating with real users, so I built first and iterated fast.</p>
   </section>
   <section>
     <h3 class="font-size-2">Planned for extensibility</h3>

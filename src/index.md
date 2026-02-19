@@ -22,6 +22,6 @@ supplementaryMaterials:
     subTitle: What I'm up to right now
 ---
 <div class="intro">
-  <p>I'm Nikin, a product designer with a background in frontend development. That combination has shaped how I work — I design systems that are not only scalable and inclusive, but buildable. Over 10+ years I've led complex product work at scale, from replatforming government publishing tools to building design systems from the ground up.</p>
-  <p>Outside of work, I created <a href="https://everydaylens.photos">Everyday Lens</a>, a website where I share my photography. I'm currently building an iOS app.</p>
+  <p>I'm Nikin, a product designer with a background in frontend development. That combination has shaped how I work. I design systems that are not only scalable and inclusive, but buildable. Over 10+ years I've led complex design work at scale, from replatforming government publishing tools to building design systems from the ground up.</p>
+  <p>Outside of work, I created <a href="https://everydaylens.photos">Everyday Lens</a>, a website where I share my photography. Currently, I'm also building an iOS app.</p>
 </div>

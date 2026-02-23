@@ -171,7 +171,7 @@ ul {
 }
 
 .home-link {
-  @include spacing-mixins.spacing(bottom, 6, margin);
+  @include spacing-mixins.spacing(bottom, 8, margin);
 }
 
 .last-updated {
@@ -184,6 +184,7 @@ ul {
   margin-bottom: 0;
   font-weight: var(--font-weight-medium);
   @extend .font-size-1;
+  line-height: 1;
 }
 
 .lead-paragraph {

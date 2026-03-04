@@ -43,6 +43,10 @@ opengraphImageAltText:
   <section>
     <h3 class="font-size-2">Planned for extensibility</h3>
     <p>Scoped the initial release tightly while laying foundations for future component references, Figma embeds, and code snippets.</p>
+    <figure>
+      <img src="../visuals/figmaDesignGuideIntegration.png" alt="Webpage screenshot of GOV.UK Publishing Design Guide on breadcrumbs with a Figma embed of the component.">
+      <figcaption>A component page in the Publishing Design Guide that supports Figma embeds and code snippets as the system evolves.</figcaption>
+    </figure>
   </section>
   <section>
     <h3 class="font-size-2">Intentional visual clarity</h3>

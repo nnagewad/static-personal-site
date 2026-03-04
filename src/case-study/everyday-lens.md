@@ -64,8 +64,8 @@ opengraphImageAltText:
     <h3 class="font-size-2">Multi-channel distribution</h3>
     <p>Clean URLs, Open Graph previews, and RSS feeds. Anyone can access and subscribe without signing up to a social media platform.</p>
     <figure>
-      <img src="visuals/og-graphic.png" alt="WhatsApp OpenGraph preview showing a street photography from Everyday Lens. The preview displays a photograph titled The Merchant Street's Midday Convergence, featuring a busy urban street scene with pedestrians walking between brick buildings. Modern skyscrapers are visible in the background under clear blue sky. The interface shows the website title everydaylens.photos and an eye icon indicating the image can be viewed." class="image-openGraph">
-      <figcaption>OpenGraph preview render showing how Everyday Lens photographs appear when shared on messaging platforms.</figcaption>
+      <img src="visuals/og-graphic.png" alt="WhatsApp Open Graph preview showing a street photography from Everyday Lens. The preview displays a photograph titled The Merchant Street's Midday Convergence, featuring a busy urban street scene with pedestrians walking between brick buildings. Modern skyscrapers are visible in the background under clear blue sky. The interface shows the website title everydaylens.photos and an eye icon indicating the image can be viewed." class="image-openGraph">
+      <figcaption>WhatsApp's Open Graph preview render showing how Everyday Lens photographs appear when shared on messaging platforms.</figcaption>
     </figure>
   </section>
   

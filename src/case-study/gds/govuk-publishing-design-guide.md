@@ -51,6 +51,23 @@ opengraphImageAltText:
   <section>
     <h3 class="font-size-2">Intentional visual clarity</h3>
     <p>Introduced a small set of Lego-inspired illustrations to support conceptual clarity and differentiate the guide without compromising GOV.UK's utilitarian design principles. The illustrations demonstrate the difference between components, patterns, and frontend templates through visual storytelling.</p>
+    <figure>
+      <div class="three-images">
+        <div>
+          <small class="figure-label">Figure 1</small>
+          <img src="../visuals/components.png" alt="A set of colorful building blocks with explanatory text about reusable components." class="image-outline">
+        </div>
+        <div>
+          <small class="figure-label">Figure 2</small>
+          <img src="../visuals/patterns.png" alt="A set of colorful building blocks with explanatory text about reusable patterns." class="image-outline">
+        </div>
+        <div>
+          <small class="figure-label">Figure 3</small>
+          <img src="../visuals/frontendTemplates.png" alt="A set of colorful building blocks with explanatory text about frontend templates." class="image-outline">
+        </div>
+      </div>
+      <figcaption>Examples of the Lego-inspired illustrations to explain to users the difference between Components (Figure 1), Patterns (Figure 2), and Frontend Templates (Figure 3).</figcaption>
+    </figure>
   </section>
 </section>
 

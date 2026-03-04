@@ -80,7 +80,16 @@ opengraphImageAltText:
     <li>Directly influenced the creation of an updated Figma UI Kit of the GOV.UK Design System, which can be used as a basis to create editorial and publishing tool specific components</li>
   </ul>
   <figure>
-    <img class="image-figma" src="../visuals/figma_DesignSystemV2.png" alt="Screenshot of the GOV.UK Design System V2 in Figma, showing various user interface components.">
-    <figcaption>Version 2 of the GOV.UK Design System Figma UI Kit.</figcaption>
+    <div class="side-by-side-images">
+      <div>
+        <small class="figure-label">Figure 4</small>
+        <img src="../visuals/figmaBuildingBlocks.png" alt="Screenshot of a Figma file showcasing: accordion, icon, and input format building blocks from the GOV.UK Design System." class="image-outline">
+      </div>
+      <div>
+        <small class="figure-label">Figure 5</small>
+        <img src="../visuals/figmaComponents.png" alt="Screenshot of a Figma file showcasing: accordion, breadcrumbs, back link, button, and character count components from the GOV.UK Design System." class="image-outline">
+      </div>
+    </div>
+    <figcaption>Version 2 of the GOV.UK Design System Figma UI Kit. Building Blocks page (Figure 4), and the Components page (Figure 5) within the Figma file.</figcaption>
   </figure>
 </section>

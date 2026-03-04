@@ -90,6 +90,6 @@ opengraphImageAltText:
         <img src="../visuals/figmaComponents.png" alt="Screenshot of a Figma file showcasing: accordion, breadcrumbs, back link, button, and character count components from the GOV.UK Design System." class="image-outline">
       </div>
     </div>
-    <figcaption>Version 2 of the GOV.UK Design System Figma UI Kit. Building Blocks page (Figure 4), and the Components page (Figure 5) within the Figma file.</figcaption>
+    <figcaption>Version 2 of the GOV.UK Design System Figma UI Kit. Screenshots of the Building Blocks page (Figure 4), and the Components page (Figure 5) within the Figma file.</figcaption>
   </figure>
 </section>

@@ -20,6 +20,10 @@ opengraphImageAltText:
 <section>
   <h2 class="font-size-3">Design judgment</h2>
   <p>I balanced modernization with operational stability. Internal tools like this are easy to deprioritize, but 2000+ content designers rely on Whitehall every day to keep GOV.UK running.</p>
+  <figure>
+    <img src="../visuals/whitehallRoughIdeas_figma.png" alt="Digital whiteboard in Figma mockups and design concepts for upgrading Whitehall Publisher to the GOV.UK Design System." class="image-outline">
+    <figcaption>Early-stage design explorations in Figma for the Whitehall Publisher upgrade to the GOV.UK Design System, covering flows across document management, feature blocks, and ministerial content.</figcaption>
+  </figure>
 </section>
 
 <section>

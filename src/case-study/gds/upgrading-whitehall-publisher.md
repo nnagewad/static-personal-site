@@ -20,19 +20,6 @@ opengraphImageAltText:
 <section>
   <h2 class="font-size-3">Design judgment</h2>
   <p>I balanced modernization with operational stability. Internal tools like this are easy to deprioritize, but 2000+ content designers rely on Whitehall every day to keep GOV.UK running.</p>
-  <figure class="figure-bottom-padding--6">
-    <div class="side-by-side-images">
-      <div>
-        <small class="figure-label">Figure 1</small>
-        <img src="../visuals/whitehall-before.png" alt="GOV.UK Whitehall document management interface on a laptop screen.">
-      </div>
-      <div>
-        <small class="figure-label">Figure 2</small>
-        <img src="../visuals/whitehall-after.png" alt="Laptop displaying a GOV.UK document management webpage with filters and document list.">
-      </div>
-    </div>
-    <figcaption>Figure 1: Document search interface before upgrade. Figure 2: Document search interface after upgrade.</figcaption>
-  </figure>
 </section>
 
 <section>
@@ -45,15 +32,31 @@ opengraphImageAltText:
   <figure>
     <div class="side-by-side-images">
       <div>
+        <small class="figure-label">Figure 1</small>
+        <img src="../visuals/whitehall-before.png" alt="GOV.UK Whitehall document management interface on a laptop screen.">
+      </div>
+      <div>
+        <small class="figure-label">Figure 2</small>
+        <img src="../visuals/whitehall-after.png" alt="Laptop displaying a GOV.UK document management interface with filters and document list.">
+      </div>
+      <div>
         <small class="figure-label">Figure 3</small>
-        <img class="image-outline" src="../visuals/originalFlow_deleteGroup.png" alt="Original user flow showing the process to delete a group on a GOV.UK website with five stages.">
+        <img src="../visuals/document-collection--before.png" alt="GOV.UK Whitehall document collections group management interface on a laptop screen.">
       </div>
       <div>
         <small class="figure-label">Figure 4</small>
+        <img src="../visuals/document-collection--after.png" alt="Laptop displaying a GOV.UK document collection group management interface.">
+      </div>
+      <div>
+        <small class="figure-label">Figure 5</small>
+        <img class="image-outline" src="../visuals/originalFlow_deleteGroup.png" alt="Original user flow showing the process to delete a group on a GOV.UK website with five stages.">
+      </div>
+      <div>
+        <small class="figure-label">Figure 6</small>
         <img class="image-outline" src="../visuals/updatedFlow_deleteGroup.png" alt="Updated user flow showing the process to delete a group on a GOV.UK website with three stages.">
       </div>
     </div>
-    <figcaption>Figure 3: Original five-step flow for deleting a group. Figure 4: Simplified three-step flow.</figcaption>
+    <figcaption>Figure 1: Document search interface before upgrade. Figure 2: Document search interface after upgrade. Figure 3: Document collections group interface before upgrade. Figure 4: Document collections group interface after upgrade. Figure 5: Original five-step flow for deleting a group. Figure 6: Simplified three-step flow.</figcaption>
   </figure>
 </section>
 

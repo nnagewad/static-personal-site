@@ -14,7 +14,7 @@ opengraphImageAltText:
 ---
 <div class="intro">
   <p>While GOV.UK has a mature <a href="https://design-system.service.gov.uk">Design System</a>, guidance for editorial design and publishing tools was fragmented across documents, wikis, and team-owned resources. This fragmentation slowed teams down, caused inconsistency, and made onboarding new designers unnecessarily difficult.</p>
-  <p>I identified the opportunity to consolidate this knowledge into a single source of truth: the <a href="https://design-guide.publishing.service.gov.uk">GOV.UK Publishing Design Guide</a>.</p>
+  <p>There was an opportunity to consolidate this knowledge into a single source of truth: the <a href="https://design-guide.publishing.service.gov.uk">GOV.UK Publishing Design Guide</a>.</p>
   <figure>
     <img src="../visuals/publishingDesignGuide.png" alt="Two devices showing the GOV.UK Publishing Design Guide website, with details on frontend templates and Lego-like illustrations.">
     <figcaption>Left: GOV.UK Publishing Design Guide's homepage on a mobile device. Right: Overview page of Frontend Templates on a laptop.</figcaption>

@@ -6,8 +6,8 @@ metaDesc:
 date: 2026-03-18
 location: London, UK
 ---
-Exciting times ahead:
 - Just announced my resignation on LinkedIn
 - Back into iOS development
 - Will be travelling to Italy in early May
 - Will be returning to Toronto in late May
+- Enjoying the new [Ed O'Brien](https://edobrien.bandcamp.com/album/blue-morpho)

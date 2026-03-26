@@ -78,6 +78,7 @@ opengraphImageAltText:
     <li>Reduced onboarding time and eliminated duplicated documentation work across teams</li>
     <li>Inspired similar platforms created by other government teams</li>
     <li>Directly influenced the creation of an updated Figma UI Kit of the GOV.UK Design System, which can be used as a basis to create editorial and publishing tool specific components</li>
+    <li>Lays the groundwork for AI-assisted creation of GOV.UK user interfaces, with the Publishing Design Guide serving as the underlying knowledge base</li>
   </ul>
   <figure>
     <div class="side-by-side-images">

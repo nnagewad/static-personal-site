@@ -2,14 +2,14 @@
 {% block content %}
   
   <ul>
-    <li>
-      {% for sticker in stickers %}
+    {% for sticker in stickers %}
+      <li>
         <figure>
           <img src="{{ sticker.src }}" alt="{{ sticker.alt }}">
           <figcaption>{{ sticker.caption }}</figcaption>
         </figure>
-      {% endfor %}
-    </li>
+      </li>
+    {% endfor %}
   </ul>
 
 {% endblock %}

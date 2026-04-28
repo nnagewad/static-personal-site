@@ -32,4 +32,7 @@ stickers:
   - src: patches/09_beBold.png
     alt: A patch of Steamboat Willie holding the GOV.UK crown.
     caption: 'Gag patch: End of year festivities'
+  - src: patches/10_blobby.png
+    alt: A patch of Mr. Blobby's face.
+    caption: 'Gag patch: Mr. Blobby'
 ---

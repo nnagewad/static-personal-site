@@ -1,8 +1,9 @@
 ---
 layout: 'layouts/patches.njk'
 title: GDS Patches
+subTitle: Team and Mission patches illustrated during my time at GDS.
 metaDesc:
-  A collection of mission patches and team stickers I illustrated at the Government Digital Service.
+  A collection of mission patches and team stickers I illustrated at the Government Digital Service
 stickers:
   - src: patches/01_covid.png
     alt: Mission patch depicting a cat with the GOV.UK crown and face mask stands amidst flames on a red background with the text, "THIS IS FINE".

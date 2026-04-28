@@ -1,7 +1,7 @@
 ---
 layout: 'layouts/patches.njk'
 title: GDS Patches
-subTitle: Team and Mission patches illustrated during my time at GDS.
+subTitle: Team and Mission patches illustrated during my time at GDS
 metaDesc:
   A collection of mission patches and team stickers I illustrated at the Government Digital Service
 stickers:

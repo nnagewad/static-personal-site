@@ -12,13 +12,13 @@ stickers:
     caption: 'Mission patch: Tearing down the monolith'
   - src: patches/03_whitehall1.png
     alt: 'Mission patch with gradient background, overlapping square and circle, and text: "GOV.UK Publishing, Whitehall Transition 2022 - 2023".'
-    caption: 'Mission patch: GOV.UK Design System upgrade — v1'
+    caption: 'Mission patch: GOV.UK Design System upgrade (version 1)'
   - src: patches/04_whitehall2.png
     alt: 'Mission patch with gradient background, overlapping circle and hexagon, and text: "GOV.UK Publishing, Whitehall Transition 2022 - 2023".'
-    caption: 'Mission patch: GOV.UK Design System upgrade — v2'
+    caption: 'Mission patch: GOV.UK Design System upgrade (version 2)'
   - src: patches/05_whitehall3.png
     alt: 'Mission patch with gradient background, overlapping hexagon and square, and text: "GOV.UK Publishing, Whitehall Transition 2022 - 2023".'
-    caption: 'Mission patch: GOV.UK Design System upgrade — v3'
+    caption: 'Mission patch: GOV.UK Design System upgrade (version 3)'
   - src: patches/06_publishingDesignGuide.png
     alt: Mission patch for the GOV.UK Publishing Design Guide featuring a yellow, blue, and red stacked cube, dated 2024.
     caption: 'Mission patch: Publishing Design Guide launch'

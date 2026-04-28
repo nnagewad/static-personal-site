@@ -17,6 +17,9 @@ supplementaryMaterials:
   - url: https://nkngwd.medium.com
     title: Medium
     subTitle: Deep dives into projects and think pieces
+  - url: /gds-patches
+    title: GDS Patches
+    subTitle: Team and Mission patches illustrated during my time at GDS
   - url: /now
     title: Now
     subTitle: What I'm up to right now

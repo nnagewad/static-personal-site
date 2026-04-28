@@ -1,0 +1,15 @@
+{% extends 'layouts/base.njk' %}
+{% block content %}
+  
+  <ul class="patches-gallery">
+    {% for sticker in stickers %}
+      <li>
+        <figure>
+          <img src="{{ sticker.src }}" alt="{{ sticker.alt }}">
+          <figcaption>{{ sticker.caption }}</figcaption>
+        </figure>
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

@@ -6,7 +6,7 @@ title:
 subTitle:
   Introducing large imagery to GOV.UK while keeping it accessible and scalable for 2,000+ publishers
 metaDesc:
-  How I designed two services to help the public understand local and travel restrictions during COVID-19, achieving 100% task success in testing and shifting how the organizsation approached structured content.
+  Add
 opengraphImage:
   caseStudy_gds
 opengraphImageAltText:

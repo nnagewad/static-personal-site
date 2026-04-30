@@ -17,7 +17,7 @@ opengraphImageAltText:
 <div>
   <p>At the Government Digital Service (GDS), I designed products and systems used by millions of people across <a href="https://gov.uk">GOV.UK</a>. That's where I learned what design actually means: building products and services people can trust.</p>
 
-  <p><strong>Three projects that demonstrate my range:</strong></p>
+  <p><strong>Four projects that demonstrate my range:</strong></p>
 </div>
 
 {% from 'macros/card.njk' import card %}

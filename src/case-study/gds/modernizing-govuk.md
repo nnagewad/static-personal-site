@@ -30,11 +30,11 @@ opengraphImageAltText:
       <div class="side-by-side-images">
         <div>
           <small>Figure 1</small>
-          <img src="../visuals/charette.png" alt="">
+          <img src="../visuals/charette.png" alt="Collage of hand-drawn sketches showing layout and design ideas with notes on flexibility and customization.">
         </div>
         <div>
           <small>Figure 2</small>
-          <img src="../visuals/sketchingSession.jpg" alt="">
+          <img src="../visuals/sketchingSession.jpg" alt="Group of people at a table engaged in discussion in a conference room.">
         </div>
       </div>
       <figcaption>Figure 1: Samples from the design charrette (workshop 1). Figure 2: Participants from the sketching session (workshop 2).</figcaption>
@@ -44,7 +44,7 @@ opengraphImageAltText:
     <h3 class="font-size-2">Audit before ideation</h3>
     <p>Before opening Figma, I audited how large imagery had already been handled across GOV.UK. Many visually compelling examples failed on closer inspection. For instance: text over images, page titles rendered as imagery, floating text boxes obscuring the image itself. These failures defined the constraints the design had to solve.</p>
     <figure>
-      <img src="../visuals/audit.png" alt="">
+      <img src="../visuals/audit.png" alt="Web page audit overview with thumbnails of screenshots from various UK government sites, categorized by projects and years.">
       <figcaption>Birdseye view of audit findings.</figcaption>
     </figure>
   </section>
@@ -56,11 +56,11 @@ opengraphImageAltText:
       <div class="side-by-side-images">
         <div>
           <small>Figure 3</small>
-          <img src="../visuals/initialConcept_desktop.png" alt="">
+          <img src="../visuals/initialConcept_desktop.png" alt="Figma design of a desktop version of a GOV.UK component with blue and gray sections and placeholder text.">
         </div>
         <div>
           <small>Figure 4</small>
-          <img src="../visuals/initialConcept_mobile.png" alt="">
+          <img src="../visuals/initialConcept_mobile.png" alt="Figma design of a mobile version of a GOV.UK component with blue and gray sections and placeholder text.">
         </div>
       </div>
       <figcaption>Figure 3: Skeletal approach for desktop. Figure 4: Skeletal approach for mobile.</figcaption>
@@ -73,15 +73,15 @@ opengraphImageAltText:
       <div class="three-images">
         <div>
           <small>Figure 5</small>
-          <img src="../visuals/samplePhoto.png" alt="">
+          <img src="../visuals/samplePhoto.png" alt="Blue panel with GOV.UK logo and text beside a blurred group of people in a meeting setting.">
         </div>
         <div>
           <small>Figure 6</small>
-          <img src="../visuals/sampleGraphic.png" alt="">
+          <img src="../visuals/sampleGraphic.png" alt="Illustration of two cartoon figures with a magnifying glass and question mark on a blue background, accompanied by placeholder text and the GOV.UK logo.">
         </div>
         <div>
           <small>Figure 7</small>
-          <img src="../visuals/sampleTextOnly.png" alt="">
+          <img src="../visuals/sampleTextOnly.png" alt="Blue banner with GOV.UK logo and placeholder text.">
         </div>
       </div>
       <figcaption>Figure 5: Example with photo. Figure 6: Example with a graphic. Figure 7: Example with no imagery.</figcaption>
@@ -100,7 +100,7 @@ opengraphImageAltText:
     <p>A developer suggested replacing my CSS background image approach with a picture tag, loading the appropriate asset based on the user's viewport and screen density. That led to capping the header at 1024px on desktop and setting a minimum height to prevent awkward cropping on content-light pages.</p>
     <p>On the backend, the publishing tool, I also separated the upload journey into photograph and logo paths, and updated the cropping tool to preview both desktop and mobile in real time.</p>
     <figure>
-      <img src="../visuals/proposedOutput.png" alt="">
+      <img src="../visuals/proposedOutput.png" alt="A webpage display on a smartphone and laptop about the 80th anniversaries of VE Day and VJ Day, with a black-and-white photo of people celebrating.">
       <figcaption>Proposed redesign shaped by developer collaboration.</figcaption>
     </figure>
   </section>
@@ -108,7 +108,7 @@ opengraphImageAltText:
     <h3 class="font-size-2">User testing</h3>
     <p>Publishers tested the full flow via Figma prototypes. The standout finding: participants said if this capability had existed, they wouldn't have considered commissioning a bespoke site. Testing also surfaced appetite for a broader colour palette. This revealed a deeper access and permissions challenge now actively being worked on.</p>
     <figure>
-      <img src="../visuals/figmaUR.png" alt="">
+      <img src="../visuals/figmaUR.png" alt="Wireframe of user testing flow for webpage customization involving header and logo image placements.">
       <figcaption>Screenshot of Figma file used for user testing.</figcaption>
     </figure>
   </section>

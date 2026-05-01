@@ -83,7 +83,7 @@ opengraphImageAltText:
     <p>While solving for legibility I identified an opportunity: a customisable background colour would let departments express their visual identity without bespoke sites. Every pairing was drawn from the GOV.UK Design System and tested against AA contrast standards.</p>
     <figure>
       <img src="../visuals/colourSamples.png" alt='Grid of colored variations of the proposed header with "GOV.UK" logo and placeholder text.'>
-      <figcaption>Birds-eye view of all colours available.</figcaption>
+      <figcaption>All available colour options from the GOV.UK Design System.</figcaption>
     </figure>
   </section>
   <section>
@@ -93,7 +93,7 @@ opengraphImageAltText:
       <img src="../visuals/proposedOutput.png" alt="A webpage display on a smartphone and laptop about the 80th anniversaries of VE Day and VJ Day, with a black-and-white photo of people celebrating.">
       <figcaption>Component shown on desktop and mobile, with updated width cap and minimum height applied.</figcaption>
     </figure>
-    <p>On the backend, the publishing tool, I also separated the upload journey into photograph and logo paths, and collaborating with a developer we updated the cropping tool to preview both desktop and mobile in real time.</p>
+    <p>On the backend, I separated the upload journey into photograph and logo paths, and worked with a developer on the Whitehall Publisher team to update the cropping tool to preview both desktop and mobile in real time.</p>
     <figure>
       <img src="../visuals/croppingTool.png" alt="Screenshot of the GOV.UK Whitehall Publisher interface displaying image cropping capability.">
       <figcaption>Updated cropping tool within Whitehall Publisher.</figcaption>
@@ -104,7 +104,7 @@ opengraphImageAltText:
     <p>Publishers tested the full flow via Figma prototypes. The standout finding: participants said if this capability had existed, they wouldn't have considered commissioning a bespoke site. Testing also surfaced appetite for a broader colour palette. This revealed a deeper access and permissions challenge now actively being worked on.</p>
     <figure>
       <img src="../visuals/figmaUR.png" alt="Wireframe of user testing flow for webpage customization involving header and logo image placements.">
-      <figcaption>Screenshot of Figma file used for user testing.</figcaption>
+      <figcaption>Prototype used in user testing sessions.</figcaption>
     </figure>
   </section>
 </section>

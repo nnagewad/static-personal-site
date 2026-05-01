@@ -51,11 +51,11 @@ opengraphImageAltText:
   <section>
     <h3 class="font-size-2">First principle</h3>
     <p>It became apparent that text would be in front of a solid colour background, never over an image. On desktop it sits to the left of the image; on mobile, above it, both consistent with GOV.UK's existing reading flow.</p>
-    <p>I explored the inverse layout but rejected it. It created real barriers for users with motor impairments on mobile and those with limited sight on desktop, a finding confirmed by in-house accessibility specialists.</p>
-    <figure>
+    <figure class="figure-margin--bottom">
       <img src="../visuals/desktop+mobileConcepts.png" alt="">
       <figcaption>Proposed skeletal designs of component, desktop (left) and mobile (right) variations.</figcaption>
     </figure>
+    <p>I explored the inverse layout but rejected it. It created real barriers for users with motor impairments on mobile and those with limited sight on desktop, a finding confirmed by in-house accessibility specialists.</p>
   </section>
   <section>
     <h3 class="font-size-2">Built to handle every real-world scenario</h3>
@@ -89,10 +89,14 @@ opengraphImageAltText:
   <section>
     <h3 class="font-size-2">Design shaped by developer collaboration</h3>
     <p>A developer suggested replacing my CSS background image approach with a picture tag, loading the appropriate asset based on the user's viewport and screen density. That led to capping the header at 1024px on desktop and setting a minimum height to prevent awkward cropping on content-light pages.</p>
-    <p>On the backend, the publishing tool, I also separated the upload journey into photograph and logo paths, and updated the cropping tool to preview both desktop and mobile in real time.</p>
-    <figure>
+    <figure class="figure-margin--bottom">
       <img src="../visuals/proposedOutput.png" alt="A webpage display on a smartphone and laptop about the 80th anniversaries of VE Day and VJ Day, with a black-and-white photo of people celebrating.">
       <figcaption>Component shown on desktop and mobile, with updated width cap and minimum height applied.</figcaption>
+    </figure>
+    <p>On the backend, the publishing tool, I also separated the upload journey into photograph and logo paths, and collaborating with a developer we updated the cropping tool to preview both desktop and mobile in real time.</p>
+    <figure>
+      <img src="../visuals/croppingTool.png" alt="Screenshot of the GOV.UK Whitehall Publisher interface displaying image cropping capability.">
+      <figcaption>Updated cropping tool within Whitehall Publisher.</figcaption>
     </figure>
   </section>
   <section>

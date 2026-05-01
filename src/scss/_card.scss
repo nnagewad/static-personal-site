@@ -1,19 +1,23 @@
 @use 'spacing-mixins';
 
 .card-list {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: var(--spacing-6);
   list-style: none;
   padding: 0;
   margin: 0;
+  // 3 columns for exactly 3 items, or 5+ items
+  &:has(> :nth-child(3)):not(:has(> :nth-child(4))),
+  &:has(> :nth-child(5)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
   @media (max-width: 48rem) {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
 
 .card {
-  flex: 1;
   border: var(--border-medium) solid var(--color-link);
   padding: var(--spacing-6);
   display: flex;

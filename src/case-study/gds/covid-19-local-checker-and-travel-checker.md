@@ -1,5 +1,5 @@
 ---
-order: 3
+order: 4
 layout: 'layouts/case-study.njk'
 title:
   COVID-19 Postcode Checkers

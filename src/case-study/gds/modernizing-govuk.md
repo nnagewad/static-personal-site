@@ -100,7 +100,7 @@ opengraphImageAltText:
     <p>Publishers tested the full flow via Figma prototypes. The standout finding: participants said if this capability had existed, they wouldn't have considered commissioning a bespoke site. Testing also surfaced appetite for a broader colour palette. This revealed a deeper access and permissions challenge now actively being worked on.</p>
     <figure>
       <img src="../visuals/figmaUR.png" alt="Wireframe of user testing flow for webpage customization involving header and logo image placements.">
-      <figcaption>Prototype used in user testing sessions.</figcaption>
+      <figcaption>Screenshot of Figma file used for user testing.</figcaption>
     </figure>
   </section>
 </section>

@@ -91,7 +91,7 @@ opengraphImageAltText:
     <h3 class="font-size-2">Header background colour as department identity</h3>
     <p>While solving for legibility I identified an opportunity: a customisable background colour would let departments express their visual identity without bespoke sites. Every pairing was drawn from the GOV.UK Design System and tested against AA contrast standards.</p>
     <figure>
-      <img src="../visuals/colourSamples.png" alt="">
+      <img src="../visuals/colourSamples.png" alt='Grid of colored variations of the proposed header with "GOV.UK" logo and placeholder text.'>
       <figcaption>Birds-eye view of all colours available.</figcaption>
     </figure>
   </section>

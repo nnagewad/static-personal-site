@@ -26,32 +26,91 @@ opengraphImageAltText:
   <section>
     <h3 class="font-size-2">Running two workshops to find direction</h3>
     <p>I ran a design charrette with developers, researchers, product managers, and product leads across the GOV.UK frontend and Whitehall Publisher teams, followed by a sketching session with content designers from across government. Both groups, independently, surfaced the same themes: flexible layouts, personalisation, embeddable media, and more visual character, which pointed to large imagery as the first step towards modern and flexible GOV.UK.</p>
+    <figure>
+      <div class="side-by-side-images">
+        <div>
+          <small>Figure 1</small>
+          <img src="../visuals/charette.png" alt="">
+        </div>
+        <div>
+          <small>Figure 2</small>
+          <img src="../visuals/sketchingSession.jpg" alt="">
+        </div>
+      </div>
+      <figcaption>Figure 1: Samples from the design charrette (workshop 1). Figure 2: Participants from the sketching session (workshop 2).</figcaption>
+    </figure>
   </section>
   <section>
     <h3 class="font-size-2">Audit before ideation</h3>
     <p>Before opening Figma, I audited how large imagery had already been handled across GOV.UK. Many visually compelling examples failed on closer inspection. For instance: text over images, page titles rendered as imagery, floating text boxes obscuring the image itself. These failures defined the constraints the design had to solve.</p>
+    <figure>
+      <img src="../visuals/audit.png" alt="">
+      <figcaption>Birdseye view of audit findings.</figcaption>
+    </figure>
   </section>
   <section>
     <h3 class="font-size-2">First principle</h3>
     <p>It became apparent that text would be in front of a solid colour background, never over an image. On desktop it sits to the left of the image; on mobile, above it, both consistent with GOV.UK's existing reading flow.</p>
-    <p>I explored the inverse layout but rejected it: it created real barriers for users with motor impairments on mobile and those with limited sight on desktop, confirmed by GDS accessibility specialists.</p>
+    <p>I explored the inverse layout but was rejected. It created real barriers for users with motor impairments on mobile and those with limited sight on desktop, confirmed by in-house accessibility specialists.</p>
+    <figure>
+      <div class="side-by-side-images">
+        <div>
+          <small>Figure 3</small>
+          <img src="../visuals/initialConcept_desktop.png" alt="">
+        </div>
+        <div>
+          <small>Figure 4</small>
+          <img src="../visuals/initialConcept_mobile.png" alt="">
+        </div>
+      </div>
+      <figcaption>Figure 3: Skeletal approach for desktop. Figure 4: Skeletal approach for mobile.</figcaption>
+    </figure>
   </section>
   <section>
     <h3 class="font-size-2">Built to handle every real-world scenario</h3>
     <p>I tested the component with photographs, logos, and no imagery. Each variation had to work so publishers could use it with confidence and without developer intervention.</p>
+    <figure>
+      <div class="three-images">
+        <div>
+          <small>Figure 5</small>
+          <img src="../visuals/samplePhoto.png" alt="">
+        </div>
+        <div>
+          <small>Figure 6</small>
+          <img src="../visuals/sampleGraphic.png" alt="">
+        </div>
+        <div>
+          <small>Figure 7</small>
+          <img src="../visuals/sampleTextOnly.png" alt="">
+        </div>
+      </div>
+      <figcaption>Figure 5: Example with photo. Figure 6: Example with a graphic. Figure 7: Example with no imagery.</figcaption>
+    </figure>
   </section>
   <section>
     <h3 class="font-size-2">Header background colour as department identity</h3>
     <p>While solving for legibility I identified an opportunity: a customisable background colour would let departments express their visual identity without bespoke sites. Every pairing was drawn from the GOV.UK Design System and tested against AA contrast standards.</p>
+    <figure>
+      <img src="../visuals/colourSamples.png" alt="">
+      <figcaption>Birds-eye view of all colours available.</figcaption>
+    </figure>
   </section>
   <section>
     <h3 class="font-size-2">Design shaped by developer collaboration</h3>
     <p>A developer suggested replacing my CSS background image approach with a picture tag, loading the appropriate asset based on the user's viewport and screen density. That led to capping the header at 1024px on desktop and setting a minimum height to prevent awkward cropping on content-light pages.</p>
     <p>On the backend, the publishing tool, I also separated the upload journey into photograph and logo paths, and updated the cropping tool to preview both desktop and mobile in real time.</p>
+    <figure>
+      <img src="../visuals/proposedOutput.png" alt="">
+      <figcaption>Proposed redesign shaped by developer collaboration.</figcaption>
+    </figure>
   </section>
   <section>
     <h3 class="font-size-2">User testing</h3>
     <p>Publishers tested the full flow via Figma prototypes. The standout finding: participants said if this capability had existed, they wouldn't have considered commissioning a bespoke site. Testing also surfaced appetite for a broader colour palette. This revealed a deeper access and permissions challenge now actively being worked on.</p>
+    <figure>
+      <img src="../visuals/figmaUR.png" alt="">
+      <figcaption>Screenshot of Figma file used for user testing.</figcaption>
+    </figure>
   </section>
 </section>
 

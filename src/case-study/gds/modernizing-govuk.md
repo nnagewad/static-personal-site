@@ -6,7 +6,7 @@ title:
 subTitle:
   Introducing large imagery to GOV.UK while keeping it accessible and scalable for 2,000+ publishers
 metaDesc:
-  Add
+  How I led the design effort to introduce large imagery to GOV.UK, keeping it accessible and scalable for 2,000+ publishers across 400+ government bodies.
 opengraphImage:
   caseStudy_gds
 opengraphImageAltText:
